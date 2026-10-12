@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- maximum-scale/user-scalable: 入力欄フォーカス時の自動ズームを抑止する。ズームはビジュアル
+		     ビューポートを縮めてレイアウト実測値を汚染するため（editor/index.html と同じ指定） -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+		<title>Idle RPG Player</title>
+		<style>
+			/* ページ読み込み前の背景色（JavaScriptで上書きされる） */
+			html, body {
+				margin: 0;
+				padding: 0;
+				background-color: #000000;
+				/* iOSの100vhはlvh（ツールバー非表示時の高さ）なので、可視領域より約90px高くなり
+				   文書がスクロール可能になってしまう。svhは常に可視領域以下なので溢れない */
+				min-height: 100vh;
+				min-height: 100svh;
+			}
+		</style>
+		<script type="module" crossorigin src="./script/index-Ci1iFHBk.js"></script>
+		<link rel="stylesheet" crossorigin href="./script/index-4Wqx70ix.css">
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
+</html>

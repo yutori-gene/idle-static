@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<title>Idle RPG — Portal</title>
+		<style>
+			:root {
+				color-scheme: light dark;
+				--bg: #f5ecc8;
+				--fg: #2d2a6e;
+				--card-bg: #ffffff;
+				--card-border: rgba(45, 42, 110, 0.18);
+				--muted: rgba(45, 42, 110, 0.65);
+				--shadow: rgba(45, 42, 110, 0.15);
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--bg: #1b1a2e;
+					--fg: #f5ecc8;
+					--card-bg: #262445;
+					--card-border: rgba(245, 236, 200, 0.16);
+					--muted: rgba(245, 236, 200, 0.6);
+					--shadow: rgba(0, 0, 0, 0.4);
+				}
+			}
+			* { box-sizing: border-box; }
+			html, body {
+				margin: 0;
+				padding: 0;
+				min-height: 100vh;
+				background-color: var(--bg);
+				color: var(--fg);
+				font-family: system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+			}
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 24px;
+				gap: 32px;
+			}
+			header { text-align: center; }
+			h1 {
+				margin: 0;
+				font-size: clamp(28px, 6vw, 44px);
+				letter-spacing: 0.02em;
+			}
+			.subtitle {
+				margin-top: 8px;
+				color: var(--muted);
+				font-size: clamp(13px, 3vw, 16px);
+			}
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 20px;
+				width: 100%;
+				max-width: 820px;
+			}
+			.card {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				padding: 24px;
+				border-radius: 16px;
+				background: var(--card-bg);
+				border: 1px solid var(--card-border);
+				box-shadow: 0 6px 20px var(--shadow);
+				text-decoration: none;
+				color: inherit;
+				transition: transform 0.12s ease, box-shadow 0.12s ease;
+			}
+			.card:hover, .card:focus-visible {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 28px var(--shadow);
+				outline: none;
+			}
+			.card .icon { font-size: 40px; line-height: 1; }
+			.card .name { font-size: 20px; font-weight: 700; }
+			.card .desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+			footer {
+				color: var(--muted);
+				font-size: 12px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Idle RPG</h1>
+			<p class="subtitle">遊ぶ・作る・調べる — 行き先を選んでください</p>
+		</header>
+
+		<nav class="cards">
+			<a class="card" href="./player/">
+				<span class="icon" aria-hidden="true">🎮</span>
+				<span class="name">Player</span>
+				<span class="desc">ゲームを遊ぶ。通常は Editor の「Play」から起動します（直接開いた場合はワールド未読み込みになります）。</span>
+			</a>
+			<a class="card" href="./editor/">
+				<span class="icon" aria-hidden="true">🛠️</span>
+				<span class="name">Editor</span>
+				<span class="desc">ワールドを作成・編集し、「Play」でそのまま試遊できます。</span>
+			</a>
+			<a class="card" href="./document/">
+				<span class="icon" aria-hidden="true">📖</span>
+				<span class="name">Document</span>
+				<span class="desc">エディタ／プレイヤーの使い方ドキュメント（多言語）。</span>
+			</a>
+		</nav>
+
+		<footer>yutori-gene / idle-static</footer>
+	</body>
+</html>

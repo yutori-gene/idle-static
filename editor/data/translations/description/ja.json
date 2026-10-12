@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "テスト",
+      "data": "データ",
+      "document": "ドキュメント",
+      "language": "言語"
+    },
+    "item": {
+      "save": "保存",
+      "overwrite": "上書",
+      "autosave": "自動の切替",
+      "play": "プレイ",
+      "continue": "続行",
+      "new": "新規",
+      "validation": "検証",
+      "import": "インポート",
+      "local": "ローカル",
+      "empty": "空",
+      "sample": "サンプル",
+      "full": "本編",
+      "export": "エクスポート",
+      "publish": "公開",
+      "execute": "実行",
+      "portal": "ポータル",
+      "document": "ドキュメント",
+      "language": "言語",
+      "menu": "メニュー"
+    },
+    "status": {
+      "on": "オン",
+      "off": "オフ"
+    },
+    "comment": {
+      "continue": "進行状況を引き継ぎます。",
+      "new": "進行状況をリセットします。",
+      "overwrite_warning_1": "編集中の内容が",
+      "overwrite_warning_2": "上書きされます。",
+      "processing_time": "処理に時間がかかります。",
+      "full_readonly": "大きすぎるため編集はできません。",
+      "full_usage": "検証とプレイのみ行えます。",
+      "autosave_status": "現在: {status}",
+      "autosave_description": "メニューを開いた時に保存"
+    }
+  },
+  "confirm": {
+    "load_empty": "現在の編集が失われます。空のデータを読み込みますか？",
+    "load_file": "現在の編集が失われます。ファイルからデータを読み込みますか？",
+    "load_sample": "現在の編集が失われます。サンプルデータを読み込みますか？"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "エディターが初期化されていません。",
+      "validation_debug": "検証エラーが見つかりました。デバッグを開始できません。",
+      "validation_publish": "検証エラーが見つかりました。公開を開始できません。",
+      "publishing_failed": "公開に失敗しました。",
+      "invalid_image": "無効な画像です。",
+      "image_size_limit": "画像のサイズが制限を超えています。サイズ: {size} KB。（制限: {limit}KB）",
+      "export_failed": "エクスポートに失敗しました。",
+      "empty_data_load_failed": "空データの読み込みに失敗しました。",
+      "invalid_world_data": "無効なワールドデータです。基本構造を確認してください。",
+      "json_parse_failed": "JSONファイルの読み取りに失敗しました。ファイル形式を確認してください。",
+      "file_read_failed": "ファイルの読み取りに失敗しました。",
+      "sample_data_load_failed": "サンプルデータの読み込みに失敗しました。",
+      "full_data_load_failed": "本編データの読み込みに失敗しました。",
+      "validation_process_failed": "検証プロセスに失敗しました。",
+      "autosave_toggle_failed": "自動保存の切替に失敗しました。"
+    },
+    "success": {
+      "validation_generating": "検証成功！スタンドアロンファイルを生成中...",
+      "publishing_completed": "スタンドアロンファイルの公開が完了しました！",
+      "data_exported": "データがエクスポートされました: {filename}",
+      "empty_data_loaded": "空データが読み込まれました",
+      "data_loaded": "データが読み込まれました: {filename}",
+      "sample_data_loaded": "サンプルデータが読み込まれました",
+      "validation_successful": "検証成功: データに問題は見つかりませんでした",
+      "autosave_enabled": "自動保存をオンにしました",
+      "autosave_disabled": "自動保存をオフにしました",
+      "save_for_play": "プレイ用にデータを保存しました"
+    }
+  },
+  "copyInformation": {
+    "promptType": "コピー先のタイプを入力してください",
+    "promptId": "コピー先のIDを入力してください:",
+    "success": "Informationを {type} (id: {id}) にコピーしました",
+    "errorInvalidType": "無効なタイプです",
+    "errorNotFound": "指定されたID '{id}' が {type} に見つかりません。",
+    "errorCanceled": "コピーがキャンセルされました。"
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 ストレージ容量を超過しました。保存に失敗しました。",
+    "save_failed": "保存に失敗しました。",
+    "indexeddb_private_mode": "🔒 プライベートモードではIndexedDBを使用できません",
+    "storage_quota": "💾 ストレージ容量を超過しました",
+    "indexeddb_unsupported": "⚠️ ブラウザがIndexedDBをサポートしていません",
+    "database_init_failed": "❌ データベースの初期化に失敗しました: {message}"
+  },
+  "ui": {
+    "copy": "コピー",
+    "cancel": "キャンセル",
+    "enter_id": "IDを入力してください"
+  },
+  "validation": {
+    "failed_with_count": "🚨 検証に失敗しました: {count}個のエラーが見つかりました\n\n📋 詳細は Basic → Development → Errors を参照してください",
+    "icon": {
+      "invalid_base64_format": "無効なBase64画像形式 [{preview}...] at {path} - 'data:image/[type];base64,'で始まる必要があります。",
+      "missing_base64_data": "無効なBase64画像形式 at {path} - カンマの後にbase64データがありません。",
+      "invalid_base64_chars": "無効なBase64エンコーディング at {path} - 無効な文字が含まれています。",
+      "invalid_base64_length": "無効なBase64エンコーディング at {path} - 長さは4の倍数である必要があります。",
+      "invalid_iconify_format": "無効なiconify ID形式 [{iconifyId}] at {path} - ':'セパレーターを含む必要があります。",
+      "empty_iconify_family": "無効なiconify ID形式 [{iconifyId}] at {path} - ファミリー名が空です。",
+      "empty_iconify_name": "無効なiconify ID形式 [{iconifyId}] at {path} - アイコン名が空です。",
+      "iconify_load_failed": "iconifyファミリー [{family}] の読み込みに失敗しました [{iconifyId}] at {path} - {error}。"
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}] が {path}:{id} で見つかりません。",
+      "group_not_found": "グループ [{group}] が {path} で見つかりません。空か定義済みのグループIDである必要があります。"
+    }
+  }
+}

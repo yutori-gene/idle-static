@@ -1,0 +1,1442 @@
+{
+	"category": {},
+	"action": {},
+	"item": {},
+	"group": {},
+	"event": {},
+	"skill": {},
+	"preset": {
+		"locked": {
+			"name": "Verrouillé",
+			"explanation": "Une fois les conditions remplies, cet élément est déverrouillé"
+		},
+		"max": {
+			"name": "Maximum",
+			"explanation": ""
+		},
+		"min": {
+			"name": "Minimum",
+			"explanation": ""
+		},
+		"maximum-owned": {
+			"name": "Quantité maximale possédée",
+			"explanation": "Il est impossible de posséder des objets au-delà de ce nombre"
+		},
+		"maximum-execution": {
+			"name": "Exécutions maximales",
+			"explanation": "Il est impossible d'exécuter des actions au-delà de ce nombre"
+		},
+		"unavailable": {
+			"name": "Indisponible",
+			"explanation": ""
+		},
+		"purchased-count": {
+			"name": "Achats effectués",
+			"explanation": ""
+		},
+		"purchase-limit": {
+			"name": "Limite d'achat",
+			"explanation": "Le nombre maximal d'achats possibles"
+		},
+		"purchasable-count": {
+			"name": "Achetable",
+			"explanation": "Combien de fois il est encore possible d'acheter"
+		},
+		"total": {
+			"name": "Total",
+			"explanation": ""
+		},
+		"percentage": {
+			"name": "Proportion",
+			"explanation": ""
+		},
+		"player": {
+			"name": "Joueur",
+			"explanation": ""
+		},
+		"target": {
+			"name": "Cible",
+			"explanation": ""
+		},
+		"requirement": {
+			"name": "Condition",
+			"explanation": ""
+		},
+		"requirements": {
+			"name": "Liste des conditions",
+			"explanation": ""
+		},
+		"acquisition": {
+			"name": "Obtention",
+			"explanation": ""
+		},
+		"acquisitions": {
+			"name": "Liste des obtentions",
+			"explanation": ""
+		},
+		"results": {
+			"name": "Résultats",
+			"explanation": ""
+		},
+		"ok": {
+			"name": "OK？",
+			"explanation": ""
+		},
+		"yes": {
+			"name": "Oui",
+			"explanation": ""
+		},
+		"no": {
+			"name": "Non",
+			"explanation": ""
+		},
+		"on": {
+			"name": "Activé",
+			"explanation": ""
+		},
+		"off": {
+			"name": "Désactivé",
+			"explanation": ""
+		},
+		"seconds": {
+			"name": "Secondes",
+			"explanation": ""
+		},
+		"minutes": {
+			"name": "Minutes",
+			"explanation": ""
+		},
+		"hours": {
+			"name": "Heures",
+			"explanation": ""
+		},
+		"days": {
+			"name": "Jours",
+			"explanation": ""
+		},
+		"years": {
+			"name": "Années",
+			"explanation": ""
+		},
+		"centuries": {
+			"name": "Siècles",
+			"explanation": ""
+		},
+		"endless": {
+			"name": "∞",
+			"explanation": ""
+		},
+		"success": {
+			"name": "Réussite",
+			"explanation": ""
+		},
+		"failure": {
+			"name": "Échec",
+			"explanation": "Échec"
+		},
+		"failure-only": {
+			"name": "Uniquement en cas d'échec",
+			"explanation": ""
+		},
+		"up": {
+			"name": "Monter",
+			"explanation": ""
+		},
+		"down": {
+			"name": "Descendre",
+			"explanation": ""
+		},
+		"question": {
+			"name": "Question",
+			"explanation": ""
+		},
+		"navigation": {
+			"name": "Navigation",
+			"explanation": "Il est aussi possible de balayer pour passer d'une colonne à l'autre. Le bouton « Haut » s'affiche en bas à gauche de l'écran."
+		},
+		"navigation-back": {
+			"name": "Retour",
+			"explanation": ""
+		},
+		"navigation-top": {
+			"name": "Haut",
+			"explanation": ""
+		},
+		"navigation-forward": {
+			"name": "Suivant",
+			"explanation": ""
+		},
+		"navigation-column": {
+			"name": "Colonne",
+			"explanation": "La position de cette colonne et le nombre total de colonnes, y compris celles hors de l'écran"
+		},
+		"checked": {
+			"name": "Confirmé",
+			"explanation": ""
+		},
+		"chevron-down": {
+			"name": "Flèche vers le bas",
+			"explanation": ""
+		},
+		"chevron-right": {
+			"name": "Flèche vers la droite",
+			"explanation": ""
+		},
+		"selected": {
+			"name": "Sélectionné",
+			"explanation": "Le total des objets choisis pour la vente"
+		},
+		"character": {
+			"name": "Personnage",
+			"explanation": ""
+		},
+		"activity": {
+			"name": "Activité",
+			"explanation": "Liste des actions exécutables regroupées par catégorie"
+		},
+		"inventory": {
+			"name": "Inventaire",
+			"explanation": "Liste des objets possédés, regroupés par catégorie"
+		},
+		"status": {
+			"name": "État",
+			"explanation": "Affiche l'état actuel, comme les ajustements appliqués à une catégorie"
+		},
+		"ability": {
+			"name": "Aptitude",
+			"explanation": "Liste des compétences pouvant se déclencher maintenant, regroupées par catégorie"
+		},
+		"world": {
+			"name": "Monde",
+			"explanation": ""
+		},
+		"overview": {
+			"name": "Aperçu",
+			"explanation": "Affiche un aperçu de ce monde et de la console qui l'exécute"
+		},
+		"version": {
+			"name": "Version",
+			"explanation": ""
+		},
+		"license": {
+			"name": "Licence",
+			"explanation": ""
+		},
+		"updated": {
+			"name": "Mis à jour",
+			"explanation": ""
+		},
+		"author": {
+			"name": "Auteur",
+			"explanation": ""
+		},
+		"homepage": {
+			"name": "Page d'accueil",
+			"explanation": ""
+		},
+		"estimated-playing-time": {
+			"name": "Durée de jeu estimée",
+			"explanation": "La durée estimée par l'auteur pour terminer ce monde"
+		},
+		"detail": {
+			"name": "Détail",
+			"explanation": ""
+		},
+		"default-language": {
+			"name": "Langue par défaut",
+			"explanation": "La langue que le monde affiche en premier"
+		},
+		"language-change-enable-general": {
+			"name": "Modifiable",
+			"explanation": "La langue d'affichage peut être changée dans l'écran des paramètres"
+		},
+		"offline-max-hours": {
+			"name": "Temps hors ligne maximal",
+			"explanation": "La limite du temps hors ligne pris en compte dans la progression du jeu"
+		},
+		"max-category-level": {
+			"name": "Niveau maximal de catégorie",
+			"explanation": "Le niveau le plus élevé atteignable dans chaque catégorie"
+		},
+		"level-common-ratio": {
+			"name": "Augmentation de l'expérience requise",
+			"explanation": "Indique de combien augmente l'expérience requise pour le niveau suivant à chaque montée de niveau"
+		},
+		"property-ratio": {
+			"name": "Influence des propriétés",
+			"explanation": "Le multiplicateur appliqué à une propriété tous les 10 niveaux d'écart. À 1, l'écart de niveau n'a aucun effet"
+		},
+		"default-action-stamina": {
+			"name": "Valeur par défaut de l'endurance des actions",
+			"explanation": "La valeur de combat de base commune à toutes les actions. Les valeurs de combat individuelles s'y ajoutent"
+		},
+		"console": {
+			"name": "Console",
+			"explanation": "Ce jeu fonctionne sur le système de console « Idle RPG ». Il est publié gratuitement, donc tout le monde peut créer un jeu."
+		},
+		"statistics": {
+			"name": "Statistiques",
+			"explanation": "Affiche les totaux enregistrés au fil du jeu"
+		},
+		"coin": {
+			"name": "Pièce",
+			"explanation": "Un objet utilisé comme monnaie pour le commerce"
+		},
+		"play-time": {
+			"name": "Temps de jeu",
+			"explanation": "La date et l'heure du début de la partie, et le temps de jeu écoulé"
+		},
+		"play-started": {
+			"name": "Date de début",
+			"explanation": "La date et l'heure du début de la partie"
+		},
+		"play-duration": {
+			"name": "Temps écoulé",
+			"explanation": "Le temps écoulé depuis le début de la partie"
+		},
+		"coins-earned": {
+			"name": "Pièces obtenues",
+			"explanation": "La quantité totale de chaque pièce obtenue jusqu'à présent"
+		},
+		"unique-count": {
+			"name": "Nombre de types",
+			"explanation": "Le nombre de types d'objets pouvant être possédés"
+		},
+		"max-capacity": {
+			"name": "Capacité",
+			"explanation": "La limite actuelle du nombre de types d'objets pouvant être possédés"
+		},
+		"max-queue": {
+			"name": "File d'attente",
+			"explanation": "La limite actuelle du nombre d'actions que la file d'attente peut contenir"
+		},
+		"statistics-category": {
+			"name": "Catégorie",
+			"explanation": "Quelle part des catégories de ce monde a été déverrouillée"
+		},
+		"statistics-action": {
+			"name": "Action",
+			"explanation": "Quelle part des actions de ce monde a été déverrouillée"
+		},
+		"statistics-item": {
+			"name": "Objet",
+			"explanation": "Quelle part des objets de ce monde a été déverrouillée"
+		},
+		"statistics-event": {
+			"name": "Événement",
+			"explanation": "Indique quelle part des événements de ce monde a été déverrouillée"
+		},
+		"count-unlocked": {
+			"name": "Déverrouillé",
+			"explanation": "Le nombre déverrouillé jusqu'à présent sur l'ensemble"
+		},
+		"level-total": {
+			"name": "Niveau total",
+			"explanation": "La somme des niveaux de toutes les catégories et sa valeur maximale"
+		},
+		"count-performed": {
+			"name": "Exécuté",
+			"explanation": "Le nombre total de fois où des actions ont été exécutées jusqu'à présent"
+		},
+		"count-earned": {
+			"name": "Obtenu",
+			"explanation": "Le nombre total d'objets obtenus jusqu'à présent"
+		},
+		"count-triggered": {
+			"name": "Survenu",
+			"explanation": "Le nombre total de fois où des événements sont survenus jusqu'à présent"
+		},
+		"debug": {
+			"name": "Débogage",
+			"explanation": "Fournit des outils pour tester le monde. Disponible uniquement en mode débogage."
+		},
+		"acceleration": {
+			"name": "Accélération",
+			"explanation": "Accélère l'écoulement du temps dans le jeu. Attention : si la vitesse est trop augmentée alors que les actions durent peu, le traitement risque de ne pas suivre et l'application peut se figer ou planter."
+		},
+		"multiplier": {
+			"name": "Multiplicateur",
+			"explanation": ""
+		},
+		"skip": {
+			"name": "Passer",
+			"explanation": "Fait avancer d'un coup le temps du jeu sans attendre"
+		},
+		"skip-hour": {
+			"name": "Passer une heure",
+			"explanation": "Fait avancer le jeu d'une heure d'un coup. La progression est traitée comme pendant une absence et le résultat s'affiche dans une notification."
+		},
+		"adjustment": {
+			"name": "Ajustement des valeurs",
+			"explanation": "Augmente ou diminue le nombre d'objets possédés et les niveaux de catégorie"
+		},
+		"adjustment-type": {
+			"name": "Type",
+			"explanation": ""
+		},
+		"adjustment-category": {
+			"name": "Catégorie",
+			"explanation": "Ajuste le niveau d'une catégorie. Par exemple, en réglant sur +5, le niveau monte de 5."
+		},
+		"adjustment-action": {
+			"name": "Action",
+			"explanation": "Le nombre de fois où cette action a été exécutée augmente ou diminue. Les récompenses obtenues en terminant l'action ne sont toutefois pas reprises."
+		},
+		"adjustment-item": {
+			"name": "Objet",
+			"explanation": "Augmente ou diminue le nombre d'objets possédés"
+		},
+		"adjustment-id": {
+			"name": "ID",
+			"explanation": "Indique l'ID du type visé. Laissé vide, l'ajout ou le retrait s'applique à tous les ID."
+		},
+		"adjustment-sign": {
+			"name": "Signe",
+			"explanation": ""
+		},
+		"adjustment-plus": {
+			"name": "Plus",
+			"explanation": "Ajoute la valeur indiquée"
+		},
+		"adjustment-minus": {
+			"name": "Moins",
+			"explanation": "Retire la valeur indiquée"
+		},
+		"adjustment-count": {
+			"name": "Quantité",
+			"explanation": "La quantité à ajouter ou à retirer. Le signe indique s'il s'agit d'un plus ou d'un moins."
+		},
+		"adjustment-adjust": {
+			"name": "Ajuster",
+			"explanation": "Exécute l'ajustement selon les conditions indiquées"
+		},
+		"pwa": {
+			"name": "Installer la PWA",
+			"explanation": "Installe l'application web progressive (PWA)"
+		},
+		"go-top": {
+			"name": "Aller en haut de la page",
+			"explanation": ""
+		},
+		"iconify": {
+			"name": "Iconify",
+			"explanation": "Ce jeu utilise les jeux d'icônes fournis par Iconify. Nous remercions toutes les personnes qui ont participé à leur création."
+		},
+		"category": {
+			"name": "Catégorie",
+			"explanation": ""
+		},
+		"categories": {
+			"name": "Liste des catégories",
+			"explanation": ""
+		},
+		"level": {
+			"name": "Niveau",
+			"explanation": "La maîtrise de cette catégorie. Elle monte à mesure que l'expérience s'accumule"
+		},
+		"category-experience": {
+			"name": "Expérience",
+			"explanation": "L'avancée vers le niveau suivant. Elle augmente lorsqu'une action est exécutée"
+		},
+		"level-up": {
+			"name": "Passage de niveau",
+			"explanation": ""
+		},
+		"category-unlocked": {
+			"name": "Catégorie déverrouillée",
+			"explanation": ""
+		},
+		"element": {
+			"name": "Élément",
+			"explanation": ""
+		},
+		"standalone": {
+			"name": "Autonome",
+			"explanation": "S'exécute de façon autonome, quel que soit l'avancement des actions des autres catégories"
+		},
+		"standalone-yes": {
+			"name": "Passive",
+			"explanation": "S'exécute de façon autonome, quel que soit l'avancement des actions des autres catégories"
+		},
+		"standalone-no": {
+			"name": "Active",
+			"explanation": "Partage l'emplacement d'exécution avec les autres catégories. Une seule action peut s'exécuter à la fois, et démarrer une autre action renvoie l'exécution en cours dans la file d'attente"
+		},
+		"action": {
+			"name": "Action",
+			"explanation": "Ce qui peut être accompli dans cette catégorie"
+		},
+		"actions": {
+			"name": "Liste des actions",
+			"explanation": "La liste des actions appartenant à cette catégorie"
+		},
+		"action-unlocked": {
+			"name": "Action déverrouillée",
+			"explanation": ""
+		},
+		"attribute": {
+			"name": "Attribut",
+			"explanation": "L'attribut propre à cette action. Les propriétés de la catégorie s'appliquent à l'attribut de cette action, et cet attribut reçoit aussi de l'expérience."
+		},
+		"progress": {
+			"name": "Avancement",
+			"explanation": ""
+		},
+		"progressing": {
+			"name": "En cours",
+			"explanation": ""
+		},
+		"progressing-action": {
+			"name": "En cours",
+			"explanation": ""
+		},
+		"possible-action": {
+			"name": "Exécutable",
+			"explanation": ""
+		},
+		"impossible-action": {
+			"name": "Non exécutable",
+			"explanation": ""
+		},
+		"unconfirmed-action": {
+			"name": "Non confirmée",
+			"explanation": ""
+		},
+		"idle": {
+			"name": "En attente",
+			"explanation": ""
+		},
+		"progress-type": {
+			"name": "Type d'avancement",
+			"explanation": ""
+		},
+		"persistent": {
+			"name": "Continue",
+			"explanation": "Exécute l'action en continu et accorde une récompense chaque fois que l'action est terminée"
+		},
+		"single": {
+			"name": "Unique",
+			"explanation": "Elle s'arrête après une exécution et ne se répète pas. L'avancement est conservé même si elle est interrompue en cours de route."
+		},
+		"snap": {
+			"name": "Immédiate",
+			"explanation": "L'action se termine instantanément"
+		},
+		"stamina": {
+			"name": "Endurance",
+			"explanation": "À chaque action, l'endurance du joueur et celle de la cible diminuent. Quand l'endurance de la cible est épuisée, c'est une victoire, et quand celle du joueur l'est, la partie est perdue. Une défaite ne fait rien perdre, mais toutes les actions en cours sont interrompues."
+		},
+		"enable-count": {
+			"name": "Exécutions possibles",
+			"explanation": ""
+		},
+		"estimated-time": {
+			"name": "Durée estimée",
+			"explanation": ""
+		},
+		"count": {
+			"name": "Quantité",
+			"explanation": ""
+		},
+		"completed-count": {
+			"name": "Nombre d'achèvements",
+			"explanation": ""
+		},
+		"turn": {
+			"name": "Tour",
+			"explanation": ""
+		},
+		"current-count": {
+			"name": "Nombre actuel",
+			"explanation": ""
+		},
+		"elapsed-time": {
+			"name": "Temps écoulé",
+			"explanation": ""
+		},
+		"rest-time": {
+			"name": "Temps restant",
+			"explanation": ""
+		},
+		"each-time": {
+			"name": "Cycle",
+			"explanation": ""
+		},
+		"next-time": {
+			"name": "Avant la prochaine",
+			"explanation": ""
+		},
+		"rest-count": {
+			"name": "Nombre restant",
+			"explanation": ""
+		},
+		"act": {
+			"name": "Exécuter",
+			"explanation": "Démarre et arrête cette action et affiche son avancement"
+		},
+		"confirm": {
+			"name": "Confirmer",
+			"explanation": "Valide le résultat de l'avancement terminé"
+		},
+		"start": {
+			"name": "Départ",
+			"explanation": ""
+		},
+		"end": {
+			"name": "Fin",
+			"explanation": ""
+		},
+		"stop": {
+			"name": "Arrêter",
+			"explanation": ""
+		},
+		"reserve": {
+			"name": "Réserver",
+			"explanation": "Ajoute cette action à la file de réservation pour qu'elle s'exécute à son tour"
+		},
+		"reorder": {
+			"name": "Réordonner",
+			"explanation": "Applique le nombre d'exécutions et l'ordre d'exécution choisis à cette action dans la file d'attente. Déplacer l'action en cours en position 1 ou au-delà l'arrête et la remet en attente."
+		},
+		"position": {
+			"name": "Ordre d'exécution",
+			"explanation": "Choisit la position de cette action dans la file d'attente. 0 est la tête : l'action en cours est repoussée et celle-ci s'exécute tout de suite. À partir de 1, elle attend à cette position."
+		},
+		"now": {
+			"name": "Tout de suite",
+			"explanation": "Place cette action en tête de file d'attente et l'exécute tout de suite"
+		},
+		"clear": {
+			"name": "Vider",
+			"explanation": "Supprime toutes les réservations de la file d'attente, y compris celle en cours d'exécution"
+		},
+		"acquisition-failure": {
+			"name": "Échec d'obtention",
+			"explanation": "Les récompenses portant la mention [Uniquement en cas d'échec] dans leur description ne s'obtiennent que lorsque l'action échoue. Le pourcentage affiché est leur probabilité d'obtention."
+		},
+		"item": {
+			"name": "Objet",
+			"explanation": "Les possessions liées à cette catégorie"
+		},
+		"items": {
+			"name": "Liste des objets",
+			"explanation": "La liste des objets appartenant à cette catégorie"
+		},
+		"selling-items": {
+			"name": "Liste des objets",
+			"explanation": "La liste des objets possédés dont le prix de vente est défini"
+		},
+		"item-type": {
+			"name": "Type",
+			"explanation": "Le type de cet objet"
+		},
+		"normal": {
+			"name": "Normal",
+			"explanation": "Un objet normal qui peut être possédé, équipé et échangé"
+		},
+		"capacity": {
+			"name": "Capacité",
+			"explanation": "Influe sur le nombre de types d'objets pouvant être possédés en même temps"
+		},
+		"queue": {
+			"name": "File d'attente",
+			"explanation": "Le nombre d'actions pouvant être placées dans la file d'attente (les emplacements de réservation des actions)"
+		},
+		"equipping": {
+			"name": "Équipement en cours",
+			"explanation": ""
+		},
+		"unequipping": {
+			"name": "Retrait en cours",
+			"explanation": ""
+		},
+		"equip": {
+			"name": "Équiper",
+			"explanation": ""
+		},
+		"equipment": {
+			"name": "Équipement",
+			"explanation": ""
+		},
+		"unequip": {
+			"name": "Retirer",
+			"explanation": ""
+		},
+		"nothing": {
+			"name": "Aucun",
+			"explanation": ""
+		},
+		"own-count": {
+			"name": "Quantité possédée",
+			"explanation": "La quantité actuellement possédée"
+		},
+		"recovery": {
+			"name": "Récupération",
+			"explanation": "La quantité d'endurance récupérée au début du combat"
+		},
+		"unique": {
+			"name": "Unique",
+			"explanation": "Un objet dont on ne peut posséder qu'un seul exemplaire"
+		},
+		"equipment-type": {
+			"name": "Type d'équipement",
+			"explanation": "Le type d'équipement de l'objet"
+		},
+		"necessary-item": {
+			"name": "Nécessaire",
+			"explanation": "L'équiper déclenche l'effet"
+		},
+		"unnecessary-item": {
+			"name": "Toujours actif",
+			"explanation": "L'effet se déclenche rien qu'en le possédant. Cet effet est multiplié par la quantité possédée."
+		},
+		"impossible-item": {
+			"name": "Impossible",
+			"explanation": "Il ne peut pas être équipé"
+		},
+		"consumable-item": {
+			"name": "Consommable",
+			"explanation": "L'équiper fait agir son effet, mais il est consommé à chaque action réalisée (il n'est pas consommé à chaque tour d'endurance)"
+		},
+		"buy": {
+			"name": "Acheter",
+			"explanation": "Achète un objet"
+		},
+		"buying-value": {
+			"name": "Prix d'achat",
+			"explanation": "Le prix à l'achat"
+		},
+		"sell": {
+			"name": "Vendre",
+			"explanation": "Vend un objet"
+		},
+		"selling": {
+			"name": "Vente",
+			"explanation": "Vend en une fois les objets possédés, choisis dans une liste"
+		},
+		"kind": {
+			"name": "Types",
+			"explanation": "Le nombre de types d'objets choisis"
+		},
+		"selling-value": {
+			"name": "Prix de vente",
+			"explanation": "Le prix à la vente de cet objet"
+		},
+		"trade": {
+			"name": "Échange",
+			"explanation": "Achète ou vend cet objet"
+		},
+		"trade-failed": {
+			"name": "Échange impossible",
+			"explanation": "L'échange a échoué"
+		},
+		"capacity-full": {
+			"name": "Inventaire plein",
+			"explanation": "La capacité de l'inventaire est pleine"
+		},
+		"queue-full": {
+			"name": "File d'attente pleine",
+			"explanation": "La file d'attente est pleine, y compris ce qui est en cours d'exécution"
+		},
+		"already-queued": {
+			"name": "Déjà dans la file d'attente",
+			"explanation": "Cette action est déjà dans la file d'attente"
+		},
+		"unmatched-requirements": {
+			"name": "Conditions non remplies",
+			"explanation": "Les conditions nécessaires à son exécution ne sont pas remplies"
+		},
+		"not-owned-item": {
+			"name": "Non possédé",
+			"explanation": "Cet objet n'est pas possédé"
+		},
+		"unmatched-equip-requirements": {
+			"name": "Conditions d'équipement non remplies",
+			"explanation": "Les conditions nécessaires pour l'équiper ne sont pas remplies"
+		},
+		"unequippable-item": {
+			"name": "Type non équipable",
+			"explanation": "Cet objet est d'un type qui ne peut pas être équipé"
+		},
+		"purchase-limit-reached": {
+			"name": "Limite d'achat atteinte",
+			"explanation": "La limite d'achat a été atteinte"
+		},
+		"completed-maximum": {
+			"name": "Limite d'achèvements",
+			"explanation": "Le nombre d'achèvements a atteint la limite"
+		},
+		"relationships": {
+			"name": "Lié",
+			"explanation": ""
+		},
+		"related-actions": {
+			"name": "Actions liées",
+			"explanation": ""
+		},
+		"relationship-items": {
+			"name": "Objets liés",
+			"explanation": "La liste des objets liés aux actions de la catégorie"
+		},
+		"required-equipment": {
+			"name": "Équipement requis",
+			"explanation": ""
+		},
+		"group": {
+			"name": "Groupe",
+			"explanation": "Un classement qui regroupe catégories, actions et objets entre eux"
+		},
+		"skill": {
+			"name": "Compétence",
+			"explanation": "Déclenchée en combat, elle ajuste les valeurs de combat pour ce tour uniquement"
+		},
+		"skills": {
+			"name": "Liste des compétences",
+			"explanation": "La liste des compétences que possède cet élément"
+		},
+		"no-ability": {
+			"name": "Aucune compétence",
+			"explanation": "Il n'y a aucune compétence pouvant se déclencher maintenant"
+		},
+		"property": {
+			"name": "Propriété",
+			"explanation": "Une valeur qui influe sur le résultat d'une action"
+		},
+		"calculation": {
+			"name": "Calcul",
+			"explanation": "Les valeurs des propriétés reprises dans l'action et leur détail"
+		},
+		"properties": {
+			"name": "Liste des propriétés",
+			"explanation": "La liste des propriétés appartenant à cette catégorie"
+		},
+		"attack": {
+			"name": "Attaque",
+			"explanation": "Les dégâts du joueur vers la cible"
+		},
+		"defence": {
+			"name": "Défense",
+			"explanation": "Les dégâts de la cible vers le joueur"
+		},
+		"accuracy": {
+			"name": "Précision",
+			"explanation": "La probabilité que le joueur inflige des dégâts à la cible"
+		},
+		"evasion": {
+			"name": "Esquive",
+			"explanation": "La probabilité de subir des dégâts de la cible"
+		},
+		"restore": {
+			"name": "Récupération",
+			"explanation": "La quantité récupérée quand l'endurance de la cible est épuisée et que l'on passe à l'action suivante"
+		},
+		"speed": {
+			"name": "Vitesse",
+			"explanation": "Influe sur la vitesse de l'action"
+		},
+		"chance": {
+			"name": "Taux de réussite",
+			"explanation": "En cas d'échec, ni la récompense ni l'expérience ne sont obtenues"
+		},
+		"experience": {
+			"name": "Expérience",
+			"explanation": "Influe sur l'expérience obtenue d'une action"
+		},
+		"value": {
+			"name": "Valeur",
+			"explanation": ""
+		},
+		"resources": {
+			"name": "Objets d'ajustement",
+			"explanation": ""
+		},
+		"base-value": {
+			"name": "Valeur de base",
+			"explanation": "La valeur propre à ce jeu ou à cette action"
+		},
+		"level-gap": {
+			"name": "Écart de niveau",
+			"explanation": "Pour le calcul numérique, voir le bloc « Niveau »"
+		},
+		"reflected-value": {
+			"name": "Valeur retenue",
+			"explanation": "La valeur finale calculée à partir de la « Valeur de base » et de l'« Écart de niveau »"
+		},
+		"level-gap-property": {
+			"name": "Propriété de l'écart de niveau",
+			"explanation": "La valeur de l'« Écart de niveau » est la somme des valeurs de ce bloc"
+		},
+		"level-gap-category": {
+			"name": "Catégorie de l'écart de niveau",
+			"explanation": "Le niveau de catégorie du joueur moins le niveau de cette action. Dans le cas de l'« Expérience », c'est toutefois l'inverse."
+		},
+		"level-gap-action": {
+			"name": "Action de l'écart de niveau",
+			"explanation": "Quand le type d'avancement est « Endurance », la valeur propre définie par cette action"
+		},
+		"level-gap-item": {
+			"name": "Objet de l'écart de niveau",
+			"explanation": "Il s'agit de l'ajustement apporté par les objets équipés ou par ceux qui agissent sans être équipés"
+		},
+		"no-status": {
+			"name": "Aucun état",
+			"explanation": "Il n'y a aucun ajustement de propriétés dans aucune catégorie"
+		},
+		"event": {
+			"name": "Événement",
+			"explanation": ""
+		},
+		"timing": {
+			"name": "Moment",
+			"explanation": "Le moment où cet événement se produit"
+		},
+		"timing-tasked": {
+			"name": "Conditions remplies",
+			"explanation": "Se produit à l'instant où les conditions sont remplies"
+		},
+		"timing-comebacked": {
+			"name": "Retour",
+			"explanation": "Se produit lorsque vous revenez après être resté un moment hors ligne"
+		},
+		"timing-gameovered": {
+			"name": "Fin de partie",
+			"explanation": "Se produit lorsque l'endurance s'épuise pendant un combat"
+		},
+		"timing-welcomed": {
+			"name": "Premier lancement",
+			"explanation": "Se produit lorsque vous ouvrez ce monde pour la première fois"
+		},
+		"timing-completed": {
+			"name": "Achèvement",
+			"explanation": "Se produit lorsque toutes les catégories atteignent le niveau maximal"
+		},
+		"timing-obtained": {
+			"name": "Obtention",
+			"explanation": "Se produit lorsqu'une action ponctuelle est terminée"
+		},
+		"tasked": {
+			"name": "Conditions remplies",
+			"explanation": "Les conditions ont été remplies"
+		},
+		"comebacked": {
+			"name": "Bon retour",
+			"explanation": "Bon retour ! Voici votre progression pendant votre absence :"
+		},
+		"gameovered": {
+			"name": "Fin de partie",
+			"explanation": "Fin de partie. Votre progression a été réinitialisée."
+		},
+		"completed": {
+			"name": "Achèvement",
+			"explanation": "Félicitations ! Vous avez terminé toutes les catégories."
+		},
+		"welcomed": {
+			"name": "Bienvenue",
+			"explanation": "Bienvenue dans ce monde !"
+		},
+		"obtained": {
+			"name": "Obtention",
+			"explanation": "Vérifiez ce que vous avez obtenu"
+		},
+		"achieved": {
+			"name": "Accomplie",
+			"explanation": "Si la tâche est accomplie ou non"
+		},
+		"receive": {
+			"name": "Recevoir",
+			"explanation": "Recevoir la récompense de cette tâche"
+		},
+		"received": {
+			"name": "Reçue",
+			"explanation": "La récompense de cette tâche a déjà été reçue"
+		},
+		"hidden": {
+			"name": "Masquée",
+			"explanation": "Une fois le contenu vérifié, cette colonne est masquée"
+		},
+		"task": {
+			"name": "Tâche",
+			"explanation": "Un défi qui donne une récompense une fois accompli"
+		},
+		"task-completed": {
+			"name": "Tâche accomplie",
+			"explanation": ""
+		},
+		"tasks": {
+			"name": "Liste des tâches",
+			"explanation": "La liste des tâches définies pour cette catégorie"
+		},
+		"missions": {
+			"name": "Missions",
+			"explanation": "La liste des tâches de toutes les catégories et leur état d'accomplissement"
+		},
+		"language-en": {
+			"name": "English",
+			"explanation": ""
+		},
+		"language-zh": {
+			"name": "中文（简体）",
+			"explanation": ""
+		},
+		"language-es": {
+			"name": "Español",
+			"explanation": ""
+		},
+		"language-pt": {
+			"name": "Português",
+			"explanation": ""
+		},
+		"language-fr": {
+			"name": "Français",
+			"explanation": ""
+		},
+		"language-ru": {
+			"name": "Русский",
+			"explanation": ""
+		},
+		"language-de": {
+			"name": "Deutsch",
+			"explanation": ""
+		},
+		"language-ja": {
+			"name": "日本語",
+			"explanation": ""
+		},
+		"language-id": {
+			"name": "Bahasa Indonesia",
+			"explanation": ""
+		},
+		"language-ko": {
+			"name": "한국어",
+			"explanation": ""
+		},
+		"config": {
+			"name": "Paramètres",
+			"explanation": "Modifier les paramètres de ce jeu et gérer les données de sauvegarde"
+		},
+		"operation": {
+			"name": "Commandes",
+			"explanation": "Modifier la façon de piloter l'exécution des actions"
+		},
+		"auto-clear-queue": {
+			"name": "Vidage automatique de la file d'attente",
+			"explanation": "Lorsque vous appuyez longuement sur une action pour la lancer rapidement, toute la file d'attente, y compris l'action en cours, est supprimée avant que cette action soit exécutée"
+		},
+		"display": {
+			"name": "Affichage",
+			"explanation": "Modifier la façon dont le jeu s'affiche à l'écran"
+		},
+		"language": {
+			"name": "Langue",
+			"explanation": "Modifier la langue utilisée pour l'affichage"
+		},
+		"selected-language": {
+			"name": "Langue sélectionnée",
+			"explanation": "La langue actuellement utilisée pour l'affichage"
+		},
+		"language-change-enable": {
+			"name": "Modifiable",
+			"explanation": "La langue d'affichage peut être modifiée"
+		},
+		"language-change-unenable": {
+			"name": "Non modifiable",
+			"explanation": "Il n'y a pas d'autre langue disponible pour l'affichage"
+		},
+		"category-shortcut": {
+			"name": "Afficher les listes avec la catégorie",
+			"explanation": "À l'ouverture d'une catégorie, afficher aussi la liste des actions ou la liste des objets"
+		},
+		"showing-hint": {
+			"name": "Astuces",
+			"explanation": "Afficher les explications sur la façon de jouer"
+		},
+		"showing-navigation": {
+			"name": "Navigation",
+			"explanation": "Afficher les boutons permettant de passer d'une colonne à l'autre. Même sans les boutons, vous pouvez glisser pour passer d'une colonne à l'autre."
+		},
+		"performance": {
+			"name": "Performances",
+			"explanation": "Ajuster le fonctionnement à votre appareil"
+		},
+		"performing-highly": {
+			"name": "Mise à jour à haute fréquence",
+			"explanation": "Augmente la fréquence de mise à jour. Si le jeu est lent, il est conseillé de la désactiver. Cela n'affecte pas la durée d'exécution de chaque action."
+		},
+		"data": {
+			"name": "Données",
+			"explanation": "Enregistrer, charger et supprimer les données de progression de ce monde"
+		},
+		"export-game": {
+			"name": "Exporter",
+			"explanation": "Les données de progression du jeu ont été exportées"
+		},
+		"import-game": {
+			"name": "Importer",
+			"explanation": "Les données de progression du jeu ont été importées"
+		},
+		"import-mistake": {
+			"name": "Échec du chargement",
+			"explanation": "Le chargement des données du jeu a échoué"
+		},
+		"reset-game": {
+			"name": "Réinitialiser le jeu",
+			"explanation": "Supprime toutes les données de progression de ce monde. Cette opération est irréversible. Après avoir vérifié que vous voulez vraiment supprimer le fichier, saisissez « DELETE » dans le champ de saisie."
+		},
+		"reset-really": {
+			"name": "Vraiment ?",
+			"explanation": ""
+		},
+		"reset-alert": {
+			"name": "Confirmation de la réinitialisation",
+			"explanation": "Réinitialiser le jeu efface toutes les données. Voulez-vous vraiment réinitialiser le jeu ?"
+		},
+		"reset-debug-mode": {
+			"name": "Mode débogage",
+			"explanation": "En mode débogage, aucune saisie n'est nécessaire dans le champ de confirmation"
+		},
+		"restart": {
+			"name": "Redémarrer",
+			"explanation": "Recharge la console. À utiliser pour vérifier si la version compilée a été remplacée."
+		},
+		"hint-language-scope": {
+			"name": "Hint Language Scope",
+			"explanation": "Seule la langue de l'interface change"
+		},
+		"hint-language-fallback": {
+			"name": "Hint Language Fallback",
+			"explanation": "Les textes sans traduction s'affichent dans la langue par défaut"
+		},
+		"hint-event-capacity": {
+			"name": "Hint Event Capacity",
+			"explanation": "Vous ne pouvez pas recevoir la récompense tant que vous êtes à la limite du nombre de types que vous pouvez posséder. Faites de la place puis recevez-la de nouveau"
+		},
+		"hint-event-closing": {
+			"name": "Hint Event Closing",
+			"explanation": "Elle se ferme en appuyant sur Confirmé ou en glissant vers la colonne de gauche"
+		},
+		"hint-group-meaning": {
+			"name": "Hint Group Meaning",
+			"explanation": "Un groupe est un classement qui rassemble catégories, actions et objets"
+		},
+		"hint-group-exclusive": {
+			"name": "Hint Group Exclusive",
+			"explanation": "Un seul objet peut être équipé par groupe"
+		},
+		"hint-group-index": {
+			"name": "Hint Group Index",
+			"explanation": "La valeur à droite est le niveau pour les catégories, le niveau requis pour les actions et la quantité possédée pour les objets"
+		},
+		"hint-debug-mode": {
+			"name": "Hint Debug Mode",
+			"explanation": "Ne s'affiche qu'au lancement en mode débogage. N'apparaît pas en jeu normal"
+		},
+		"hint-debug-acceleration": {
+			"name": "Hint Debug Acceleration",
+			"explanation": "Le réglage d'accélération est enregistré dans les données de progression, mais il n'agit que pendant le mode débogage"
+		},
+		"hint-config-settings": {
+			"name": "Hint Config Settings",
+			"explanation": "Vous pouvez modifier les commandes, l'affichage et la charge de fonctionnement. Les paramètres sont enregistrés avec les données de progression et sont conservés dans les données exportées"
+		},
+		"hint-config-data": {
+			"name": "Hint Config Data",
+			"explanation": "Les données de progression sont enregistrées sur cet appareil pour chaque monde. Un fichier exporté ne peut être chargé que par la même version du même monde"
+		},
+		"hint-statistics-progress": {
+			"name": "Hint Statistics Progress",
+			"explanation": "Vous pouvez consulter le cumul du temps de jeu et des pièces obtenues, ainsi que le nombre d'emplacements d'inventaire et de réservation (file d'attente) que vous pouvez posséder actuellement"
+		},
+		"hint-statistics-unlocked": {
+			"name": "Hint Statistics Unlocked",
+			"explanation": "Le nombre de catégories, d'actions, d'objets et d'événements déverrouillés a pour dénominateur le total du monde entier, y compris ceux que vous n'avez pas encore trouvés"
+		},
+		"hint-statistics-opening": {
+			"name": "Hint Statistics Opening",
+			"explanation": "En touchant les pièces, la capacité, la file d'attente ou une catégorie du détail, vous ouvrez cet écran"
+		},
+		"hint-overview-world": {
+			"name": "Hint Overview World",
+			"explanation": "Vous pouvez consulter l'identité du monde, comme son auteur, sa version et sa durée de jeu estimée, ainsi que les paramètres communs à tout le monde, comme la langue par défaut, la durée hors ligne maximale, le plafond de niveau des catégories et la progression de l'expérience requise"
+		},
+		"hint-overview-console": {
+			"name": "Hint Overview Console",
+			"explanation": "La console est l'environnement d'exécution qui charge et fait tourner un monde. Elle possède sa propre version et sa propre date de mise à jour, distinctes de celles du monde"
+		},
+		"hint-properties-meaning": {
+			"name": "Hint Properties Meaning",
+			"explanation": "Une propriété est un élément qui influe sur l'exécution des actions"
+		},
+		"hint-properties-resource": {
+			"name": "Hint Properties Resource",
+			"explanation": "Les étiquettes en dessous sont les objets qui contribuent à cette valeur, avec leur détail"
+		},
+		"hint-properties-crossing": {
+			"name": "Hint Properties Crossing",
+			"explanation": "Un objet d'une autre catégorie agit lui aussi si cette catégorie est sa cible"
+		},
+		"hint-trade-availability": {
+			"name": "Hint Trade Availability",
+			"explanation": "Sans prix, les emplacements d'achat et de vente n'apparaissent même pas. Il est également impossible de commercer tant que c'est verrouillé"
+		},
+		"hint-trade-capacity": {
+			"name": "Hint Trade Capacity",
+			"explanation": "Lorsque les emplacements d'inventaire sont pleins, vous ne pouvez pas acheter un type que vous ne possédez pas encore. Vous pouvez toujours en racheter"
+		},
+		"hint-trade-limit": {
+			"name": "Hint Trade Limit",
+			"explanation": "Les emplacements d'inventaire et de file d'attente s'achètent un par un et leur prix augmente à chaque achat. Certains mondes limitent aussi le nombre d'achats (les récompenses ne comptent pas)"
+		},
+		"hint-trade-selling": {
+			"name": "Hint Trade Selling",
+			"explanation": "Un équipement qui tombe à zéro après la vente est retiré automatiquement"
+		},
+		"hint-items-meaning": {
+			"name": "Hint Items Meaning",
+			"explanation": "Un objet est un élément lié à ce que vous possédez, comme les équipements, les consommables et les objets de valeur"
+		},
+		"hint-items-list": {
+			"name": "Hint Items List",
+			"explanation": "La liste des objets que vous pouvez posséder dans cette catégorie"
+		},
+		"hint-items-equipping": {
+			"name": "Hint Items Equipping",
+			"explanation": "Appuyez longuement pour équiper ou déséquiper un objet"
+		},
+		"hint-items-exclusive": {
+			"name": "Hint Items Exclusive",
+			"explanation": "Un seul objet peut être équipé par groupe"
+		},
+		"hint-items-locked": {
+			"name": "Hint Items Locked",
+			"explanation": "Les objets dont les conditions de déverrouillage ne sont pas remplies sont affichés barrés, et leur explication ainsi que leur quantité sont masquées"
+		},
+		"hint-items-relationship": {
+			"name": "Hint Items Relationship",
+			"explanation": "Lié indique les actions qui procurent l'objet et celles qui le consomment"
+		},
+		"hint-item-meaning": {
+			"name": "Hint Item Meaning",
+			"explanation": "Un objet est un élément lié à ce que vous possédez, comme les équipements, les consommables et les objets de valeur"
+		},
+		"hint-item-exclusive": {
+			"name": "Hint Item Exclusive",
+			"explanation": "Un seul objet peut être équipé par groupe. Si les groupes diffèrent, ils peuvent être équipés en même temps, même dans la même catégorie"
+		},
+		"hint-item-equipping": {
+			"name": "Hint Item Equipping",
+			"explanation": "Le bouton Équiper n'apparaît que sur les objets que vous possédez, dont les conditions sont remplies et que la catégorie accepte comme équipement"
+		},
+		"hint-item-locked": {
+			"name": "Hint Item Locked",
+			"explanation": "Les objets dont les conditions de déverrouillage ne sont pas remplies sont affichés barrés, et leur explication ainsi que leur quantité sont masquées"
+		},
+		"hint-act-count": {
+			"name": "Hint Act Count",
+			"explanation": "Le ∞ tout à droite poursuit l'exécution jusqu'à s'arrêter à la limite des ressources ou du nombre total d'exécutions"
+		},
+		"hint-act-position": {
+			"name": "Hint Act Position",
+			"explanation": "Dans l'ordre d'exécution, 0 signifie exécuter tout de suite et 1 ou plus signifie attendre. Une exécution interrompue conserve le nombre de fois restant, retourne en attente et reprend plus tard"
+		},
+		"hint-act-queue": {
+			"name": "Hint Act Queue",
+			"explanation": "Même pleine, la réservation passe, et ce qui déborde est écarté à partir de la fin de l'attente. Une réservation qui ne peut pas être exécutée à son tour est également écartée"
+		},
+		"hint-act-opening": {
+			"name": "Hint Act Opening",
+			"explanation": "En appuyant sur la ligne de la cible ou de la compétence, vous ouvrez cette colonne"
+		},
+		"hint-calculation-ratio": {
+			"name": "Hint Calculation Ratio",
+			"explanation": "La valeur appliquée n'est ni ajoutée ni retranchée : un multiplicateur s'applique tous les 10 niveaux d'écart. L'attaque et l'expérience augmentent, tandis que la défense et la durée requise diminuent"
+		},
+		"hint-calculation-weight": {
+			"name": "Hint Calculation Weight",
+			"explanation": "La façon dont cela agit diffère selon la propriété"
+		},
+		"hint-calculation-odds": {
+			"name": "Hint Calculation Odds",
+			"explanation": "La précision, l'esquive, le taux de réussite et la récupération ne descendent jamais sous 0 % ni ne dépassent 100 %"
+		},
+		"hint-queue-removing": {
+			"name": "Hint Queue Removing",
+			"explanation": "Appuyez longuement sur une barre pour la retirer de la file d'attente. La première est en cours d'exécution : elle s'arrête et la suivante commence."
+		},
+		"hint-actions-meaning": {
+			"name": "Hint Actions Meaning",
+			"explanation": "Une action est un comportement qui, une fois exécuté, rapporte de l'expérience et des récompenses"
+		},
+		"hint-actions-list": {
+			"name": "Hint Actions List",
+			"explanation": "La liste des actions que vous pouvez exécuter dans cette catégorie"
+		},
+		"hint-actions-executing": {
+			"name": "Hint Actions Executing",
+			"explanation": "Appuyez longuement pour lancer ou arrêter l'exécution d'une action"
+		},
+		"hint-actions-exclusive": {
+			"name": "Hint Actions Exclusive",
+			"explanation": "Une seule action peut être exécutée au sein d'une même catégorie"
+		},
+		"hint-actions-parallel": {
+			"name": "Hint Actions Parallel",
+			"explanation": "Selon la catégorie (autonome réglé sur passive), les actions de plusieurs catégories peuvent progresser en même temps"
+		},
+		"hint-actions-locked": {
+			"name": "Hint Actions Locked",
+			"explanation": "Les actions dont les conditions de déverrouillage ne sont pas remplies sont affichées barrées, et leur explication est masquée"
+		},
+		"hint-action-meaning": {
+			"name": "Hint Action Meaning",
+			"explanation": "Une action est un comportement qui, une fois exécuté, rapporte de l'expérience et des récompenses"
+		},
+		"hint-action-attribute": {
+			"name": "Hint Action Attribute",
+			"explanation": "L'attribut est la catégorie qui reçoit l'expérience. Elle peut différer de la catégorie de l'action elle-même, et le niveau requis pour l'exécution y est également évalué"
+		},
+		"hint-action-executing": {
+			"name": "Hint Action Executing",
+			"explanation": "Un appui long sur la ligne d'exécution bascule entre démarrage et arrêt"
+		},
+		"hint-action-resource": {
+			"name": "Hint Action Resource",
+			"explanation": "Ce qui figure sous « Condition » est consommé à chaque exécution. Lorsqu'un pourcentage est indiqué, c'est la probabilité d'être consommé"
+		},
+		"hint-action-locked": {
+			"name": "Hint Action Locked",
+			"explanation": "Les actions dont les conditions de déverrouillage ne sont pas remplies sont affichées barrées, et leur explication est masquée"
+		},
+		"hint-skills-list": {
+			"name": "Hint Skills List",
+			"explanation": "Répertorie les compétences que possèdent les objets de chaque catégorie"
+		},
+		"hint-skills-chance": {
+			"name": "Hint Skills Chance",
+			"explanation": "Le pourcentage est la probabilité de déclenchement"
+		},
+		"hint-skills-opponent": {
+			"name": "Hint Skills Opponent",
+			"explanation": "Les compétences du côté de l'action se consultent dans la colonne de l'action"
+		},
+		"hint-skill-meaning": {
+			"name": "Hint Skill Meaning",
+			"explanation": "Une compétence est un élément qui, lorsqu'il se déclenche en combat, ajuste les valeurs de combat pour ce tour uniquement"
+		},
+		"hint-skill-chance": {
+			"name": "Hint Skill Chance",
+			"explanation": "Le déclenchement est tiré au sort à chaque tour, au maximum un par tour pour votre camp et pour l'adversaire. Si une autre compétence sort d'abord, il ne survient pas aussi souvent que la probabilité affichée"
+		},
+		"hint-skill-restore": {
+			"name": "Hint Skill Restore",
+			"explanation": "Seule la récupération n'agit pas pendant ce tour : elle est appliquée d'un bloc dans la récupération qui suit l'issue du combat"
+		},
+		"hint-tasks-meaning": {
+			"name": "Hint Tasks Meaning",
+			"explanation": "Une tâche est un événement accompli lorsque ses conditions sont remplies. La récompense, c'est vous qui la recevez"
+		},
+		"hint-tasks-unclaimed": {
+			"name": "Hint Tasks Unclaimed",
+			"explanation": "Les tâches dont la récompense n'a pas encore été reçue portent un ruban. Ouvrez-la et appuyez sur Recevoir"
+		},
+		"hint-tasks-capacity": {
+			"name": "Hint Tasks Capacity",
+			"explanation": "Vous ne pouvez pas recevoir la récompense tant que vous êtes à la limite du nombre de types que vous pouvez posséder. Faites de la place puis recevez-la de nouveau"
+		},
+		"hint-category-meaning": {
+			"name": "Hint Category Meaning",
+			"explanation": "Une catégorie est l'unité qui rassemble actions, objets, propriétés, compétences et tâches"
+		},
+		"hint-category-level": {
+			"name": "Hint Category Level",
+			"explanation": "Le niveau monte grâce à l'expérience obtenue en exécutant des actions"
+		},
+		"hint-category-holding": {
+			"name": "Hint Category Holding",
+			"explanation": "Les barres de progression et d'équipement se permutent par un appui long"
+		},
+		"hint-category-equipment": {
+			"name": "Hint Category Equipment",
+			"explanation": "Un emplacement d'équipement est prévu par groupe"
+		},
+		"hint-status-meaning": {
+			"name": "Hint Status Meaning",
+			"explanation": "Une propriété est un ajustement numérique qui influe sur le résultat de l'exécution d'une action"
+		},
+		"hint-status-property": {
+			"name": "Hint Status Property",
+			"explanation": "Seuls les ajustements provenant des objets figurent ici ; selon l'action exécutée, d'autres ajustements, comme ceux des compétences, s'y ajoutent"
+		},
+		"hint-status-stacking": {
+			"name": "Hint Status Stacking",
+			"explanation": "Pour les objets qui n'ont pas besoin d'être équipés, l'ajustement augmente proportionnellement à la quantité possédée"
+		},
+		"hint-inventory-meaning": {
+			"name": "Hint Inventory Meaning",
+			"explanation": "Un objet est un élément lié à ce que vous possédez, comme les équipements, les consommables et les objets de valeur"
+		},
+		"hint-inventory-equipping": {
+			"name": "Hint Inventory Equipping",
+			"explanation": "Appuyez longuement sur une barre pour changer d'équipement"
+		},
+		"hint-inventory-capacity": {
+			"name": "Hint Inventory Capacity",
+			"explanation": "Les emplacements d'inventaire comptent les types d'objets, non les unités"
+		},
+		"hint-selling-list": {
+			"name": "Hint Selling List",
+			"explanation": "Seuls les objets que vous possédez et dont le prix de vente est défini apparaissent"
+		},
+		"hint-selling-amount": {
+			"name": "Hint Selling Amount",
+			"explanation": "En le sélectionnant, toute la quantité possédée est mise en vente. La valeur est le total"
+		},
+		"hint-selling-unequip": {
+			"name": "Hint Selling Unequip",
+			"explanation": "Un équipement qui tombe à zéro après la vente est retiré automatiquement"
+		},
+		"hint-activity-meaning": {
+			"name": "Hint Activity Meaning",
+			"explanation": "Une action est un comportement qui, une fois exécuté, rapporte de l'expérience et des récompenses"
+		},
+		"hint-activity-executing": {
+			"name": "Hint Activity Executing",
+			"explanation": "Appuyez longuement sur une barre pour basculer l'exécution"
+		},
+		"hint-activity-index": {
+			"name": "Hint Activity Index",
+			"explanation": "Lv.n est le niveau requis pour cette action"
+		},
+		"hint-ability-meaning": {
+			"name": "Hint Ability Meaning",
+			"explanation": "Une compétence est un élément qui, lorsqu'il se déclenche en combat, ajuste les valeurs de combat pour ce tour uniquement"
+		},
+		"hint-ability-source": {
+			"name": "Hint Ability Source",
+			"explanation": "Y figurent les compétences des objets équipés et des objets possédés qui n'ont pas besoin d'être équipés"
+		},
+		"hint-ability-chance": {
+			"name": "Hint Ability Chance",
+			"explanation": "Le pourcentage est la probabilité de déclenchement"
+		},
+		"hint-missions-meaning": {
+			"name": "Hint Missions Meaning",
+			"explanation": "Une tâche est un événement accompli lorsque ses conditions sont remplies. La récompense, c'est vous qui la recevez"
+		},
+		"hint-missions-completed": {
+			"name": "Hint Missions Completed",
+			"explanation": "Les tâches accomplies portent une coche. Une fois accomplie, une tâche le reste même si les conditions ne sont plus remplies ensuite"
+		},
+		"hint-missions-unclaimed": {
+			"name": "Hint Missions Unclaimed",
+			"explanation": "Les tâches dont la récompense n'a pas encore été reçue portent un ruban. Ouvrez-la et appuyez sur Recevoir"
+		},
+		"hint-property-meaning": {
+			"name": "Hint Property Meaning",
+			"explanation": "Une propriété est un ajustement numérique qui influe sur le résultat de l'exécution d'une action"
+		},
+		"hint-property-scope": {
+			"name": "Hint Property Scope",
+			"explanation": "Ouvert depuis une catégorie, il affiche la liste des objets qui contribuent ; depuis un objet, la liste des catégories affectées ; depuis une compétence, seulement les valeurs d'ajustement"
+		}
+	}
+}

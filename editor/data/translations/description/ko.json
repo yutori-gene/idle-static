@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "테스트",
+      "data": "데이터",
+      "document": "문서",
+      "language": "언어"
+    },
+    "item": {
+      "save": "저장",
+      "overwrite": "덮어쓰기",
+      "autosave": "자동 저장 전환",
+      "play": "플레이",
+      "continue": "계속",
+      "new": "새로 만들기",
+      "validation": "검증",
+      "import": "가져오기",
+      "local": "로컬",
+      "empty": "빈 데이터",
+      "sample": "샘플",
+      "full": "본편",
+      "export": "내보내기",
+      "publish": "공개",
+      "execute": "실행",
+      "portal": "포털",
+      "document": "문서",
+      "language": "언어",
+      "menu": "메뉴"
+    },
+    "status": {
+      "on": "켜짐",
+      "off": "꺼짐"
+    },
+    "comment": {
+      "continue": "진행 상황을 이어받습니다.",
+      "new": "진행 상황을 초기화합니다.",
+      "overwrite_warning_1": "편집 중인 내용이",
+      "overwrite_warning_2": "덮어쓰기됩니다.",
+      "processing_time": "처리에 시간이 걸립니다.",
+      "full_readonly": "너무 커서 편집할 수 없습니다.",
+      "full_usage": "검증과 플레이만 가능합니다.",
+      "autosave_status": "현재: {status}",
+      "autosave_description": "메뉴를 열 때 저장"
+    }
+  },
+  "confirm": {
+    "load_empty": "현재 편집 내용이 사라집니다. 빈 데이터를 불러올까요?",
+    "load_file": "현재 편집 내용이 사라집니다. 파일에서 데이터를 불러올까요?",
+    "load_sample": "현재 편집 내용이 사라집니다. 샘플 데이터를 불러올까요?"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "에디터가 초기화되지 않았습니다.",
+      "validation_debug": "검증 오류가 발견되었습니다. 디버그를 시작할 수 없습니다.",
+      "validation_publish": "검증 오류가 발견되었습니다. 공개를 시작할 수 없습니다.",
+      "publishing_failed": "공개에 실패했습니다.",
+      "invalid_image": "유효하지 않은 이미지입니다.",
+      "image_size_limit": "이미지 크기가 제한을 초과했습니다. 크기: {size} KB. (제한: {limit}KB)",
+      "export_failed": "내보내기에 실패했습니다.",
+      "empty_data_load_failed": "빈 데이터를 불러오지 못했습니다.",
+      "invalid_world_data": "유효하지 않은 월드 데이터입니다. 기본 구조를 확인하세요.",
+      "json_parse_failed": "JSON 파일을 읽지 못했습니다. 파일 형식을 확인하세요.",
+      "file_read_failed": "파일을 읽지 못했습니다.",
+      "sample_data_load_failed": "샘플 데이터를 불러오지 못했습니다.",
+      "full_data_load_failed": "본편 데이터를 불러오지 못했습니다.",
+      "validation_process_failed": "검증 과정에 실패했습니다.",
+      "autosave_toggle_failed": "자동 저장 전환에 실패했습니다."
+    },
+    "success": {
+      "validation_generating": "검증 성공! 독립 실행 파일을 생성하는 중...",
+      "publishing_completed": "독립 실행 파일 공개가 완료되었습니다!",
+      "data_exported": "데이터를 내보냈습니다: {filename}",
+      "empty_data_loaded": "빈 데이터를 불러왔습니다",
+      "data_loaded": "데이터를 불러왔습니다: {filename}",
+      "sample_data_loaded": "샘플 데이터를 불러왔습니다",
+      "validation_successful": "검증 성공: 데이터에서 문제를 찾지 못했습니다",
+      "autosave_enabled": "자동 저장을 켰습니다",
+      "autosave_disabled": "자동 저장을 껐습니다",
+      "save_for_play": "플레이용으로 데이터를 저장했습니다"
+    }
+  },
+  "copyInformation": {
+    "promptType": "복사 대상 타입을 입력하세요",
+    "promptId": "복사 대상 ID를 입력하세요:",
+    "success": "Information을 {type} (id: {id})에 복사했습니다",
+    "errorInvalidType": "유효하지 않은 타입입니다",
+    "errorNotFound": "지정한 ID '{id}'을(를) {type}에서 찾을 수 없습니다.",
+    "errorCanceled": "복사가 취소되었습니다."
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 저장 공간을 초과했습니다. 저장에 실패했습니다.",
+    "save_failed": "저장에 실패했습니다.",
+    "indexeddb_private_mode": "🔒 시크릿 모드에서는 IndexedDB를 사용할 수 없습니다",
+    "storage_quota": "💾 저장 공간을 초과했습니다",
+    "indexeddb_unsupported": "⚠️ 브라우저가 IndexedDB를 지원하지 않습니다",
+    "database_init_failed": "❌ 데이터베이스 초기화에 실패했습니다: {message}"
+  },
+  "ui": {
+    "copy": "복사",
+    "cancel": "취소",
+    "enter_id": "ID를 입력하세요"
+  },
+  "validation": {
+    "failed_with_count": "🚨 검증에 실패했습니다: 오류 {count}개가 발견되었습니다\n\n📋 자세한 내용은 Basic → Development → Errors를 참조하세요",
+    "icon": {
+      "invalid_base64_format": "{path}의 Base64 이미지 형식이 유효하지 않습니다 [{preview}...] - 'data:image/[type];base64,'로 시작해야 합니다.",
+      "missing_base64_data": "{path}의 Base64 이미지 형식이 유효하지 않습니다 - 쉼표 뒤에 Base64 데이터가 없습니다.",
+      "invalid_base64_chars": "{path}의 Base64 인코딩이 유효하지 않습니다 - 유효하지 않은 문자가 포함되어 있습니다.",
+      "invalid_base64_length": "{path}의 Base64 인코딩이 유효하지 않습니다 - 길이는 4의 배수여야 합니다.",
+      "invalid_iconify_format": "{path}의 iconify ID 형식이 유효하지 않습니다 [{iconifyId}] - ':' 구분자를 포함해야 합니다.",
+      "empty_iconify_family": "{path}의 iconify ID 형식이 유효하지 않습니다 [{iconifyId}] - 패밀리 이름이 비어 있습니다.",
+      "empty_iconify_name": "{path}의 iconify ID 형식이 유효하지 않습니다 [{iconifyId}] - 아이콘 이름이 비어 있습니다.",
+      "iconify_load_failed": "{path}에서 iconify 패밀리 [{family}]를 불러오지 못했습니다 [{iconifyId}] - {error}."
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}]을(를) {path}:{id}에서 찾을 수 없습니다.",
+      "group_not_found": "그룹 [{group}]을(를) {path}에서 찾을 수 없습니다. 비어 있거나 정의된 그룹 ID여야 합니다."
+    }
+  }
+}

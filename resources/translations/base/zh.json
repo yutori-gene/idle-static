@@ -1,0 +1,1442 @@
+{
+	"category": {},
+	"action": {},
+	"item": {},
+	"group": {},
+	"event": {},
+	"skill": {},
+	"preset": {
+		"locked": {
+			"name": "锁定中",
+			"explanation": "满足条件后即可解锁该元素"
+		},
+		"max": {
+			"name": "最大",
+			"explanation": ""
+		},
+		"min": {
+			"name": "最小",
+			"explanation": ""
+		},
+		"maximum-owned": {
+			"name": "最大持有数",
+			"explanation": "无法持有超过该数量的物品"
+		},
+		"maximum-execution": {
+			"name": "最大执行数",
+			"explanation": "无法执行超过该数量的动作"
+		},
+		"unavailable": {
+			"name": "不可用",
+			"explanation": ""
+		},
+		"purchased-count": {
+			"name": "购买次数",
+			"explanation": ""
+		},
+		"purchase-limit": {
+			"name": "购买上限",
+			"explanation": "可购买次数的上限"
+		},
+		"purchasable-count": {
+			"name": "可购买",
+			"explanation": "还能购买多少次"
+		},
+		"total": {
+			"name": "总计",
+			"explanation": ""
+		},
+		"percentage": {
+			"name": "比例",
+			"explanation": ""
+		},
+		"player": {
+			"name": "玩家",
+			"explanation": ""
+		},
+		"target": {
+			"name": "目标",
+			"explanation": ""
+		},
+		"requirement": {
+			"name": "条件",
+			"explanation": ""
+		},
+		"requirements": {
+			"name": "条件列表",
+			"explanation": ""
+		},
+		"acquisition": {
+			"name": "获得",
+			"explanation": ""
+		},
+		"acquisitions": {
+			"name": "获得列表",
+			"explanation": ""
+		},
+		"results": {
+			"name": "结果",
+			"explanation": ""
+		},
+		"ok": {
+			"name": "OK？",
+			"explanation": ""
+		},
+		"yes": {
+			"name": "是",
+			"explanation": ""
+		},
+		"no": {
+			"name": "否",
+			"explanation": ""
+		},
+		"on": {
+			"name": "开",
+			"explanation": ""
+		},
+		"off": {
+			"name": "关",
+			"explanation": ""
+		},
+		"seconds": {
+			"name": "秒",
+			"explanation": ""
+		},
+		"minutes": {
+			"name": "分钟",
+			"explanation": ""
+		},
+		"hours": {
+			"name": "小时",
+			"explanation": ""
+		},
+		"days": {
+			"name": "天",
+			"explanation": ""
+		},
+		"years": {
+			"name": "年",
+			"explanation": ""
+		},
+		"centuries": {
+			"name": "世纪",
+			"explanation": ""
+		},
+		"endless": {
+			"name": "∞",
+			"explanation": ""
+		},
+		"success": {
+			"name": "成功",
+			"explanation": ""
+		},
+		"failure": {
+			"name": "失败",
+			"explanation": "失败"
+		},
+		"failure-only": {
+			"name": "仅失败时",
+			"explanation": ""
+		},
+		"up": {
+			"name": "向上",
+			"explanation": ""
+		},
+		"down": {
+			"name": "向下",
+			"explanation": ""
+		},
+		"question": {
+			"name": "问题",
+			"explanation": ""
+		},
+		"navigation": {
+			"name": "导航",
+			"explanation": "也可以滑动以在列之间移动。屏幕左下角会显示「顶部」按钮。"
+		},
+		"navigation-back": {
+			"name": "返回",
+			"explanation": ""
+		},
+		"navigation-top": {
+			"name": "顶部",
+			"explanation": ""
+		},
+		"navigation-forward": {
+			"name": "前进",
+			"explanation": ""
+		},
+		"navigation-column": {
+			"name": "列",
+			"explanation": "该列的位置，以及包含画面外在内的列总数"
+		},
+		"checked": {
+			"name": "已确认",
+			"explanation": ""
+		},
+		"chevron-down": {
+			"name": "下箭头",
+			"explanation": ""
+		},
+		"chevron-right": {
+			"name": "右箭头",
+			"explanation": ""
+		},
+		"selected": {
+			"name": "已选择",
+			"explanation": "为出售而选中的物品总计"
+		},
+		"character": {
+			"name": "角色",
+			"explanation": ""
+		},
+		"activity": {
+			"name": "活动",
+			"explanation": "按类别分组的可执行动作列表"
+		},
+		"inventory": {
+			"name": "库存",
+			"explanation": "按类别分组的持有物品列表"
+		},
+		"status": {
+			"name": "状态",
+			"explanation": "显示应用于类别的修正等当前状态"
+		},
+		"ability": {
+			"name": "能力",
+			"explanation": "按类别分组的当前可发动技能列表"
+		},
+		"world": {
+			"name": "世界",
+			"explanation": ""
+		},
+		"overview": {
+			"name": "概览",
+			"explanation": "显示该世界以及运行它的控制台的概览"
+		},
+		"version": {
+			"name": "版本",
+			"explanation": ""
+		},
+		"license": {
+			"name": "许可证",
+			"explanation": ""
+		},
+		"updated": {
+			"name": "更新日期",
+			"explanation": ""
+		},
+		"author": {
+			"name": "作者",
+			"explanation": ""
+		},
+		"homepage": {
+			"name": "主页",
+			"explanation": ""
+		},
+		"estimated-playing-time": {
+			"name": "预计游玩时间",
+			"explanation": "作者估算的通关该世界所需的时间"
+		},
+		"detail": {
+			"name": "详情",
+			"explanation": ""
+		},
+		"default-language": {
+			"name": "默认语言",
+			"explanation": "世界最初显示的语言"
+		},
+		"language-change-enable-general": {
+			"name": "可更改",
+			"explanation": "可在设置界面更改显示语言"
+		},
+		"offline-max-hours": {
+			"name": "最长离线时间",
+			"explanation": "反映到游戏进度中的离线时间上限"
+		},
+		"max-category-level": {
+			"name": "类别等级上限",
+			"explanation": "各类别可达到的最高等级"
+		},
+		"level-common-ratio": {
+			"name": "所需经验值的增长幅度",
+			"explanation": "表示每次升级后，下一等级所需经验值增加多少"
+		},
+		"property-ratio": {
+			"name": "属性的影响程度",
+			"explanation": "每相差10级属性变为多少倍的倍率。为1时不受等级差影响"
+		},
+		"default-action-stamina": {
+			"name": "动作耐力的默认值",
+			"explanation": "所有动作共通的基础战斗值。各自的战斗值会加算于此"
+		},
+		"console": {
+			"name": "控制台",
+			"explanation": "本游戏运行在「Idle RPG」控制台系统上。该系统免费向公众开放，任何人都可以制作游戏。"
+		},
+		"statistics": {
+			"name": "统计",
+			"explanation": "显示游玩过程中记录的合计"
+		},
+		"coin": {
+			"name": "金币",
+			"explanation": "用于买卖的货币类物品"
+		},
+		"play-time": {
+			"name": "游玩时间",
+			"explanation": "开始游玩的日期时间，以及已游玩的时长"
+		},
+		"play-started": {
+			"name": "开始时间",
+			"explanation": "开始游玩的日期时间"
+		},
+		"play-duration": {
+			"name": "已用时间",
+			"explanation": "自开始游玩以来经过的时间"
+		},
+		"coins-earned": {
+			"name": "已获得金币",
+			"explanation": "迄今为止获得的各种金币的总量"
+		},
+		"unique-count": {
+			"name": "种类数",
+			"explanation": "可持有物品的种类数量"
+		},
+		"max-capacity": {
+			"name": "容量",
+			"explanation": "当前可持有物品种类数的上限"
+		},
+		"max-queue": {
+			"name": "队列",
+			"explanation": "当前队列可保持的动作数上限"
+		},
+		"statistics-category": {
+			"name": "类别",
+			"explanation": "该世界的类别开放了多少"
+		},
+		"statistics-action": {
+			"name": "动作",
+			"explanation": "该世界的动作开放了多少"
+		},
+		"statistics-item": {
+			"name": "物品",
+			"explanation": "该世界的物品开放了多少"
+		},
+		"statistics-event": {
+			"name": "事件",
+			"explanation": "表示该世界的事件开放了多少"
+		},
+		"count-unlocked": {
+			"name": "已开放",
+			"explanation": "全部之中至今已开放的数量"
+		},
+		"level-total": {
+			"name": "总等级",
+			"explanation": "全部类别的等级合计值及其最大值"
+		},
+		"count-performed": {
+			"name": "已执行",
+			"explanation": "至今执行动作的合计次数"
+		},
+		"count-earned": {
+			"name": "已获得",
+			"explanation": "至今获得物品的合计数量"
+		},
+		"count-triggered": {
+			"name": "已发生",
+			"explanation": "至今事件发生的合计次数"
+		},
+		"debug": {
+			"name": "调试",
+			"explanation": "提供用于测试世界的工具。仅在调试模式下可用。"
+		},
+		"acceleration": {
+			"name": "加速",
+			"explanation": "加快游戏内时间的推进。请注意，在动作执行时间很短的状态下把速度提得过高，处理可能跟不上，导致应用卡死或崩溃。"
+		},
+		"multiplier": {
+			"name": "乘数",
+			"explanation": ""
+		},
+		"skip": {
+			"name": "跳过",
+			"explanation": "不必等待，一次性推进游戏内的时间"
+		},
+		"skip-hour": {
+			"name": "跳过1小时",
+			"explanation": "让游戏一次推进1小时。推进过程与离开时的处理方式相同，结果通过通知显示。"
+		},
+		"adjustment": {
+			"name": "数值调整",
+			"explanation": "增减持有的物品数量和类别等级"
+		},
+		"adjustment-type": {
+			"name": "类型",
+			"explanation": ""
+		},
+		"adjustment-category": {
+			"name": "类别",
+			"explanation": "调整类别的等级。例如设为 +5，等级就会提升5级。"
+		},
+		"adjustment-action": {
+			"name": "动作",
+			"explanation": "由此增减该动作被执行的次数。但完成动作所获得的奖励不会反映进来。"
+		},
+		"adjustment-item": {
+			"name": "物品",
+			"explanation": "增减持有的物品数量"
+		},
+		"adjustment-id": {
+			"name": "ID",
+			"explanation": "指定目标种别的ID。留空时，将对所有ID进行加减。"
+		},
+		"adjustment-sign": {
+			"name": "正负号",
+			"explanation": ""
+		},
+		"adjustment-plus": {
+			"name": "加",
+			"explanation": "加上指定的数值"
+		},
+		"adjustment-minus": {
+			"name": "减",
+			"explanation": "减去指定的数值"
+		},
+		"adjustment-count": {
+			"name": "数量",
+			"explanation": "要增减的数量。用正负号指定是加还是减。"
+		},
+		"adjustment-adjust": {
+			"name": "执行调整",
+			"explanation": "按指定的条件执行调整"
+		},
+		"pwa": {
+			"name": "安装 PWA",
+			"explanation": "安装渐进式网页应用（PWA）"
+		},
+		"go-top": {
+			"name": "返回页首",
+			"explanation": ""
+		},
+		"iconify": {
+			"name": "Iconify",
+			"explanation": "本游戏使用了 Iconify 提供的图标集。谨此感谢所有参与制作的人们。"
+		},
+		"category": {
+			"name": "类别",
+			"explanation": ""
+		},
+		"categories": {
+			"name": "类别列表",
+			"explanation": ""
+		},
+		"level": {
+			"name": "等级",
+			"explanation": "该类别的熟练程度。经验值积累后会提升"
+		},
+		"category-experience": {
+			"name": "经验值",
+			"explanation": "距离下一等级的进展程度。执行动作后会增加"
+		},
+		"level-up": {
+			"name": "升级",
+			"explanation": ""
+		},
+		"category-unlocked": {
+			"name": "类别开放",
+			"explanation": ""
+		},
+		"element": {
+			"name": "元素",
+			"explanation": ""
+		},
+		"standalone": {
+			"name": "独立",
+			"explanation": "与其他类别中动作的进展状况无关，独立执行"
+		},
+		"standalone-yes": {
+			"name": "被动",
+			"explanation": "与其他类别中动作的进展状况无关，独立执行"
+		},
+		"standalone-no": {
+			"name": "主动",
+			"explanation": "与其他类别共享执行位。同时只能执行1个动作，开始别的动作时当前的执行会转入等待队列"
+		},
+		"action": {
+			"name": "动作",
+			"explanation": "在该类别中可以进行的行为"
+		},
+		"actions": {
+			"name": "动作列表",
+			"explanation": "属于该类别的动作列表"
+		},
+		"action-unlocked": {
+			"name": "动作开放",
+			"explanation": ""
+		},
+		"attribute": {
+			"name": "特性",
+			"explanation": "该动作特有的特性。类别的属性会作用于该动作的特性，并且该特性也会获得经验值。"
+		},
+		"progress": {
+			"name": "进度",
+			"explanation": ""
+		},
+		"progressing": {
+			"name": "进行中",
+			"explanation": ""
+		},
+		"progressing-action": {
+			"name": "进行中",
+			"explanation": ""
+		},
+		"possible-action": {
+			"name": "可执行",
+			"explanation": ""
+		},
+		"impossible-action": {
+			"name": "不可执行",
+			"explanation": ""
+		},
+		"unconfirmed-action": {
+			"name": "未确认",
+			"explanation": ""
+		},
+		"idle": {
+			"name": "待机中",
+			"explanation": ""
+		},
+		"progress-type": {
+			"name": "进行类型",
+			"explanation": ""
+		},
+		"persistent": {
+			"name": "连续",
+			"explanation": "连续执行动作，每完成一次动作就能获得奖励"
+		},
+		"single": {
+			"name": "单次",
+			"explanation": "执行1次后停止，不会连续执行。中途中断时进度也会保存。"
+		},
+		"snap": {
+			"name": "即时",
+			"explanation": "动作瞬间完成"
+		},
+		"stamina": {
+			"name": "耐力",
+			"explanation": "每进行一次动作，玩家和目标的耐力都会减少。目标的耐力耗尽即为胜利，玩家的耐力耗尽则为游戏结束。游戏结束不会失去任何东西，但进行中的动作会全部中断。"
+		},
+		"enable-count": {
+			"name": "可执行次数",
+			"explanation": ""
+		},
+		"estimated-time": {
+			"name": "预计所需时间",
+			"explanation": ""
+		},
+		"count": {
+			"name": "数量",
+			"explanation": ""
+		},
+		"completed-count": {
+			"name": "完成次数",
+			"explanation": ""
+		},
+		"turn": {
+			"name": "回合",
+			"explanation": ""
+		},
+		"current-count": {
+			"name": "当前次数",
+			"explanation": ""
+		},
+		"elapsed-time": {
+			"name": "已过时间",
+			"explanation": ""
+		},
+		"rest-time": {
+			"name": "剩余时间",
+			"explanation": ""
+		},
+		"each-time": {
+			"name": "周期",
+			"explanation": ""
+		},
+		"next-time": {
+			"name": "距下次",
+			"explanation": ""
+		},
+		"rest-count": {
+			"name": "剩余次数",
+			"explanation": ""
+		},
+		"act": {
+			"name": "执行",
+			"explanation": "进行该动作的开始与停止，并显示进度"
+		},
+		"confirm": {
+			"name": "确认",
+			"explanation": "确定已结束进程的结果"
+		},
+		"start": {
+			"name": "开始",
+			"explanation": ""
+		},
+		"end": {
+			"name": "结束",
+			"explanation": ""
+		},
+		"stop": {
+			"name": "停止",
+			"explanation": ""
+		},
+		"reserve": {
+			"name": "预约",
+			"explanation": "把该动作加入预约队列，使其依次执行"
+		},
+		"reorder": {
+			"name": "排序",
+			"explanation": "把所选的执行次数和执行顺序反映到队列中的该动作上。把执行中的动作移到1以后，它会停止并回到等待。"
+		},
+		"position": {
+			"name": "执行顺序",
+			"explanation": "选择该动作在队列中的位置。0为最前，会把执行中的动作挤到后面并立即执行。1以后则在该位置等待。"
+		},
+		"now": {
+			"name": "立即",
+			"explanation": "把该动作放到队列最前，立即执行"
+		},
+		"clear": {
+			"name": "清空",
+			"explanation": "删除队列中的所有预约，包括执行中的"
+		},
+		"acquisition-failure": {
+			"name": "获得失败",
+			"explanation": "说明中标有 [仅失败时] 的奖励，只有在动作失败时才能获得。显示的比例即为其获得概率。"
+		},
+		"item": {
+			"name": "物品",
+			"explanation": "与该类别相关的所持物"
+		},
+		"items": {
+			"name": "物品列表",
+			"explanation": "属于该类别的物品列表"
+		},
+		"selling-items": {
+			"name": "物品列表",
+			"explanation": "设定了出售价格的所持物品列表"
+		},
+		"item-type": {
+			"name": "类型",
+			"explanation": "该物品的类型"
+		},
+		"normal": {
+			"name": "普通",
+			"explanation": "可以拥有、装备和交易的普通物品"
+		},
+		"capacity": {
+			"name": "容量",
+			"explanation": "影响可同时拥有的物品种类数"
+		},
+		"queue": {
+			"name": "队列",
+			"explanation": "可以放入队列（动作的预约位）的动作数量"
+		},
+		"equipping": {
+			"name": "装备中",
+			"explanation": ""
+		},
+		"unequipping": {
+			"name": "解除装备中",
+			"explanation": ""
+		},
+		"equip": {
+			"name": "装备",
+			"explanation": ""
+		},
+		"equipment": {
+			"name": "装备",
+			"explanation": ""
+		},
+		"unequip": {
+			"name": "解除装备",
+			"explanation": ""
+		},
+		"nothing": {
+			"name": "无",
+			"explanation": ""
+		},
+		"own-count": {
+			"name": "拥有数",
+			"explanation": "当前拥有的数量"
+		},
+		"recovery": {
+			"name": "恢复",
+			"explanation": "战斗开始时耐力的恢复量"
+		},
+		"unique": {
+			"name": "独有",
+			"explanation": "只能拥有1个的物品"
+		},
+		"equipment-type": {
+			"name": "装备类型",
+			"explanation": "物品的装备类型"
+		},
+		"necessary-item": {
+			"name": "必要",
+			"explanation": "装备后效果发动"
+		},
+		"unnecessary-item": {
+			"name": "常时发动",
+			"explanation": "只要持有效果就会发动。该效果会按持有的数量成倍增加。"
+		},
+		"impossible-item": {
+			"name": "不可",
+			"explanation": "无法装备"
+		},
+		"consumable-item": {
+			"name": "消耗品",
+			"explanation": "装备后可发挥效果，但每进行一次动作就会被消耗（不会按耐力的每回合消耗）"
+		},
+		"buy": {
+			"name": "购买",
+			"explanation": "购买物品"
+		},
+		"buying-value": {
+			"name": "购买价格",
+			"explanation": "购买时的价格"
+		},
+		"sell": {
+			"name": "出售",
+			"explanation": "出售物品"
+		},
+		"selling": {
+			"name": "出售",
+			"explanation": "从列表中选出所拥有的物品并一并出售"
+		},
+		"kind": {
+			"name": "种类",
+			"explanation": "所选物品的种类数"
+		},
+		"selling-value": {
+			"name": "出售价格",
+			"explanation": "出售该物品时的价格"
+		},
+		"trade": {
+			"name": "交易",
+			"explanation": "购买或出售该物品"
+		},
+		"trade-failed": {
+			"name": "无法交易",
+			"explanation": "交易失败了"
+		},
+		"capacity-full": {
+			"name": "库存已满",
+			"explanation": "库存的容量已满"
+		},
+		"queue-full": {
+			"name": "队列已满",
+			"explanation": "包含执行中在内队列已满"
+		},
+		"already-queued": {
+			"name": "已在队列中",
+			"explanation": "该动作已经在队列中"
+		},
+		"unmatched-requirements": {
+			"name": "未满足条件",
+			"explanation": "未满足执行所需的条件"
+		},
+		"not-owned-item": {
+			"name": "未持有",
+			"explanation": "未持有该物品"
+		},
+		"unmatched-equip-requirements": {
+			"name": "未满足装备条件",
+			"explanation": "未满足装备所需的条件"
+		},
+		"unequippable-item": {
+			"name": "无法装备的类型",
+			"explanation": "该物品属于无法装备的类型"
+		},
+		"purchase-limit-reached": {
+			"name": "已达购买上限",
+			"explanation": "已达到购买上限"
+		},
+		"completed-maximum": {
+			"name": "完成上限",
+			"explanation": "完成次数已达上限"
+		},
+		"relationships": {
+			"name": "关联",
+			"explanation": ""
+		},
+		"related-actions": {
+			"name": "关联动作",
+			"explanation": ""
+		},
+		"relationship-items": {
+			"name": "关联物品",
+			"explanation": "与该类别的动作相关的物品列表"
+		},
+		"required-equipment": {
+			"name": "需装备",
+			"explanation": ""
+		},
+		"group": {
+			"name": "分组",
+			"explanation": "跨越类别、动作和物品进行归拢的分类"
+		},
+		"skill": {
+			"name": "技能",
+			"explanation": "在战斗中发动后，仅在该回合修正战斗值"
+		},
+		"skills": {
+			"name": "技能列表",
+			"explanation": "该元素所拥有的技能列表"
+		},
+		"no-ability": {
+			"name": "没有技能",
+			"explanation": "现在没有可发动的技能"
+		},
+		"property": {
+			"name": "属性",
+			"explanation": "影响动作结果的数值"
+		},
+		"calculation": {
+			"name": "计算",
+			"explanation": "反映到动作上的属性值及其明细"
+		},
+		"properties": {
+			"name": "属性列表",
+			"explanation": "属于该类别的属性列表"
+		},
+		"attack": {
+			"name": "攻击",
+			"explanation": "从玩家对目标造成的伤害"
+		},
+		"defence": {
+			"name": "防御",
+			"explanation": "从目标对玩家造成的伤害"
+		},
+		"accuracy": {
+			"name": "精度",
+			"explanation": "玩家对目标造成伤害的概率"
+		},
+		"evasion": {
+			"name": "回避",
+			"explanation": "从目标处受到伤害的概率"
+		},
+		"restore": {
+			"name": "恢复",
+			"explanation": "目标的耐力耗尽、转入下一个动作时的恢复量"
+		},
+		"speed": {
+			"name": "速度",
+			"explanation": "影响动作的速度"
+		},
+		"chance": {
+			"name": "成功率",
+			"explanation": "失败时既得不到奖励也得不到经验值"
+		},
+		"experience": {
+			"name": "经验值",
+			"explanation": "影响从动作中获得的经验值"
+		},
+		"value": {
+			"name": "数值",
+			"explanation": ""
+		},
+		"resources": {
+			"name": "加成物品",
+			"explanation": ""
+		},
+		"base-value": {
+			"name": "基础值",
+			"explanation": "针对本游戏或该动作的固有值"
+		},
+		"level-gap": {
+			"name": "等级差",
+			"explanation": "关于数值计算，请参阅「等级」区块"
+		},
+		"reflected-value": {
+			"name": "反映后的值",
+			"explanation": "根据「基础值」和「等级差」计算出的最终值"
+		},
+		"level-gap-property": {
+			"name": "等级差的属性",
+			"explanation": "「等级差」的值是该区块内各值的合计"
+		},
+		"level-gap-category": {
+			"name": "等级差的类别",
+			"explanation": "从玩家的类别等级中减去该动作等级后的值。不过，「经验值」的情况正好相反。"
+		},
+		"level-gap-action": {
+			"name": "等级差的动作",
+			"explanation": "进行类型为「耐力」时，由该动作设定的固有值"
+		},
+		"level-gap-item": {
+			"name": "等级差的物品",
+			"explanation": "这是来自已装备的物品，或未装备也能发挥效果的物品的加成值"
+		},
+		"no-status": {
+			"name": "没有状态",
+			"explanation": "任何类别都没有属性加成"
+		},
+		"event": {
+			"name": "事件",
+			"explanation": ""
+		},
+		"timing": {
+			"name": "时机",
+			"explanation": "该事件发生的时机"
+		},
+		"timing-tasked": {
+			"name": "条件达成",
+			"explanation": "条件被满足的瞬间发生"
+		},
+		"timing-comebacked": {
+			"name": "回归",
+			"explanation": "离线一段时间后再次回来时发生"
+		},
+		"timing-gameovered": {
+			"name": "游戏结束",
+			"explanation": "战斗中耐力耗尽时发生"
+		},
+		"timing-welcomed": {
+			"name": "首次启动",
+			"explanation": "首次打开该世界时发生"
+		},
+		"timing-completed": {
+			"name": "全部完成",
+			"explanation": "所有类别达到最高等级时发生"
+		},
+		"timing-obtained": {
+			"name": "获得",
+			"explanation": "单次动作完成时发生"
+		},
+		"tasked": {
+			"name": "条件达成",
+			"explanation": "条件已被满足"
+		},
+		"comebacked": {
+			"name": "欢迎回来",
+			"explanation": "欢迎回来！离开期间的进度如下："
+		},
+		"gameovered": {
+			"name": "游戏结束",
+			"explanation": "游戏结束。进度已重置。"
+		},
+		"completed": {
+			"name": "全部完成",
+			"explanation": "恭喜！你已完成所有类别。"
+		},
+		"welcomed": {
+			"name": "欢迎",
+			"explanation": "欢迎来到这个世界！"
+		},
+		"obtained": {
+			"name": "获得",
+			"explanation": "确认一下获得的内容"
+		},
+		"achieved": {
+			"name": "达成",
+			"explanation": "任务是否已达成"
+		},
+		"receive": {
+			"name": "领取",
+			"explanation": "领取该任务的奖励"
+		},
+		"received": {
+			"name": "已领取",
+			"explanation": "该任务的奖励已领取"
+		},
+		"hidden": {
+			"name": "隐藏",
+			"explanation": "确认内容后，该栏会被隐藏"
+		},
+		"task": {
+			"name": "任务",
+			"explanation": "达成后可获得奖励的目标"
+		},
+		"task-completed": {
+			"name": "任务达成",
+			"explanation": ""
+		},
+		"tasks": {
+			"name": "任务列表",
+			"explanation": "该类别中设定的任务列表"
+		},
+		"missions": {
+			"name": "使命",
+			"explanation": "所有类别的任务及其达成状况的列表"
+		},
+		"language-en": {
+			"name": "English",
+			"explanation": ""
+		},
+		"language-zh": {
+			"name": "中文（简体）",
+			"explanation": ""
+		},
+		"language-es": {
+			"name": "Español",
+			"explanation": ""
+		},
+		"language-pt": {
+			"name": "Português",
+			"explanation": ""
+		},
+		"language-fr": {
+			"name": "Français",
+			"explanation": ""
+		},
+		"language-ru": {
+			"name": "Русский",
+			"explanation": ""
+		},
+		"language-de": {
+			"name": "Deutsch",
+			"explanation": ""
+		},
+		"language-ja": {
+			"name": "日本語",
+			"explanation": ""
+		},
+		"language-id": {
+			"name": "Bahasa Indonesia",
+			"explanation": ""
+		},
+		"language-ko": {
+			"name": "한국어",
+			"explanation": ""
+		},
+		"config": {
+			"name": "设置",
+			"explanation": "更改该游戏的设置，并管理存档数据"
+		},
+		"operation": {
+			"name": "操作",
+			"explanation": "更改动作执行相关的操作方式"
+		},
+		"auto-clear-queue": {
+			"name": "自动清空队列",
+			"explanation": "长按动作快速开始时，先删除包含执行中动作在内的全部队列，再执行该动作"
+		},
+		"display": {
+			"name": "显示",
+			"explanation": "更改游戏在屏幕上的显示方式"
+		},
+		"language": {
+			"name": "语言",
+			"explanation": "更改显示所使用的语言"
+		},
+		"selected-language": {
+			"name": "使用中的语言",
+			"explanation": "当前用于显示的语言"
+		},
+		"language-change-enable": {
+			"name": "可更改",
+			"explanation": "可以更改显示的语言"
+		},
+		"language-change-unenable": {
+			"name": "无法更改",
+			"explanation": "没有其他可显示的语言"
+		},
+		"category-shortcut": {
+			"name": "与类别同时显示",
+			"explanation": "打开类别时，同时显示动作列表或物品列表"
+		},
+		"showing-hint": {
+			"name": "提示",
+			"explanation": "显示操作方法的说明"
+		},
+		"showing-navigation": {
+			"name": "导航",
+			"explanation": "显示用于在栏之间移动的按钮。即使不显示按钮，也可以通过滑动在栏之间移动。"
+		},
+		"performance": {
+			"name": "性能",
+			"explanation": "配合所用设备调整运行方式"
+		},
+		"performing-highly": {
+			"name": "高频更新",
+			"explanation": "提高更新频率。运行卡顿时建议关闭。不会影响各动作的执行时间。"
+		},
+		"data": {
+			"name": "数据",
+			"explanation": "保存、读取、删除该世界的进度数据"
+		},
+		"export-game": {
+			"name": "导出",
+			"explanation": "游戏的进度数据已导出"
+		},
+		"import-game": {
+			"name": "导入",
+			"explanation": "游戏的进度数据已导入"
+		},
+		"import-mistake": {
+			"name": "读取失败",
+			"explanation": "游戏数据读取失败"
+		},
+		"reset-game": {
+			"name": "重置游戏",
+			"explanation": "删除该世界的全部进度数据。此操作无法撤销。确认确实可以删除文件后，在输入栏中输入「DELETE」。"
+		},
+		"reset-really": {
+			"name": "真的吗？",
+			"explanation": ""
+		},
+		"reset-alert": {
+			"name": "重置确认",
+			"explanation": "重置游戏后，所有数据都会被清除。真的要重置游戏吗？"
+		},
+		"reset-debug-mode": {
+			"name": "调试模式",
+			"explanation": "调试模式下无需在确认栏中输入"
+		},
+		"restart": {
+			"name": "重启",
+			"explanation": "重新加载控制台。用于确认构建是否已更换。"
+		},
+		"hint-language-scope": {
+			"name": "Hint Language Scope",
+			"explanation": "切换的是界面的语言"
+		},
+		"hint-language-fallback": {
+			"name": "Hint Language Fallback",
+			"explanation": "没有翻译的文章会以默认语言显示"
+		},
+		"hint-event-capacity": {
+			"name": "Hint Event Capacity",
+			"explanation": "可持有的种类数达到上限期间无法领取奖励。腾出空位后重新领取"
+		},
+		"hint-event-closing": {
+			"name": "Hint Event Closing",
+			"explanation": "按下已确认，或向左侧栏滑动即可关闭"
+		},
+		"hint-group-meaning": {
+			"name": "Hint Group Meaning",
+			"explanation": "分组是横跨类别、动作、物品进行归拢的分类"
+		},
+		"hint-group-exclusive": {
+			"name": "Hint Group Exclusive",
+			"explanation": "每个分组只能装备一件物品"
+		},
+		"hint-group-index": {
+			"name": "Hint Group Index",
+			"explanation": "右侧的数值，类别是等级，动作是所需等级，物品是持有数"
+		},
+		"hint-debug-mode": {
+			"name": "Hint Debug Mode",
+			"explanation": "仅在以调试模式启动时显示。正常游玩时不会出现"
+		},
+		"hint-debug-acceleration": {
+			"name": "Hint Debug Acceleration",
+			"explanation": "加速的设置会保存在进度数据中，但仅在调试模式期间生效"
+		},
+		"hint-config-settings": {
+			"name": "Hint Config Settings",
+			"explanation": "可以更改操作方法、屏幕显示和运行负担。设置会作为进度数据的一部分保存，并沿用到导出的数据中"
+		},
+		"hint-config-data": {
+			"name": "Hint Config Data",
+			"explanation": "进度数据按世界分别保存在该设备上。导出的文件只能由同一世界的同一版本读取"
+		},
+		"hint-statistics-progress": {
+			"name": "Hint Statistics Progress",
+			"explanation": "可以查看游玩时间和获得金币的累计，以及当前可持有的持有位和预约位（队列）数量"
+		},
+		"hint-statistics-unlocked": {
+			"name": "Hint Statistics Unlocked",
+			"explanation": "类别、动作、物品、事件的开放数，分母是包含尚未发现内容在内的整个世界的数量"
+		},
+		"hint-statistics-opening": {
+			"name": "Hint Statistics Opening",
+			"explanation": "点击金币、容量、队列以及明细中排列的类别，即可打开对应画面"
+		},
+		"hint-overview-world": {
+			"name": "Hint Overview World",
+			"explanation": "可以查看作者、版本、预计游玩时间等世界的基本信息，以及默认语言、最长离线时间、类别等级上限、所需经验增长幅度等整个世界通用的设置"
+		},
+		"hint-overview-console": {
+			"name": "Hint Overview Console",
+			"explanation": "控制台是加载并运行世界的执行环境。它拥有与世界不同的版本和更新日期"
+		},
+		"hint-properties-meaning": {
+			"name": "Hint Properties Meaning",
+			"explanation": "属性是影响动作执行的要素"
+		},
+		"hint-properties-resource": {
+			"name": "Hint Properties Resource",
+			"explanation": "下方排列的标签是对该数值有贡献的物品及其明细"
+		},
+		"hint-properties-crossing": {
+			"name": "Hint Properties Crossing",
+			"explanation": "即使是其他类别的物品，只要对象是该类别就会生效"
+		},
+		"hint-trade-availability": {
+			"name": "Hint Trade Availability",
+			"explanation": "没有价格时，购买和出售的栏位本身不会出现。锁定中也无法买卖"
+		},
+		"hint-trade-capacity": {
+			"name": "Hint Trade Capacity",
+			"explanation": "持有位已满时，无法购买尚未持有的种类。追加购买则可以"
+		},
+		"hint-trade-limit": {
+			"name": "Hint Trade Limit",
+			"explanation": "持有位和队列位每次只能买一个，每买一次价格都会上涨。也有世界会限制购买次数（奖励部分不计入）"
+		},
+		"hint-trade-selling": {
+			"name": "Hint Trade Selling",
+			"explanation": "出售后数量变为0的装备会自动卸下"
+		},
+		"hint-items-meaning": {
+			"name": "Hint Items Meaning",
+			"explanation": "物品是装备品、消耗品、贵重品等与持有物相关的要素"
+		},
+		"hint-items-list": {
+			"name": "Hint Items List",
+			"explanation": "该类别中可持有的物品列表"
+		},
+		"hint-items-equipping": {
+			"name": "Hint Items Equipping",
+			"explanation": "长按可切换物品的装备状态"
+		},
+		"hint-items-exclusive": {
+			"name": "Hint Items Exclusive",
+			"explanation": "每个分组只能装备一件物品"
+		},
+		"hint-items-locked": {
+			"name": "Hint Items Locked",
+			"explanation": "未满足开放条件的物品会以带斜线的方式显示，说明文和持有数会被隐藏"
+		},
+		"hint-items-relationship": {
+			"name": "Hint Items Relationship",
+			"explanation": "关联指的是获得该物品的动作和消耗该物品的动作"
+		},
+		"hint-item-meaning": {
+			"name": "Hint Item Meaning",
+			"explanation": "物品是装备品、消耗品、贵重品等与持有物相关的要素"
+		},
+		"hint-item-exclusive": {
+			"name": "Hint Item Exclusive",
+			"explanation": "每个分组只能装备一件物品。分组不同时，即使是同一类别也可以同时装备"
+		},
+		"hint-item-equipping": {
+			"name": "Hint Item Equipping",
+			"explanation": "装备按钮仅在持有、满足要件且类别认可其作为装备对象的物品上出现"
+		},
+		"hint-item-locked": {
+			"name": "Hint Item Locked",
+			"explanation": "未满足开放条件的物品会以带斜线的方式显示，说明文和持有数会被隐藏"
+		},
+		"hint-act-count": {
+			"name": "Hint Act Count",
+			"explanation": "最右侧的∞会持续执行，直到因资源或总执行次数的上限而停止"
+		},
+		"hint-act-position": {
+			"name": "Hint Act Position",
+			"explanation": "执行顺序中的0表示立即执行，1以后表示待机。被打断的执行中动作会保留剩余次数返回待机，之后再继续"
+		},
+		"hint-act-queue": {
+			"name": "Hint Act Queue",
+			"explanation": "即使已满，预约仍会通过，溢出的待机会从末尾开始被丢弃。轮到顺序却无法执行的预约也会被丢弃"
+		},
+		"hint-act-opening": {
+			"name": "Hint Act Opening",
+			"explanation": "按下目标或技能的行，即可打开对应的栏"
+		},
+		"hint-calculation-ratio": {
+			"name": "Hint Calculation Ratio",
+			"explanation": "反映的数值不是加减，而是每10级的等级差施加一次倍率。攻击和经验值会增加，防御和所需时间会减少"
+		},
+		"hint-calculation-weight": {
+			"name": "Hint Calculation Weight",
+			"explanation": "生效方式因属性而异"
+		},
+		"hint-calculation-odds": {
+			"name": "Hint Calculation Odds",
+			"explanation": "精度、回避、成功率、恢复量不会低于0%或超过100%"
+		},
+		"hint-queue-removing": {
+			"name": "Hint Queue Removing",
+			"explanation": "长按条即可从队列中移除。开头的正在执行，因此会停止并开始下一个。"
+		},
+		"hint-actions-meaning": {
+			"name": "Hint Actions Meaning",
+			"explanation": "动作是执行后可获得经验值和奖励的行为"
+		},
+		"hint-actions-list": {
+			"name": "Hint Actions List",
+			"explanation": "该类别中可执行的动作列表"
+		},
+		"hint-actions-executing": {
+			"name": "Hint Actions Executing",
+			"explanation": "长按可切换动作的执行状态"
+		},
+		"hint-actions-exclusive": {
+			"name": "Hint Actions Exclusive",
+			"explanation": "一个类别中只能执行一个"
+		},
+		"hint-actions-parallel": {
+			"name": "Hint Actions Parallel",
+			"explanation": "根据类别的不同（独立设为被动时），可以同时进行多个类别的动作"
+		},
+		"hint-actions-locked": {
+			"name": "Hint Actions Locked",
+			"explanation": "未满足开放条件的动作会以带斜线的方式显示，说明文会被隐藏"
+		},
+		"hint-action-meaning": {
+			"name": "Hint Action Meaning",
+			"explanation": "动作是执行后可获得经验值和奖励的行为"
+		},
+		"hint-action-attribute": {
+			"name": "Hint Action Attribute",
+			"explanation": "特性是经验值的归属类别。它可能与动作自身的类别不同，执行所需的等级也按该类别判定"
+		},
+		"hint-action-executing": {
+			"name": "Hint Action Executing",
+			"explanation": "长按执行的行，即可切换开始和停止"
+		},
+		"hint-action-resource": {
+			"name": "Hint Action Resource",
+			"explanation": "「条件」中排列的内容会在每次执行时被消耗。带有比例的表示被消耗的概率"
+		},
+		"hint-action-locked": {
+			"name": "Hint Action Locked",
+			"explanation": "未满足开放条件的动作会以带斜线的方式显示，说明文会被隐藏"
+		},
+		"hint-skills-list": {
+			"name": "Hint Skills List",
+			"explanation": "列出各类别的物品所拥有的技能"
+		},
+		"hint-skills-chance": {
+			"name": "Hint Skills Chance",
+			"explanation": "比例是发动的概率"
+		},
+		"hint-skills-opponent": {
+			"name": "Hint Skills Opponent",
+			"explanation": "动作方拥有的技能可以在动作栏中查看"
+		},
+		"hint-skill-meaning": {
+			"name": "Hint Skill Meaning",
+			"explanation": "技能是在战斗中发动时，仅在该回合修正战斗数值的要素"
+		},
+		"hint-skill-chance": {
+			"name": "Hint Skill Chance",
+			"explanation": "发动在每个回合抽选，我方和对方每回合最多各一个。若其他技能先抽中，则不会完全按照显示的概率出现"
+		},
+		"hint-skill-restore": {
+			"name": "Hint Skill Restore",
+			"explanation": "只有恢复不会在该回合生效，而是统一反映到战斗决出胜负之后的恢复中"
+		},
+		"hint-tasks-meaning": {
+			"name": "Hint Tasks Meaning",
+			"explanation": "任务是满足条件即达成的事件。奖励需要自己领取"
+		},
+		"hint-tasks-unclaimed": {
+			"name": "Hint Tasks Unclaimed",
+			"explanation": "尚未领取奖励的任务会带有丝带标记。打开后按下领取"
+		},
+		"hint-tasks-capacity": {
+			"name": "Hint Tasks Capacity",
+			"explanation": "可持有的种类数达到上限期间无法领取奖励。腾出空位后重新领取"
+		},
+		"hint-category-meaning": {
+			"name": "Hint Category Meaning",
+			"explanation": "类别是把动作、物品、属性、技能、任务汇总起来的单位"
+		},
+		"hint-category-level": {
+			"name": "Hint Category Level",
+			"explanation": "等级通过执行动作获得的经验值提升"
+		},
+		"hint-category-holding": {
+			"name": "Hint Category Holding",
+			"explanation": "进度和装备的条可以通过长按切换"
+		},
+		"hint-category-equipment": {
+			"name": "Hint Category Equipment",
+			"explanation": "每个分组会准备一个装备位"
+		},
+		"hint-status-meaning": {
+			"name": "Hint Status Meaning",
+			"explanation": "属性是影响动作执行结果的数值修正"
+		},
+		"hint-status-property": {
+			"name": "Hint Status Property",
+			"explanation": "这里排列的仅是物品带来的修正，根据执行的动作，还会施加技能等其他修正"
+		},
+		"hint-status-stacking": {
+			"name": "Hint Status Stacking",
+			"explanation": "无需装备的物品，其修正会随持有数成比例增加"
+		},
+		"hint-inventory-meaning": {
+			"name": "Hint Inventory Meaning",
+			"explanation": "物品是装备品、消耗品、贵重品等与持有物相关的要素"
+		},
+		"hint-inventory-equipping": {
+			"name": "Hint Inventory Equipping",
+			"explanation": "长按条即可切换装备"
+		},
+		"hint-inventory-capacity": {
+			"name": "Hint Inventory Capacity",
+			"explanation": "持有位统计的是物品的种类数，而不是个数"
+		},
+		"hint-selling-list": {
+			"name": "Hint Selling List",
+			"explanation": "排列的仅是设定了出售价格的持有物品"
+		},
+		"hint-selling-amount": {
+			"name": "Hint Selling Amount",
+			"explanation": "选择后持有数会全部成为出售对象。数值是总额"
+		},
+		"hint-selling-unequip": {
+			"name": "Hint Selling Unequip",
+			"explanation": "出售后数量变为0的装备会自动卸下"
+		},
+		"hint-activity-meaning": {
+			"name": "Hint Activity Meaning",
+			"explanation": "动作是执行后可获得经验值和奖励的行为"
+		},
+		"hint-activity-executing": {
+			"name": "Hint Activity Executing",
+			"explanation": "长按条即可切换执行"
+		},
+		"hint-activity-index": {
+			"name": "Hint Activity Index",
+			"explanation": "Lv.n 是该动作所需的等级"
+		},
+		"hint-ability-meaning": {
+			"name": "Hint Ability Meaning",
+			"explanation": "技能是在战斗中发动时，仅在该回合修正战斗数值的要素"
+		},
+		"hint-ability-source": {
+			"name": "Hint Ability Source",
+			"explanation": "排列的是装备中的物品，以及无需装备的持有物品所拥有的技能"
+		},
+		"hint-ability-chance": {
+			"name": "Hint Ability Chance",
+			"explanation": "比例是发动的概率"
+		},
+		"hint-missions-meaning": {
+			"name": "Hint Missions Meaning",
+			"explanation": "任务是满足条件即达成的事件。奖励需要自己领取"
+		},
+		"hint-missions-completed": {
+			"name": "Hint Missions Completed",
+			"explanation": "已达成的任务会带有勾选标记。一旦达成，之后即使不再满足条件也会保持达成"
+		},
+		"hint-missions-unclaimed": {
+			"name": "Hint Missions Unclaimed",
+			"explanation": "尚未领取奖励的任务会带有丝带标记。打开后按下领取"
+		},
+		"hint-property-meaning": {
+			"name": "Hint Property Meaning",
+			"explanation": "属性是影响动作执行结果的数值修正"
+		},
+		"hint-property-scope": {
+			"name": "Hint Property Scope",
+			"explanation": "从类别打开时显示有贡献的物品列表，从物品打开时显示影响的类别列表，从技能打开时仅显示修正值"
+		}
+	}
+}

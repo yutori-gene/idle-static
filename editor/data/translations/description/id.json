@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "Tes",
+      "data": "Data",
+      "document": "Dokumen",
+      "language": "Bahasa"
+    },
+    "item": {
+      "save": "Simpan",
+      "overwrite": "Timpa",
+      "autosave": "Alihkan simpan otomatis",
+      "play": "Main",
+      "continue": "Lanjutkan",
+      "new": "Baru",
+      "validation": "Validasi",
+      "import": "Impor",
+      "local": "Lokal",
+      "empty": "Kosong",
+      "sample": "Contoh",
+      "full": "Utama",
+      "export": "Ekspor",
+      "publish": "Publikasikan",
+      "execute": "Jalankan",
+      "portal": "Portal",
+      "document": "Dokumen",
+      "language": "Bahasa",
+      "menu": "Menu"
+    },
+    "status": {
+      "on": "Aktif",
+      "off": "Nonaktif"
+    },
+    "comment": {
+      "continue": "Progres akan dilanjutkan.",
+      "new": "Progres akan direset.",
+      "overwrite_warning_1": "Konten yang sedang diedit",
+      "overwrite_warning_2": "akan ditimpa.",
+      "processing_time": "Proses ini memerlukan waktu.",
+      "full_readonly": "Terlalu besar untuk diedit.",
+      "full_usage": "Hanya validasi dan main.",
+      "autosave_status": "Saat ini: {status}",
+      "autosave_description": "Simpan saat menu dibuka"
+    }
+  },
+  "confirm": {
+    "load_empty": "Editan saat ini akan hilang. Muat data kosong?",
+    "load_file": "Editan saat ini akan hilang. Muat data dari berkas?",
+    "load_sample": "Editan saat ini akan hilang. Muat data contoh?"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "Editor belum diinisialisasi.",
+      "validation_debug": "Ditemukan galat validasi. Proses debug tidak dapat dimulai.",
+      "validation_publish": "Ditemukan galat validasi. Publikasi tidak dapat dimulai.",
+      "publishing_failed": "Gagal memublikasikan.",
+      "invalid_image": "Gambar tidak valid.",
+      "image_size_limit": "Ukuran gambar melebihi batas. Ukuran: {size} KB. (Batas: {limit}KB)",
+      "export_failed": "Gagal mengekspor.",
+      "empty_data_load_failed": "Gagal memuat data kosong.",
+      "invalid_world_data": "Data dunia tidak valid. Periksa struktur dasarnya.",
+      "json_parse_failed": "Gagal membaca berkas JSON. Periksa format berkasnya.",
+      "file_read_failed": "Gagal membaca berkas.",
+      "sample_data_load_failed": "Gagal memuat data contoh.",
+      "full_data_load_failed": "Gagal memuat data utama.",
+      "validation_process_failed": "Proses validasi gagal.",
+      "autosave_toggle_failed": "Gagal mengalihkan simpan otomatis."
+    },
+    "success": {
+      "validation_generating": "Validasi berhasil! Membuat berkas mandiri...",
+      "publishing_completed": "Berkas mandiri telah dipublikasikan!",
+      "data_exported": "Data diekspor: {filename}",
+      "empty_data_loaded": "Data kosong dimuat",
+      "data_loaded": "Data dimuat: {filename}",
+      "sample_data_loaded": "Data contoh dimuat",
+      "validation_successful": "Validasi berhasil: tidak ditemukan masalah pada data",
+      "autosave_enabled": "Simpan otomatis diaktifkan",
+      "autosave_disabled": "Simpan otomatis dinonaktifkan",
+      "save_for_play": "Data disimpan untuk bermain"
+    }
+  },
+  "copyInformation": {
+    "promptType": "Masukkan tipe tujuan salinan",
+    "promptId": "Masukkan ID tujuan salinan:",
+    "success": "Information disalin ke {type} (id: {id})",
+    "errorInvalidType": "Tipe tidak valid",
+    "errorNotFound": "ID '{id}' yang ditentukan tidak ditemukan di {type}.",
+    "errorCanceled": "Penyalinan dibatalkan."
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 Kapasitas penyimpanan terlampaui. Gagal menyimpan.",
+    "save_failed": "Gagal menyimpan.",
+    "indexeddb_private_mode": "🔒 IndexedDB tidak dapat digunakan dalam mode privat",
+    "storage_quota": "💾 Kapasitas penyimpanan terlampaui",
+    "indexeddb_unsupported": "⚠️ Peramban tidak mendukung IndexedDB",
+    "database_init_failed": "❌ Gagal menginisialisasi basis data: {message}"
+  },
+  "ui": {
+    "copy": "Salin",
+    "cancel": "Batal",
+    "enter_id": "Masukkan ID"
+  },
+  "validation": {
+    "failed_with_count": "🚨 Validasi gagal: ditemukan {count} galat\n\n📋 Lihat Basic → Development → Errors untuk detailnya",
+    "icon": {
+      "invalid_base64_format": "Format gambar Base64 tidak valid [{preview}...] di {path} - harus diawali dengan 'data:image/[type];base64,'.",
+      "missing_base64_data": "Format gambar Base64 tidak valid di {path} - tidak ada data Base64 setelah koma.",
+      "invalid_base64_chars": "Enkode Base64 tidak valid di {path} - mengandung karakter yang tidak valid.",
+      "invalid_base64_length": "Enkode Base64 tidak valid di {path} - panjangnya harus kelipatan 4.",
+      "invalid_iconify_format": "Format ID iconify tidak valid [{iconifyId}] di {path} - harus memuat pemisah ':'.",
+      "empty_iconify_family": "Format ID iconify tidak valid [{iconifyId}] di {path} - nama familinya kosong.",
+      "empty_iconify_name": "Format ID iconify tidak valid [{iconifyId}] di {path} - nama ikonnya kosong.",
+      "iconify_load_failed": "Gagal memuat famili iconify [{family}] [{iconifyId}] di {path} - {error}."
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}] tidak ditemukan di {path}:{id}.",
+      "group_not_found": "Grup [{group}] tidak ditemukan di {path}. Harus kosong atau berupa ID grup yang telah didefinisikan."
+    }
+  }
+}

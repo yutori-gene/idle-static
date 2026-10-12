@@ -1,0 +1,42 @@
+import { Markdown, Tree } from "~d/type/markdownType";
+import { tree as editor } from "./editor";
+import { tree as player } from "./player";
+
+
+// readme
+
+export const readme: Markdown = {
+	title: "放置系ゲーム開発プラットフォーム",
+	summary: "ワールドという定義データから放置系ゲームを作って遊ぶためのプラットフォーム",
+	points: [
+		"ゲームの中身は「ワールド」と呼ぶ定義データにまとまっています。プログラムを書かなくても、エディターの入力だけで1本のゲームを組み立てられます。",
+		"作ったワールドはプレイヤーで読み込んで遊びます。単体で動く形に書き出せば、そのまま配布することもできます。",
+		"このドキュメントはエディターとプレイヤーの2部構成です。ワールドを作る側の設定項目はエディター、遊ぶ側の画面はプレイヤーを参照してください。",
+	],
+	children: {
+		feature: {
+			title: "特徴",
+			summary: "プラットフォームの主要機能と特徴",
+			points: [
+				"放置系ゲームに必要な要素（カテゴリ・アクション・アイテム・スキル・グループ・プリセット）とイベントが最初から用意されていて、組み合わせだけでゲームの形が決まります。",
+				"画面を閉じている間の時間もオフラインの進行として消化されるため、放置したぶんが進みます。",
+				"10の言語に対応しています。画面の共通語句は常に同梱され、ワールド自身の文言も言語ごとに用意できます。",
+				"進行状況はブラウザにワールドごとに保存され、ファイルへ書き出して持ち運べます。",
+			],
+		},
+	},
+	options: {
+		label: "README",
+		readme: true,
+	}
+};
+
+
+// tree
+
+export const tree: Tree = {
+	title: readme,
+	twig: [editor, player]
+}
+
+// export const list:Markdown[] =  flattenTree(tree);

@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "Test",
+      "data": "Data",
+      "document": "Document",
+      "language": "Language"
+    },
+    "item": {
+      "save": "Save",
+      "overwrite": "Overwrite",
+      "autosave": "Toggle Auto Save",
+      "play": "Play",
+      "continue": "Continue",
+      "new": "New",
+      "validation": "Validation",
+      "import": "Import",
+      "local": "Local",
+      "empty": "Empty",
+      "sample": "Sample",
+      "full": "Main",
+      "export": "Export",
+      "publish": "Publish",
+      "execute": "Execute",
+      "portal": "Portal",
+      "document": "Document",
+      "language": "Language",
+      "menu": "Menu"
+    },
+    "status": {
+      "on": "On",
+      "off": "Off"
+    },
+    "comment": {
+      "continue": "Carries over your progress.",
+      "new": "Resets your progress.",
+      "overwrite_warning_1": "The content you are editing",
+      "overwrite_warning_2": "will be overwritten.",
+      "processing_time": "Processing takes some time.",
+      "full_readonly": "Too large to edit.",
+      "full_usage": "Validation and play only.",
+      "autosave_status": "Current: {status}",
+      "autosave_description": "Saves when the menu is opened"
+    }
+  },
+  "confirm": {
+    "load_empty": "Your current edits will be lost. Load empty data?",
+    "load_file": "Your current edits will be lost. Load data from a file?",
+    "load_sample": "Your current edits will be lost. Load sample data?"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "The editor is not initialized.",
+      "validation_debug": "Validation errors were found. Debugging cannot start.",
+      "validation_publish": "Validation errors were found. Publishing cannot start.",
+      "publishing_failed": "Publishing failed.",
+      "invalid_image": "The image is invalid.",
+      "image_size_limit": "The image exceeds the size limit. Size: {size} KB. (Limit: {limit}KB)",
+      "export_failed": "Export failed.",
+      "empty_data_load_failed": "Failed to load the empty data.",
+      "invalid_world_data": "The world data is invalid. Check the basic structure.",
+      "json_parse_failed": "Failed to read the JSON file. Check the file format.",
+      "file_read_failed": "Failed to read the file.",
+      "sample_data_load_failed": "Failed to load the sample data.",
+      "full_data_load_failed": "Failed to load the main data.",
+      "validation_process_failed": "The validation process failed.",
+      "autosave_toggle_failed": "Failed to toggle auto save."
+    },
+    "success": {
+      "validation_generating": "Validation passed! Generating the standalone file...",
+      "publishing_completed": "The standalone file has been published!",
+      "data_exported": "Data exported: {filename}",
+      "empty_data_loaded": "Empty data loaded",
+      "data_loaded": "Data loaded: {filename}",
+      "sample_data_loaded": "Sample data loaded",
+      "validation_successful": "Validation passed: no problems found in the data",
+      "autosave_enabled": "Auto save turned on",
+      "autosave_disabled": "Auto save turned off",
+      "save_for_play": "Data saved for play"
+    }
+  },
+  "copyInformation": {
+    "promptType": "Enter the type to copy to",
+    "promptId": "Enter the ID to copy to:",
+    "success": "Copied Information to {type} (id: {id})",
+    "errorInvalidType": "Invalid type",
+    "errorNotFound": "The specified ID '{id}' was not found in {type}.",
+    "errorCanceled": "The copy was canceled."
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 Storage capacity exceeded. Saving failed.",
+    "save_failed": "Saving failed.",
+    "indexeddb_private_mode": "🔒 IndexedDB cannot be used in private mode",
+    "storage_quota": "💾 Storage capacity exceeded",
+    "indexeddb_unsupported": "⚠️ The browser does not support IndexedDB",
+    "database_init_failed": "❌ Failed to initialize the database: {message}"
+  },
+  "ui": {
+    "copy": "Copy",
+    "cancel": "Cancel",
+    "enter_id": "Enter an ID"
+  },
+  "validation": {
+    "failed_with_count": "🚨 Validation failed: {count} errors found\n\n📋 See Basic → Development → Errors for details",
+    "icon": {
+      "invalid_base64_format": "Invalid Base64 image format [{preview}...] at {path} - must start with 'data:image/[type];base64,'.",
+      "missing_base64_data": "Invalid Base64 image format at {path} - no Base64 data after the comma.",
+      "invalid_base64_chars": "Invalid Base64 encoding at {path} - contains invalid characters.",
+      "invalid_base64_length": "Invalid Base64 encoding at {path} - the length must be a multiple of 4.",
+      "invalid_iconify_format": "Invalid iconify ID format [{iconifyId}] at {path} - must contain a ':' separator.",
+      "empty_iconify_family": "Invalid iconify ID format [{iconifyId}] at {path} - the family name is empty.",
+      "empty_iconify_name": "Invalid iconify ID format [{iconifyId}] at {path} - the icon name is empty.",
+      "iconify_load_failed": "Failed to load the iconify family [{family}] [{iconifyId}] at {path} - {error}."
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}] not found at {path}:{id}.",
+      "group_not_found": "Group [{group}] not found at {path}. It must be empty or a defined group ID."
+    }
+  }
+}

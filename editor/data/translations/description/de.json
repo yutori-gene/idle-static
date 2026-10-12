@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "Test",
+      "data": "Daten",
+      "document": "Dokument",
+      "language": "Sprache"
+    },
+    "item": {
+      "save": "Speichern",
+      "overwrite": "Überschreiben",
+      "autosave": "Automatisches Speichern umschalten",
+      "play": "Spielen",
+      "continue": "Fortsetzen",
+      "new": "Neu",
+      "validation": "Prüfung",
+      "import": "Importieren",
+      "local": "Lokal",
+      "empty": "Leer",
+      "sample": "Beispiel",
+      "full": "Hauptspiel",
+      "export": "Exportieren",
+      "publish": "Veröffentlichen",
+      "execute": "Ausführen",
+      "portal": "Portal",
+      "document": "Dokument",
+      "language": "Sprache",
+      "menu": "Menü"
+    },
+    "status": {
+      "on": "Ein",
+      "off": "Aus"
+    },
+    "comment": {
+      "continue": "Der Fortschritt wird übernommen.",
+      "new": "Der Fortschritt wird zurückgesetzt.",
+      "overwrite_warning_1": "Der bearbeitete Inhalt",
+      "overwrite_warning_2": "wird überschrieben.",
+      "processing_time": "Die Verarbeitung dauert eine Weile.",
+      "full_readonly": "Zu groß zum Bearbeiten.",
+      "full_usage": "Nur Prüfung und Spielen.",
+      "autosave_status": "Aktuell: {status}",
+      "autosave_description": "Beim Öffnen des Menüs speichern"
+    }
+  },
+  "confirm": {
+    "load_empty": "Die aktuellen Änderungen gehen verloren. Leere Daten laden?",
+    "load_file": "Die aktuellen Änderungen gehen verloren. Daten aus einer Datei laden?",
+    "load_sample": "Die aktuellen Änderungen gehen verloren. Beispieldaten laden?"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "Der Editor ist nicht initialisiert.",
+      "validation_debug": "Es wurden Prüffehler gefunden. Das Debuggen kann nicht gestartet werden.",
+      "validation_publish": "Es wurden Prüffehler gefunden. Die Veröffentlichung kann nicht gestartet werden.",
+      "publishing_failed": "Veröffentlichen fehlgeschlagen.",
+      "invalid_image": "Das Bild ist ungültig.",
+      "image_size_limit": "Das Bild überschreitet die Größenbeschränkung. Größe: {size} KB. (Grenze: {limit}KB)",
+      "export_failed": "Export fehlgeschlagen.",
+      "empty_data_load_failed": "Die leeren Daten konnten nicht geladen werden.",
+      "invalid_world_data": "Die Weltdaten sind ungültig. Prüfe die Grundstruktur.",
+      "json_parse_failed": "Die JSON-Datei konnte nicht gelesen werden. Prüfe das Dateiformat.",
+      "file_read_failed": "Die Datei konnte nicht gelesen werden.",
+      "sample_data_load_failed": "Die Beispieldaten konnten nicht geladen werden.",
+      "full_data_load_failed": "Die Hauptspieldaten konnten nicht geladen werden.",
+      "validation_process_failed": "Der Prüfvorgang ist fehlgeschlagen.",
+      "autosave_toggle_failed": "Das automatische Speichern konnte nicht umgeschaltet werden."
+    },
+    "success": {
+      "validation_generating": "Prüfung erfolgreich! Die eigenständige Datei wird erzeugt...",
+      "publishing_completed": "Die eigenständige Datei wurde veröffentlicht!",
+      "data_exported": "Daten exportiert: {filename}",
+      "empty_data_loaded": "Leere Daten geladen",
+      "data_loaded": "Daten geladen: {filename}",
+      "sample_data_loaded": "Beispieldaten geladen",
+      "validation_successful": "Prüfung erfolgreich: keine Probleme in den Daten gefunden",
+      "autosave_enabled": "Automatisches Speichern eingeschaltet",
+      "autosave_disabled": "Automatisches Speichern ausgeschaltet",
+      "save_for_play": "Daten zum Spielen gespeichert"
+    }
+  },
+  "copyInformation": {
+    "promptType": "Gib den Zieltyp für die Kopie ein",
+    "promptId": "Gib die Ziel-ID für die Kopie ein:",
+    "success": "Information nach {type} (id: {id}) kopiert",
+    "errorInvalidType": "Ungültiger Typ",
+    "errorNotFound": "Die angegebene ID '{id}' wurde in {type} nicht gefunden.",
+    "errorCanceled": "Das Kopieren wurde abgebrochen."
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 Der Speicherplatz wurde überschritten. Speichern fehlgeschlagen.",
+    "save_failed": "Speichern fehlgeschlagen.",
+    "indexeddb_private_mode": "🔒 Im privaten Modus kann IndexedDB nicht verwendet werden",
+    "storage_quota": "💾 Der Speicherplatz wurde überschritten",
+    "indexeddb_unsupported": "⚠️ Der Browser unterstützt IndexedDB nicht",
+    "database_init_failed": "❌ Die Datenbank konnte nicht initialisiert werden: {message}"
+  },
+  "ui": {
+    "copy": "Kopieren",
+    "cancel": "Abbrechen",
+    "enter_id": "Gib eine ID ein"
+  },
+  "validation": {
+    "failed_with_count": "🚨 Prüfung fehlgeschlagen: {count} Fehler gefunden\n\n📋 Einzelheiten siehe Basic → Development → Errors",
+    "icon": {
+      "invalid_base64_format": "Ungültiges Base64-Bildformat [{preview}...] in {path} - muss mit 'data:image/[type];base64,' beginnen.",
+      "missing_base64_data": "Ungültiges Base64-Bildformat in {path} - nach dem Komma fehlen die Base64-Daten.",
+      "invalid_base64_chars": "Ungültige Base64-Kodierung in {path} - enthält ungültige Zeichen.",
+      "invalid_base64_length": "Ungültige Base64-Kodierung in {path} - die Länge muss ein Vielfaches von 4 sein.",
+      "invalid_iconify_format": "Ungültiges iconify-ID-Format [{iconifyId}] in {path} - muss den Trenner ':' enthalten.",
+      "empty_iconify_family": "Ungültiges iconify-ID-Format [{iconifyId}] in {path} - der Familienname ist leer.",
+      "empty_iconify_name": "Ungültiges iconify-ID-Format [{iconifyId}] in {path} - der Symbolname ist leer.",
+      "iconify_load_failed": "Die iconify-Familie [{family}] konnte nicht geladen werden [{iconifyId}] in {path} - {error}."
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}] wurde in {path}:{id} nicht gefunden.",
+      "group_not_found": "Gruppe [{group}] wurde in {path} nicht gefunden. Sie muss leer oder eine definierte Gruppen-ID sein."
+    }
+  }
+}

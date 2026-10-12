@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "Тест",
+      "data": "Данные",
+      "document": "Документ",
+      "language": "Язык"
+    },
+    "item": {
+      "save": "Сохранить",
+      "overwrite": "Перезаписать",
+      "autosave": "Переключить автосохранение",
+      "play": "Играть",
+      "continue": "Продолжить",
+      "new": "Создать",
+      "validation": "Проверка",
+      "import": "Импорт",
+      "local": "Локально",
+      "empty": "Пусто",
+      "sample": "Образец",
+      "full": "Основное",
+      "export": "Экспорт",
+      "publish": "Опубликовать",
+      "execute": "Выполнить",
+      "portal": "Портал",
+      "document": "Документ",
+      "language": "Язык",
+      "menu": "Меню"
+    },
+    "status": {
+      "on": "Вкл",
+      "off": "Выкл"
+    },
+    "comment": {
+      "continue": "Прогресс будет сохранён.",
+      "new": "Прогресс будет сброшен.",
+      "overwrite_warning_1": "Редактируемое содержимое",
+      "overwrite_warning_2": "будет перезаписано.",
+      "processing_time": "Обработка займёт некоторое время.",
+      "full_readonly": "Слишком большой для редактирования.",
+      "full_usage": "Только проверка и игра.",
+      "autosave_status": "Сейчас: {status}",
+      "autosave_description": "Сохранять при открытии меню"
+    }
+  },
+  "confirm": {
+    "load_empty": "Текущие правки будут потеряны. Загрузить пустые данные?",
+    "load_file": "Текущие правки будут потеряны. Загрузить данные из файла?",
+    "load_sample": "Текущие правки будут потеряны. Загрузить образец данных?"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "Редактор не инициализирован.",
+      "validation_debug": "Найдены ошибки проверки. Отладку начать нельзя.",
+      "validation_publish": "Найдены ошибки проверки. Публикацию начать нельзя.",
+      "publishing_failed": "Не удалось опубликовать.",
+      "invalid_image": "Недопустимое изображение.",
+      "image_size_limit": "Изображение превышает ограничение по размеру. Размер: {size} KB. (Ограничение: {limit}KB)",
+      "export_failed": "Не удалось экспортировать.",
+      "empty_data_load_failed": "Не удалось загрузить пустые данные.",
+      "invalid_world_data": "Недопустимые данные мира. Проверьте базовую структуру.",
+      "json_parse_failed": "Не удалось прочитать файл JSON. Проверьте формат файла.",
+      "file_read_failed": "Не удалось прочитать файл.",
+      "sample_data_load_failed": "Не удалось загрузить образец данных.",
+      "full_data_load_failed": "Не удалось загрузить основные данные.",
+      "validation_process_failed": "Процесс проверки завершился с ошибкой.",
+      "autosave_toggle_failed": "Не удалось переключить автосохранение."
+    },
+    "success": {
+      "validation_generating": "Проверка пройдена! Создание автономного файла...",
+      "publishing_completed": "Автономный файл опубликован!",
+      "data_exported": "Данные экспортированы: {filename}",
+      "empty_data_loaded": "Пустые данные загружены",
+      "data_loaded": "Данные загружены: {filename}",
+      "sample_data_loaded": "Образец данных загружен",
+      "validation_successful": "Проверка пройдена: проблем в данных не найдено",
+      "autosave_enabled": "Автосохранение включено",
+      "autosave_disabled": "Автосохранение выключено",
+      "save_for_play": "Данные сохранены для игры"
+    }
+  },
+  "copyInformation": {
+    "promptType": "Введите тип назначения копирования",
+    "promptId": "Введите ID назначения копирования:",
+    "success": "Information скопирована в {type} (id: {id})",
+    "errorInvalidType": "Недопустимый тип",
+    "errorNotFound": "Указанный ID '{id}' не найден в {type}.",
+    "errorCanceled": "Копирование отменено."
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 Превышен объём хранилища. Не удалось сохранить.",
+    "save_failed": "Не удалось сохранить.",
+    "indexeddb_private_mode": "🔒 В приватном режиме IndexedDB использовать нельзя",
+    "storage_quota": "💾 Превышен объём хранилища",
+    "indexeddb_unsupported": "⚠️ Браузер не поддерживает IndexedDB",
+    "database_init_failed": "❌ Не удалось инициализировать базу данных: {message}"
+  },
+  "ui": {
+    "copy": "Копировать",
+    "cancel": "Отмена",
+    "enter_id": "Введите ID"
+  },
+  "validation": {
+    "failed_with_count": "🚨 Проверка не пройдена: найдено ошибок — {count}\n\n📋 Подробности см. в Basic → Development → Errors",
+    "icon": {
+      "invalid_base64_format": "Недопустимый формат изображения Base64 [{preview}...] в {path} - должен начинаться с 'data:image/[type];base64,'.",
+      "missing_base64_data": "Недопустимый формат изображения Base64 в {path} - после запятой нет данных Base64.",
+      "invalid_base64_chars": "Недопустимая кодировка Base64 в {path} - содержит недопустимые символы.",
+      "invalid_base64_length": "Недопустимая кодировка Base64 в {path} - длина должна быть кратна 4.",
+      "invalid_iconify_format": "Недопустимый формат ID iconify [{iconifyId}] в {path} - должен содержать разделитель ':'.",
+      "empty_iconify_family": "Недопустимый формат ID iconify [{iconifyId}] в {path} - имя семейства пустое.",
+      "empty_iconify_name": "Недопустимый формат ID iconify [{iconifyId}] в {path} - имя значка пустое.",
+      "iconify_load_failed": "Не удалось загрузить семейство iconify [{family}] [{iconifyId}] в {path} - {error}."
+    },
+    "reference": {
+      "id_not_found": "{typeName} id [{id}] не найден в {path}:{id}.",
+      "group_not_found": "Группа [{group}] не найдена в {path}. Она должна быть пустой или содержать заданный ID группы."
+    }
+  }
+}

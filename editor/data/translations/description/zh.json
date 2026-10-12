@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "header": {
+      "test": "测试",
+      "data": "数据",
+      "document": "文档",
+      "language": "语言"
+    },
+    "item": {
+      "save": "保存",
+      "overwrite": "覆盖",
+      "autosave": "切换自动保存",
+      "play": "游玩",
+      "continue": "继续",
+      "new": "新建",
+      "validation": "验证",
+      "import": "导入",
+      "local": "本地",
+      "empty": "空白",
+      "sample": "示例",
+      "full": "正式版",
+      "export": "导出",
+      "publish": "发布",
+      "execute": "执行",
+      "portal": "门户",
+      "document": "文档",
+      "language": "语言",
+      "menu": "菜单"
+    },
+    "status": {
+      "on": "开",
+      "off": "关"
+    },
+    "comment": {
+      "continue": "将继承当前的进度。",
+      "new": "将重置进度。",
+      "overwrite_warning_1": "正在编辑的内容",
+      "overwrite_warning_2": "将被覆盖。",
+      "processing_time": "处理需要一些时间。",
+      "full_readonly": "体积过大，无法编辑。",
+      "full_usage": "仅可验证与试玩。",
+      "autosave_status": "当前: {status}",
+      "autosave_description": "打开菜单时保存"
+    }
+  },
+  "confirm": {
+    "load_empty": "当前的编辑将会丢失。要载入空数据吗？",
+    "load_file": "当前的编辑将会丢失。要从文件载入数据吗？",
+    "load_sample": "当前的编辑将会丢失。要载入示例数据吗？"
+  },
+  "toast": {
+    "error": {
+      "editor_not_initialized": "编辑器尚未初始化。",
+      "validation_debug": "发现验证错误。无法开始调试。",
+      "validation_publish": "发现验证错误。无法开始发布。",
+      "publishing_failed": "发布失败。",
+      "invalid_image": "图像无效。",
+      "image_size_limit": "图像大小超出限制。大小: {size} KB。（限制: {limit}KB）",
+      "export_failed": "导出失败。",
+      "empty_data_load_failed": "载入空数据失败。",
+      "invalid_world_data": "世界数据无效。请检查基本结构。",
+      "json_parse_failed": "读取 JSON 文件失败。请检查文件格式。",
+      "file_read_failed": "读取文件失败。",
+      "sample_data_load_failed": "载入示例数据失败。",
+      "full_data_load_failed": "载入正式数据失败。",
+      "validation_process_failed": "验证过程失败。",
+      "autosave_toggle_failed": "切换自动保存失败。"
+    },
+    "success": {
+      "validation_generating": "验证成功！正在生成独立文件...",
+      "publishing_completed": "独立文件已发布完成！",
+      "data_exported": "数据已导出: {filename}",
+      "empty_data_loaded": "已载入空数据",
+      "data_loaded": "已载入数据: {filename}",
+      "sample_data_loaded": "已载入示例数据",
+      "validation_successful": "验证成功: 数据未发现问题",
+      "autosave_enabled": "已开启自动保存",
+      "autosave_disabled": "已关闭自动保存",
+      "save_for_play": "已保存游玩用的数据"
+    }
+  },
+  "copyInformation": {
+    "promptType": "请输入复制目标的类型",
+    "promptId": "请输入复制目标的 ID:",
+    "success": "已将 Information 复制到 {type} (id: {id})",
+    "errorInvalidType": "类型无效",
+    "errorNotFound": "在 {type} 中找不到指定的 ID '{id}'。",
+    "errorCanceled": "复制已取消。"
+  },
+  "alert": {
+    "storage_quota_exceeded": "💾 存储容量已超出。保存失败。",
+    "save_failed": "保存失败。",
+    "indexeddb_private_mode": "🔒 隐私模式下无法使用 IndexedDB",
+    "storage_quota": "💾 存储容量已超出",
+    "indexeddb_unsupported": "⚠️ 浏览器不支持 IndexedDB",
+    "database_init_failed": "❌ 数据库初始化失败: {message}"
+  },
+  "ui": {
+    "copy": "复制",
+    "cancel": "取消",
+    "enter_id": "请输入 ID"
+  },
+  "validation": {
+    "failed_with_count": "🚨 验证失败: 发现 {count} 个错误\n\n📋 详情请参阅 Basic → Development → Errors",
+    "icon": {
+      "invalid_base64_format": "无效的 Base64 图像格式 [{preview}...] 位于 {path} - 必须以 'data:image/[type];base64,' 开头。",
+      "missing_base64_data": "无效的 Base64 图像格式 位于 {path} - 逗号后没有 Base64 数据。",
+      "invalid_base64_chars": "无效的 Base64 编码 位于 {path} - 包含无效字符。",
+      "invalid_base64_length": "无效的 Base64 编码 位于 {path} - 长度必须是 4 的倍数。",
+      "invalid_iconify_format": "无效的 iconify ID 格式 [{iconifyId}] 位于 {path} - 必须包含 ':' 分隔符。",
+      "empty_iconify_family": "无效的 iconify ID 格式 [{iconifyId}] 位于 {path} - 系列名称为空。",
+      "empty_iconify_name": "无效的 iconify ID 格式 [{iconifyId}] 位于 {path} - 图标名称为空。",
+      "iconify_load_failed": "载入 iconify 系列 [{family}] 失败 [{iconifyId}] 位于 {path} - {error}。"
+    },
+    "reference": {
+      "id_not_found": "在 {path}:{id} 中找不到 {typeName} id [{id}]。",
+      "group_not_found": "在 {path} 中找不到分组 [{group}]。必须为空或为已定义的分组 ID。"
+    }
+  }
+}

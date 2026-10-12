@@ -1,0 +1,1442 @@
+{
+	"category": {},
+	"action": {},
+	"item": {},
+	"group": {},
+	"event": {},
+	"skill": {},
+	"preset": {
+		"locked": {
+			"name": "Locked",
+			"explanation": "Meeting the requirements unlocks this element"
+		},
+		"max": {
+			"name": "Maximum",
+			"explanation": ""
+		},
+		"min": {
+			"name": "Minimum",
+			"explanation": ""
+		},
+		"maximum-owned": {
+			"name": "Maximum Owned",
+			"explanation": "Items cannot be held beyond this number"
+		},
+		"maximum-execution": {
+			"name": "Maximum Executions",
+			"explanation": "Actions cannot be executed beyond this number"
+		},
+		"unavailable": {
+			"name": "Unavailable",
+			"explanation": ""
+		},
+		"purchased-count": {
+			"name": "Purchased",
+			"explanation": ""
+		},
+		"purchase-limit": {
+			"name": "Purchase Limit",
+			"explanation": "The upper limit on how many times it can be purchased"
+		},
+		"purchasable-count": {
+			"name": "Purchasable",
+			"explanation": "How many more times it can be purchased"
+		},
+		"total": {
+			"name": "Total",
+			"explanation": ""
+		},
+		"percentage": {
+			"name": "Percentage",
+			"explanation": ""
+		},
+		"player": {
+			"name": "Player",
+			"explanation": ""
+		},
+		"target": {
+			"name": "Target",
+			"explanation": ""
+		},
+		"requirement": {
+			"name": "Requirement",
+			"explanation": ""
+		},
+		"requirements": {
+			"name": "Requirement List",
+			"explanation": ""
+		},
+		"acquisition": {
+			"name": "Acquisition",
+			"explanation": ""
+		},
+		"acquisitions": {
+			"name": "Acquisition List",
+			"explanation": ""
+		},
+		"results": {
+			"name": "Results",
+			"explanation": ""
+		},
+		"ok": {
+			"name": "OK？",
+			"explanation": ""
+		},
+		"yes": {
+			"name": "Yes",
+			"explanation": ""
+		},
+		"no": {
+			"name": "No",
+			"explanation": ""
+		},
+		"on": {
+			"name": "On",
+			"explanation": ""
+		},
+		"off": {
+			"name": "Off",
+			"explanation": ""
+		},
+		"seconds": {
+			"name": "Seconds",
+			"explanation": ""
+		},
+		"minutes": {
+			"name": "Minutes",
+			"explanation": ""
+		},
+		"hours": {
+			"name": "Hours",
+			"explanation": ""
+		},
+		"days": {
+			"name": "Days",
+			"explanation": ""
+		},
+		"years": {
+			"name": "Years",
+			"explanation": ""
+		},
+		"centuries": {
+			"name": "Centuries",
+			"explanation": ""
+		},
+		"endless": {
+			"name": "∞",
+			"explanation": ""
+		},
+		"success": {
+			"name": "Success",
+			"explanation": ""
+		},
+		"failure": {
+			"name": "Failure",
+			"explanation": "Failure"
+		},
+		"failure-only": {
+			"name": "On Failure",
+			"explanation": ""
+		},
+		"up": {
+			"name": "Up",
+			"explanation": ""
+		},
+		"down": {
+			"name": "Down",
+			"explanation": ""
+		},
+		"question": {
+			"name": "Question",
+			"explanation": ""
+		},
+		"navigation": {
+			"name": "Navigation",
+			"explanation": "You can also swipe to move between columns. A \"Top\" button appears at the bottom left of the screen."
+		},
+		"navigation-back": {
+			"name": "Back",
+			"explanation": ""
+		},
+		"navigation-top": {
+			"name": "Top",
+			"explanation": ""
+		},
+		"navigation-forward": {
+			"name": "Forward",
+			"explanation": ""
+		},
+		"navigation-column": {
+			"name": "Column",
+			"explanation": "The position of this column and the total number of columns, including those off screen"
+		},
+		"checked": {
+			"name": "Checked",
+			"explanation": ""
+		},
+		"chevron-down": {
+			"name": "Down Arrow",
+			"explanation": ""
+		},
+		"chevron-right": {
+			"name": "Right Arrow",
+			"explanation": ""
+		},
+		"selected": {
+			"name": "Selected",
+			"explanation": "The total of the items chosen to be sold"
+		},
+		"character": {
+			"name": "Character",
+			"explanation": ""
+		},
+		"activity": {
+			"name": "Activity",
+			"explanation": "A list of executable actions grouped by category"
+		},
+		"inventory": {
+			"name": "Inventory",
+			"explanation": "A list of the items you hold, grouped by category"
+		},
+		"status": {
+			"name": "Status",
+			"explanation": "Shows the current state, such as the modifiers applied to a category"
+		},
+		"ability": {
+			"name": "Ability",
+			"explanation": "A list of the skills that can trigger now, grouped by category"
+		},
+		"world": {
+			"name": "World",
+			"explanation": ""
+		},
+		"overview": {
+			"name": "Overview",
+			"explanation": "Shows an overview of this world and the console running it"
+		},
+		"version": {
+			"name": "Version",
+			"explanation": ""
+		},
+		"license": {
+			"name": "License",
+			"explanation": ""
+		},
+		"updated": {
+			"name": "Updated",
+			"explanation": ""
+		},
+		"author": {
+			"name": "Author",
+			"explanation": ""
+		},
+		"homepage": {
+			"name": "Homepage",
+			"explanation": ""
+		},
+		"estimated-playing-time": {
+			"name": "Estimated Playing Time",
+			"explanation": "The time the author estimates it takes to clear this world"
+		},
+		"detail": {
+			"name": "Detail",
+			"explanation": ""
+		},
+		"default-language": {
+			"name": "Default Language",
+			"explanation": "The language the world displays first"
+		},
+		"language-change-enable-general": {
+			"name": "Changeable",
+			"explanation": "The display language can be changed on the settings screen"
+		},
+		"offline-max-hours": {
+			"name": "Maximum Offline Hours",
+			"explanation": "The upper limit on the offline time reflected in the game progress"
+		},
+		"max-category-level": {
+			"name": "Maximum Category Level",
+			"explanation": "The highest level reachable in each category"
+		},
+		"level-common-ratio": {
+			"name": "Required Experience Growth",
+			"explanation": "Shows how much the experience required for the next level increases with each level up"
+		},
+		"property-ratio": {
+			"name": "Property Influence",
+			"explanation": "The multiplier applied to a property for every 10 levels of difference. At 1 the level difference has no effect"
+		},
+		"default-action-stamina": {
+			"name": "Default Action Stamina",
+			"explanation": "The base combat value common to all actions. Individual combat values are added to it"
+		},
+		"console": {
+			"name": "Console",
+			"explanation": "This game runs on the \"Idle RPG\" console system. It is published free to the public, so anyone can create a game."
+		},
+		"statistics": {
+			"name": "Statistics",
+			"explanation": "Shows the totals recorded through play"
+		},
+		"coin": {
+			"name": "Coin",
+			"explanation": "An item used as the currency for trading"
+		},
+		"play-time": {
+			"name": "Play Time",
+			"explanation": "The date and time play started, and how long you have been playing"
+		},
+		"play-started": {
+			"name": "Started",
+			"explanation": "The date and time play started"
+		},
+		"play-duration": {
+			"name": "Elapsed Time",
+			"explanation": "The time elapsed since play started"
+		},
+		"coins-earned": {
+			"name": "Coins Earned",
+			"explanation": "The total amount of each coin earned so far"
+		},
+		"unique-count": {
+			"name": "Unique Count",
+			"explanation": "The number of kinds of items that can be held"
+		},
+		"max-capacity": {
+			"name": "Capacity",
+			"explanation": "The current upper limit on the number of item kinds that can be held"
+		},
+		"max-queue": {
+			"name": "Queue",
+			"explanation": "The current upper limit on the number of actions the queue can hold"
+		},
+		"statistics-category": {
+			"name": "Category",
+			"explanation": "How much of this world's categories have been unlocked"
+		},
+		"statistics-action": {
+			"name": "Action",
+			"explanation": "How much of this world's actions have been unlocked"
+		},
+		"statistics-item": {
+			"name": "Item",
+			"explanation": "How much of this world's items have been unlocked"
+		},
+		"statistics-event": {
+			"name": "Event",
+			"explanation": "Shows how much of this world's events have been unlocked"
+		},
+		"count-unlocked": {
+			"name": "Unlocked",
+			"explanation": "The number unlocked so far out of the total"
+		},
+		"level-total": {
+			"name": "Total Level",
+			"explanation": "The sum of the levels of all categories and its maximum"
+		},
+		"count-performed": {
+			"name": "Performed",
+			"explanation": "The total number of times actions have been performed so far"
+		},
+		"count-earned": {
+			"name": "Earned",
+			"explanation": "The total number of items earned so far"
+		},
+		"count-triggered": {
+			"name": "Triggered",
+			"explanation": "The total number of times events have occurred so far"
+		},
+		"debug": {
+			"name": "Debug",
+			"explanation": "Provides tools for testing the world. Available only in debug mode."
+		},
+		"acceleration": {
+			"name": "Acceleration",
+			"explanation": "Speeds up the passage of time in the game. Take care: raising the speed too far while actions take little time can outrun the processing and freeze or crash the app."
+		},
+		"multiplier": {
+			"name": "Multiplier",
+			"explanation": ""
+		},
+		"skip": {
+			"name": "Skip",
+			"explanation": "Advances the in-game time all at once without waiting"
+		},
+		"skip-hour": {
+			"name": "Skip One Hour",
+			"explanation": "Advances the game by one hour at once. The progress is handled the same way as while you are away, and the result is shown in a notification."
+		},
+		"adjustment": {
+			"name": "Value Adjustment",
+			"explanation": "Increases or decreases the number of items held and the category levels"
+		},
+		"adjustment-type": {
+			"name": "Type",
+			"explanation": ""
+		},
+		"adjustment-category": {
+			"name": "Category",
+			"explanation": "Adjusts the level of a category. For example, setting it to +5 raises the level by 5."
+		},
+		"adjustment-action": {
+			"name": "Action",
+			"explanation": "This increases or decreases the number of times that action has been performed. The rewards gained by completing the action are not reflected, however."
+		},
+		"adjustment-item": {
+			"name": "Item",
+			"explanation": "Increases or decreases the number of items held"
+		},
+		"adjustment-id": {
+			"name": "ID",
+			"explanation": "Specifies the ID of the target kind. Left blank, the addition or subtraction applies to every ID."
+		},
+		"adjustment-sign": {
+			"name": "Sign",
+			"explanation": ""
+		},
+		"adjustment-plus": {
+			"name": "Plus",
+			"explanation": "Adds the specified value"
+		},
+		"adjustment-minus": {
+			"name": "Minus",
+			"explanation": "Subtracts the specified value"
+		},
+		"adjustment-count": {
+			"name": "Quantity",
+			"explanation": "The quantity to add or subtract. The sign specifies whether it is plus or minus."
+		},
+		"adjustment-adjust": {
+			"name": "Adjust",
+			"explanation": "Runs the adjustment under the specified conditions"
+		},
+		"pwa": {
+			"name": "Install the PWA",
+			"explanation": "Installs the Progressive Web App (PWA)"
+		},
+		"go-top": {
+			"name": "To Page Top",
+			"explanation": ""
+		},
+		"iconify": {
+			"name": "Iconify",
+			"explanation": "This game uses the icon sets provided by Iconify. Our thanks go to everyone who took part in making them."
+		},
+		"category": {
+			"name": "Category",
+			"explanation": ""
+		},
+		"categories": {
+			"name": "Category List",
+			"explanation": ""
+		},
+		"level": {
+			"name": "Level",
+			"explanation": "The proficiency in this category. It rises as experience accumulates"
+		},
+		"category-experience": {
+			"name": "Experience",
+			"explanation": "The progress toward the next level. It increases when an action is performed"
+		},
+		"level-up": {
+			"name": "Level Up",
+			"explanation": ""
+		},
+		"category-unlocked": {
+			"name": "Category Unlocked",
+			"explanation": ""
+		},
+		"element": {
+			"name": "Element",
+			"explanation": ""
+		},
+		"standalone": {
+			"name": "Standalone",
+			"explanation": "Runs on its own, regardless of how actions in other categories are progressing"
+		},
+		"standalone-yes": {
+			"name": "Passive",
+			"explanation": "Runs on its own, regardless of how actions in other categories are progressing"
+		},
+		"standalone-no": {
+			"name": "Active",
+			"explanation": "Shares an execution slot with the other categories. Only one action can run at a time, and starting another action sends the current one to the queue"
+		},
+		"action": {
+			"name": "Action",
+			"explanation": "Something that can be performed in this category"
+		},
+		"actions": {
+			"name": "Action List",
+			"explanation": "A list of the actions belonging to this category"
+		},
+		"action-unlocked": {
+			"name": "Action Unlocked",
+			"explanation": ""
+		},
+		"attribute": {
+			"name": "Attribute",
+			"explanation": "The attribute unique to this action. The category's properties apply to this action's attribute, and experience is granted to the attribute as well."
+		},
+		"progress": {
+			"name": "Progress",
+			"explanation": ""
+		},
+		"progressing": {
+			"name": "In Progress",
+			"explanation": ""
+		},
+		"progressing-action": {
+			"name": "In Progress",
+			"explanation": ""
+		},
+		"possible-action": {
+			"name": "Executable",
+			"explanation": ""
+		},
+		"impossible-action": {
+			"name": "Not Executable",
+			"explanation": ""
+		},
+		"unconfirmed-action": {
+			"name": "Unconfirmed",
+			"explanation": ""
+		},
+		"idle": {
+			"name": "Idle",
+			"explanation": ""
+		},
+		"progress-type": {
+			"name": "Progress Type",
+			"explanation": ""
+		},
+		"persistent": {
+			"name": "Continuous",
+			"explanation": "Runs the action over and over, granting a reward each time the action is completed"
+		},
+		"single": {
+			"name": "Single",
+			"explanation": "It stops after running once and does not repeat. The progress is saved even if it is interrupted partway."
+		},
+		"snap": {
+			"name": "Instant",
+			"explanation": "The action completes instantly"
+		},
+		"stamina": {
+			"name": "Stamina",
+			"explanation": "Every time an action is performed, the stamina of the player and of the target decreases. Running the target's stamina out is a win, and running the player's stamina out is a game over. Nothing is lost on a game over, but every action in progress is interrupted."
+		},
+		"enable-count": {
+			"name": "Executable Count",
+			"explanation": ""
+		},
+		"estimated-time": {
+			"name": "Estimated Time",
+			"explanation": ""
+		},
+		"count": {
+			"name": "Quantity",
+			"explanation": ""
+		},
+		"completed-count": {
+			"name": "Completed Count",
+			"explanation": ""
+		},
+		"turn": {
+			"name": "Turn",
+			"explanation": ""
+		},
+		"current-count": {
+			"name": "Current Count",
+			"explanation": ""
+		},
+		"elapsed-time": {
+			"name": "Elapsed Time",
+			"explanation": ""
+		},
+		"rest-time": {
+			"name": "Remaining Time",
+			"explanation": ""
+		},
+		"each-time": {
+			"name": "Interval",
+			"explanation": ""
+		},
+		"next-time": {
+			"name": "Until Next",
+			"explanation": ""
+		},
+		"rest-count": {
+			"name": "Remaining Count",
+			"explanation": ""
+		},
+		"act": {
+			"name": "Act",
+			"explanation": "Starts and stops this action and shows how far it has progressed"
+		},
+		"confirm": {
+			"name": "Confirm",
+			"explanation": "Finalizes the result of the progress that has finished"
+		},
+		"start": {
+			"name": "Start",
+			"explanation": ""
+		},
+		"end": {
+			"name": "End",
+			"explanation": ""
+		},
+		"stop": {
+			"name": "Stop",
+			"explanation": ""
+		},
+		"reserve": {
+			"name": "Reserve",
+			"explanation": "Adds this action to the reservation queue so that it runs in turn"
+		},
+		"reorder": {
+			"name": "Reorder",
+			"explanation": "Applies the chosen execution count and execution order to this action in the queue. Moving the running action to 1 or later stops it and returns it to standby."
+		},
+		"position": {
+			"name": "Execution Order",
+			"explanation": "Chooses this action's position in the queue. 0 is the head, which pushes the running action back and runs this one right away. 1 and later wait at that position."
+		},
+		"now": {
+			"name": "Now",
+			"explanation": "Places this action at the head of the queue and runs it right away"
+		},
+		"clear": {
+			"name": "Clear",
+			"explanation": "Deletes every reservation in the queue, including the one being executed"
+		},
+		"acquisition-failure": {
+			"name": "Acquisition Failure",
+			"explanation": "Rewards marked [On Failure] in their description are obtained only when the action fails. The percentage shown is the chance of obtaining them."
+		},
+		"item": {
+			"name": "Item",
+			"explanation": "The belongings related to this category"
+		},
+		"items": {
+			"name": "Item List",
+			"explanation": "A list of the items belonging to this category"
+		},
+		"selling-items": {
+			"name": "Item List",
+			"explanation": "A list of the items you hold that have a selling price set"
+		},
+		"item-type": {
+			"name": "Type",
+			"explanation": "The type of this item"
+		},
+		"normal": {
+			"name": "Normal",
+			"explanation": "A normal item that can be owned, equipped and traded"
+		},
+		"capacity": {
+			"name": "Capacity",
+			"explanation": "Affects the number of item kinds that can be held at once"
+		},
+		"queue": {
+			"name": "Queue",
+			"explanation": "The number of actions that can be put in the queue (the reservation slots for actions)"
+		},
+		"equipping": {
+			"name": "Equipping",
+			"explanation": ""
+		},
+		"unequipping": {
+			"name": "Unequipping",
+			"explanation": ""
+		},
+		"equip": {
+			"name": "Equip",
+			"explanation": ""
+		},
+		"equipment": {
+			"name": "Equipment",
+			"explanation": ""
+		},
+		"unequip": {
+			"name": "Unequip",
+			"explanation": ""
+		},
+		"nothing": {
+			"name": "None",
+			"explanation": ""
+		},
+		"own-count": {
+			"name": "Owned",
+			"explanation": "The quantity currently owned"
+		},
+		"recovery": {
+			"name": "Recovery",
+			"explanation": "The amount of stamina recovered at the start of combat"
+		},
+		"unique": {
+			"name": "Unique",
+			"explanation": "An item that can be owned only one of"
+		},
+		"equipment-type": {
+			"name": "Equipment Type",
+			"explanation": "The equipment type of the item"
+		},
+		"necessary-item": {
+			"name": "Required",
+			"explanation": "Equipping it triggers the effect"
+		},
+		"unnecessary-item": {
+			"name": "Always Active",
+			"explanation": "The effect triggers just by holding it. The effect is multiplied by the number held."
+		},
+		"impossible-item": {
+			"name": "Impossible",
+			"explanation": "It cannot be equipped"
+		},
+		"consumable-item": {
+			"name": "Consumable",
+			"explanation": "Equipping it brings out the effect, but it is consumed every time an action is performed (it is not consumed on each stamina turn)"
+		},
+		"buy": {
+			"name": "Buy",
+			"explanation": "Buys an item"
+		},
+		"buying-value": {
+			"name": "Buying Price",
+			"explanation": "The price when buying"
+		},
+		"sell": {
+			"name": "Sell",
+			"explanation": "Sells an item"
+		},
+		"selling": {
+			"name": "Selling",
+			"explanation": "Sells the items you own in bulk, chosen from a list"
+		},
+		"kind": {
+			"name": "Kinds",
+			"explanation": "The number of item kinds chosen"
+		},
+		"selling-value": {
+			"name": "Selling Price",
+			"explanation": "The price when selling that item"
+		},
+		"trade": {
+			"name": "Trade",
+			"explanation": "Buys or sells this item"
+		},
+		"trade-failed": {
+			"name": "Trade Unavailable",
+			"explanation": "The trade failed"
+		},
+		"capacity-full": {
+			"name": "Inventory Full",
+			"explanation": "The inventory capacity is full"
+		},
+		"queue-full": {
+			"name": "Queue Full",
+			"explanation": "The queue is full, including what is running"
+		},
+		"already-queued": {
+			"name": "Already Queued",
+			"explanation": "That action is already in the queue"
+		},
+		"unmatched-requirements": {
+			"name": "Requirements Unmet",
+			"explanation": "The requirements needed to run it are not met"
+		},
+		"not-owned-item": {
+			"name": "Not Owned",
+			"explanation": "This item is not owned"
+		},
+		"unmatched-equip-requirements": {
+			"name": "Equip Requirements Unmet",
+			"explanation": "The requirements needed to equip it are not met"
+		},
+		"unequippable-item": {
+			"name": "Unequippable Type",
+			"explanation": "This item is of a type that cannot be equipped"
+		},
+		"purchase-limit-reached": {
+			"name": "Purchase Limit Reached",
+			"explanation": "The purchase limit has been reached"
+		},
+		"completed-maximum": {
+			"name": "Completion Limit",
+			"explanation": "The completed count has reached the limit"
+		},
+		"relationships": {
+			"name": "Related",
+			"explanation": ""
+		},
+		"related-actions": {
+			"name": "Related Actions",
+			"explanation": ""
+		},
+		"relationship-items": {
+			"name": "Related Items",
+			"explanation": "A list of the items involved in the category's actions"
+		},
+		"required-equipment": {
+			"name": "Equipment Required",
+			"explanation": ""
+		},
+		"group": {
+			"name": "Group",
+			"explanation": "A classification that bundles categories, actions and items across each other"
+		},
+		"skill": {
+			"name": "Skill",
+			"explanation": "Triggering it during combat adjusts the combat values for that turn only"
+		},
+		"skills": {
+			"name": "Skill List",
+			"explanation": "A list of the skills this element has"
+		},
+		"no-ability": {
+			"name": "No Skills",
+			"explanation": "There are no skills that can trigger now"
+		},
+		"property": {
+			"name": "Property",
+			"explanation": "A value that affects the result of an action"
+		},
+		"calculation": {
+			"name": "Calculation",
+			"explanation": "The property values reflected in the action and their breakdown"
+		},
+		"properties": {
+			"name": "Property List",
+			"explanation": "A list of the properties belonging to this category"
+		},
+		"attack": {
+			"name": "Attack",
+			"explanation": "The damage from the player to the target"
+		},
+		"defence": {
+			"name": "Defence",
+			"explanation": "The damage from the target to the player"
+		},
+		"accuracy": {
+			"name": "Accuracy",
+			"explanation": "The probability of the player dealing damage to the target"
+		},
+		"evasion": {
+			"name": "Evasion",
+			"explanation": "The probability of taking damage from the target"
+		},
+		"restore": {
+			"name": "Recovery",
+			"explanation": "The amount recovered when the target's stamina runs out and play moves on to the next action"
+		},
+		"speed": {
+			"name": "Speed",
+			"explanation": "Affects the speed of an action"
+		},
+		"chance": {
+			"name": "Success Rate",
+			"explanation": "On a failure, neither the reward nor the experience is gained"
+		},
+		"experience": {
+			"name": "Experience",
+			"explanation": "Affects the experience gained from an action"
+		},
+		"value": {
+			"name": "Value",
+			"explanation": ""
+		},
+		"resources": {
+			"name": "Modifier Items",
+			"explanation": ""
+		},
+		"base-value": {
+			"name": "Base Value",
+			"explanation": "The value specific to this game or action"
+		},
+		"level-gap": {
+			"name": "Level Gap",
+			"explanation": "For the numeric calculation, see the \"Level\" block"
+		},
+		"reflected-value": {
+			"name": "Reflected Value",
+			"explanation": "The final value calculated from the \"Base Value\" and the \"Level Gap\""
+		},
+		"level-gap-property": {
+			"name": "Level Gap Property",
+			"explanation": "The \"Level Gap\" value is the sum of the values in this block"
+		},
+		"level-gap-category": {
+			"name": "Level Gap Category",
+			"explanation": "The player's category level minus this action's level. For \"Experience\", however, it is the other way around."
+		},
+		"level-gap-action": {
+			"name": "Level Gap Action",
+			"explanation": "When the progress type is \"Stamina\", the value set by this action itself"
+		},
+		"level-gap-item": {
+			"name": "Level Gap Item",
+			"explanation": "This is the adjustment from items that are equipped, or that take effect without being equipped"
+		},
+		"no-status": {
+			"name": "No Status",
+			"explanation": "There is no property adjustment in any category"
+		},
+		"event": {
+			"name": "Event",
+			"explanation": ""
+		},
+		"timing": {
+			"name": "Timing",
+			"explanation": "When this event occurs"
+		},
+		"timing-tasked": {
+			"name": "Requirements Met",
+			"explanation": "Occurs the moment the requirements are met"
+		},
+		"timing-comebacked": {
+			"name": "Comeback",
+			"explanation": "Occurs when you come back after being away offline for a while"
+		},
+		"timing-gameovered": {
+			"name": "Game Over",
+			"explanation": "Occurs when your stamina runs out during battle"
+		},
+		"timing-welcomed": {
+			"name": "First Launch",
+			"explanation": "Occurs when you open this world for the first time"
+		},
+		"timing-completed": {
+			"name": "Completion",
+			"explanation": "Occurs when every category reaches its maximum level"
+		},
+		"timing-obtained": {
+			"name": "Obtained",
+			"explanation": "Occurs when a one-off action is completed"
+		},
+		"tasked": {
+			"name": "Requirements Met",
+			"explanation": "The requirements were met"
+		},
+		"comebacked": {
+			"name": "Welcome Back",
+			"explanation": "Welcome back! Here is your progress while you were away:"
+		},
+		"gameovered": {
+			"name": "Game Over",
+			"explanation": "Game over. Your progress has been reset."
+		},
+		"completed": {
+			"name": "Completion",
+			"explanation": "Congratulations! You have completed every category."
+		},
+		"welcomed": {
+			"name": "Welcome",
+			"explanation": "Welcome to this world!"
+		},
+		"obtained": {
+			"name": "Obtained",
+			"explanation": "Check what you obtained"
+		},
+		"achieved": {
+			"name": "Achieved",
+			"explanation": "Whether the task has been achieved"
+		},
+		"receive": {
+			"name": "Claim",
+			"explanation": "Claim the reward for this task"
+		},
+		"received": {
+			"name": "Claimed",
+			"explanation": "The reward for this task has been claimed"
+		},
+		"hidden": {
+			"name": "Hidden",
+			"explanation": "This column is hidden once you check its contents"
+		},
+		"task": {
+			"name": "Task",
+			"explanation": "A challenge that gives a reward when achieved"
+		},
+		"task-completed": {
+			"name": "Task Achieved",
+			"explanation": ""
+		},
+		"tasks": {
+			"name": "Task List",
+			"explanation": "The list of tasks set for this category"
+		},
+		"missions": {
+			"name": "Missions",
+			"explanation": "The list of tasks from every category and their achievement status"
+		},
+		"language-en": {
+			"name": "English",
+			"explanation": ""
+		},
+		"language-zh": {
+			"name": "中文（简体）",
+			"explanation": ""
+		},
+		"language-es": {
+			"name": "Español",
+			"explanation": ""
+		},
+		"language-pt": {
+			"name": "Português",
+			"explanation": ""
+		},
+		"language-fr": {
+			"name": "Français",
+			"explanation": ""
+		},
+		"language-ru": {
+			"name": "Русский",
+			"explanation": ""
+		},
+		"language-de": {
+			"name": "Deutsch",
+			"explanation": ""
+		},
+		"language-ja": {
+			"name": "日本語",
+			"explanation": ""
+		},
+		"language-id": {
+			"name": "Bahasa Indonesia",
+			"explanation": ""
+		},
+		"language-ko": {
+			"name": "한국어",
+			"explanation": ""
+		},
+		"config": {
+			"name": "Settings",
+			"explanation": "Change this game's settings and manage its save data"
+		},
+		"operation": {
+			"name": "Controls",
+			"explanation": "Change how actions are executed"
+		},
+		"auto-clear-queue": {
+			"name": "Auto-Clear Queue",
+			"explanation": "When you long-press an action to quick-start it, the whole queue including the running action is cleared before that action is executed"
+		},
+		"display": {
+			"name": "Display",
+			"explanation": "Change how the game is displayed on screen"
+		},
+		"language": {
+			"name": "Language",
+			"explanation": "Change the language used for display"
+		},
+		"selected-language": {
+			"name": "Selected Language",
+			"explanation": "The language currently used for display"
+		},
+		"language-change-enable": {
+			"name": "Changeable",
+			"explanation": "The display language can be changed"
+		},
+		"language-change-unenable": {
+			"name": "Not Changeable",
+			"explanation": "There is no other language available for display"
+		},
+		"category-shortcut": {
+			"name": "Show Lists With Category",
+			"explanation": "When you open a category, also show the action list or the item list"
+		},
+		"showing-hint": {
+			"name": "Hints",
+			"explanation": "Show explanations of how to operate the game"
+		},
+		"showing-navigation": {
+			"name": "Navigation",
+			"explanation": "Show the buttons for moving between columns. Even without the buttons, you can swipe to move between columns."
+		},
+		"performance": {
+			"name": "Performance",
+			"explanation": "Adjust the behavior to suit your device"
+		},
+		"performing-highly": {
+			"name": "High-Frequency Updates",
+			"explanation": "Increase the update frequency. Turning this off is recommended if the game runs slowly. It does not affect the execution time of each action."
+		},
+		"data": {
+			"name": "Data",
+			"explanation": "Save, load, and delete the progress data for this world"
+		},
+		"export-game": {
+			"name": "Export",
+			"explanation": "The game's progress data has been exported"
+		},
+		"import-game": {
+			"name": "Import",
+			"explanation": "The game's progress data has been imported"
+		},
+		"import-mistake": {
+			"name": "Load Failed",
+			"explanation": "Failed to load the game data"
+		},
+		"reset-game": {
+			"name": "Reset Game",
+			"explanation": "Delete all progress data for this world. This cannot be undone. Make sure you really want to delete the file, then type \"DELETE\" in the input field."
+		},
+		"reset-really": {
+			"name": "Really?",
+			"explanation": ""
+		},
+		"reset-alert": {
+			"name": "Reset Confirmation",
+			"explanation": "Resetting the game erases all data. Do you really want to reset the game?"
+		},
+		"reset-debug-mode": {
+			"name": "Debug Mode",
+			"explanation": "In debug mode, no input in the confirmation field is required"
+		},
+		"restart": {
+			"name": "Restart",
+			"explanation": "Reload the console. Use this to check whether the build has been replaced."
+		},
+		"hint-language-scope": {
+			"name": "Hint Language Scope",
+			"explanation": "Only the language of the interface changes"
+		},
+		"hint-language-fallback": {
+			"name": "Hint Language Fallback",
+			"explanation": "Text without a translation is shown in the default language"
+		},
+		"hint-event-capacity": {
+			"name": "Hint Event Capacity",
+			"explanation": "You cannot claim a reward while you are at the limit for the number of types you can hold. Make room, then claim it again"
+		},
+		"hint-event-closing": {
+			"name": "Hint Event Closing",
+			"explanation": "It closes when you press Checked or slide to the column on the left"
+		},
+		"hint-group-meaning": {
+			"name": "Hint Group Meaning",
+			"explanation": "A group is a classification that bundles categories, actions, and items together"
+		},
+		"hint-group-exclusive": {
+			"name": "Hint Group Exclusive",
+			"explanation": "Only one item can be equipped per group"
+		},
+		"hint-group-index": {
+			"name": "Hint Group Index",
+			"explanation": "The value on the right is the level for a category, the required level for an action, and the quantity held for an item"
+		},
+		"hint-debug-mode": {
+			"name": "Hint Debug Mode",
+			"explanation": "Shown only when launched in debug mode. It does not appear in normal play"
+		},
+		"hint-debug-acceleration": {
+			"name": "Hint Debug Acceleration",
+			"explanation": "The acceleration setting is saved in the progress data, but it only takes effect while in debug mode"
+		},
+		"hint-config-settings": {
+			"name": "Hint Config Settings",
+			"explanation": "You can change the controls, the display, and the processing load. Settings are saved as part of the progress data and carried over into exported data"
+		},
+		"hint-config-data": {
+			"name": "Hint Config Data",
+			"explanation": "Progress data is saved on this device for each world. An exported file can only be loaded by the same version of the same world"
+		},
+		"hint-statistics-progress": {
+			"name": "Hint Statistics Progress",
+			"explanation": "You can check the totals for play time and coins earned, and how many item slots and queue slots you can hold right now"
+		},
+		"hint-statistics-unlocked": {
+			"name": "Hint Statistics Unlocked",
+			"explanation": "The unlocked counts for categories, actions, items, and events use the world's total as the denominator, including those you have not found yet"
+		},
+		"hint-statistics-opening": {
+			"name": "Hint Statistics Opening",
+			"explanation": "Tapping coins, capacity, the queue, or a category in the breakdown opens that screen"
+		},
+		"hint-overview-world": {
+			"name": "Hint Overview World",
+			"explanation": "You can check the identity of the world, such as its author, version, and estimated play time, along with the settings shared by the whole world, such as the default language, the maximum offline hours, the category level cap, and how steeply the required experience grows"
+		},
+		"hint-overview-console": {
+			"name": "Hint Overview Console",
+			"explanation": "The console is the runtime that loads and runs a world. It has its own version and update date, separate from the world"
+		},
+		"hint-properties-meaning": {
+			"name": "Hint Properties Meaning",
+			"explanation": "A property is an element that affects the execution of actions"
+		},
+		"hint-properties-resource": {
+			"name": "Hint Properties Resource",
+			"explanation": "The tags listed below are the items contributing to that value, with their breakdown"
+		},
+		"hint-properties-crossing": {
+			"name": "Hint Properties Crossing",
+			"explanation": "An item from another category also takes effect if this category is its target"
+		},
+		"hint-trade-availability": {
+			"name": "Hint Trade Availability",
+			"explanation": "Without a price, the buy and sell slots do not appear at all. Locked items cannot be traded either"
+		},
+		"hint-trade-capacity": {
+			"name": "Hint Trade Capacity",
+			"explanation": "When the item slots are full, you cannot buy a type you do not hold yet. You can still buy more of what you have"
+		},
+		"hint-trade-limit": {
+			"name": "Hint Trade Limit",
+			"explanation": "Item slots and queue slots are bought one at a time, and the price rises with each purchase. Some worlds also cap the number of purchases (rewards are not counted)"
+		},
+		"hint-trade-selling": {
+			"name": "Hint Trade Selling",
+			"explanation": "Equipment that drops to zero after being sold is unequipped automatically"
+		},
+		"hint-items-meaning": {
+			"name": "Hint Items Meaning",
+			"explanation": "An item is an element for the things you hold, such as equipment, consumables, and valuables"
+		},
+		"hint-items-list": {
+			"name": "Hint Items List",
+			"explanation": "The list of items you can hold in this category"
+		},
+		"hint-items-equipping": {
+			"name": "Hint Items Equipping",
+			"explanation": "Long-press to switch whether an item is equipped"
+		},
+		"hint-items-exclusive": {
+			"name": "Hint Items Exclusive",
+			"explanation": "Only one item can be equipped per group"
+		},
+		"hint-items-locked": {
+			"name": "Hint Items Locked",
+			"explanation": "An item whose unlock requirements are not met is shown with a strikethrough, and its explanation and quantity are hidden"
+		},
+		"hint-items-relationship": {
+			"name": "Hint Items Relationship",
+			"explanation": "Related shows the actions that obtain the item and the actions that consume it"
+		},
+		"hint-item-meaning": {
+			"name": "Hint Item Meaning",
+			"explanation": "An item is an element for the things you hold, such as equipment, consumables, and valuables"
+		},
+		"hint-item-exclusive": {
+			"name": "Hint Item Exclusive",
+			"explanation": "Only one item can be equipped per group. Items in different groups can be equipped at the same time even within the same category"
+		},
+		"hint-item-equipping": {
+			"name": "Hint Item Equipping",
+			"explanation": "The Equip button appears only for an item you hold, whose requirements you meet, and which the category accepts as equipment"
+		},
+		"hint-item-locked": {
+			"name": "Hint Item Locked",
+			"explanation": "An item whose unlock requirements are not met is shown with a strikethrough, and its explanation and quantity are hidden"
+		},
+		"hint-act-count": {
+			"name": "Hint Act Count",
+			"explanation": "The ∞ on the far right keeps executing until it stops at the limit of the resources or of the total number of executions"
+		},
+		"hint-act-position": {
+			"name": "Hint Act Position",
+			"explanation": "In the execution order, 0 means execute now and 1 or later means waiting. An interrupted execution keeps its remaining count, returns to waiting, and resumes later"
+		},
+		"hint-act-queue": {
+			"name": "Hint Act Queue",
+			"explanation": "A reservation goes through even when the queue is full, and the overflow is discarded from the end of the waiting list. A reservation that cannot be executed when its turn comes is discarded as well"
+		},
+		"hint-act-opening": {
+			"name": "Hint Act Opening",
+			"explanation": "Pressing the target row or the skill row opens that column"
+		},
+		"hint-calculation-ratio": {
+			"name": "Hint Calculation Ratio",
+			"explanation": "The applied value is not added or subtracted; a multiplier is applied for every 10 levels of difference. Attack and experience increase, while defence and the required time decrease"
+		},
+		"hint-calculation-weight": {
+			"name": "Hint Calculation Weight",
+			"explanation": "How strongly it works differs from property to property"
+		},
+		"hint-calculation-odds": {
+			"name": "Hint Calculation Odds",
+			"explanation": "Accuracy, evasion, success rate, and recovery never go below 0% or above 100%"
+		},
+		"hint-queue-removing": {
+			"name": "Hint Queue Removing",
+			"explanation": "Long-press a bar to remove it from the queue. The first one is running, so it stops and the next one begins."
+		},
+		"hint-actions-meaning": {
+			"name": "Hint Actions Meaning",
+			"explanation": "An action is something you execute to gain experience and rewards"
+		},
+		"hint-actions-list": {
+			"name": "Hint Actions List",
+			"explanation": "The list of actions you can execute in this category"
+		},
+		"hint-actions-executing": {
+			"name": "Hint Actions Executing",
+			"explanation": "Long-press to switch whether an action is executing"
+		},
+		"hint-actions-exclusive": {
+			"name": "Hint Actions Exclusive",
+			"explanation": "Only one action can be executed within a single category"
+		},
+		"hint-actions-parallel": {
+			"name": "Hint Actions Parallel",
+			"explanation": "Depending on the category (standalone set to passive), actions from several categories can progress at the same time"
+		},
+		"hint-actions-locked": {
+			"name": "Hint Actions Locked",
+			"explanation": "An action whose unlock requirements are not met is shown with a strikethrough, and its explanation is hidden"
+		},
+		"hint-action-meaning": {
+			"name": "Hint Action Meaning",
+			"explanation": "An action is something you execute to gain experience and rewards"
+		},
+		"hint-action-attribute": {
+			"name": "Hint Action Attribute",
+			"explanation": "The attribute is the category that receives the experience. It can differ from the category the action belongs to, and the level required to execute is judged there as well"
+		},
+		"hint-action-executing": {
+			"name": "Hint Action Executing",
+			"explanation": "Long-press the execute row to switch between starting and stopping"
+		},
+		"hint-action-resource": {
+			"name": "Hint Action Resource",
+			"explanation": "The things listed under \"Requirement\" are consumed on every execution. A percentage is the chance of being consumed"
+		},
+		"hint-action-locked": {
+			"name": "Hint Action Locked",
+			"explanation": "An action whose unlock requirements are not met is shown with a strikethrough, and its explanation is hidden"
+		},
+		"hint-skills-list": {
+			"name": "Hint Skills List",
+			"explanation": "Lists the skills held by the items of each category"
+		},
+		"hint-skills-chance": {
+			"name": "Hint Skills Chance",
+			"explanation": "The percentage is the chance of activation"
+		},
+		"hint-skills-opponent": {
+			"name": "Hint Skills Opponent",
+			"explanation": "The skills held by the action side can be checked in the action column"
+		},
+		"hint-skill-meaning": {
+			"name": "Hint Skill Meaning",
+			"explanation": "A skill is an element that adjusts the battle values for that turn alone when it activates during battle"
+		},
+		"hint-skill-chance": {
+			"name": "Hint Skill Chance",
+			"explanation": "Activation is drawn each turn, with at most one per turn for your side and for the opponent. If another skill is drawn first, it does not occur as often as the displayed chance"
+		},
+		"hint-skill-restore": {
+			"name": "Hint Skill Restore",
+			"explanation": "Recovery alone does not take effect on that turn; it is applied together in the recovery after the battle is settled"
+		},
+		"hint-tasks-meaning": {
+			"name": "Hint Tasks Meaning",
+			"explanation": "A task is an event that is achieved when its requirements are met. You claim the reward yourself"
+		},
+		"hint-tasks-unclaimed": {
+			"name": "Hint Tasks Unclaimed",
+			"explanation": "A task whose reward has not been claimed is marked with a ribbon. Open it and press Claim"
+		},
+		"hint-tasks-capacity": {
+			"name": "Hint Tasks Capacity",
+			"explanation": "You cannot claim a reward while you are at the limit for the number of types you can hold. Make room, then claim it again"
+		},
+		"hint-category-meaning": {
+			"name": "Hint Category Meaning",
+			"explanation": "A category is a unit that gathers actions, items, properties, skills, and tasks"
+		},
+		"hint-category-level": {
+			"name": "Hint Category Level",
+			"explanation": "The level rises with the experience gained by executing actions"
+		},
+		"hint-category-holding": {
+			"name": "Hint Category Holding",
+			"explanation": "Long-press to switch between the progress bar and the equipment bar"
+		},
+		"hint-category-equipment": {
+			"name": "Hint Category Equipment",
+			"explanation": "One equipment slot is provided per group"
+		},
+		"hint-status-meaning": {
+			"name": "Hint Status Meaning",
+			"explanation": "A property is a numeric adjustment that affects the result of executing an action"
+		},
+		"hint-status-property": {
+			"name": "Hint Status Property",
+			"explanation": "Only the adjustments from items are listed here; depending on the action you execute, further adjustments such as skills also apply"
+		},
+		"hint-status-stacking": {
+			"name": "Hint Status Stacking",
+			"explanation": "For an item that does not need to be equipped, the adjustment grows in proportion to the quantity held"
+		},
+		"hint-inventory-meaning": {
+			"name": "Hint Inventory Meaning",
+			"explanation": "An item is an element for the things you hold, such as equipment, consumables, and valuables"
+		},
+		"hint-inventory-equipping": {
+			"name": "Hint Inventory Equipping",
+			"explanation": "Long-press a bar to switch equipment"
+		},
+		"hint-inventory-capacity": {
+			"name": "Hint Inventory Capacity",
+			"explanation": "Item slots count the number of item types, not the number of items"
+		},
+		"hint-selling-list": {
+			"name": "Hint Selling List",
+			"explanation": "Only the items you hold that have a selling price are listed"
+		},
+		"hint-selling-amount": {
+			"name": "Hint Selling Amount",
+			"explanation": "Selecting one puts your entire quantity up for sale. The value is the total"
+		},
+		"hint-selling-unequip": {
+			"name": "Hint Selling Unequip",
+			"explanation": "Equipment that drops to zero after being sold is unequipped automatically"
+		},
+		"hint-activity-meaning": {
+			"name": "Hint Activity Meaning",
+			"explanation": "An action is something you execute to gain experience and rewards"
+		},
+		"hint-activity-executing": {
+			"name": "Hint Activity Executing",
+			"explanation": "Long-press a bar to switch execution"
+		},
+		"hint-activity-index": {
+			"name": "Hint Activity Index",
+			"explanation": "Lv.n is the level required for that action"
+		},
+		"hint-ability-meaning": {
+			"name": "Hint Ability Meaning",
+			"explanation": "A skill is an element that adjusts the battle values for that turn alone when it activates during battle"
+		},
+		"hint-ability-source": {
+			"name": "Hint Ability Source",
+			"explanation": "Listed are the skills held by equipped items and by items you hold that do not need to be equipped"
+		},
+		"hint-ability-chance": {
+			"name": "Hint Ability Chance",
+			"explanation": "The percentage is the chance of activation"
+		},
+		"hint-missions-meaning": {
+			"name": "Hint Missions Meaning",
+			"explanation": "A task is an event that is achieved when its requirements are met. You claim the reward yourself"
+		},
+		"hint-missions-completed": {
+			"name": "Hint Missions Completed",
+			"explanation": "An achieved task is marked with a check. Once achieved, it stays achieved even if the requirements are no longer met"
+		},
+		"hint-missions-unclaimed": {
+			"name": "Hint Missions Unclaimed",
+			"explanation": "A task whose reward has not been claimed is marked with a ribbon. Open it and press Claim"
+		},
+		"hint-property-meaning": {
+			"name": "Hint Property Meaning",
+			"explanation": "A property is a numeric adjustment that affects the result of executing an action"
+		},
+		"hint-property-scope": {
+			"name": "Hint Property Scope",
+			"explanation": "Opening it from a category shows the list of contributing items, from an item the list of affected categories, and from a skill only the adjustment values"
+		}
+	}
+}
