@@ -1048,7 +1048,7 @@
 		},
 		"switching-list": {
 			"name": "Alternar grupos nas listas",
-			"explanation": "Na lista de ações, na lista de itens e na lista de tarefas, mostra os grupos um de cada vez. Ao abrir um grupo, os outros se fecham e o grupo aberto vai para o topo."
+			"explanation": "Nas colunas de listas de uma categoria, expandir apenas um grupo por vez"
 		},
 		"showing-hint": {
 			"name": "Dicas",

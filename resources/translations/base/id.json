@@ -1048,7 +1048,7 @@
 		},
 		"switching-list": {
 			"name": "Tampilan daftar bergantian",
-			"explanation": "Di daftar aksi, daftar item, dan daftar tugas, grup ditampilkan satu per satu. Saat sebuah grup dibuka, grup lain ditutup dan grup yang dibuka berada di bagian atas."
+			"explanation": "Di kolom daftar dalam kategori, hanya satu grup yang dibuka sekaligus"
 		},
 		"showing-hint": {
 			"name": "Petunjuk",

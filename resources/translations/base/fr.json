@@ -1048,7 +1048,7 @@
 		},
 		"switching-list": {
 			"name": "Alterner les groupes des listes",
-			"explanation": "Dans la liste des actions, la liste des objets et la liste des tâches, affiche les groupes un par un. Ouvrir un groupe ferme les autres et place le groupe ouvert en haut."
+			"explanation": "Dans les colonnes de listes d'une catégorie, ne déplier qu'un seul groupe à la fois"
 		},
 		"showing-hint": {
 			"name": "Astuces",

@@ -1048,7 +1048,7 @@
 		},
 		"switching-list": {
 			"name": "Listen gruppenweise umschalten",
-			"explanation": "In der Aktionsliste, der Gegenstandsliste und der Aufgabenliste werden die Gruppen einzeln angezeigt. Beim Öffnen einer Gruppe werden die anderen geschlossen und die geöffnete Gruppe rückt nach oben."
+			"explanation": "In den Listenspalten einer Kategorie immer nur eine Gruppe gleichzeitig aufklappen"
 		},
 		"showing-hint": {
 			"name": "Hinweise",

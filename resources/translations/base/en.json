@@ -1048,7 +1048,7 @@
 		},
 		"switching-list": {
 			"name": "Switch Lists by Group",
-			"explanation": "In the action list, item list, and task list, show groups one at a time. Opening a group closes the others and brings the opened group to the top."
+			"explanation": "In the list columns within a category, expand only one group at a time"
 		},
 		"showing-hint": {
 			"name": "Hints",
