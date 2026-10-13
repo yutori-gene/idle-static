@@ -1046,6 +1046,10 @@
 			"name": "Mostrar listas con la categoría",
 			"explanation": "Al abrir una categoría, mostrar también la lista de acciones o la lista de artículos"
 		},
+		"switching-list": {
+			"name": "Alternar grupos en las listas",
+			"explanation": "En la lista de acciones, la lista de artículos y la lista de tareas, muestra los grupos de uno en uno. Al abrir un grupo, los demás se cierran y el grupo abierto se coloca arriba."
+		},
 		"showing-hint": {
 			"name": "Consejos",
 			"explanation": "Muestra las explicaciones sobre cómo manejar el juego"

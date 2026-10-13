@@ -1046,6 +1046,10 @@
 			"name": "Show Lists With Category",
 			"explanation": "When you open a category, also show the action list or the item list"
 		},
+		"switching-list": {
+			"name": "Switch Lists by Group",
+			"explanation": "In the action list, item list, and task list, show groups one at a time. Opening a group closes the others and brings the opened group to the top."
+		},
 		"showing-hint": {
 			"name": "Hints",
 			"explanation": "Show explanations of how to operate the game"

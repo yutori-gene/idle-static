@@ -1046,6 +1046,10 @@
 			"name": "Listen zusammen mit der Kategorie anzeigen",
 			"explanation": "Beim Öffnen einer Kategorie auch die Aktionsliste oder die Gegenstandsliste anzeigen"
 		},
+		"switching-list": {
+			"name": "Listen gruppenweise umschalten",
+			"explanation": "In der Aktionsliste, der Gegenstandsliste und der Aufgabenliste werden die Gruppen einzeln angezeigt. Beim Öffnen einer Gruppe werden die anderen geschlossen und die geöffnete Gruppe rückt nach oben."
+		},
 		"showing-hint": {
 			"name": "Hinweise",
 			"explanation": "Erklärungen zur Bedienung des Spiels anzeigen"

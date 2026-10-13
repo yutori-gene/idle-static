@@ -1046,6 +1046,10 @@
 			"name": "Afficher les listes avec la catégorie",
 			"explanation": "À l'ouverture d'une catégorie, afficher aussi la liste des actions ou la liste des objets"
 		},
+		"switching-list": {
+			"name": "Alterner les groupes des listes",
+			"explanation": "Dans la liste des actions, la liste des objets et la liste des tâches, affiche les groupes un par un. Ouvrir un groupe ferme les autres et place le groupe ouvert en haut."
+		},
 		"showing-hint": {
 			"name": "Astuces",
 			"explanation": "Afficher les explications sur la façon de jouer"
