@@ -19,6 +19,7 @@
       "empty": "Vazio",
       "sample": "Exemplo",
       "full": "Principal",
+      "load": "Carregar",
       "export": "Exportar",
       "publish": "Publicar",
       "execute": "Executar",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "O conteúdo em edição",
       "overwrite_warning_2": "será sobrescrito.",
       "processing_time": "O processamento leva algum tempo.",
-      "full_readonly": "Grande demais para editar.",
-      "full_usage": "Apenas validação e jogo.",
       "autosave_status": "Atual: {status}",
       "autosave_description": "Salvar ao abrir o menu"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "As edições atuais serão perdidas. Carregar dados vazios?",
     "load_file": "As edições atuais serão perdidas. Carregar dados de um arquivo?",
-    "load_sample": "As edições atuais serão perdidas. Carregar dados de exemplo?"
+    "load_sample": "As edições atuais serão perdidas. Carregar dados de exemplo?",
+    "load_full": "As edições atuais serão perdidas. Carregar os dados principais?"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "Dados vazios carregados",
       "data_loaded": "Dados carregados: {filename}",
       "sample_data_loaded": "Dados de exemplo carregados",
+      "full_data_loaded": "Dados principais carregados",
       "validation_successful": "Validação bem-sucedida: nenhum problema encontrado nos dados",
       "autosave_enabled": "Salvamento automático ativado",
       "autosave_disabled": "Salvamento automático desativado",

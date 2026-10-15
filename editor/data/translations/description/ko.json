@@ -19,6 +19,7 @@
       "empty": "빈 데이터",
       "sample": "샘플",
       "full": "본편",
+      "load": "불러오기",
       "export": "내보내기",
       "publish": "공개",
       "execute": "실행",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "편집 중인 내용이",
       "overwrite_warning_2": "덮어쓰기됩니다.",
       "processing_time": "처리에 시간이 걸립니다.",
-      "full_readonly": "너무 커서 편집할 수 없습니다.",
-      "full_usage": "검증과 플레이만 가능합니다.",
       "autosave_status": "현재: {status}",
       "autosave_description": "메뉴를 열 때 저장"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "현재 편집 내용이 사라집니다. 빈 데이터를 불러올까요?",
     "load_file": "현재 편집 내용이 사라집니다. 파일에서 데이터를 불러올까요?",
-    "load_sample": "현재 편집 내용이 사라집니다. 샘플 데이터를 불러올까요?"
+    "load_sample": "현재 편집 내용이 사라집니다. 샘플 데이터를 불러올까요?",
+    "load_full": "현재 편집 내용이 사라집니다. 본편 데이터를 불러올까요?"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "빈 데이터를 불러왔습니다",
       "data_loaded": "데이터를 불러왔습니다: {filename}",
       "sample_data_loaded": "샘플 데이터를 불러왔습니다",
+      "full_data_loaded": "본편 데이터를 불러왔습니다",
       "validation_successful": "검증 성공: 데이터에서 문제를 찾지 못했습니다",
       "autosave_enabled": "자동 저장을 켰습니다",
       "autosave_disabled": "자동 저장을 껐습니다",

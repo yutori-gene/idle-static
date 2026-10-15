@@ -19,6 +19,7 @@
       "empty": "空",
       "sample": "サンプル",
       "full": "本編",
+      "load": "ロード",
       "export": "エクスポート",
       "publish": "公開",
       "execute": "実行",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "編集中の内容が",
       "overwrite_warning_2": "上書きされます。",
       "processing_time": "処理に時間がかかります。",
-      "full_readonly": "大きすぎるため編集はできません。",
-      "full_usage": "検証とプレイのみ行えます。",
       "autosave_status": "現在: {status}",
       "autosave_description": "メニューを開いた時に保存"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "現在の編集が失われます。空のデータを読み込みますか？",
     "load_file": "現在の編集が失われます。ファイルからデータを読み込みますか？",
-    "load_sample": "現在の編集が失われます。サンプルデータを読み込みますか？"
+    "load_sample": "現在の編集が失われます。サンプルデータを読み込みますか？",
+    "load_full": "現在の編集が失われます。本編を読み込みますか？"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "空データが読み込まれました",
       "data_loaded": "データが読み込まれました: {filename}",
       "sample_data_loaded": "サンプルデータが読み込まれました",
+      "full_data_loaded": "本編が読み込まれました",
       "validation_successful": "検証成功: データに問題は見つかりませんでした",
       "autosave_enabled": "自動保存をオンにしました",
       "autosave_disabled": "自動保存をオフにしました",

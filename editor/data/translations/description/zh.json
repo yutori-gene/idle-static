@@ -19,6 +19,7 @@
       "empty": "空白",
       "sample": "示例",
       "full": "正式版",
+      "load": "载入",
       "export": "导出",
       "publish": "发布",
       "execute": "执行",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "正在编辑的内容",
       "overwrite_warning_2": "将被覆盖。",
       "processing_time": "处理需要一些时间。",
-      "full_readonly": "体积过大，无法编辑。",
-      "full_usage": "仅可验证与试玩。",
       "autosave_status": "当前: {status}",
       "autosave_description": "打开菜单时保存"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "当前的编辑将会丢失。要载入空数据吗？",
     "load_file": "当前的编辑将会丢失。要从文件载入数据吗？",
-    "load_sample": "当前的编辑将会丢失。要载入示例数据吗？"
+    "load_sample": "当前的编辑将会丢失。要载入示例数据吗？",
+    "load_full": "当前的编辑将会丢失。要载入正式数据吗？"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "已载入空数据",
       "data_loaded": "已载入数据: {filename}",
       "sample_data_loaded": "已载入示例数据",
+      "full_data_loaded": "已载入正式数据",
       "validation_successful": "验证成功: 数据未发现问题",
       "autosave_enabled": "已开启自动保存",
       "autosave_disabled": "已关闭自动保存",

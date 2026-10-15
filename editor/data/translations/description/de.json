@@ -19,6 +19,7 @@
       "empty": "Leer",
       "sample": "Beispiel",
       "full": "Hauptspiel",
+      "load": "Laden",
       "export": "Exportieren",
       "publish": "Veröffentlichen",
       "execute": "Ausführen",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "Der bearbeitete Inhalt",
       "overwrite_warning_2": "wird überschrieben.",
       "processing_time": "Die Verarbeitung dauert eine Weile.",
-      "full_readonly": "Zu groß zum Bearbeiten.",
-      "full_usage": "Nur Prüfung und Spielen.",
       "autosave_status": "Aktuell: {status}",
       "autosave_description": "Beim Öffnen des Menüs speichern"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "Die aktuellen Änderungen gehen verloren. Leere Daten laden?",
     "load_file": "Die aktuellen Änderungen gehen verloren. Daten aus einer Datei laden?",
-    "load_sample": "Die aktuellen Änderungen gehen verloren. Beispieldaten laden?"
+    "load_sample": "Die aktuellen Änderungen gehen verloren. Beispieldaten laden?",
+    "load_full": "Die aktuellen Änderungen gehen verloren. Hauptspieldaten laden?"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "Leere Daten geladen",
       "data_loaded": "Daten geladen: {filename}",
       "sample_data_loaded": "Beispieldaten geladen",
+      "full_data_loaded": "Hauptspieldaten geladen",
       "validation_successful": "Prüfung erfolgreich: keine Probleme in den Daten gefunden",
       "autosave_enabled": "Automatisches Speichern eingeschaltet",
       "autosave_disabled": "Automatisches Speichern ausgeschaltet",

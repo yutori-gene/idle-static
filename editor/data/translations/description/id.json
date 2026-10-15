@@ -19,6 +19,7 @@
       "empty": "Kosong",
       "sample": "Contoh",
       "full": "Utama",
+      "load": "Muat",
       "export": "Ekspor",
       "publish": "Publikasikan",
       "execute": "Jalankan",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "Konten yang sedang diedit",
       "overwrite_warning_2": "akan ditimpa.",
       "processing_time": "Proses ini memerlukan waktu.",
-      "full_readonly": "Terlalu besar untuk diedit.",
-      "full_usage": "Hanya validasi dan main.",
       "autosave_status": "Saat ini: {status}",
       "autosave_description": "Simpan saat menu dibuka"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "Editan saat ini akan hilang. Muat data kosong?",
     "load_file": "Editan saat ini akan hilang. Muat data dari berkas?",
-    "load_sample": "Editan saat ini akan hilang. Muat data contoh?"
+    "load_sample": "Editan saat ini akan hilang. Muat data contoh?",
+    "load_full": "Editan saat ini akan hilang. Muat data utama?"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "Data kosong dimuat",
       "data_loaded": "Data dimuat: {filename}",
       "sample_data_loaded": "Data contoh dimuat",
+      "full_data_loaded": "Data utama dimuat",
       "validation_successful": "Validasi berhasil: tidak ditemukan masalah pada data",
       "autosave_enabled": "Simpan otomatis diaktifkan",
       "autosave_disabled": "Simpan otomatis dinonaktifkan",

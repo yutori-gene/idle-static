@@ -19,6 +19,7 @@
       "empty": "Empty",
       "sample": "Sample",
       "full": "Main",
+      "load": "Load",
       "export": "Export",
       "publish": "Publish",
       "execute": "Execute",
@@ -37,8 +38,6 @@
       "overwrite_warning_1": "The content you are editing",
       "overwrite_warning_2": "will be overwritten.",
       "processing_time": "Processing takes some time.",
-      "full_readonly": "Too large to edit.",
-      "full_usage": "Validation and play only.",
       "autosave_status": "Current: {status}",
       "autosave_description": "Saves when the menu is opened"
     }
@@ -46,7 +45,8 @@
   "confirm": {
     "load_empty": "Your current edits will be lost. Load empty data?",
     "load_file": "Your current edits will be lost. Load data from a file?",
-    "load_sample": "Your current edits will be lost. Load sample data?"
+    "load_sample": "Your current edits will be lost. Load sample data?",
+    "load_full": "Your current edits will be lost. Load the main data?"
   },
   "toast": {
     "error": {
@@ -73,6 +73,7 @@
       "empty_data_loaded": "Empty data loaded",
       "data_loaded": "Data loaded: {filename}",
       "sample_data_loaded": "Sample data loaded",
+      "full_data_loaded": "Main data loaded",
       "validation_successful": "Validation passed: no problems found in the data",
       "autosave_enabled": "Auto save turned on",
       "autosave_disabled": "Auto save turned off",
