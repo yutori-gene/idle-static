@@ -660,7 +660,7 @@ export const item: Type.Item = {
 		equipmentType: {
 			title: "Tipo de equipamento",
 			summary: "A configuração de tipo relativa ao equipar, ao efeito e ao consumo do item",
-			points: ["Nos itens de `necessary` e `consumable`, o grupo deles vira automaticamente um espaço de equipamento da categoria.", "Dentro do mesmo grupo só um item pode ser equipado. Ao equipar um item novo, o equipamento existente do mesmo grupo é retirado automaticamente.", "A ordem dos espaços de equipamento segue a ordem de definição da lista de grupos do mundo.", "`unnecessary` faz efeito estando equipado ou não, e a magnitude do efeito é proporcional à quantidade em posse (sem efeito com 0, n vezes com n unidades).", "`consumable` só é consumido quando as propriedades desse item afetam a ação executada, uma unidade por ação. Ele não diminui nas ações às quais o efeito dele não chega.", "Um item consumido até 0 é desequipado automaticamente.", "Para equipá-lo é preciso atender tanto as condições desse item quanto as da categoria."],
+			points: ["Nos itens de `necessary` e `consumable`, o grupo deles vira automaticamente um espaço de equipamento da categoria.", "Dentro do mesmo grupo só um item pode ser equipado. Ao equipar um item novo, o equipamento existente do mesmo grupo é retirado automaticamente.", "A ordem dos espaços de equipamento segue a ordem de definição da lista de grupos do mundo.", "`unnecessary` faz efeito estando equipado ou não, e a magnitude do efeito é proporcional à quantidade em posse (sem efeito com 0, n vezes com n unidades).", "`consumable` só é consumido quando as propriedades desse item afetam a ação executada, uma unidade por ação. Ele não diminui nas ações às quais o efeito dele não chega. Se ele de fato diminui é decidido pela probabilidade de consumo.", "Um item consumido até 0 é desequipado automaticamente.", "Para equipá-lo é preciso atender tanto as condições desse item quanto as da categoria."],
 			list: [
 				["Valor", "Equipamento", "Fazer efeito", "Consumo", "Exemplo"],
 				["`necessary`", "Necessário", "Só enquanto equipado (por uma unidade)", "Não", "Equipamentos como espadas e armaduras"],
@@ -668,6 +668,11 @@ export const item: Type.Item = {
 				["`unnecessary`", "Desnecessário", "Sempre enquanto em posse (proporcional à quantidade em posse)", "Não", "Itens passivos que fazem efeito só por serem mantidos"],
 				["`impossible`", "Impossível", "Nenhum", "Não", "Itens sem efeito, como materiais e bugigangas"],
 			],
+		},
+		consumeChance: {
+			title: "Probabilidade de consumo [0-1]",
+			summary: "Probabilidade de um equipamento consumível ser consumido em uma ação",
+			points: ["Especifique, de `0` a `1`, a probabilidade de um item cujo tipo de equipamento é `consumable` ser consumido em uma ação. O valor padrão é `1` (consumido todas as vezes).", "Com `0.5` ele é consumido cerca de uma vez a cada duas, e com `0` nunca é consumido.", "O julgamento de consumo só é feito quando as propriedades desse item afetam a ação executada.", "Não é usado em tipos de equipamento diferentes de `consumable`."],
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "As condições para o item ser desbloqueado e poder ser equipado" },
 		properties: { ...property, options: { ...property.options, array: true }, summary: "Os efeitos de propriedade que o item tem" },

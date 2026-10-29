@@ -660,7 +660,7 @@ export const item: Type.Item = {
 		equipmentType: {
 			title: "Ausrüstungstyp",
 			summary: "Die Typeinstellung rund um Ausrüsten, Wirkung und Verbrauch des Gegenstands",
-			points: ["Bei Gegenständen mit `necessary` und `consumable` wird deren Gruppe automatisch zu einem Ausrüstungsplatz der Kategorie.", "Innerhalb derselben Gruppe lässt sich nur ein Gegenstand ausrüsten. Rüstest du einen neuen Gegenstand aus, wird die vorhandene Ausrüstung derselben Gruppe automatisch abgelegt.", "Die Reihenfolge der Ausrüstungsplätze richtet sich nach der Definitionsreihenfolge der Gruppenliste der Welt.", "`unnecessary` wirkt unabhängig davon, ob er ausgerüstet ist, und die Höhe der Wirkung ist proportional zur Besitzanzahl (bei 0 keine Wirkung, bei n Stück das n-Fache).", "`consumable` wird nur dann verbraucht, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken, und zwar ein Stück je Aktion. Bei Aktionen, die seine Wirkung nicht erreicht, nimmt er nicht ab.", "Ein Gegenstand, der bis auf 0 verbraucht ist, wird automatisch abgelegt.", "Zum Ausrüsten müssen sowohl die Bedingungen dieses Gegenstands als auch die der Kategorie erfüllt sein."],
+			points: ["Bei Gegenständen mit `necessary` und `consumable` wird deren Gruppe automatisch zu einem Ausrüstungsplatz der Kategorie.", "Innerhalb derselben Gruppe lässt sich nur ein Gegenstand ausrüsten. Rüstest du einen neuen Gegenstand aus, wird die vorhandene Ausrüstung derselben Gruppe automatisch abgelegt.", "Die Reihenfolge der Ausrüstungsplätze richtet sich nach der Definitionsreihenfolge der Gruppenliste der Welt.", "`unnecessary` wirkt unabhängig davon, ob er ausgerüstet ist, und die Höhe der Wirkung ist proportional zur Besitzanzahl (bei 0 keine Wirkung, bei n Stück das n-Fache).", "`consumable` wird nur dann verbraucht, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken, und zwar ein Stück je Aktion. Bei Aktionen, die seine Wirkung nicht erreicht, nimmt er nicht ab. Ob er tatsächlich abnimmt, entscheidet die Verbrauchswahrscheinlichkeit.", "Ein Gegenstand, der bis auf 0 verbraucht ist, wird automatisch abgelegt.", "Zum Ausrüsten müssen sowohl die Bedingungen dieses Gegenstands als auch die der Kategorie erfüllt sein."],
 			list: [
 				["Wert", "Ausrüstung", "Wirkung", "Verbrauch", "Beispiel"],
 				["`necessary`", "Nötig", "Nur ausgerüstet (für ein Stück)", "Nein", "Ausrüstung wie Schwerter und Rüstungen"],
@@ -668,6 +668,11 @@ export const item: Type.Item = {
 				["`unnecessary`", "Nicht nötig", "Immer im Besitz (proportional zur Besitzanzahl)", "Nein", "Passive Gegenstände, die schon durch das Halten wirken"],
 				["`impossible`", "Nicht möglich", "Keine", "Nein", "Gegenstände ohne Wirkung, etwa Material und Kram"],
 			],
+		},
+		consumeChance: {
+			title: "Verbrauchswahrscheinlichkeit [0-1]",
+			summary: "Wahrscheinlichkeit, dass eine verbrauchbare Ausrüstung bei einer Aktion verbraucht wird",
+			points: ["Gib von `0` bis `1` die Wahrscheinlichkeit an, mit der ein Gegenstand mit dem Ausrüstungstyp `consumable` bei einer Aktion verbraucht wird. Der Standardwert ist `1` (wird jedes Mal verbraucht).", "Bei `0.5` wird er etwa jedes zweite Mal verbraucht, bei `0` nie.", "Die Verbrauchsprüfung findet nur statt, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken.", "Bei anderen Ausrüstungstypen als `consumable` wird sie nicht verwendet."],
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "Die Bedingungen, unter denen der Gegenstand freigeschaltet und ausrüstbar wird" },
 		properties: { ...property, options: { ...property.options, array: true }, summary: "Die Eigenschaftswirkungen, die der Gegenstand hat" },

@@ -660,7 +660,7 @@ export const item: Type.Item = {
 		equipmentType: {
 			title: "Tipe peralatan",
 			summary: "Pengaturan tipe terkait pemasangan, efek, dan konsumsi item",
-			points: ["Pada item `necessary` dan `consumable`, grupnya otomatis menjadi slot peralatan kategori.", "Di dalam grup yang sama hanya satu item yang bisa dipasang. Bila item baru dipasang, peralatan yang sudah ada di grup yang sama otomatis dilepas.", "Urutan slot peralatan mengikuti urutan definisi pada daftar grup dunia.", "`unnecessary` memberi efek terlepas dari dipasang atau tidak, dan besarnya efek sebanding dengan jumlah kepemilikan (0 buah tanpa efek, n buah menjadi n kali lipat).", "`consumable` hanya dikonsumsi ketika properti item itu memberi efek pada aksi yang dieksekusi, sebanyak 1 buah tiap satu aksi. Pada aksi yang tidak terjangkau efeknya, item tidak berkurang.", "Item yang habis dikonsumsi sampai 0 otomatis dilepas dari peralatan.", "Untuk memasangnya, syarat item itu dan syarat kategori harus sama-sama terpenuhi."],
+			points: ["Pada item `necessary` dan `consumable`, grupnya otomatis menjadi slot peralatan kategori.", "Di dalam grup yang sama hanya satu item yang bisa dipasang. Bila item baru dipasang, peralatan yang sudah ada di grup yang sama otomatis dilepas.", "Urutan slot peralatan mengikuti urutan definisi pada daftar grup dunia.", "`unnecessary` memberi efek terlepas dari dipasang atau tidak, dan besarnya efek sebanding dengan jumlah kepemilikan (0 buah tanpa efek, n buah menjadi n kali lipat).", "`consumable` hanya dikonsumsi ketika properti item itu memberi efek pada aksi yang dieksekusi, sebanyak 1 buah tiap satu aksi. Pada aksi yang tidak terjangkau efeknya, item tidak berkurang. Apakah item benar-benar berkurang ditentukan oleh peluang konsumsi.", "Item yang habis dikonsumsi sampai 0 otomatis dilepas dari peralatan.", "Untuk memasangnya, syarat item itu dan syarat kategori harus sama-sama terpenuhi."],
 			list: [
 				["Nilai", "Pemasangan", "Pemberian efek", "Konsumsi", "Contoh"],
 				["`necessary`", "Perlu", "Hanya selama dipasang (untuk 1 buah)", "Tidak", "Peralatan seperti pedang dan baju zirah"],
@@ -668,6 +668,11 @@ export const item: Type.Item = {
 				["`unnecessary`", "Tidak perlu", "Selalu selama dimiliki (sebanding dengan jumlah kepemilikan)", "Tidak", "Item pasif yang memberi efek cukup dengan dimiliki"],
 				["`impossible`", "Tidak bisa", "Tidak ada", "Tidak", "Item tanpa efek seperti bahan dan rongsokan"],
 			],
+		},
+		consumeChance: {
+			title: "Peluang konsumsi [0-1]",
+			summary: "Peluang peralatan habis pakai dikonsumsi dalam satu aksi",
+			points: ["Tentukan, dari `0` sampai `1`, peluang item dengan tipe peralatan `consumable` dikonsumsi dalam satu aksi. Nilai bawaannya adalah `1` (dikonsumsi setiap kali).", "Dengan `0.5` item dikonsumsi kira-kira sekali setiap dua kali, dan dengan `0` tidak pernah dikonsumsi.", "Penentuan konsumsi hanya dilakukan ketika properti item itu memberi efek pada aksi yang dieksekusi.", "Tidak digunakan untuk tipe peralatan selain `consumable`."],
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "Syarat agar item terbuka dan bisa dipasang" },
 		properties: { ...property, options: { ...property.options, array: true }, summary: "Efek properti yang dimiliki item" },
