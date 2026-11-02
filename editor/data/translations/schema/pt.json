@@ -1425,7 +1425,7 @@
             "barColor",
             "textColor",
             "shadowColor",
-            "background"
+            "backgrounds"
           ],
           "options": {
             "disable_collapse": true,
@@ -1485,36 +1485,87 @@
                 "reference": "pt/editor/design?id=Cor de sombra"
               }
             },
-            "background": {
-              "type": "string",
-              "default": "",
-              "media": {
-                "binaryEncoding": "base64",
-                "type": "img/png"
-              },
-              "title": "Imagem de fundo",
+            "backgrounds": {
+              "type": "object",
+              "additionalProperties": false,
+              "format": "grid",
+              "required": [
+                "laptop",
+                "mobile"
+              ],
               "options": {
+                "disable_collapse": true,
                 "infoText": "A imagem de fundo do jogo inteiro"
               },
+              "properties": {
+                "laptop": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Notebook",
+                  "options": {
+                    "infoText": "A imagem de fundo do jogo inteiro usada em telas horizontais"
+                  },
+                  "yutori": {
+                    "points": [
+                      "É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal."
+                    ],
+                    "reference": "pt/editor/design?id=Notebook"
+                  }
+                },
+                "deleteLaptop": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                },
+                "mobile": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Dispositivo móvel",
+                  "options": {
+                    "infoText": "A imagem de fundo do jogo inteiro usada em telas verticais"
+                  },
+                  "yutori": {
+                    "points": [
+                      "É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical."
+                    ],
+                    "reference": "pt/editor/design?id=Dispositivo móvel"
+                  }
+                },
+                "deleteMobile": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                }
+              },
+              "title": "Imagem de fundo",
               "yutori": {
                 "points": [
-                  "Define a imagem de fundo do jogo.",
-                  "Se nenhuma imagem for definida, o fundo passa a ser um degradê baseado na cor de texto.",
+                  "Define a imagem de fundo do jogo separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel). Como a proporção das telas é muito diferente, é possível preparar uma imagem adequada a cada formato.",
+                  "Qual delas é usada depende da orientação da tela. Ao girar o dispositivo ou mudar o formato da janela, ela troca na hora.",
+                  "Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo passa a ser um degradê baseado na cor de texto.",
                   "A imagem é reduzida automaticamente para caber em 256×256 pixels. Os GIF e os AVIF são convertidos em PNG.",
-                  "Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria.",
-                  "A imagem definida pode ser apagada com o botão Delete Image."
+                  "Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria. O lado da categoria tem prioridade mesmo quando só tem uma imagem que não corresponde à orientação da tela.",
+                  "Cada imagem definida pode ser apagada com o botão Delete Image que fica logo depois dela."
                 ],
                 "reference": "pt/editor/design?id=Imagem de fundo"
-              }
-            },
-            "delete": {
-              "format": "button",
-              "options": {
-                "button": {
-                  "text": "Delete Image",
-                  "icon": "trash",
-                  "action": "deletePrevious"
-                }
               }
             }
           },
@@ -1734,7 +1785,7 @@
           "requirements",
           "numeric",
           "standaloneProgress",
-          "background"
+          "backgrounds"
         ],
         "properties": {
           "information": {
@@ -2139,35 +2190,85 @@
               "reference": "pt/editor/category?id=Andamento simultâneo"
             }
           },
-          "background": {
-            "type": "string",
-            "default": "",
-            "media": {
-              "binaryEncoding": "base64",
-              "type": "img/png"
-            },
-            "title": "Fundo",
+          "backgrounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "format": "grid",
+            "required": [
+              "laptop",
+              "mobile"
+            ],
             "options": {
+              "disable_collapse": true,
               "infoText": "A configuração de fundo própria da categoria"
             },
+            "properties": {
+              "laptop": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Notebook",
+                "options": {
+                  "infoText": "A imagem de fundo da categoria usada em telas horizontais"
+                },
+                "yutori": {
+                  "points": [
+                    "É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal."
+                  ],
+                  "reference": "pt/editor/category?id=Notebook"
+                }
+              },
+              "deleteLaptop": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              },
+              "mobile": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Dispositivo móvel",
+                "options": {
+                  "infoText": "A imagem de fundo da categoria usada em telas verticais"
+                },
+                "yutori": {
+                  "points": [
+                    "É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical."
+                  ],
+                  "reference": "pt/editor/category?id=Dispositivo móvel"
+                }
+              },
+              "deleteMobile": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              }
+            },
+            "title": "Fundo",
             "yutori": {
               "points": [
-                "Define o fundo desta categoria.",
+                "Define o fundo desta categoria separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel).",
                 "Quando a categoria é selecionada, a imagem de fundo muda junto com ela.",
-                "Se não for definida, o fundo do design é usado como está.",
+                "Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo do design é usado como está.",
                 "Ao ser importada, ela é reduzida automaticamente para caber em 256×256 pixels."
               ],
               "reference": "pt/editor/category?id=Fundo"
-            }
-          },
-          "delete": {
-            "format": "button",
-            "options": {
-              "button": {
-                "text": "Delete Image",
-                "icon": "trash",
-                "action": "deletePrevious"
-              }
             }
           }
         }
@@ -2990,6 +3091,7 @@
           "coinId",
           "maximum",
           "equipmentType",
+          "consumeChance",
           "requirements",
           "properties",
           "skill"
@@ -3354,11 +3456,30 @@
                 "Dentro do mesmo grupo só um item pode ser equipado. Ao equipar um item novo, o equipamento existente do mesmo grupo é retirado automaticamente.",
                 "A ordem dos espaços de equipamento segue a ordem de definição da lista de grupos do mundo.",
                 "`unnecessary` faz efeito estando equipado ou não, e a magnitude do efeito é proporcional à quantidade em posse (sem efeito com 0, n vezes com n unidades).",
-                "`consumable` só é consumido quando as propriedades desse item afetam a ação executada, uma unidade por ação. Ele não diminui nas ações às quais o efeito dele não chega.",
+                "`consumable` só é consumido quando as propriedades desse item afetam a ação executada, uma unidade por ação. Ele não diminui nas ações às quais o efeito dele não chega. Se ele de fato diminui é decidido pela probabilidade de consumo.",
                 "Um item consumido até 0 é desequipado automaticamente.",
                 "Para equipá-lo é preciso atender tanto as condições desse item quanto as da categoria."
               ],
               "reference": "pt/editor/item?id=Tipo de equipamento"
+            }
+          },
+          "consumeChance": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "title": "Probabilidade de consumo [0-1]",
+            "options": {
+              "infoText": "Probabilidade de um equipamento consumível ser consumido em uma ação"
+            },
+            "yutori": {
+              "points": [
+                "Especifique, de `0` a `1`, a probabilidade de um item cujo tipo de equipamento é `consumable` ser consumido em uma ação. O valor padrão é `1` (consumido todas as vezes).",
+                "Com `0.5` ele é consumido cerca de uma vez a cada duas, e com `0` nunca é consumido.",
+                "O julgamento de consumo só é feito quando as propriedades desse item afetam a ação executada.",
+                "Não é usado em tipos de equipamento diferentes de `consumable`."
+              ],
+              "reference": "pt/editor/item?id=Probabilidade de consumo [0-1]"
             }
           },
           "requirements": {

@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "Pengaturan pelaksanaan sejajar dengan kategori lain",
 			points: ["Penanda apakah aksi kategori ini bisa berjalan sejajar dengan aksi kategori lain.", "Bila aktif, aksi bisa berjalan bersamaan secara mandiri dari aksi kategori lain.", "Bila nonaktif, di seluruh kategori yang sama-sama disetel nonaktif hanya satu aksi yang bisa berjalan.", "Bila kamu memulai aksi baru di kategori yang nonaktif, aksi yang sedang berjalan tidak dibatalkan, melainkan didorong kembali ke awal antrian tunggu. Sisa jumlah eksekusinya dipertahankan, dan setelah aksi yang menyela selesai, aksi itu dilanjutkan dari sana."],
 		},
-		background: {
+		backgrounds: {
 			title: "Latar",
 			summary: "Pengaturan latar khas kategori",
-			points: ["Mengatur latar kategori ini.", "Saat kategori dipilih, gambar latar ikut berubah.", "Bila tidak diatur, latar dari desain dipakai apa adanya.", "Saat dimasukkan, gambar otomatis diperkecil hingga muat dalam 256×256 piksel."],
+			points: ["Mengatur latar kategori ini secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler).", "Saat kategori dipilih, gambar latar ikut berubah.", "Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latar dari desain dipakai apa adanya.", "Saat dimasukkan, gambar otomatis diperkecil hingga muat dalam 256×256 piksel."],
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "Gambar latar kategori yang dipakai di layar mendatar",
+					points: ["Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar."],
+				},
+				mobile: {
+					title: "Seluler",
+					summary: "Gambar latar kategori yang dipakai di layar tegak",
+					points: ["Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "Warna bayangan bilah",
 			points: ["Dipakai sebagai warna bayangan yang jatuh pada bilah dan tajuk.", "Menjadikannya warna yang lebih gelap daripada warna bilah menghasilkan bayangan yang wajar."],
 		},
-		background: {
+		backgrounds: {
 			title: "Gambar latar",
 			summary: "Gambar latar seluruh permainan",
-			points: ["Mengatur gambar latar permainan.", "Bila gambar tidak diatur, latarnya menjadi gradasi yang berdasar pada warna teks.", "Gambar otomatis diperkecil agar muat dalam 256×256 piksel. GIF dan AVIF diubah menjadi PNG.", "Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan.", "Gambar yang diatur bisa dihapus dengan tombol Delete Image."],
+			points: ["Mengatur gambar latar permainan secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler). Karena perbandingan sisi layarnya sangat berbeda, gambar yang cocok untuk tiap bentuk bisa disiapkan.", "Yang mana yang dipakai ditentukan oleh orientasi layar. Saat perangkat diputar atau bentuk jendela diubah, gambarnya langsung berganti.", "Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latarnya menjadi gradasi yang berdasar pada warna teks.", "Gambar otomatis diperkecil agar muat dalam 256×256 piksel. GIF dan AVIF diubah menjadi PNG.", "Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan. Sisi kategori tetap diutamakan meskipun hanya punya gambar yang tidak sesuai dengan orientasi layar.", "Tiap gambar yang diatur bisa dihapus dengan tombol Delete Image yang ada tepat sesudahnya."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "Gambar latar seluruh permainan yang dipakai di layar mendatar",
+					points: ["Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar."],
+				},
+				mobile: {
+					title: "Seluler",
+					summary: "Gambar latar seluruh permainan yang dipakai di layar tegak",
+					points: ["Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak."],
+				},
+			},
 		},
 	},
 	options: {

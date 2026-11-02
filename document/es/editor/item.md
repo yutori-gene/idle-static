@@ -76,7 +76,7 @@ El ajuste de tipo relativo al equipamiento, al efecto y al consumo del artículo
 - Dentro del mismo grupo solo puede equiparse un artículo. Al equipar un artículo nuevo, el equipamiento existente del mismo grupo se retira automáticamente.
 - El orden de los espacios de equipamiento sigue el orden de definición de la lista de grupos del mundo.
 - `unnecessary` surte efecto se equipe o no, y la magnitud del efecto es proporcional a la cantidad en posesión (sin efecto con 0, n veces con n unidades).
-- `consumable` solo se consume cuando las propiedades de ese artículo afectan a la acción ejecutada, una unidad por acción. No disminuye en las acciones a las que su efecto no llega.
+- `consumable` solo se consume cuando las propiedades de ese artículo afectan a la acción ejecutada, una unidad por acción. No disminuye en las acciones a las que su efecto no llega. Que disminuya realmente lo decide la probabilidad de consumo.
 - Un artículo que se ha consumido hasta 0 se desequipa automáticamente.
 - Para equiparlo hay que cumplir tanto las condiciones de ese artículo como las de la categoría.
 
@@ -86,6 +86,14 @@ El ajuste de tipo relativo al equipamiento, al efecto y al consumo del artículo
 |`consumable`|Necesario|Solo mientras está equipado (por una unidad)|Se consume al ejecutar la acción|Artículos que se consumen para obtener un efecto, como las pociones|
 |`unnecessary`|Innecesario|Siempre mientras se posee (proporcional a la cantidad en posesión)|No|Artículos pasivos que hacen efecto con solo tenerlos|
 |`impossible`|Imposible|Ninguno|No|Artículos sin efecto, como materiales y chatarra|
+___
+
+## Probabilidad de consumo [0-1]
+Probabilidad de que un equipamiento consumible se consuma en una acción
+- Indica, de `0` a `1`, la probabilidad de que un artículo cuyo tipo de equipamiento es `consumable` se consuma en una acción. El valor predeterminado es `1` (se consume siempre).
+- Con `0.5` se consume aproximadamente una de cada dos veces, y con `0` no se consume nunca.
+- El juicio de consumo solo se hace cuando las propiedades de ese artículo afectan a la acción ejecutada.
+- No se usa con tipos de equipamiento distintos de `consumable`.
 ___
 
 ## [_Requisito_](es/editor/requirement)

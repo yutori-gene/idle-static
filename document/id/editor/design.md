@@ -28,9 +28,20 @@ ___
 
 ## Gambar latar
 Gambar latar seluruh permainan
-- Mengatur gambar latar permainan.
-- Bila gambar tidak diatur, latarnya menjadi gradasi yang berdasar pada warna teks.
+- Mengatur gambar latar permainan secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler). Karena perbandingan sisi layarnya sangat berbeda, gambar yang cocok untuk tiap bentuk bisa disiapkan.
+- Yang mana yang dipakai ditentukan oleh orientasi layar. Saat perangkat diputar atau bentuk jendela diubah, gambarnya langsung berganti.
+- Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latarnya menjadi gradasi yang berdasar pada warna teks.
 - Gambar otomatis diperkecil agar muat dalam 256×256 piksel. GIF dan AVIF diubah menjadi PNG.
-- Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan.
-- Gambar yang diatur bisa dihapus dengan tombol Delete Image.
+- Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan. Sisi kategori tetap diutamakan meskipun hanya punya gambar yang tidak sesuai dengan orientasi layar.
+- Tiap gambar yang diatur bisa dihapus dengan tombol Delete Image yang ada tepat sesudahnya.
 - [_category_](id/editor/category)
+___
+
+### Laptop
+Gambar latar seluruh permainan yang dipakai di layar mendatar
+- Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar.
+___
+
+### Seluler
+Gambar latar seluruh permainan yang dipakai di layar tegak
+- Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak.

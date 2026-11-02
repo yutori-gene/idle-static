@@ -28,9 +28,20 @@ ___
 
 ## Hintergrundbild
 Das Hintergrundbild des gesamten Spiels
-- Stellt das Hintergrundbild des Spiels ein.
-- Ist kein Bild eingestellt, wird der Hintergrund zu einem Verlauf auf Basis der Textfarbe.
+- Stellt das Hintergrundbild des Spiels getrennt für Querformat-Bildschirme (Laptop) und Hochformat-Bildschirme (Mobilgerät) ein. Da sich die Seitenverhältnisse der Bildschirme stark unterscheiden, lässt sich für jede Form ein passendes Bild vorbereiten.
+- Welches verwendet wird, entscheidet die Ausrichtung des Bildschirms. Dreht man das Gerät oder ändert die Form des Fensters, wird sofort umgeschaltet.
+- Ist die zur Bildschirmausrichtung passende Seite leer, wird das andere Bild verwendet. Sind beide leer, wird der Hintergrund zu einem Verlauf auf Basis der Textfarbe.
 - Das Bild wird automatisch so verkleinert, dass es in 256×256 Pixel passt. GIF und AVIF werden in PNG umgewandelt.
-- Ist bei einer Kategorie ein Hintergrundbild eingestellt, hat auf dem Bildschirm dieser Kategorie das Bild auf Seiten der Kategorie Vorrang.
-- Das eingestellte Bild lässt sich mit der Schaltfläche Delete Image löschen.
+- Ist bei einer Kategorie ein Hintergrundbild eingestellt, hat auf dem Bildschirm dieser Kategorie das Bild auf Seiten der Kategorie Vorrang. Die Seite der Kategorie hat auch dann Vorrang, wenn sie nur ein Bild hat, das nicht zur Bildschirmausrichtung passt.
+- Jedes eingestellte Bild lässt sich mit der Schaltfläche Delete Image löschen, die direkt danach steht.
 - [_category_](de/editor/category)
+___
+
+### Laptop
+Das Hintergrundbild des gesamten Spiels für Querformat-Bildschirme
+- Wird verwendet, wenn der Bildschirm breiter als hoch ist. Das betrifft Computer und quer gehaltene Tablets.
+___
+
+### Mobilgerät
+Das Hintergrundbild des gesamten Spiels für Hochformat-Bildschirme
+- Wird verwendet, wenn der Bildschirm mindestens so hoch wie breit ist. Das betrifft Smartphones und hochkant gehaltene Tablets.

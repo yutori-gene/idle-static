@@ -46,7 +46,17 @@ ___
 
 ## Latar
 Pengaturan latar khas kategori
-- Mengatur latar kategori ini.
+- Mengatur latar kategori ini secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler).
 - Saat kategori dipilih, gambar latar ikut berubah.
-- Bila tidak diatur, latar dari desain dipakai apa adanya.
+- Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latar dari desain dipakai apa adanya.
 - Saat dimasukkan, gambar otomatis diperkecil hingga muat dalam 256×256 piksel.
+___
+
+### Laptop
+Gambar latar kategori yang dipakai di layar mendatar
+- Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar.
+___
+
+### Seluler
+Gambar latar kategori yang dipakai di layar tegak
+- Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak.

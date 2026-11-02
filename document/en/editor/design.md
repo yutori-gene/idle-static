@@ -28,9 +28,20 @@ ___
 
 ## Background Image
 The background image of the whole game
-- It sets the background image of the game.
-- When no image is set, the background becomes a gradient based on the text colour.
+- It sets the background image of the game separately for wide screens (laptop) and tall screens (mobile). Since the aspect ratios of the screens differ greatly, you can prepare an image that fits each shape.
+- Which one is used is decided by the orientation of the screen. When you rotate the device or change the shape of the window, it switches on the spot.
+- When the side that matches the screen orientation is empty, the other image is used. When both are empty, the background becomes a gradient based on the text colour.
 - The image is automatically reduced so that it fits within 256×256 pixels. GIF and AVIF are converted to PNG.
-- When a background image is set on a category, the image on the category side takes priority on the screen of that category.
-- The image you set can be deleted with the Delete Image button.
+- When a background image is set on a category, the image on the category side takes priority on the screen of that category. The category side takes priority even when it only has an image that does not match the screen orientation.
+- Each image you set can be deleted with the Delete Image button placed after it.
 - [_category_](en/editor/category)
+___
+
+### Laptop
+The background image of the whole game used on wide screens
+- It is used when the screen is wider than it is tall. This covers computers and tablets held sideways.
+___
+
+### Mobile
+The background image of the whole game used on tall screens
+- It is used when the screen is at least as tall as it is wide. This covers smartphones and tablets held upright.

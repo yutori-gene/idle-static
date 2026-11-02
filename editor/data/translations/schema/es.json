@@ -1425,7 +1425,7 @@
             "barColor",
             "textColor",
             "shadowColor",
-            "background"
+            "backgrounds"
           ],
           "options": {
             "disable_collapse": true,
@@ -1485,36 +1485,87 @@
                 "reference": "es/editor/design?id=Color de sombra"
               }
             },
-            "background": {
-              "type": "string",
-              "default": "",
-              "media": {
-                "binaryEncoding": "base64",
-                "type": "img/png"
-              },
-              "title": "Imagen de fondo",
+            "backgrounds": {
+              "type": "object",
+              "additionalProperties": false,
+              "format": "grid",
+              "required": [
+                "laptop",
+                "mobile"
+              ],
               "options": {
+                "disable_collapse": true,
                 "infoText": "La imagen de fondo de todo el juego"
               },
+              "properties": {
+                "laptop": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Portátil",
+                  "options": {
+                    "infoText": "La imagen de fondo de todo el juego que se usa en pantallas horizontales"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal."
+                    ],
+                    "reference": "es/editor/design?id=Portátil"
+                  }
+                },
+                "deleteLaptop": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                },
+                "mobile": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Móvil",
+                  "options": {
+                    "infoText": "La imagen de fondo de todo el juego que se usa en pantallas verticales"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical."
+                    ],
+                    "reference": "es/editor/design?id=Móvil"
+                  }
+                },
+                "deleteMobile": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                }
+              },
+              "title": "Imagen de fondo",
               "yutori": {
                 "points": [
-                  "Establece la imagen de fondo del juego.",
-                  "Si no se establece ninguna imagen, el fondo pasa a ser un degradado basado en el color de texto.",
+                  "Establece la imagen de fondo del juego por separado para pantallas horizontales (portátil) y pantallas verticales (móvil). Como la proporción de las pantallas es muy distinta, se puede preparar una imagen adaptada a cada forma.",
+                  "Cuál se usa lo decide la orientación de la pantalla. Al girar el dispositivo o cambiar la forma de la ventana, cambia en el acto.",
+                  "Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, el fondo pasa a ser un degradado basado en el color de texto.",
                   "La imagen se reduce automáticamente para que quepa en 256×256 píxeles. Los GIF y los AVIF se convierten a PNG.",
-                  "Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría.",
-                  "La imagen establecida se puede borrar con el botón Delete Image."
+                  "Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría. El lado de la categoría tiene prioridad aunque solo tenga una imagen que no corresponda a la orientación de la pantalla.",
+                  "Cada imagen establecida se puede borrar con el botón Delete Image que hay a continuación de ella."
                 ],
                 "reference": "es/editor/design?id=Imagen de fondo"
-              }
-            },
-            "delete": {
-              "format": "button",
-              "options": {
-                "button": {
-                  "text": "Delete Image",
-                  "icon": "trash",
-                  "action": "deletePrevious"
-                }
               }
             }
           },
@@ -1734,7 +1785,7 @@
           "requirements",
           "numeric",
           "standaloneProgress",
-          "background"
+          "backgrounds"
         ],
         "properties": {
           "information": {
@@ -2139,35 +2190,85 @@
               "reference": "es/editor/category?id=Avance simultáneo"
             }
           },
-          "background": {
-            "type": "string",
-            "default": "",
-            "media": {
-              "binaryEncoding": "base64",
-              "type": "img/png"
-            },
-            "title": "Fondo",
+          "backgrounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "format": "grid",
+            "required": [
+              "laptop",
+              "mobile"
+            ],
             "options": {
+              "disable_collapse": true,
               "infoText": "La configuración de fondo propia de la categoría"
             },
+            "properties": {
+              "laptop": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Portátil",
+                "options": {
+                  "infoText": "La imagen de fondo de la categoría que se usa en pantallas horizontales"
+                },
+                "yutori": {
+                  "points": [
+                    "Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal."
+                  ],
+                  "reference": "es/editor/category?id=Portátil"
+                }
+              },
+              "deleteLaptop": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              },
+              "mobile": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Móvil",
+                "options": {
+                  "infoText": "La imagen de fondo de la categoría que se usa en pantallas verticales"
+                },
+                "yutori": {
+                  "points": [
+                    "Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical."
+                  ],
+                  "reference": "es/editor/category?id=Móvil"
+                }
+              },
+              "deleteMobile": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              }
+            },
+            "title": "Fondo",
             "yutori": {
               "points": [
-                "Establece el fondo de esta categoría.",
+                "Establece el fondo de esta categoría por separado para pantallas horizontales (portátil) y pantallas verticales (móvil).",
                 "Cuando se selecciona la categoría, la imagen de fondo cambia junto con ella.",
-                "Si no se establece, se usa tal cual el fondo del diseño.",
+                "Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, se usa tal cual el fondo del diseño.",
                 "Al importarla se reduce automáticamente a un tamaño dentro de 256×256 píxeles."
               ],
               "reference": "es/editor/category?id=Fondo"
-            }
-          },
-          "delete": {
-            "format": "button",
-            "options": {
-              "button": {
-                "text": "Delete Image",
-                "icon": "trash",
-                "action": "deletePrevious"
-              }
             }
           }
         }
@@ -2990,6 +3091,7 @@
           "coinId",
           "maximum",
           "equipmentType",
+          "consumeChance",
           "requirements",
           "properties",
           "skill"
@@ -3354,11 +3456,30 @@
                 "Dentro del mismo grupo solo puede equiparse un artículo. Al equipar un artículo nuevo, el equipamiento existente del mismo grupo se retira automáticamente.",
                 "El orden de los espacios de equipamiento sigue el orden de definición de la lista de grupos del mundo.",
                 "`unnecessary` surte efecto se equipe o no, y la magnitud del efecto es proporcional a la cantidad en posesión (sin efecto con 0, n veces con n unidades).",
-                "`consumable` solo se consume cuando las propiedades de ese artículo afectan a la acción ejecutada, una unidad por acción. No disminuye en las acciones a las que su efecto no llega.",
+                "`consumable` solo se consume cuando las propiedades de ese artículo afectan a la acción ejecutada, una unidad por acción. No disminuye en las acciones a las que su efecto no llega. Que disminuya realmente lo decide la probabilidad de consumo.",
                 "Un artículo que se ha consumido hasta 0 se desequipa automáticamente.",
                 "Para equiparlo hay que cumplir tanto las condiciones de ese artículo como las de la categoría."
               ],
               "reference": "es/editor/item?id=Tipo de equipamiento"
+            }
+          },
+          "consumeChance": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "title": "Probabilidad de consumo [0-1]",
+            "options": {
+              "infoText": "Probabilidad de que un equipamiento consumible se consuma en una acción"
+            },
+            "yutori": {
+              "points": [
+                "Indica, de `0` a `1`, la probabilidad de que un artículo cuyo tipo de equipamiento es `consumable` se consuma en una acción. El valor predeterminado es `1` (se consume siempre).",
+                "Con `0.5` se consume aproximadamente una de cada dos veces, y con `0` no se consume nunca.",
+                "El juicio de consumo solo se hace cuando las propiedades de ese artículo afectan a la acción ejecutada.",
+                "No se usa con tipos de equipamiento distintos de `consumable`."
+              ],
+              "reference": "es/editor/item?id=Probabilidad de consumo [0-1]"
             }
           },
           "requirements": {

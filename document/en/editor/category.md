@@ -46,7 +46,17 @@ ___
 
 ## Background
 The background setting specific to the category
-- It sets the background of this category.
+- It sets the background of this category separately for wide screens (laptop) and tall screens (mobile).
 - When the category is selected, the background image changes along with it.
-- When it is not set, the background of the design is used as it is.
+- When the side that matches the screen orientation is empty, the other image is used. When both are empty, the background of the design is used as it is.
 - It is automatically reduced to within 256×256 pixels when it is imported.
+___
+
+### Laptop
+The category background image used on wide screens
+- It is used when the screen is wider than it is tall. This covers computers and tablets held sideways.
+___
+
+### Mobile
+The category background image used on tall screens
+- It is used when the screen is at least as tall as it is wide. This covers smartphones and tablets held upright.

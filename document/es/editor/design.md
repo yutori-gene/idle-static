@@ -28,9 +28,20 @@ ___
 
 ## Imagen de fondo
 La imagen de fondo de todo el juego
-- Establece la imagen de fondo del juego.
-- Si no se establece ninguna imagen, el fondo pasa a ser un degradado basado en el color de texto.
+- Establece la imagen de fondo del juego por separado para pantallas horizontales (portátil) y pantallas verticales (móvil). Como la proporción de las pantallas es muy distinta, se puede preparar una imagen adaptada a cada forma.
+- Cuál se usa lo decide la orientación de la pantalla. Al girar el dispositivo o cambiar la forma de la ventana, cambia en el acto.
+- Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, el fondo pasa a ser un degradado basado en el color de texto.
 - La imagen se reduce automáticamente para que quepa en 256×256 píxeles. Los GIF y los AVIF se convierten a PNG.
-- Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría.
-- La imagen establecida se puede borrar con el botón Delete Image.
+- Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría. El lado de la categoría tiene prioridad aunque solo tenga una imagen que no corresponda a la orientación de la pantalla.
+- Cada imagen establecida se puede borrar con el botón Delete Image que hay a continuación de ella.
 - [_category_](es/editor/category)
+___
+
+### Portátil
+La imagen de fondo de todo el juego que se usa en pantallas horizontales
+- Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal.
+___
+
+### Móvil
+La imagen de fondo de todo el juego que se usa en pantallas verticales
+- Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical.

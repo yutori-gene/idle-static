@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "A configuração de execução em paralelo com outras categorias",
 			points: ["É a marca de se as ações desta categoria podem andar em paralelo com as ações de outras categorias.", "Se estiver ligada, elas podem andar ao mesmo tempo de forma independente das ações de outras categorias.", "Se estiver desligada, no conjunto das categorias igualmente desligadas só uma ação pode andar.", "Se você iniciar uma ação nova numa categoria desligada, a ação em andamento não é cancelada, e sim empurrada de volta para o início da fila de espera. O número de execuções restante é preservado e, quando a ação que entrou na frente termina, ela é retomada de onde parou."],
 		},
-		background: {
+		backgrounds: {
 			title: "Fundo",
 			summary: "A configuração de fundo própria da categoria",
-			points: ["Define o fundo desta categoria.", "Quando a categoria é selecionada, a imagem de fundo muda junto com ela.", "Se não for definida, o fundo do design é usado como está.", "Ao ser importada, ela é reduzida automaticamente para caber em 256×256 pixels."],
+			points: ["Define o fundo desta categoria separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel).", "Quando a categoria é selecionada, a imagem de fundo muda junto com ela.", "Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo do design é usado como está.", "Ao ser importada, ela é reduzida automaticamente para caber em 256×256 pixels."],
+			children: {
+				laptop: {
+					title: "Notebook",
+					summary: "A imagem de fundo da categoria usada em telas horizontais",
+					points: ["É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal."],
+				},
+				mobile: {
+					title: "Dispositivo móvel",
+					summary: "A imagem de fundo da categoria usada em telas verticais",
+					points: ["É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "A cor da sombra da barra",
 			points: ["É usada como cor da sombra que cai sobre as barras e o cabeçalho.", "Deixá-la numa cor mais escura que a cor de barra dá uma sombra natural."],
 		},
-		background: {
+		backgrounds: {
 			title: "Imagem de fundo",
 			summary: "A imagem de fundo do jogo inteiro",
-			points: ["Define a imagem de fundo do jogo.", "Se nenhuma imagem for definida, o fundo passa a ser um degradê baseado na cor de texto.", "A imagem é reduzida automaticamente para caber em 256×256 pixels. Os GIF e os AVIF são convertidos em PNG.", "Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria.", "A imagem definida pode ser apagada com o botão Delete Image."],
+			points: ["Define a imagem de fundo do jogo separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel). Como a proporção das telas é muito diferente, é possível preparar uma imagem adequada a cada formato.", "Qual delas é usada depende da orientação da tela. Ao girar o dispositivo ou mudar o formato da janela, ela troca na hora.", "Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo passa a ser um degradê baseado na cor de texto.", "A imagem é reduzida automaticamente para caber em 256×256 pixels. Os GIF e os AVIF são convertidos em PNG.", "Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria. O lado da categoria tem prioridade mesmo quando só tem uma imagem que não corresponde à orientação da tela.", "Cada imagem definida pode ser apagada com o botão Delete Image que fica logo depois dela."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Notebook",
+					summary: "A imagem de fundo do jogo inteiro usada em telas horizontais",
+					points: ["É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal."],
+				},
+				mobile: {
+					title: "Dispositivo móvel",
+					summary: "A imagem de fundo do jogo inteiro usada em telas verticais",
+					points: ["É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical."],
+				},
+			},
 		},
 	},
 	options: {

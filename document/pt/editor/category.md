@@ -46,7 +46,17 @@ ___
 
 ## Fundo
 A configuração de fundo própria da categoria
-- Define o fundo desta categoria.
+- Define o fundo desta categoria separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel).
 - Quando a categoria é selecionada, a imagem de fundo muda junto com ela.
-- Se não for definida, o fundo do design é usado como está.
+- Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo do design é usado como está.
 - Ao ser importada, ela é reduzida automaticamente para caber em 256×256 pixels.
+___
+
+### Notebook
+A imagem de fundo da categoria usada em telas horizontais
+- É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal.
+___
+
+### Dispositivo móvel
+A imagem de fundo da categoria usada em telas verticais
+- É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical.

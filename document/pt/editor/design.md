@@ -28,9 +28,20 @@ ___
 
 ## Imagem de fundo
 A imagem de fundo do jogo inteiro
-- Define a imagem de fundo do jogo.
-- Se nenhuma imagem for definida, o fundo passa a ser um degradê baseado na cor de texto.
+- Define a imagem de fundo do jogo separadamente para telas horizontais (notebook) e telas verticais (dispositivo móvel). Como a proporção das telas é muito diferente, é possível preparar uma imagem adequada a cada formato.
+- Qual delas é usada depende da orientação da tela. Ao girar o dispositivo ou mudar o formato da janela, ela troca na hora.
+- Se o lado que corresponde à orientação da tela estiver vazio, é usada a outra imagem. Se ambos estiverem vazios, o fundo passa a ser um degradê baseado na cor de texto.
 - A imagem é reduzida automaticamente para caber em 256×256 pixels. Os GIF e os AVIF são convertidos em PNG.
-- Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria.
-- A imagem definida pode ser apagada com o botão Delete Image.
+- Se uma imagem de fundo for definida numa categoria, na tela dessa categoria tem prioridade a imagem do lado da categoria. O lado da categoria tem prioridade mesmo quando só tem uma imagem que não corresponde à orientação da tela.
+- Cada imagem definida pode ser apagada com o botão Delete Image que fica logo depois dela.
 - [_category_](pt/editor/category)
+___
+
+### Notebook
+A imagem de fundo do jogo inteiro usada em telas horizontais
+- É usada quando a tela é mais larga do que alta. Corresponde aos computadores e aos tablets na horizontal.
+___
+
+### Dispositivo móvel
+A imagem de fundo do jogo inteiro usada em telas verticais
+- É usada quando a tela é tão alta quanto larga ou mais alta. Corresponde aos smartphones e aos tablets na vertical.

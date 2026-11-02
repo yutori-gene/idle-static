@@ -1425,7 +1425,7 @@
             "barColor",
             "textColor",
             "shadowColor",
-            "background"
+            "backgrounds"
           ],
           "options": {
             "disable_collapse": true,
@@ -1485,36 +1485,87 @@
                 "reference": "ja/editor/design?id=影色"
               }
             },
-            "background": {
-              "type": "string",
-              "default": "",
-              "media": {
-                "binaryEncoding": "base64",
-                "type": "img/png"
-              },
-              "title": "背景画像",
+            "backgrounds": {
+              "type": "object",
+              "additionalProperties": false,
+              "format": "grid",
+              "required": [
+                "laptop",
+                "mobile"
+              ],
               "options": {
+                "disable_collapse": true,
                 "infoText": "ゲーム全体の背景画像"
               },
+              "properties": {
+                "laptop": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "ラップトップ",
+                  "options": {
+                    "infoText": "横長の画面で使うゲーム全体の背景画像"
+                  },
+                  "yutori": {
+                    "points": [
+                      "画面の幅が高さより大きいときに使われます。パソコンや横向きのタブレットが当たります。"
+                    ],
+                    "reference": "ja/editor/design?id=ラップトップ"
+                  }
+                },
+                "deleteLaptop": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                },
+                "mobile": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "モバイル",
+                  "options": {
+                    "infoText": "縦長の画面で使うゲーム全体の背景画像"
+                  },
+                  "yutori": {
+                    "points": [
+                      "画面の高さが幅と同じか大きいときに使われます。スマートフォンや縦向きのタブレットが当たります。"
+                    ],
+                    "reference": "ja/editor/design?id=モバイル"
+                  }
+                },
+                "deleteMobile": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                }
+              },
+              "title": "背景画像",
               "yutori": {
                 "points": [
-                  "ゲーム背景画像を設定します。",
-                  "画像を設定しない場合は、文字色を元にしたグラデーションの背景となります。",
+                  "ゲーム背景画像を、横長の画面用（ラップトップ）と縦長の画面用（モバイル）に分けて設定します。画面の縦横比が大きく違うため、それぞれの形に合わせた画像を用意できます。",
+                  "どちらを使うかは画面の向きで決まります。端末を回転したりウィンドウの形を変えたりすると、その場で切り替わります。",
+                  "画面の向きに合う側が空欄の場合は、もう一方の画像が使われます。どちらも空欄の場合は、文字色を元にしたグラデーションの背景となります。",
                   "画像は256×256ピクセルに収まるよう自動的に縮小されます。GIFとAVIFはPNGに変換されます。",
-                  "カテゴリに背景画像を設定した場合は、そのカテゴリの画面ではカテゴリ側の画像が優先されます。",
-                  "設定した画像はDelete Imageのボタンで削除できます。"
+                  "カテゴリに背景画像を設定した場合は、そのカテゴリの画面ではカテゴリ側の画像が優先されます。カテゴリ側に画面の向きに合わない画像しか無い場合も、カテゴリ側が優先されます。",
+                  "設定した画像は、それぞれの画像の後ろにあるDelete Imageのボタンで削除できます。"
                 ],
                 "reference": "ja/editor/design?id=背景画像"
-              }
-            },
-            "delete": {
-              "format": "button",
-              "options": {
-                "button": {
-                  "text": "Delete Image",
-                  "icon": "trash",
-                  "action": "deletePrevious"
-                }
               }
             }
           },
@@ -1734,7 +1785,7 @@
           "requirements",
           "numeric",
           "standaloneProgress",
-          "background"
+          "backgrounds"
         ],
         "properties": {
           "information": {
@@ -2139,35 +2190,85 @@
               "reference": "ja/editor/category?id=同時進行"
             }
           },
-          "background": {
-            "type": "string",
-            "default": "",
-            "media": {
-              "binaryEncoding": "base64",
-              "type": "img/png"
-            },
-            "title": "背景",
+          "backgrounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "format": "grid",
+            "required": [
+              "laptop",
+              "mobile"
+            ],
             "options": {
+              "disable_collapse": true,
               "infoText": "カテゴリ固有の背景設定"
             },
+            "properties": {
+              "laptop": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "ラップトップ",
+                "options": {
+                  "infoText": "横長の画面で使うカテゴリの背景画像"
+                },
+                "yutori": {
+                  "points": [
+                    "画面の幅が高さより大きいときに使われます。パソコンや横向きのタブレットが当たります。"
+                  ],
+                  "reference": "ja/editor/category?id=ラップトップ"
+                }
+              },
+              "deleteLaptop": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              },
+              "mobile": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "モバイル",
+                "options": {
+                  "infoText": "縦長の画面で使うカテゴリの背景画像"
+                },
+                "yutori": {
+                  "points": [
+                    "画面の高さが幅と同じか大きいときに使われます。スマートフォンや縦向きのタブレットが当たります。"
+                  ],
+                  "reference": "ja/editor/category?id=モバイル"
+                }
+              },
+              "deleteMobile": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              }
+            },
+            "title": "背景",
             "yutori": {
               "points": [
-                "このカテゴリの背景を設定します。",
+                "このカテゴリの背景を、横長の画面用（ラップトップ）と縦長の画面用（モバイル）に分けて設定します。",
                 "カテゴリを選択されたときに、連動して背景画像が変更されます。",
-                "設定しない場合はデザインの背景がそのまま使用されます。",
+                "画面の向きに合う側が空欄の場合は、もう一方の画像が使われます。どちらも空欄の場合はデザインの背景がそのまま使用されます。",
                 "取り込むときに自動で256×256ピクセル以内へ縮小されます。"
               ],
               "reference": "ja/editor/category?id=背景"
-            }
-          },
-          "delete": {
-            "format": "button",
-            "options": {
-              "button": {
-                "text": "Delete Image",
-                "icon": "trash",
-                "action": "deletePrevious"
-              }
             }
           }
         }
@@ -2990,6 +3091,7 @@
           "coinId",
           "maximum",
           "equipmentType",
+          "consumeChance",
           "requirements",
           "properties",
           "skill"
@@ -3354,11 +3456,30 @@
                 "同じグループ内では1つのアイテムのみ装備できます。新しいアイテムを装備すると、同グループの既存装備は自動的に解除されます。",
                 "装備枠の並び順は、ワールドのグループ一覧の定義順に従います。",
                 "`unnecessary`は装備の有無に関わらず効果が発揮され、効果量は所持数に比例します（0個で効果なし、n個でn倍）。",
-                "`consumable`が消費されるのは、そのアイテムのプロパティが実行したアクションに効果を及ぼすときだけで、アクション1回につき1個です。効果の及ばないアクションでは減りません。",
+                "`consumable`が消費されるのは、そのアイテムのプロパティが実行したアクションに効果を及ぼすときだけで、アクション1回につき1個です。効果の及ばないアクションでは減りません。実際に減るかどうかは消費確率で決まります。",
                 "消費されて0個になったアイテムは自動的に装備から外れます。",
                 "装備するには、そのアイテムの条件とカテゴリの条件の両方を満たしている必要があります。"
               ],
               "reference": "ja/editor/item?id=装備タイプ"
+            }
+          },
+          "consumeChance": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "title": "消費確率[0-1]",
+            "options": {
+              "infoText": "消費装備がアクション1回で消費される確率"
+            },
+            "yutori": {
+              "points": [
+                "装備タイプが`consumable`のアイテムが、アクション1回で消費される確率を`0`〜`1`で指定します。デフォルト値は`1`（毎回消費）です。",
+                "`0.5`なら2回に1回ほど、`0`なら消費されません。",
+                "消費の判定は、そのアイテムのプロパティが実行したアクションに効果を及ぼすときだけ行われます。",
+                "`consumable`以外の装備タイプでは使われません。"
+              ],
+              "reference": "ja/editor/item?id=消費確率[0-1]"
             }
           },
           "requirements": {

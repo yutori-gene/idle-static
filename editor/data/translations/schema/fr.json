@@ -1425,7 +1425,7 @@
             "barColor",
             "textColor",
             "shadowColor",
-            "background"
+            "backgrounds"
           ],
           "options": {
             "disable_collapse": true,
@@ -1485,36 +1485,87 @@
                 "reference": "fr/editor/design?id=Couleur d'ombre"
               }
             },
-            "background": {
-              "type": "string",
-              "default": "",
-              "media": {
-                "binaryEncoding": "base64",
-                "type": "img/png"
-              },
-              "title": "Image de fond",
+            "backgrounds": {
+              "type": "object",
+              "additionalProperties": false,
+              "format": "grid",
+              "required": [
+                "laptop",
+                "mobile"
+              ],
               "options": {
+                "disable_collapse": true,
                 "infoText": "L'image de fond de tout le jeu"
               },
+              "properties": {
+                "laptop": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Ordinateur portable",
+                  "options": {
+                    "infoText": "L'image de fond de tout le jeu utilisée sur les écrans horizontaux"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale."
+                    ],
+                    "reference": "fr/editor/design?id=Ordinateur portable"
+                  }
+                },
+                "deleteLaptop": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                },
+                "mobile": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Mobile",
+                  "options": {
+                    "infoText": "L'image de fond de tout le jeu utilisée sur les écrans verticaux"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale."
+                    ],
+                    "reference": "fr/editor/design?id=Mobile"
+                  }
+                },
+                "deleteMobile": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                }
+              },
+              "title": "Image de fond",
               "yutori": {
                 "points": [
-                  "Elle règle l'image de fond du jeu.",
-                  "Si aucune image n'est réglée, le fond devient un dégradé fondé sur la couleur de texte.",
+                  "Elle règle l'image de fond du jeu séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile). Comme les proportions des écrans diffèrent beaucoup, on peut préparer une image adaptée à chaque forme.",
+                  "Celle qui est utilisée dépend de l'orientation de l'écran. Lorsqu'on fait pivoter l'appareil ou qu'on change la forme de la fenêtre, elle bascule sur-le-champ.",
+                  "Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond devient un dégradé fondé sur la couleur de texte.",
                   "L'image est automatiquement réduite pour tenir dans 256×256 pixels. Les GIF et les AVIF sont convertis en PNG.",
-                  "Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie.",
-                  "L'image réglée peut être supprimée avec le bouton Delete Image."
+                  "Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie. Le côté de la catégorie reste prioritaire même s'il n'a qu'une image qui ne correspond pas à l'orientation de l'écran.",
+                  "Chaque image réglée peut être supprimée avec le bouton Delete Image placé juste après elle."
                 ],
                 "reference": "fr/editor/design?id=Image de fond"
-              }
-            },
-            "delete": {
-              "format": "button",
-              "options": {
-                "button": {
-                  "text": "Delete Image",
-                  "icon": "trash",
-                  "action": "deletePrevious"
-                }
               }
             }
           },
@@ -1734,7 +1785,7 @@
           "requirements",
           "numeric",
           "standaloneProgress",
-          "background"
+          "backgrounds"
         ],
         "properties": {
           "information": {
@@ -2139,35 +2190,85 @@
               "reference": "fr/editor/category?id=Avancement simultané"
             }
           },
-          "background": {
-            "type": "string",
-            "default": "",
-            "media": {
-              "binaryEncoding": "base64",
-              "type": "img/png"
-            },
-            "title": "Fond",
+          "backgrounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "format": "grid",
+            "required": [
+              "laptop",
+              "mobile"
+            ],
             "options": {
+              "disable_collapse": true,
               "infoText": "Le réglage de fond propre à la catégorie"
             },
+            "properties": {
+              "laptop": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Ordinateur portable",
+                "options": {
+                  "infoText": "L'image de fond de la catégorie utilisée sur les écrans horizontaux"
+                },
+                "yutori": {
+                  "points": [
+                    "Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale."
+                  ],
+                  "reference": "fr/editor/category?id=Ordinateur portable"
+                }
+              },
+              "deleteLaptop": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              },
+              "mobile": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Mobile",
+                "options": {
+                  "infoText": "L'image de fond de la catégorie utilisée sur les écrans verticaux"
+                },
+                "yutori": {
+                  "points": [
+                    "Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale."
+                  ],
+                  "reference": "fr/editor/category?id=Mobile"
+                }
+              },
+              "deleteMobile": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              }
+            },
+            "title": "Fond",
             "yutori": {
               "points": [
-                "Il règle le fond de cette catégorie.",
+                "Il règle le fond de cette catégorie séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile).",
                 "Lorsque la catégorie est sélectionnée, l'image de fond change de concert.",
-                "S'il n'est pas réglé, le fond du design est utilisé tel quel.",
+                "Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond du design est utilisé tel quel.",
                 "Elle est automatiquement réduite pour tenir dans 256×256 pixels lors de son importation."
               ],
               "reference": "fr/editor/category?id=Fond"
-            }
-          },
-          "delete": {
-            "format": "button",
-            "options": {
-              "button": {
-                "text": "Delete Image",
-                "icon": "trash",
-                "action": "deletePrevious"
-              }
             }
           }
         }
@@ -2990,6 +3091,7 @@
           "coinId",
           "maximum",
           "equipmentType",
+          "consumeChance",
           "requirements",
           "properties",
           "skill"
@@ -3354,11 +3456,30 @@
                 "Au sein d'un même groupe, un seul objet peut être équipé. Lorsque vous équipez un nouvel objet, l'équipement existant du même groupe est retiré automatiquement.",
                 "L'ordre des emplacements d'équipement suit l'ordre de définition de la liste des groupes du monde.",
                 "`unnecessary` produit son effet qu'il soit équipé ou non, et l'ampleur de l'effet est proportionnelle à la quantité possédée (aucun effet à 0, n fois avec n unités).",
-                "`consumable` n'est consommé que lorsque les propriétés de cet objet portent sur l'action exécutée, à raison d'une unité par action. Il ne diminue pas pour les actions que son effet n'atteint pas.",
+                "`consumable` n'est consommé que lorsque les propriétés de cet objet portent sur l'action exécutée, à raison d'une unité par action. Il ne diminue pas pour les actions que son effet n'atteint pas. Qu’il diminue réellement ou non dépend de la probabilité de consommation.",
                 "Un objet consommé jusqu'à 0 est automatiquement déséquipé.",
                 "Pour l'équiper, il faut remplir à la fois les conditions de cet objet et celles de la catégorie."
               ],
               "reference": "fr/editor/item?id=Type d'équipement"
+            }
+          },
+          "consumeChance": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "title": "Probabilité de consommation [0-1]",
+            "options": {
+              "infoText": "Probabilité qu’un équipement consommable soit consommé en une action"
+            },
+            "yutori": {
+              "points": [
+                "Indiquez, de `0` à `1`, la probabilité qu’un objet dont le type d’équipement est `consumable` soit consommé en une action. La valeur par défaut est `1` (consommé à chaque fois).",
+                "Avec `0.5`, il est consommé environ une fois sur deux, et avec `0`, il n’est jamais consommé.",
+                "Le jugement de consommation n’a lieu que lorsque les propriétés de cet objet portent sur l’action exécutée.",
+                "Il n’est pas utilisé pour les types d’équipement autres que `consumable`."
+              ],
+              "reference": "fr/editor/item?id=Probabilité de consommation [0-1]"
             }
           },
           "requirements": {

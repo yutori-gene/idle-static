@@ -46,7 +46,17 @@ ___
 
 ## Hintergrund
 Die kategorieeigene Hintergrundeinstellung
-- Stellt den Hintergrund dieser Kategorie ein.
+- Stellt den Hintergrund dieser Kategorie getrennt für Querformat-Bildschirme (Laptop) und Hochformat-Bildschirme (Mobilgerät) ein.
 - Wird die Kategorie ausgewählt, wechselt das Hintergrundbild mit.
-- Ist er nicht eingestellt, wird der Hintergrund des Designs unverändert verwendet.
+- Ist die zur Bildschirmausrichtung passende Seite leer, wird das andere Bild verwendet. Sind beide leer, wird der Hintergrund des Designs unverändert verwendet.
 - Beim Einlesen wird es automatisch auf höchstens 256×256 Pixel verkleinert.
+___
+
+### Laptop
+Das Hintergrundbild der Kategorie für Querformat-Bildschirme
+- Wird verwendet, wenn der Bildschirm breiter als hoch ist. Das betrifft Computer und quer gehaltene Tablets.
+___
+
+### Mobilgerät
+Das Hintergrundbild der Kategorie für Hochformat-Bildschirme
+- Wird verwendet, wenn der Bildschirm mindestens so hoch wie breit ist. Das betrifft Smartphones und hochkant gehaltene Tablets.

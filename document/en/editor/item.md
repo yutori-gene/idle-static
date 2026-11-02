@@ -76,7 +76,7 @@ The type setting about the equipping, the effect and the consumption of the item
 - Only one item within the same group can be equipped. Equipping a new item automatically unequips the existing equipment of the same group.
 - The order of the equipment slots follows the order of definition in the list of groups of the world.
 - `unnecessary` takes effect whether or not it is equipped, and the size of the effect is proportional to the number owned (no effect at 0, n times with n of them).
-- `consumable` is consumed only when the properties of that item affect the action performed, one per action. It does not decrease on an action its effect does not reach.
+- `consumable` is consumed only when the properties of that item affect the action performed, one per action. It does not decrease on an action its effect does not reach. Whether it actually decreases is decided by the consumption chance.
 - An item that has been consumed down to 0 is unequipped automatically.
 - To equip it, both the conditions of that item and the conditions of the category have to be met.
 
@@ -86,6 +86,14 @@ The type setting about the equipping, the effect and the consumption of the item
 |`consumable`|Required|Only while equipped (for one)|Consumed when the action is performed|Items that are consumed to gain an effect, such as potions|
 |`unnecessary`|Not required|Always while owned (proportional to the number owned)|No|Passive items that have an effect just by being held|
 |`impossible`|Not possible|None|No|Items with no effect, such as materials and junk|
+___
+
+## Consumption Chance [0-1]
+The chance that a consumable item is consumed in one action
+- Specify, from `0` to `1`, the chance that an item whose equipment type is `consumable` is consumed in one action. The default value is `1` (consumed every time).
+- With `0.5` it is consumed about once every two times, and with `0` it is never consumed.
+- The consumption check is made only when the properties of that item affect the action performed.
+- It is not used for equipment types other than `consumable`.
 ___
 
 ## [_Requirement_](en/editor/requirement)

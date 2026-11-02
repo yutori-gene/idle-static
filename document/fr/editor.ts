@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "Le réglage d'exécution en parallèle avec d'autres catégories",
 			points: ["C'est le drapeau indiquant si les actions de cette catégorie peuvent avancer en parallèle avec les actions d'autres catégories.", "S'il est activé, elles peuvent avancer en même temps, indépendamment des actions d'autres catégories.", "S'il est désactivé, une seule action peut avancer sur l'ensemble des catégories également réglées sur désactivé.", "Si vous démarrez une nouvelle action dans une catégorie désactivée, l'action en cours n'est pas annulée mais repoussée en tête de la file d'attente. Le nombre d'exécutions restant est conservé et, une fois l'action qui s'est intercalée terminée, elle reprend là où elle s'était arrêtée."],
 		},
-		background: {
+		backgrounds: {
 			title: "Fond",
 			summary: "Le réglage de fond propre à la catégorie",
-			points: ["Il règle le fond de cette catégorie.", "Lorsque la catégorie est sélectionnée, l'image de fond change de concert.", "S'il n'est pas réglé, le fond du design est utilisé tel quel.", "Elle est automatiquement réduite pour tenir dans 256×256 pixels lors de son importation."],
+			points: ["Il règle le fond de cette catégorie séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile).", "Lorsque la catégorie est sélectionnée, l'image de fond change de concert.", "Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond du design est utilisé tel quel.", "Elle est automatiquement réduite pour tenir dans 256×256 pixels lors de son importation."],
+			children: {
+				laptop: {
+					title: "Ordinateur portable",
+					summary: "L'image de fond de la catégorie utilisée sur les écrans horizontaux",
+					points: ["Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale."],
+				},
+				mobile: {
+					title: "Mobile",
+					summary: "L'image de fond de la catégorie utilisée sur les écrans verticaux",
+					points: ["Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "La couleur de l'ombre de la barre",
 			points: ["Elle est utilisée comme couleur de l'ombre portée sur les barres et l'en-tête.", "La mettre dans une couleur plus sombre que la couleur de barre donne une ombre naturelle."],
 		},
-		background: {
+		backgrounds: {
 			title: "Image de fond",
 			summary: "L'image de fond de tout le jeu",
-			points: ["Elle règle l'image de fond du jeu.", "Si aucune image n'est réglée, le fond devient un dégradé fondé sur la couleur de texte.", "L'image est automatiquement réduite pour tenir dans 256×256 pixels. Les GIF et les AVIF sont convertis en PNG.", "Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie.", "L'image réglée peut être supprimée avec le bouton Delete Image."],
+			points: ["Elle règle l'image de fond du jeu séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile). Comme les proportions des écrans diffèrent beaucoup, on peut préparer une image adaptée à chaque forme.", "Celle qui est utilisée dépend de l'orientation de l'écran. Lorsqu'on fait pivoter l'appareil ou qu'on change la forme de la fenêtre, elle bascule sur-le-champ.", "Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond devient un dégradé fondé sur la couleur de texte.", "L'image est automatiquement réduite pour tenir dans 256×256 pixels. Les GIF et les AVIF sont convertis en PNG.", "Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie. Le côté de la catégorie reste prioritaire même s'il n'a qu'une image qui ne correspond pas à l'orientation de l'écran.", "Chaque image réglée peut être supprimée avec le bouton Delete Image placé juste après elle."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Ordinateur portable",
+					summary: "L'image de fond de tout le jeu utilisée sur les écrans horizontaux",
+					points: ["Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale."],
+				},
+				mobile: {
+					title: "Mobile",
+					summary: "L'image de fond de tout le jeu utilisée sur les écrans verticaux",
+					points: ["Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale."],
+				},
+			},
 		},
 	},
 	options: {

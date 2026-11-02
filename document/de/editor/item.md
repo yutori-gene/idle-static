@@ -76,7 +76,7 @@ Die Typeinstellung rund um Ausrüsten, Wirkung und Verbrauch des Gegenstands
 - Innerhalb derselben Gruppe lässt sich nur ein Gegenstand ausrüsten. Rüstest du einen neuen Gegenstand aus, wird die vorhandene Ausrüstung derselben Gruppe automatisch abgelegt.
 - Die Reihenfolge der Ausrüstungsplätze richtet sich nach der Definitionsreihenfolge der Gruppenliste der Welt.
 - `unnecessary` wirkt unabhängig davon, ob er ausgerüstet ist, und die Höhe der Wirkung ist proportional zur Besitzanzahl (bei 0 keine Wirkung, bei n Stück das n-Fache).
-- `consumable` wird nur dann verbraucht, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken, und zwar ein Stück je Aktion. Bei Aktionen, die seine Wirkung nicht erreicht, nimmt er nicht ab.
+- `consumable` wird nur dann verbraucht, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken, und zwar ein Stück je Aktion. Bei Aktionen, die seine Wirkung nicht erreicht, nimmt er nicht ab. Ob er tatsächlich abnimmt, entscheidet die Verbrauchswahrscheinlichkeit.
 - Ein Gegenstand, der bis auf 0 verbraucht ist, wird automatisch abgelegt.
 - Zum Ausrüsten müssen sowohl die Bedingungen dieses Gegenstands als auch die der Kategorie erfüllt sein.
 
@@ -86,6 +86,14 @@ Die Typeinstellung rund um Ausrüsten, Wirkung und Verbrauch des Gegenstands
 |`consumable`|Nötig|Nur ausgerüstet (für ein Stück)|Wird beim Ausführen der Aktion verbraucht|Gegenstände, die für eine Wirkung verbraucht werden, etwa Tränke|
 |`unnecessary`|Nicht nötig|Immer im Besitz (proportional zur Besitzanzahl)|Nein|Passive Gegenstände, die schon durch das Halten wirken|
 |`impossible`|Nicht möglich|Keine|Nein|Gegenstände ohne Wirkung, etwa Material und Kram|
+___
+
+## Verbrauchswahrscheinlichkeit [0-1]
+Wahrscheinlichkeit, dass eine verbrauchbare Ausrüstung bei einer Aktion verbraucht wird
+- Gib von `0` bis `1` die Wahrscheinlichkeit an, mit der ein Gegenstand mit dem Ausrüstungstyp `consumable` bei einer Aktion verbraucht wird. Der Standardwert ist `1` (wird jedes Mal verbraucht).
+- Bei `0.5` wird er etwa jedes zweite Mal verbraucht, bei `0` nie.
+- Die Verbrauchsprüfung findet nur statt, wenn die Eigenschaften dieses Gegenstands auf die ausgeführte Aktion wirken.
+- Bei anderen Ausrüstungstypen als `consumable` wird sie nicht verwendet.
 ___
 
 ## [_Bedingung_](de/editor/requirement)

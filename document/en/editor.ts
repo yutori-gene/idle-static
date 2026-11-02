@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "The setting for running in parallel with other categories",
 			points: ["It is the flag for whether the actions of this category can progress in parallel with the actions of other categories.", "When it is on, they can progress at the same time independently of the actions of other categories.", "When it is off, only one action at a time can progress across all the categories that are likewise set to off.", "When you start a new action in a category that is off, the action in progress is not cancelled but pushed back to the head of the waiting queue. The remaining number of executions is kept, and once the action that cut in has finished it resumes from where it left off."],
 		},
-		background: {
+		backgrounds: {
 			title: "Background",
 			summary: "The background setting specific to the category",
-			points: ["It sets the background of this category.", "When the category is selected, the background image changes along with it.", "When it is not set, the background of the design is used as it is.", "It is automatically reduced to within 256×256 pixels when it is imported."],
+			points: ["It sets the background of this category separately for wide screens (laptop) and tall screens (mobile).", "When the category is selected, the background image changes along with it.", "When the side that matches the screen orientation is empty, the other image is used. When both are empty, the background of the design is used as it is.", "It is automatically reduced to within 256×256 pixels when it is imported."],
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "The category background image used on wide screens",
+					points: ["It is used when the screen is wider than it is tall. This covers computers and tablets held sideways."],
+				},
+				mobile: {
+					title: "Mobile",
+					summary: "The category background image used on tall screens",
+					points: ["It is used when the screen is at least as tall as it is wide. This covers smartphones and tablets held upright."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "The colour of the shadow of the bar",
 			points: ["It is used as the colour of the shadow cast on the bars and the header.", "Making it a darker colour than the bar colour gives a natural shadow."],
 		},
-		background: {
+		backgrounds: {
 			title: "Background Image",
 			summary: "The background image of the whole game",
-			points: ["It sets the background image of the game.", "When no image is set, the background becomes a gradient based on the text colour.", "The image is automatically reduced so that it fits within 256×256 pixels. GIF and AVIF are converted to PNG.", "When a background image is set on a category, the image on the category side takes priority on the screen of that category.", "The image you set can be deleted with the Delete Image button."],
+			points: ["It sets the background image of the game separately for wide screens (laptop) and tall screens (mobile). Since the aspect ratios of the screens differ greatly, you can prepare an image that fits each shape.", "Which one is used is decided by the orientation of the screen. When you rotate the device or change the shape of the window, it switches on the spot.", "When the side that matches the screen orientation is empty, the other image is used. When both are empty, the background becomes a gradient based on the text colour.", "The image is automatically reduced so that it fits within 256×256 pixels. GIF and AVIF are converted to PNG.", "When a background image is set on a category, the image on the category side takes priority on the screen of that category. The category side takes priority even when it only has an image that does not match the screen orientation.", "Each image you set can be deleted with the Delete Image button placed after it."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "The background image of the whole game used on wide screens",
+					points: ["It is used when the screen is wider than it is tall. This covers computers and tablets held sideways."],
+				},
+				mobile: {
+					title: "Mobile",
+					summary: "The background image of the whole game used on tall screens",
+					points: ["It is used when the screen is at least as tall as it is wide. This covers smartphones and tablets held upright."],
+				},
+			},
 		},
 	},
 	options: {

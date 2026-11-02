@@ -46,7 +46,17 @@ ___
 
 ## Fond
 Le réglage de fond propre à la catégorie
-- Il règle le fond de cette catégorie.
+- Il règle le fond de cette catégorie séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile).
 - Lorsque la catégorie est sélectionnée, l'image de fond change de concert.
-- S'il n'est pas réglé, le fond du design est utilisé tel quel.
+- Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond du design est utilisé tel quel.
 - Elle est automatiquement réduite pour tenir dans 256×256 pixels lors de son importation.
+___
+
+### Ordinateur portable
+L'image de fond de la catégorie utilisée sur les écrans horizontaux
+- Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale.
+___
+
+### Mobile
+L'image de fond de la catégorie utilisée sur les écrans verticaux
+- Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale.

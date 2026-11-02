@@ -1425,7 +1425,7 @@
             "barColor",
             "textColor",
             "shadowColor",
-            "background"
+            "backgrounds"
           ],
           "options": {
             "disable_collapse": true,
@@ -1485,36 +1485,87 @@
                 "reference": "id/editor/design?id=Warna bayangan"
               }
             },
-            "background": {
-              "type": "string",
-              "default": "",
-              "media": {
-                "binaryEncoding": "base64",
-                "type": "img/png"
-              },
-              "title": "Gambar latar",
+            "backgrounds": {
+              "type": "object",
+              "additionalProperties": false,
+              "format": "grid",
+              "required": [
+                "laptop",
+                "mobile"
+              ],
               "options": {
+                "disable_collapse": true,
                 "infoText": "Gambar latar seluruh permainan"
               },
+              "properties": {
+                "laptop": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Laptop",
+                  "options": {
+                    "infoText": "Gambar latar seluruh permainan yang dipakai di layar mendatar"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar."
+                    ],
+                    "reference": "id/editor/design?id=Laptop"
+                  }
+                },
+                "deleteLaptop": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                },
+                "mobile": {
+                  "type": "string",
+                  "default": "",
+                  "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                  },
+                  "title": "Seluler",
+                  "options": {
+                    "infoText": "Gambar latar seluruh permainan yang dipakai di layar tegak"
+                  },
+                  "yutori": {
+                    "points": [
+                      "Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak."
+                    ],
+                    "reference": "id/editor/design?id=Seluler"
+                  }
+                },
+                "deleteMobile": {
+                  "format": "button",
+                  "options": {
+                    "button": {
+                      "text": "Delete Image",
+                      "icon": "trash",
+                      "action": "deletePrevious"
+                    }
+                  }
+                }
+              },
+              "title": "Gambar latar",
               "yutori": {
                 "points": [
-                  "Mengatur gambar latar permainan.",
-                  "Bila gambar tidak diatur, latarnya menjadi gradasi yang berdasar pada warna teks.",
+                  "Mengatur gambar latar permainan secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler). Karena perbandingan sisi layarnya sangat berbeda, gambar yang cocok untuk tiap bentuk bisa disiapkan.",
+                  "Yang mana yang dipakai ditentukan oleh orientasi layar. Saat perangkat diputar atau bentuk jendela diubah, gambarnya langsung berganti.",
+                  "Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latarnya menjadi gradasi yang berdasar pada warna teks.",
                   "Gambar otomatis diperkecil agar muat dalam 256×256 piksel. GIF dan AVIF diubah menjadi PNG.",
-                  "Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan.",
-                  "Gambar yang diatur bisa dihapus dengan tombol Delete Image."
+                  "Bila gambar latar diatur pada suatu kategori, di layar kategori itu gambar dari sisi kategorilah yang diutamakan. Sisi kategori tetap diutamakan meskipun hanya punya gambar yang tidak sesuai dengan orientasi layar.",
+                  "Tiap gambar yang diatur bisa dihapus dengan tombol Delete Image yang ada tepat sesudahnya."
                 ],
                 "reference": "id/editor/design?id=Gambar latar"
-              }
-            },
-            "delete": {
-              "format": "button",
-              "options": {
-                "button": {
-                  "text": "Delete Image",
-                  "icon": "trash",
-                  "action": "deletePrevious"
-                }
               }
             }
           },
@@ -1734,7 +1785,7 @@
           "requirements",
           "numeric",
           "standaloneProgress",
-          "background"
+          "backgrounds"
         ],
         "properties": {
           "information": {
@@ -2139,35 +2190,85 @@
               "reference": "id/editor/category?id=Kemajuan bersamaan"
             }
           },
-          "background": {
-            "type": "string",
-            "default": "",
-            "media": {
-              "binaryEncoding": "base64",
-              "type": "img/png"
-            },
-            "title": "Latar",
+          "backgrounds": {
+            "type": "object",
+            "additionalProperties": false,
+            "format": "grid",
+            "required": [
+              "laptop",
+              "mobile"
+            ],
             "options": {
+              "disable_collapse": true,
               "infoText": "Pengaturan latar khas kategori"
             },
+            "properties": {
+              "laptop": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Laptop",
+                "options": {
+                  "infoText": "Gambar latar kategori yang dipakai di layar mendatar"
+                },
+                "yutori": {
+                  "points": [
+                    "Dipakai saat lebar layar lebih besar daripada tingginya. Ini mencakup komputer dan tablet yang dipegang mendatar."
+                  ],
+                  "reference": "id/editor/category?id=Laptop"
+                }
+              },
+              "deleteLaptop": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              },
+              "mobile": {
+                "type": "string",
+                "default": "",
+                "media": {
+                  "binaryEncoding": "base64",
+                  "type": "img/png"
+                },
+                "title": "Seluler",
+                "options": {
+                  "infoText": "Gambar latar kategori yang dipakai di layar tegak"
+                },
+                "yutori": {
+                  "points": [
+                    "Dipakai saat tinggi layar sama dengan atau lebih besar daripada lebarnya. Ini mencakup ponsel pintar dan tablet yang dipegang tegak."
+                  ],
+                  "reference": "id/editor/category?id=Seluler"
+                }
+              },
+              "deleteMobile": {
+                "format": "button",
+                "options": {
+                  "button": {
+                    "text": "Delete Image",
+                    "icon": "trash",
+                    "action": "deletePrevious"
+                  }
+                }
+              }
+            },
+            "title": "Latar",
             "yutori": {
               "points": [
-                "Mengatur latar kategori ini.",
+                "Mengatur latar kategori ini secara terpisah untuk layar mendatar (laptop) dan layar tegak (seluler).",
                 "Saat kategori dipilih, gambar latar ikut berubah.",
-                "Bila tidak diatur, latar dari desain dipakai apa adanya.",
+                "Bila sisi yang sesuai dengan orientasi layar kosong, gambar yang satunya dipakai. Bila keduanya kosong, latar dari desain dipakai apa adanya.",
                 "Saat dimasukkan, gambar otomatis diperkecil hingga muat dalam 256×256 piksel."
               ],
               "reference": "id/editor/category?id=Latar"
-            }
-          },
-          "delete": {
-            "format": "button",
-            "options": {
-              "button": {
-                "text": "Delete Image",
-                "icon": "trash",
-                "action": "deletePrevious"
-              }
             }
           }
         }
@@ -2990,6 +3091,7 @@
           "coinId",
           "maximum",
           "equipmentType",
+          "consumeChance",
           "requirements",
           "properties",
           "skill"
@@ -3354,11 +3456,30 @@
                 "Di dalam grup yang sama hanya satu item yang bisa dipasang. Bila item baru dipasang, peralatan yang sudah ada di grup yang sama otomatis dilepas.",
                 "Urutan slot peralatan mengikuti urutan definisi pada daftar grup dunia.",
                 "`unnecessary` memberi efek terlepas dari dipasang atau tidak, dan besarnya efek sebanding dengan jumlah kepemilikan (0 buah tanpa efek, n buah menjadi n kali lipat).",
-                "`consumable` hanya dikonsumsi ketika properti item itu memberi efek pada aksi yang dieksekusi, sebanyak 1 buah tiap satu aksi. Pada aksi yang tidak terjangkau efeknya, item tidak berkurang.",
+                "`consumable` hanya dikonsumsi ketika properti item itu memberi efek pada aksi yang dieksekusi, sebanyak 1 buah tiap satu aksi. Pada aksi yang tidak terjangkau efeknya, item tidak berkurang. Apakah item benar-benar berkurang ditentukan oleh peluang konsumsi.",
                 "Item yang habis dikonsumsi sampai 0 otomatis dilepas dari peralatan.",
                 "Untuk memasangnya, syarat item itu dan syarat kategori harus sama-sama terpenuhi."
               ],
               "reference": "id/editor/item?id=Tipe peralatan"
+            }
+          },
+          "consumeChance": {
+            "type": "number",
+            "default": 1,
+            "minimum": 0,
+            "maximum": 1,
+            "title": "Peluang konsumsi [0-1]",
+            "options": {
+              "infoText": "Peluang peralatan habis pakai dikonsumsi dalam satu aksi"
+            },
+            "yutori": {
+              "points": [
+                "Tentukan, dari `0` sampai `1`, peluang item dengan tipe peralatan `consumable` dikonsumsi dalam satu aksi. Nilai bawaannya adalah `1` (dikonsumsi setiap kali).",
+                "Dengan `0.5` item dikonsumsi kira-kira sekali setiap dua kali, dan dengan `0` tidak pernah dikonsumsi.",
+                "Penentuan konsumsi hanya dilakukan ketika properti item itu memberi efek pada aksi yang dieksekusi.",
+                "Tidak digunakan untuk tipe peralatan selain `consumable`."
+              ],
+              "reference": "id/editor/item?id=Peluang konsumsi [0-1]"
             }
           },
           "requirements": {

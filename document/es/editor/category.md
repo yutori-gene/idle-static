@@ -46,7 +46,17 @@ ___
 
 ## Fondo
 La configuración de fondo propia de la categoría
-- Establece el fondo de esta categoría.
+- Establece el fondo de esta categoría por separado para pantallas horizontales (portátil) y pantallas verticales (móvil).
 - Cuando se selecciona la categoría, la imagen de fondo cambia junto con ella.
-- Si no se establece, se usa tal cual el fondo del diseño.
+- Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, se usa tal cual el fondo del diseño.
 - Al importarla se reduce automáticamente a un tamaño dentro de 256×256 píxeles.
+___
+
+### Portátil
+La imagen de fondo de la categoría que se usa en pantallas horizontales
+- Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal.
+___
+
+### Móvil
+La imagen de fondo de la categoría que se usa en pantallas verticales
+- Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical.

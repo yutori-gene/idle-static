@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "La configuración de ejecución en paralelo con otras categorías",
 			points: ["Es la marca de si las acciones de esta categoría pueden avanzar en paralelo con las acciones de otras categorías.", "Si está activada, pueden avanzar a la vez de forma independiente de las acciones de otras categorías.", "Si está desactivada, en el conjunto de las categorías igualmente desactivadas solo puede avanzar una acción.", "Si inicias una acción nueva en una categoría desactivada, la acción en curso no se cancela, sino que se empuja de vuelta al principio de la cola de espera. El número de ejecuciones restante se conserva y, cuando termina la acción que se ha colado, se reanuda desde donde quedó."],
 		},
-		background: {
+		backgrounds: {
 			title: "Fondo",
 			summary: "La configuración de fondo propia de la categoría",
-			points: ["Establece el fondo de esta categoría.", "Cuando se selecciona la categoría, la imagen de fondo cambia junto con ella.", "Si no se establece, se usa tal cual el fondo del diseño.", "Al importarla se reduce automáticamente a un tamaño dentro de 256×256 píxeles."],
+			points: ["Establece el fondo de esta categoría por separado para pantallas horizontales (portátil) y pantallas verticales (móvil).", "Cuando se selecciona la categoría, la imagen de fondo cambia junto con ella.", "Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, se usa tal cual el fondo del diseño.", "Al importarla se reduce automáticamente a un tamaño dentro de 256×256 píxeles."],
+			children: {
+				laptop: {
+					title: "Portátil",
+					summary: "La imagen de fondo de la categoría que se usa en pantallas horizontales",
+					points: ["Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal."],
+				},
+				mobile: {
+					title: "Móvil",
+					summary: "La imagen de fondo de la categoría que se usa en pantallas verticales",
+					points: ["Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "El color de la sombra de la barra",
 			points: ["Se usa como color de la sombra que cae sobre las barras y el encabezado.", "Ponerlo en un color más oscuro que el color de barra da una sombra natural."],
 		},
-		background: {
+		backgrounds: {
 			title: "Imagen de fondo",
 			summary: "La imagen de fondo de todo el juego",
-			points: ["Establece la imagen de fondo del juego.", "Si no se establece ninguna imagen, el fondo pasa a ser un degradado basado en el color de texto.", "La imagen se reduce automáticamente para que quepa en 256×256 píxeles. Los GIF y los AVIF se convierten a PNG.", "Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría.", "La imagen establecida se puede borrar con el botón Delete Image."],
+			points: ["Establece la imagen de fondo del juego por separado para pantallas horizontales (portátil) y pantallas verticales (móvil). Como la proporción de las pantallas es muy distinta, se puede preparar una imagen adaptada a cada forma.", "Cuál se usa lo decide la orientación de la pantalla. Al girar el dispositivo o cambiar la forma de la ventana, cambia en el acto.", "Si el lado que corresponde a la orientación de la pantalla está vacío, se usa la otra imagen. Si ambos están vacíos, el fondo pasa a ser un degradado basado en el color de texto.", "La imagen se reduce automáticamente para que quepa en 256×256 píxeles. Los GIF y los AVIF se convierten a PNG.", "Si se establece una imagen de fondo en una categoría, en la pantalla de esa categoría tiene prioridad la imagen del lado de la categoría. El lado de la categoría tiene prioridad aunque solo tenga una imagen que no corresponda a la orientación de la pantalla.", "Cada imagen establecida se puede borrar con el botón Delete Image que hay a continuación de ella."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Portátil",
+					summary: "La imagen de fondo de todo el juego que se usa en pantallas horizontales",
+					points: ["Se usa cuando la pantalla es más ancha que alta. Corresponde a los ordenadores y a las tabletas en horizontal."],
+				},
+				mobile: {
+					title: "Móvil",
+					summary: "La imagen de fondo de todo el juego que se usa en pantallas verticales",
+					points: ["Se usa cuando la pantalla es igual de alta que de ancha o más alta. Corresponde a los teléfonos inteligentes y a las tabletas en vertical."],
+				},
+			},
 		},
 	},
 	options: {

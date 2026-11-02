@@ -28,9 +28,20 @@ ___
 
 ## Image de fond
 L'image de fond de tout le jeu
-- Elle règle l'image de fond du jeu.
-- Si aucune image n'est réglée, le fond devient un dégradé fondé sur la couleur de texte.
+- Elle règle l'image de fond du jeu séparément pour les écrans horizontaux (ordinateur portable) et les écrans verticaux (mobile). Comme les proportions des écrans diffèrent beaucoup, on peut préparer une image adaptée à chaque forme.
+- Celle qui est utilisée dépend de l'orientation de l'écran. Lorsqu'on fait pivoter l'appareil ou qu'on change la forme de la fenêtre, elle bascule sur-le-champ.
+- Si le côté qui correspond à l'orientation de l'écran est vide, l'autre image est utilisée. Si les deux sont vides, le fond devient un dégradé fondé sur la couleur de texte.
 - L'image est automatiquement réduite pour tenir dans 256×256 pixels. Les GIF et les AVIF sont convertis en PNG.
-- Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie.
-- L'image réglée peut être supprimée avec le bouton Delete Image.
+- Si une image de fond est réglée sur une catégorie, l'image du côté de la catégorie est prioritaire sur l'écran de cette catégorie. Le côté de la catégorie reste prioritaire même s'il n'a qu'une image qui ne correspond pas à l'orientation de l'écran.
+- Chaque image réglée peut être supprimée avec le bouton Delete Image placé juste après elle.
 - [_category_](fr/editor/category)
+___
+
+### Ordinateur portable
+L'image de fond de tout le jeu utilisée sur les écrans horizontaux
+- Elle est utilisée lorsque l'écran est plus large que haut. Cela concerne les ordinateurs et les tablettes tenues à l'horizontale.
+___
+
+### Mobile
+L'image de fond de tout le jeu utilisée sur les écrans verticaux
+- Elle est utilisée lorsque l'écran est aussi haut que large ou plus haut. Cela concerne les smartphones et les tablettes tenues à la verticale.

@@ -792,10 +792,22 @@ export const category: Type.Category = {
 			summary: "Die Einstellung für den parallelen Ablauf mit anderen Kategorien",
 			points: ["Es ist das Kennzeichen dafür, ob die Aktionen dieser Kategorie parallel zu den Aktionen anderer Kategorien voranschreiten können.", "Ist es an, können sie unabhängig von den Aktionen anderer Kategorien gleichzeitig voranschreiten.", "Ist es aus, kann über alle ebenfalls auf Aus gestellten Kategorien hinweg nur eine einzige Aktion voranschreiten.", "Startest du in einer ausgeschalteten Kategorie eine neue Aktion, wird die laufende Aktion nicht abgebrochen, sondern an den Anfang der Warteschlange zurückgeschoben. Die verbleibende Anzahl der Ausführungen bleibt erhalten, und sobald die dazwischengeschobene Aktion beendet ist, geht sie an der Stelle weiter."],
 		},
-		background: {
+		backgrounds: {
 			title: "Hintergrund",
 			summary: "Die kategorieeigene Hintergrundeinstellung",
-			points: ["Stellt den Hintergrund dieser Kategorie ein.", "Wird die Kategorie ausgewählt, wechselt das Hintergrundbild mit.", "Ist er nicht eingestellt, wird der Hintergrund des Designs unverändert verwendet.", "Beim Einlesen wird es automatisch auf höchstens 256×256 Pixel verkleinert."],
+			points: ["Stellt den Hintergrund dieser Kategorie getrennt für Querformat-Bildschirme (Laptop) und Hochformat-Bildschirme (Mobilgerät) ein.", "Wird die Kategorie ausgewählt, wechselt das Hintergrundbild mit.", "Ist die zur Bildschirmausrichtung passende Seite leer, wird das andere Bild verwendet. Sind beide leer, wird der Hintergrund des Designs unverändert verwendet.", "Beim Einlesen wird es automatisch auf höchstens 256×256 Pixel verkleinert."],
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "Das Hintergrundbild der Kategorie für Querformat-Bildschirme",
+					points: ["Wird verwendet, wenn der Bildschirm breiter als hoch ist. Das betrifft Computer und quer gehaltene Tablets."],
+				},
+				mobile: {
+					title: "Mobilgerät",
+					summary: "Das Hintergrundbild der Kategorie für Hochformat-Bildschirme",
+					points: ["Wird verwendet, wenn der Bildschirm mindestens so hoch wie breit ist. Das betrifft Smartphones und hochkant gehaltene Tablets."],
+				},
+			},
 		},
 	},
 	options: {
@@ -890,11 +902,23 @@ export const design: Type.Design = {
 			summary: "Die Farbe des Schattens der Leiste",
 			points: ["Wird als Farbe des Schattens verwendet, der auf die Leisten und die Kopfzeile fällt.", "Wählst du sie dunkler als die Leistenfarbe, wird der Schatten natürlich."],
 		},
-		background: {
+		backgrounds: {
 			title: "Hintergrundbild",
 			summary: "Das Hintergrundbild des gesamten Spiels",
-			points: ["Stellt das Hintergrundbild des Spiels ein.", "Ist kein Bild eingestellt, wird der Hintergrund zu einem Verlauf auf Basis der Textfarbe.", "Das Bild wird automatisch so verkleinert, dass es in 256×256 Pixel passt. GIF und AVIF werden in PNG umgewandelt.", "Ist bei einer Kategorie ein Hintergrundbild eingestellt, hat auf dem Bildschirm dieser Kategorie das Bild auf Seiten der Kategorie Vorrang.", "Das eingestellte Bild lässt sich mit der Schaltfläche Delete Image löschen."],
+			points: ["Stellt das Hintergrundbild des Spiels getrennt für Querformat-Bildschirme (Laptop) und Hochformat-Bildschirme (Mobilgerät) ein. Da sich die Seitenverhältnisse der Bildschirme stark unterscheiden, lässt sich für jede Form ein passendes Bild vorbereiten.", "Welches verwendet wird, entscheidet die Ausrichtung des Bildschirms. Dreht man das Gerät oder ändert die Form des Fensters, wird sofort umgeschaltet.", "Ist die zur Bildschirmausrichtung passende Seite leer, wird das andere Bild verwendet. Sind beide leer, wird der Hintergrund zu einem Verlauf auf Basis der Textfarbe.", "Das Bild wird automatisch so verkleinert, dass es in 256×256 Pixel passt. GIF und AVIF werden in PNG umgewandelt.", "Ist bei einer Kategorie ein Hintergrundbild eingestellt, hat auf dem Bildschirm dieser Kategorie das Bild auf Seiten der Kategorie Vorrang. Die Seite der Kategorie hat auch dann Vorrang, wenn sie nur ein Bild hat, das nicht zur Bildschirmausrichtung passt.", "Jedes eingestellte Bild lässt sich mit der Schaltfläche Delete Image löschen, die direkt danach steht."],
 			links: { category: "category" },
+			children: {
+				laptop: {
+					title: "Laptop",
+					summary: "Das Hintergrundbild des gesamten Spiels für Querformat-Bildschirme",
+					points: ["Wird verwendet, wenn der Bildschirm breiter als hoch ist. Das betrifft Computer und quer gehaltene Tablets."],
+				},
+				mobile: {
+					title: "Mobilgerät",
+					summary: "Das Hintergrundbild des gesamten Spiels für Hochformat-Bildschirme",
+					points: ["Wird verwendet, wenn der Bildschirm mindestens so hoch wie breit ist. Das betrifft Smartphones und hochkant gehaltene Tablets."],
+				},
+			},
 		},
 	},
 	options: {

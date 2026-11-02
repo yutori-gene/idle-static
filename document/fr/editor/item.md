@@ -76,7 +76,7 @@ Le réglage de type concernant l'équipement, l'effet et la consommation de l'ob
 - Au sein d'un même groupe, un seul objet peut être équipé. Lorsque vous équipez un nouvel objet, l'équipement existant du même groupe est retiré automatiquement.
 - L'ordre des emplacements d'équipement suit l'ordre de définition de la liste des groupes du monde.
 - `unnecessary` produit son effet qu'il soit équipé ou non, et l'ampleur de l'effet est proportionnelle à la quantité possédée (aucun effet à 0, n fois avec n unités).
-- `consumable` n'est consommé que lorsque les propriétés de cet objet portent sur l'action exécutée, à raison d'une unité par action. Il ne diminue pas pour les actions que son effet n'atteint pas.
+- `consumable` n'est consommé que lorsque les propriétés de cet objet portent sur l'action exécutée, à raison d'une unité par action. Il ne diminue pas pour les actions que son effet n'atteint pas. Qu’il diminue réellement ou non dépend de la probabilité de consommation.
 - Un objet consommé jusqu'à 0 est automatiquement déséquipé.
 - Pour l'équiper, il faut remplir à la fois les conditions de cet objet et celles de la catégorie.
 
@@ -86,6 +86,14 @@ Le réglage de type concernant l'équipement, l'effet et la consommation de l'ob
 |`consumable`|Nécessaire|Seulement une fois équipé (pour une unité)|Consommé à l'exécution de l'action|Objets consommés pour obtenir un effet, comme les potions|
 |`unnecessary`|Inutile|Toujours tant qu'il est possédé (proportionnel à la quantité possédée)|Non|Objets passifs qui produisent un effet du simple fait d'être détenus|
 |`impossible`|Impossible|Aucun|Non|Objets sans effet, comme les matériaux et les bricoles|
+___
+
+## Probabilité de consommation [0-1]
+Probabilité qu’un équipement consommable soit consommé en une action
+- Indiquez, de `0` à `1`, la probabilité qu’un objet dont le type d’équipement est `consumable` soit consommé en une action. La valeur par défaut est `1` (consommé à chaque fois).
+- Avec `0.5`, il est consommé environ une fois sur deux, et avec `0`, il n’est jamais consommé.
+- Le jugement de consommation n’a lieu que lorsque les propriétés de cet objet portent sur l’action exécutée.
+- Il n’est pas utilisé pour les types d’équipement autres que `consumable`.
 ___
 
 ## [_Condition_](fr/editor/requirement)
