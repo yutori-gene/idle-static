@@ -122,7 +122,7 @@ Die Übernahme der Farbeinstellung des übergeordneten Elements
 - Die Hierarchie der Vererbung sieht so aus.
 - Bei einem Element mit einzeln eingestellter Farbe hat diese Farbe Vorrang. Sie wird nicht überschrieben, auch wenn die Kategorie eine Farbe hat.
 - Grundsätzlich legt man je Kategorie eine Farbe fest und überlässt das Darunterliegende der Vererbung. Eine eigene Farbe stellt man ein, wenn ein bestimmtes Element hervorstechen soll.
-- Ist an der Aktion ein Attribut (attribute) eingestellt, wird nicht die Farbe der Kategorie übernommen, zu der sie gehört, sondern die der im Attribut angegebenen Kategorie.
+- Ist an der Aktion eine Disziplin (discipline) eingestellt, wird nicht die Farbe der Kategorie übernommen, zu der sie gehört, sondern die der als Disziplin angegebenen Kategorie.
 - Die Kategorie selbst hat niemanden, von dem sie erben könnte. Bleibt die Farbe der Kategorie Schwarz (`#000000`), werden diese Kategorie und die darunterliegenden Elemente ohne eingestellte Farbe in der Mischfarbe zwischen der Balkenfarbe und der Textfarbe des Designs angezeigt.
 - Gruppen, Fähigkeiten und Voreinstellungen erben nicht und verwenden nur die an ihnen selbst eingestellte Farbe.
 ```

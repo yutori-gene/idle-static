@@ -11,5 +11,3 @@
   * [日本語](ja/?id=main)
   * [Bahasa Indonesia](id/?id=main)
   * [한국어](ko/?id=main)
-
-* [GitHub](https://github.com)

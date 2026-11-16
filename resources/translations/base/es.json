@@ -474,9 +474,17 @@
 			"name": "Acción desbloqueada",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "Atributo",
-			"explanation": "El atributo propio de esta acción. Las propiedades de la categoría se aplican al atributo de esta acción, y el atributo también recibe experiencia."
+		"discipline": {
+			"name": "Disciplina",
+			"explanation": "La categoría que sirve de referencia para la fuerza de esta acción. La diferencia de nivel y los efectos de los artículos se aplican desde esta categoría, y la experiencia también va a esta categoría, por separado de la categoría de la acción."
+		},
+		"discipline-level": {
+			"name": "Nivel de disciplina",
+			"explanation": "El nivel de la categoría de la disciplina necesario para ejecutar. Debe cumplirse junto con el nivel de la categoría a la que pertenece la acción."
+		},
+		"experience-distribution": {
+			"name": "Reparto de experiencia",
+			"explanation": "La experiencia de una acción con disciplina se calcula con la diferencia de nivel de la categoría a la que pertenece y de la categoría de la disciplina por separado, y se reparte de modo que la categoría de la acción recibe la parte de la tasa de retorno y la categoría de la disciplina el resto. La parte de una categoría cuyo nivel no sube se pierde."
 		},
 		"progress": {
 			"name": "Avance",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "Una acción es un comportamiento que, al ejecutarlo, da experiencia y recompensas"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "El atributo es la categoría que recibe la experiencia. Puede ser distinta de la categoría de la propia acción, y el nivel necesario para ejecutarla también se juzga allí"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "La disciplina es la categoría que sirve de referencia para la fuerza. Si es distinta de la categoría de la acción, para ejecutarla se necesitan los niveles de ambas, y la experiencia se reparte entre las dos. Los efectos de los artículos se juzgan por la disciplina, y no se puede ejecutar hasta que se desbloquee la categoría de la disciplina"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

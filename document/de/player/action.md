@@ -2,7 +2,7 @@
 # Aktion
 Die Handlung, die sich in dieser Kategorie ausführen lässt
 - Eine Aktion ist eine Handlung, die beim Ausführen Erfahrung und Belohnungen einbringt
-- Das Attribut ist die Kategorie, in die die Erfahrung fließt. Sie kann von der eigenen Kategorie der Aktion abweichen, und auch das zum Ausführen nötige Level wird dort geprüft
+- Die Disziplin ist die Kategorie, die als Maßstab für die Stärke dient. Weicht sie von der eigenen Kategorie ab, sind zum Ausführen die Level beider Kategorien nötig, und die Erfahrung wird auf beide aufgeteilt. Die Wirkungen von Gegenständen werden nach der Disziplin geprüft, und bis die Kategorie der Disziplin freigeschaltet ist, kann die Aktion nicht ausgeführt werden
 - Ein langes Drücken auf die Ausführungszeile wechselt zwischen Starten und Stoppen
 - Was unter „Bedingung“ steht, wird bei jeder Ausführung verbraucht. Steht ein Anteil dabei, ist das die Wahrscheinlichkeit des Verbrauchs
 - Aktionen, deren Freischaltbedingungen nicht erfüllt sind, werden durchgestrichen angezeigt; ihre Erklärung bleibt verborgen

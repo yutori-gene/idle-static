@@ -56,6 +56,7 @@ ___
 Pengaturan kapasitas inventaris
 - Mengelola batas atas jumlah jenis item yang bisa dimiliki pemain.
 - Yang dikelola bukan jumlah kepemilikan tiap item, melainkan jumlah jenis item yang dimiliki.
+- Item yang nilai jual dan nilai belinya sama-sama `0` dan jumlah maksimumnya `1` (barang yang tidak bisa dijual, dibeli, atau dimiliki lebih dari satu) tidak dihitung dalam jumlah jenis.
 - Bila `initialCount` dijadikan 0, kapasitas menjadi tanpa batas, dan pembelian kapasitas pun tidak bisa dilakukan.
 - Bila kamu merujuk item kapasitas pada syarat atau hadiah, gunakanlah ID yang diatur di sini, atau `capacity`.
 - [_item_](id/editor/item)
@@ -170,11 +171,22 @@ Laju kenaikan kesulitan naik level
 - [_category_](id/editor/category)
 ___
 
+## Rasio pengembalian pengalaman [0-1]
+Bagian pengalaman aksi yang memiliki disiplin yang masuk ke kategori tempatnya bernaung
+- Rasio pembagian pengalaman ke kategori tempat aksi bernaung dan kategori disiplin saat aksi yang disiplinnya (discipline) diatur berhasil. Nilai bawaannya `0.5`.
+- Kategori tempat aksi bernaung menerima rasio ini, dan kategori disiplin menerima sisanya (`1` dikurangi nilai ini). Dengan `0` hanya kategori disiplin yang menerima; dengan `1` hanya kategori tempat aksi bernaung.
+- Tiap bagian dihitung dari selisih level kategori itu dengan level aksi (`level` untuk kategori tempat aksi bernaung, `disciplineLevel` untuk disiplin) dan dari koreksi pengalaman item yang menyasar kategori itu, lalu dibagi.
+- Bagian kategori yang numeric-nya dinonaktifkan sehingga levelnya tidak naik dibuang. Bagian itu tidak dialihkan ke kategori lain.
+- Pengalaman aksi tanpa disiplin seluruhnya masuk ke kategori tempatnya bernaung, berapa pun nilai ini.
+- [_action_](id/editor/action)
+- [_category_](id/editor/category)
+___
+
 ## Batas level aksi
-Menuntut level kategori atribut untuk menjalankan aksi
-- Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat "level kategori atribut berada pada atau di atas level aksi tersebut".
-- Bila atribut (attribute) tidak diatur, kategori tempatnya bernaung yang dipakai.
-- Bila numeric pada kategori atribut dinonaktifkan, kategori itu tidak naik level sehingga tidak ada yang ditambahkan.
+Menuntut level kategori tempat aksi bernaung dan kategori disiplin untuk menjalankan aksi
+- Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat "level kategori tempatnya bernaung berada pada atau di atas level aksi tersebut (`level`)".
+- Pada aksi yang disiplinnya (discipline) diatur, ditambahkan pula syarat "level kategori disiplin berada pada atau di atas level disiplin (`disciplineLevel`)".
+- Bila numeric pada suatu kategori dinonaktifkan, kategori itu tidak naik level sehingga syarat untuk kategori itu tidak ditambahkan.
 - Syarat yang ditambahkan dituliskan saat dunia dimuat, jadi pada layar player pun ia ditampilkan sama seperti syarat biasa.
 - [_action_](id/editor/action)
 - [_category_](id/editor/category)
@@ -188,7 +200,8 @@ Menjadi berapa kali lipat properti tiap 10 selisih level
 - Serangan dan pengalaman bertambah sebesar pengali ini, sedangkan pertahanan (kerusakan yang diterima) dan kecepatan (waktu yang dibutuhkan) berkurang sebesar pengali yang sama.
 - Akurasi, menghindar, tingkat keberhasilan, dan jumlah pemulihan adalah nilai yang tetap berada di `0`–`100`%, jadi pengali dikenakan pada perbandingan antara sisi yang terjadi dan sisi yang tidak. `0`% dan `100`% tidak berubah, dan nilai di antaranya pun tidak pernah melewati `100`%.
 - Pada pertahanan, menghindar, dan kecepatan, pengali bekerja setengahnya (selisih level `20` setara dengan selisih level `10` pada properti lain). Pertahanan dan menghindar bekerja ganda, pada tingkat terkena serangan dan pada kerusakan yang diterima, sedangkan kecepatan bekerja pada semua properti lain sebagai jumlah penjalanan, jadi pengaruhnya dilemahkan agar seimbang.
-- Patokannya adalah (laju pertumbuhan pengalaman) pangkat `6.7`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.
+- Untuk pengalaman, pengalinya bekerja `1.5` kali lebih kuat (selisih level `10` dihitung seperti selisih `15` pada properti lain). Dengan begitu, beralih ke aksi yang baru terbuka memberi pengalaman lebih banyak daripada terus mengulang aksi berlevel rendah.
+- Patokannya adalah (laju pertumbuhan pengalaman) pangkat `5`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.
 - Bila dijadikan `1`, pengaruh selisih level menghilang. Memperbesar nilainya membuat untung ruginya selisih level menjadi tajam.
 
 |Rasio properti|Selisih level -20|Selisih level -10|Selisih level 0|Selisih level +10|Selisih level +20|

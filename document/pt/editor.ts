@@ -429,7 +429,7 @@ export const information: Type.Information = {
 				"heritage-from-parent": {
 					title: "Herança do elemento pai",
 					summary: "Como a configuração de cor do elemento pai é herdada",
-					points: ["Ações, itens e eventos sem cor definida herdam a cor da categoria à qual pertencem.", "A hierarquia da herança é a seguinte.", "Nos elementos com uma cor própria definida, essa cor tem prioridade. Não é sobrescrita mesmo que a categoria tenha cor.", "O uso básico é decidir uma cor por categoria e deixar que o que está abaixo herde. A cor individual é definida quando você quer destacar um elemento específico.", "Se um atributo (attribute) estiver definido na ação, a cor herdada não é a da categoria à qual ela pertence, e sim a da categoria indicada no atributo.", "A própria categoria não tem de quem herdar. Se a cor da categoria continuar preta (`#000000`), essa categoria e os elementos abaixo dela sem cor definida são exibidos na cor intermediária entre a cor da barra e a cor do texto do design.", "Grupos, habilidades e predefinições não herdam e usam apenas a cor definida neles mesmos."],
+					points: ["Ações, itens e eventos sem cor definida herdam a cor da categoria à qual pertencem.", "A hierarquia da herança é a seguinte.", "Nos elementos com uma cor própria definida, essa cor tem prioridade. Não é sobrescrita mesmo que a categoria tenha cor.", "O uso básico é decidir uma cor por categoria e deixar que o que está abaixo herde. A cor individual é definida quando você quer destacar um elemento específico.", "Se uma disciplina (discipline) estiver definida na ação, a cor herdada não é a da categoria à qual ela pertence, e sim a da categoria indicada como disciplina.", "A própria categoria não tem de quem herdar. Se a cor da categoria continuar preta (`#000000`), essa categoria e os elementos abaixo dela sem cor definida são exibidos na cor intermediária entre a cor da barra e a cor do texto do design.", "Grupos, habilidades e predefinições não herdam e usam apenas a cor definida neles mesmos."],
 					quote: colorTree,
 					links: { type: "type" },
 				},
@@ -583,7 +583,7 @@ export const group: Type.Information = {
 export const skill: Type.Skill = {
 	title: "Habilidade",
 	summary: "Um efeito especial que é sorteado a cada turno do combate e ativa",
-	points: ["É um efeito especial que é sorteado a cada turno e ativa em uma ação de combate (`stamina`). Ele não ativa em ações de nenhum outro tipo.", "A substância é definida aqui, e é referenciada por ID a partir de `skill` de um item (o seu lado) e `skills` de uma ação (o lado do adversário).", "Os candidatos do seu lado são as habilidades referenciadas pelos itens que estão fazendo efeito naquele momento (`unnecessary` enquanto em posse, `necessary` e `consumable` enquanto equipados). Ao desequipar um item, a habilidade dele também sai dos candidatos.", "A cada turno os candidatos são embaralhados no seu lado e no lado do adversário, a probabilidade de ativação é julgada a partir do topo, e apenas a primeira que dá certo é ativada. Se nenhuma der certo, naquele turno não há habilidade.", "Quando vários itens ou ações referenciam a mesma habilidade, ela ganha outras tantas oportunidades no sorteio, então ativa com mais facilidade."],
+	points: ["É um efeito especial que é sorteado a cada turno e ativa em uma ação de combate (`stamina`). Ele não ativa em ações de nenhum outro tipo.", "A substância é definida aqui, e é referenciada por ID a partir de `skill` de um item (o seu lado) e `skills` de uma ação (o lado do adversário).", "Os candidatos do seu lado são as habilidades referenciadas pelos itens que estão fazendo efeito naquele momento (`unnecessary` enquanto em posse, `necessary` e `consumable` enquanto equipados). Ao desequipar um item, a habilidade dele também sai dos candidatos.", "No entanto, a habilidade de um item que tem uma categoria-alvo para seus efeitos (`category` de `properties`) só entra nos candidatos quando essa categoria coincide com a disciplina (`discipline`) da ação em combate. Numa ação com disciplina definida, ela não entra nos candidatos mesmo que coincida com a categoria à qual a ação pertence. `*` coincide com todas as categorias. A habilidade de um item sem efeitos entra nos candidatos em qualquer combate.", "A cada turno os candidatos são embaralhados no seu lado e no lado do adversário, a probabilidade de ativação é julgada a partir do topo, e apenas a primeira que dá certo é ativada. Se nenhuma der certo, naquele turno não há habilidade.", "Quando vários itens ou ações referenciam a mesma habilidade, ela ganha outras tantas oportunidades no sorteio, então ativa com mais facilidade."],
 	links: { item: "item", action: "action" },
 	children: {
 		information: information,
@@ -696,10 +696,10 @@ export const action: Type.Action = {
 			summary: "O ID da categoria à qual a ação pertence",
 			points: ["Indique o ID da categoria à qual esta ação pertence."],
 		},
-		attribute: {
-			title: "Atributo",
-			summary: "A categoria de atributo própria da ação",
-			points: ["Você pode definir um atributo (categoria) individual.", "Quando está em branco, a categoria à qual ela pertence é herdada.", "Por exemplo, se numa ação que pertence a uma categoria chamada Castelo do Rei Demônio você definir individualmente o atributo de magia, o nível e as propriedades da categoria de magia são calculados e aplicados ao tempo de conclusão e ao dano da ação.", "A experiência ao ter sucesso também vai para a categoria definida no atributo, e não para a categoria à qual ela pertence.", "Quando na própria ação não há cor definida, as cores do ícone e do fundo herdam a cor da categoria definida no atributo, e não a da categoria à qual ela pertence."],
+		discipline: {
+			title: "Disciplina",
+			summary: "A categoria que recebe a experiência e serve de referência para a força",
+			points: ["Em cada ação, você pode definir como disciplina uma categoria diferente daquela à qual ela pertence.", "Se ficar em branco, a categoria à qual ela pertence passa a ser a disciplina.", "Por exemplo, se numa ação que pertence a uma categoria chamada Castelo do Rei Demônio você definir a disciplina de magia, o nível e as propriedades da categoria de magia são calculados e aplicados ao tempo de conclusão e ao dano da ação.", "Numa ação com disciplina definida, informe o nível exigido da categoria da disciplina no nível de disciplina (`disciplineLevel`).", "A experiência ao ter sucesso é dividida entre a categoria à qual a ação pertence e a categoria definida como disciplina segundo a taxa de retorno de experiência (`experienceReturnRate`) da configuração geral.", "Os efeitos dos itens (correções de propriedades, habilidades e o consumo de consumíveis) também só são aplicados se tiverem como alvo a categoria definida como disciplina. Efeitos que têm como alvo a categoria à qual a ação pertence não são aplicados a uma ação com disciplina definida.", "Enquanto a categoria definida como disciplina não estiver desbloqueada, a ação também não é desbloqueada, mesmo que a categoria à qual ela pertence esteja desbloqueada.", "Quando na própria ação não há cor definida, as cores do ícone e do fundo herdam a cor da categoria definida como disciplina, e não a da categoria à qual ela pertence."],
 			links: { category: "category" },
 		},
 		group: {
@@ -715,9 +715,15 @@ export const action: Type.Action = {
 		},
 		level: {
 			title: "Nível",
-			summary: "O nível de dificuldade da ação",
-			points: ["A dificuldade da ação é expressa por um nível.", "Na execução ela é comparada com o nível do jogador e cada propriedade é calculada.", "O termo de comparação é o nível da categoria definida no atributo.", "Por exemplo, se você executa uma ação mais alta que o seu próprio nível, há efeitos como a taxa de sucesso cair.", "Desde que as condições sejam atendidas, dá para executá-la mesmo que o nível do jogador seja menor que este valor.", "No entanto, se `actionLevelLimit` de geral (o limite de nível das ações) estiver ativado, este valor é adicionado automaticamente como condição sobre o nível da categoria, então não dá para executá-la até que o nível alcance. Nas categorias que não têm nível ele não é adicionado."],
+			summary: "O nível de dificuldade da ação em relação à categoria à qual pertence",
+			points: ["A dificuldade da ação é expressa por um nível da categoria à qual ela pertence.", "Numa ação sem disciplina, ao executar, este valor é comparado com o nível da categoria à qual ela pertence para calcular cada propriedade.", "Numa ação com disciplina definida, o cálculo das propriedades usa o nível de disciplina (`disciplineLevel`), e este valor só é usado para calcular a experiência que vai para a categoria da ação e para o requisito de nível ao executar.", "Por exemplo, se você executa uma ação mais alta que o seu próprio nível, há efeitos como a taxa de sucesso cair.", "Desde que as condições sejam atendidas, dá para executá-la mesmo que o nível do jogador seja menor que este valor.", "No entanto, se `actionLevelLimit` de geral (o limite de nível das ações) estiver ativado, este valor é adicionado automaticamente como condição sobre o nível da categoria, então não dá para executá-la até que o nível alcance. Nas categorias que não têm nível ele não é adicionado."],
 			links: { property: "property" },
+		},
+		disciplineLevel: {
+			title: "Nível de disciplina",
+			summary: "O nível de dificuldade da ação em relação à categoria da disciplina",
+			points: ["O nível exigido da categoria da disciplina numa ação com disciplina (`discipline`) definida. Ao definir uma disciplina, é obrigatório um valor de `1` ou mais.", "Não é usado numa ação sem disciplina. Deixe em `0`.", "Ao executar, este valor é comparado com o nível da categoria da disciplina para calcular cada propriedade e a experiência que vai para a categoria da disciplina.", "Quando `actionLevelLimit` (o limite de nível das ações) da configuração geral está ativado, ele é acrescentado automaticamente como requisito junto com o nível da categoria à qual a ação pertence (`level`)."],
+			links: { property: "property", category: "category" },
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "As condições necessárias para executar a ação" },
 		seconds: {
@@ -729,7 +735,7 @@ export const action: Type.Action = {
 		experience: {
 			title: "Experiência [100 para o próximo nível]",
 			summary: "A experiência obtida quando a ação tem sucesso",
-			points: ["É a experiência padrão obtida ao executar a ação uma vez e ter sucesso. 100 é a experiência de um nível.", "No caso do combate ela é obtida ao vencer o oponente, então convém defini-la generosa.", "Varia na execução real pelo cálculo das propriedades."],
+			points: ["É a experiência padrão obtida ao executar a ação uma vez e ter sucesso. 100 é a experiência de um nível.", "No caso do combate ela é obtida ao vencer o oponente, então convém defini-la generosa.", "Varia na execução real pelo cálculo das propriedades.", "Numa ação com disciplina definida, a experiência é calculada a partir deste valor com a diferença de nível da categoria à qual pertence e da categoria da disciplina separadamente, e dividida segundo a taxa de retorno de experiência (`experienceReturnRate`) da configuração geral."],
 			links: { property: "property" },
 		},
 		chance: {
@@ -988,6 +994,7 @@ export const general: Type.General = {
 			points: [
 				"Gerencia o teto da quantidade de tipos de itens que um jogador pode ter.",
 				"É gerenciado pela quantidade de tipos de itens que você tem, não pela quantidade possuída de cada item.",
+				"Os itens cujo valor de venda e de compra são ambos `0` e cujo máximo é `1` (pertences que não podem ser vendidos, comprados nem ter mais de um) não contam no número de tipos.",
 				"Se você deixar `initialCount` em 0, a capacidade fica ilimitada e também não é mais possível comprar capacidade.",
 				"Quando você se referir ao item da capacidade nos requisitos ou nas recompensas, use o ID configurado aqui ou `capacity`.",
 			],
@@ -1087,13 +1094,25 @@ export const general: Type.General = {
 			],
 			links: { category: "category" },
 		},
+		experienceReturnRate: {
+			title: "Taxa de retorno da experiência [0-1]",
+			summary: "A parte da experiência de uma ação com disciplina que vai para a categoria à qual ela pertence",
+			points: [
+				"A proporção em que a experiência é dividida entre a categoria da ação e a categoria da disciplina quando uma ação com disciplina (discipline) definida tem sucesso. O valor padrão é `0.5`.",
+				"A categoria à qual a ação pertence recebe esta proporção, e a categoria da disciplina recebe o restante (`1` menos este valor). Com `0`, só a categoria da disciplina recebe; com `1`, só a categoria da ação.",
+				"Cada parte é calculada com a diferença entre o nível dessa categoria e o nível da ação (`level` para a categoria da ação, `disciplineLevel` para a disciplina) e com as correções de experiência dos itens que têm essa categoria como alvo, e então dividida.",
+				"A parte de uma categoria com numeric desativado, cujo nível não sobe, é descartada. Ela não vai para a outra categoria.",
+				"A experiência de uma ação sem disciplina vai inteiramente para a categoria à qual ela pertence, independentemente deste valor.",
+			],
+			links: { action: "action", category: "category" },
+		},
 		actionLevelLimit: {
 			title: "Limite de nível das ações",
-			summary: "Exigir o nível da categoria do atributo para executar uma ação",
+			summary: "Exigir os níveis da categoria da ação e da categoria da disciplina para executar uma ação",
 			points: [
-				"Quando está ativado, no início dos requisitos (requirements) de cada ação é acrescentado automaticamente o requisito \"que o nível da categoria do atributo seja igual ou superior ao nível daquela ação\".",
-				"Quando nenhum atributo (attribute) está configurado, é usada a categoria à qual ela pertence.",
-				"Quando numeric está desativado na categoria do atributo, ela não sobe de nível, então nada é acrescentado.",
+				"Quando está ativado, no início dos requisitos (requirements) de cada ação é acrescentado automaticamente o requisito \"que o nível da categoria à qual ela pertence seja igual ou superior ao nível daquela ação (`level`)\".",
+				"Numa ação com disciplina (discipline) definida, também é acrescentado o requisito \"que o nível da categoria da disciplina seja igual ou superior ao nível de disciplina (`disciplineLevel`)\".",
+				"Quando numeric está desativado numa categoria, ela não sobe de nível, então o requisito dessa categoria não é acrescentado.",
 				"O requisito acrescentado é escrito no carregamento do mundo, então na tela do reprodutor ele é exibido igual a um requisito comum.",
 			],
 			links: { action: "action", category: "category", requirement: "requirement" },
@@ -1107,7 +1126,8 @@ export const general: Type.General = {
 				"O ataque e a experiência aumentam conforme este multiplicador, e a defesa (o dano recebido) e a velocidade (o tempo necessário) diminuem conforme o mesmo multiplicador.",
 				"A precisão, a evasão, a taxa de sucesso e a recuperação são valores que ficam entre `0` e `100`%, então o multiplicador se aplica à proporção entre a parte que se concretiza e a que não. `0`% e `100`% não mudam, e nenhum valor intermediário passa de `100`%.",
 				"Na defesa, na evasão e na velocidade o multiplicador age pela metade (uma diferença de nível de `20` equivale a uma diferença de `10` nas demais propriedades). A defesa e a evasão se aplicam em dobro, à taxa de ser atingido e ao dano recebido, e a velocidade se aplica a todas as demais propriedades como quantidade de execuções, então o efeito delas é enfraquecido para manter o equilíbrio.",
-				"Uma referência é (a taxa de crescimento da experiência) elevada a `6.7`. Acima disso, subir de nível acelera quanto mais alto é o nível; abaixo disso, subir de nível na parte final leva mais tempo.",
+				"Na experiência, o multiplicador atua `1.5` vez mais forte (uma diferença de nível de `10` equivale a uma diferença de `15` nas outras propriedades). Assim, passar para as ações recém-desbloqueadas rende mais experiência do que continuar repetindo ações de nível baixo.",
+				"Uma referência é (a taxa de crescimento da experiência) elevada a `5`. Acima disso, subir de nível acelera quanto mais alto é o nível; abaixo disso, subir de nível na parte final leva mais tempo.",
 				"Se você o deixar em `1`, a influência da diferença de nível desaparece. Aumentar o valor torna mais bruscas as vantagens e desvantagens vindas da diferença de nível.",
 			],
 			list: [

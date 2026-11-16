@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "在 {path}:{id} 中找不到 {typeName} id [{id}]。",
-      "group_not_found": "在 {path} 中找不到分组 [{group}]。必须为空或为已定义的分组 ID。"
+      "group_not_found": "在 {path} 中找不到分组 [{group}]。必须为空或为已定义的分组 ID。",
+      "category_not_found": "在 {path} 中找不到类别 [{categoryId}]。",
+      "property_category_not_found": "在 {path} 中找不到效果对象类别 [{categoryId}]。",
+      "task_group_not_found": "在 {path} 中找不到分组 [{groupId}]。必须为空或为已定义的分组 ID。",
+      "discipline_level_required": "设置了流派的动作，其流派等级（disciplineLevel）必须为 1 以上：{path}",
+      "discipline_same_as_category": "流派指定了与所属类别相同的类别。这等同于未设置流派，请留空：{path}",
+      "discipline_not_numeric": "流派类别 [{categoryId}] 的数值已禁用。流派等级条件和经验值分配不会生效：{path}"
     }
   }
 }

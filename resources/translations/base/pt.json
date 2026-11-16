@@ -474,9 +474,17 @@
 			"name": "Ação desbloqueada",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "Atributo",
-			"explanation": "O atributo próprio desta ação. As propriedades da categoria se aplicam ao atributo desta ação, e o atributo também recebe experiência."
+		"discipline": {
+			"name": "Disciplina",
+			"explanation": "A categoria que serve de referência para a força desta ação. A diferença de nível e os efeitos dos itens são aplicados a partir desta categoria, e a experiência também vai para esta categoria, separada da categoria da ação."
+		},
+		"discipline-level": {
+			"name": "Nível de disciplina",
+			"explanation": "O nível da categoria da disciplina necessário para executar. Deve ser atendido junto com o nível da categoria à qual a ação pertence."
+		},
+		"experience-distribution": {
+			"name": "Distribuição de experiência",
+			"explanation": "A experiência de uma ação com disciplina é calculada com a diferença de nível da categoria à qual pertence e da categoria da disciplina separadamente, e é dividida de modo que a categoria da ação recebe a parte da taxa de retorno e a categoria da disciplina recebe o restante. A parte de uma categoria cujo nível não sobe é perdida."
 		},
 		"progress": {
 			"name": "Andamento",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "Uma ação é um comportamento que, ao ser executado, dá experiência e recompensas"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "O atributo é a categoria que recebe a experiência. Ela pode ser diferente da categoria da própria ação, e o nível necessário para executar também é julgado por ela"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "A disciplina é a categoria que serve de referência para a força. Quando é diferente da categoria da ação, executar exige os níveis das duas, e a experiência é dividida entre ambas. Os efeitos dos itens são avaliados pela disciplina, e a ação não pode ser executada até que a categoria da disciplina seja desbloqueada"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

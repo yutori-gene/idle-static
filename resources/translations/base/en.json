@@ -474,9 +474,17 @@
 			"name": "Action Unlocked",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "Attribute",
-			"explanation": "The attribute unique to this action. The category's properties apply to this action's attribute, and experience is granted to the attribute as well."
+		"discipline": {
+			"name": "Discipline",
+			"explanation": "The category that serves as the basis of this action's strength. The level gap and the effects of items are applied from this category, and the experience is also split into this category apart from the category the action belongs to."
+		},
+		"discipline-level": {
+			"name": "Discipline Level",
+			"explanation": "The level of the discipline's category required for execution. Both this and the level of the category the action belongs to must be met."
+		},
+		"experience-distribution": {
+			"name": "Experience Distribution",
+			"explanation": "The experience of an action with a discipline is calculated from the level gap of the category it belongs to and of the discipline's category respectively, and is split so that the category it belongs to receives the return rate and the discipline's category receives the rest. The share of a category whose level does not rise is lost."
 		},
 		"progress": {
 			"name": "Progress",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "An action is something you execute to gain experience and rewards"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "The attribute is the category that receives the experience. It can differ from the category the action belongs to, and the level required to execute is judged there as well"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "The discipline is the category that serves as the basis of strength. When it differs from the action's own category, executing requires the levels of both the own category and the discipline, and the experience is split between both. The effects of items are judged by the discipline, and the action cannot be executed until the category of the discipline is released"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

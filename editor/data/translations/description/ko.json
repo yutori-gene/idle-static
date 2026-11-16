@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}]을(를) {path}:{id}에서 찾을 수 없습니다.",
-      "group_not_found": "그룹 [{group}]을(를) {path}에서 찾을 수 없습니다. 비어 있거나 정의된 그룹 ID여야 합니다."
+      "group_not_found": "그룹 [{group}]을(를) {path}에서 찾을 수 없습니다. 비어 있거나 정의된 그룹 ID여야 합니다.",
+      "category_not_found": "카테고리 [{categoryId}]을(를) {path}에서 찾을 수 없습니다.",
+      "property_category_not_found": "효과의 대상 카테고리 [{categoryId}]을(를) {path}에서 찾을 수 없습니다.",
+      "task_group_not_found": "그룹 [{groupId}]을(를) {path}에서 찾을 수 없습니다. 비어 있거나 정의된 그룹 ID여야 합니다.",
+      "discipline_level_required": "계통을 설정한 액션은 계통 레벨(disciplineLevel)을 1 이상으로 해야 합니다: {path}",
+      "discipline_same_as_category": "계통에 소속 카테고리와 같은 카테고리가 지정되어 있습니다. 계통이 없는 것과 같으므로 비워 두세요: {path}",
+      "discipline_not_numeric": "계통 카테고리 [{categoryId}]는 수치가 비활성화되어 있습니다. 계통 레벨 조건과 경험치 분배는 사용되지 않습니다: {path}"
     }
   }
 }

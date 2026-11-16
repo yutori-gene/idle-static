@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] não encontrado em {path}:{id}.",
-      "group_not_found": "Grupo [{group}] não encontrado em {path}. Deve estar vazio ou ser um ID de grupo definido."
+      "group_not_found": "Grupo [{group}] não encontrado em {path}. Deve estar vazio ou ser um ID de grupo definido.",
+      "category_not_found": "Categoria [{categoryId}] não encontrada em {path}.",
+      "property_category_not_found": "Categoria-alvo do efeito [{categoryId}] não encontrada em {path}.",
+      "task_group_not_found": "Grupo [{groupId}] não encontrado em {path}. Deve estar vazio ou ser um ID de grupo definido.",
+      "discipline_level_required": "Uma ação com disciplina precisa ter nível de disciplina (disciplineLevel) igual ou superior a 1: {path}",
+      "discipline_same_as_category": "A disciplina é a mesma categoria à qual a ação pertence. Isso equivale a não ter disciplina, então deixe-a vazia: {path}",
+      "discipline_not_numeric": "A categoria de disciplina [{categoryId}] está com os valores numéricos desativados. O requisito de nível de disciplina e a divisão de experiência não são usados: {path}"
     }
   }
 }

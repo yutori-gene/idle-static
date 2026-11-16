@@ -56,6 +56,7 @@ ___
 Die Kapazitätseinstellungen des Inventars
 - Verwaltet die Obergrenze der Anzahl an Gegenstandsarten, die ein Spieler halten kann.
 - Verwaltet wird über die Anzahl der gehaltenen Gegenstandsarten, nicht über die Besitzanzahl je Gegenstand.
+- Gegenstände, deren Verkaufs- und Kaufwert beide `0` sind und deren Höchstzahl `1` ist (Besitztümer, die man weder verkaufen noch kaufen noch mehrfach haben kann), zählen nicht zur Anzahl der Arten.
 - Setzt du `initialCount` auf 0, wird die Kapazität unbegrenzt, und auch der Kauf von Kapazität entfällt.
 - Wenn du dich in Bedingungen oder Belohnungen auf den Gegenstand der Kapazität beziehst, verwende die hier eingestellte ID oder `capacity`.
 - [_item_](de/editor/item)
@@ -170,11 +171,22 @@ Die Steigerungsrate der Schwierigkeit des Levelaufstiegs
 - [_category_](de/editor/category)
 ___
 
+## Rückgaberate der Erfahrung [0-1]
+Der Anteil der Erfahrung einer Aktion mit Disziplin, der in die Kategorie fließt, zu der sie gehört
+- Der Anteil, mit dem die Erfahrung beim Erfolg einer Aktion mit eingestellter Disziplin (discipline) auf die eigene Kategorie und die Kategorie der Disziplin aufgeteilt wird. Der Standardwert ist `0.5`.
+- Die Kategorie, zu der die Aktion gehört, erhält diesen Anteil, die Kategorie der Disziplin den Rest (`1` minus diesen Wert). Bei `0` fließt sie nur in die Kategorie der Disziplin, bei `1` nur in die eigene Kategorie.
+- Jeder Anteil wird aus dem Unterschied zwischen dem Level dieser Kategorie und dem Level der Aktion (`level` für die eigene Kategorie, `disciplineLevel` für die Disziplin) und aus den Erfahrungskorrekturen der Gegenstände für diese Kategorie berechnet und dann aufgeteilt.
+- Der Anteil einer Kategorie, bei der numeric deaktiviert ist und deren Level nicht steigt, wird verworfen. Er geht nicht an die andere Kategorie.
+- Die Erfahrung einer Aktion ohne Disziplin fließt unabhängig von diesem Wert vollständig in die Kategorie, zu der sie gehört.
+- [_action_](de/editor/action)
+- [_category_](de/editor/category)
+___
+
 ## Levelbeschränkung der Aktionen
-Für das Ausführen einer Aktion das Level der Kategorie des Attributs verlangen
-- Ist es aktiviert, wird an den Anfang der Bedingungen (requirements) jeder Aktion automatisch die Bedingung „das Level der Kategorie des Attributs liegt auf oder über dem Level dieser Aktion“ gesetzt.
-- Ist kein Attribut (attribute) eingestellt, wird die Kategorie verwendet, zu der sie gehört.
-- Ist bei der Kategorie des Attributs numeric deaktiviert, steigt sie nicht im Level, deshalb wird nichts hinzugefügt.
+Für das Ausführen einer Aktion die Level der eigenen Kategorie und der Kategorie der Disziplin verlangen
+- Ist es aktiviert, wird an den Anfang der Bedingungen (requirements) jeder Aktion automatisch die Bedingung „das Level der Kategorie, zu der sie gehört, liegt auf oder über dem Level dieser Aktion (`level`)“ gesetzt.
+- Bei einer Aktion mit eingestellter Disziplin (discipline) wird zusätzlich die Bedingung „das Level der Kategorie der Disziplin liegt auf oder über dem Level der Disziplin (`disciplineLevel`)“ hinzugefügt.
+- Ist bei einer Kategorie numeric deaktiviert, steigt sie nicht im Level, deshalb wird die Bedingung für diese Kategorie nicht hinzugefügt.
 - Die hinzugefügte Bedingung wird beim Laden der Welt eingeschrieben, deshalb erscheint sie auf dem Bildschirm des Players wie eine gewöhnliche Bedingung.
 - [_action_](de/editor/action)
 - [_category_](de/editor/category)
@@ -188,7 +200,8 @@ Auf das Wievielfache die Eigenschaften je 10 Levelunterschied steigen
 - Angriff und Erfahrung steigen um diesen Faktor, Verteidigung (der erlittene Schaden) und Geschwindigkeit (die benötigte Zeit) sinken um denselben Faktor.
 - Genauigkeit, Ausweichen, Erfolgsrate und Erholung sind Werte, die sich zwischen `0` und `100` % halten, deshalb wirkt der Faktor auf das Verhältnis zwischen dem Teil, der eintritt, und dem, der nicht eintritt. `0` % und `100` % ändern sich nicht, und kein Zwischenwert übersteigt `100` %.
 - Bei Verteidigung, Ausweichen und Geschwindigkeit wirkt der Faktor zur Hälfte (ein Levelunterschied von `20` entspricht einem Levelunterschied von `10` bei den anderen Eigenschaften). Verteidigung und Ausweichen wirken doppelt, auf die Trefferquote und auf den erlittenen Schaden, und Geschwindigkeit wirkt als Anzahl der Ausführungen auf alle anderen Eigenschaften, deshalb ist ihre Wirkung zum Ausgleich abgeschwächt.
-- Ein Anhaltspunkt ist (die Steigerungsrate der Erfahrung) hoch `6.7`. Darüber beschleunigt sich der Levelaufstieg, je höher das Level steigt, darunter dauert der Levelaufstieg in der späteren Phase länger.
+- Bei der Erfahrung wirkt der Multiplikator `1.5`-mal so stark (ein Levelunterschied von `10` zählt wie ein Unterschied von `15` bei den anderen Eigenschaften). So bringt der Wechsel zu gerade freigeschalteten Aktionen mehr Erfahrung, als Aktionen mit niedrigem Level weiter zu wiederholen.
+- Ein Anhaltspunkt ist (die Steigerungsrate der Erfahrung) hoch `5`. Darüber beschleunigt sich der Levelaufstieg, je höher das Level steigt, darunter dauert der Levelaufstieg in der späteren Phase länger.
 - Bei `1` fällt der Einfluss des Levelunterschieds weg. Ein größerer Wert lässt Vor- und Nachteile durch den Levelunterschied schroffer ausfallen.
 
 |Eigenschaftsfaktor|Levelunterschied -20|Levelunterschied -10|Levelunterschied 0|Levelunterschied +10|Levelunterschied +20|

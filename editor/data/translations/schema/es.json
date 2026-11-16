@@ -406,6 +406,7 @@
             "offlineMaxHours",
             "maxCategoryLevels",
             "levelCommonRatio",
+            "experienceReturnRate",
             "language",
             "translations",
             "coins",
@@ -467,13 +468,13 @@
               "propertyOrder": 103,
               "title": "Límite de nivel de las acciones",
               "options": {
-                "infoText": "Exigir el nivel de la categoría del atributo para ejecutar una acción"
+                "infoText": "Exigir los niveles de la categoría de la acción y de la categoría de la disciplina para ejecutar una acción"
               },
               "yutori": {
                 "points": [
-                  "Si está activado, al principio de los requisitos (requirements) de cada acción se añade automáticamente el requisito «que el nivel de la categoría del atributo sea igual o superior al nivel de esa acción».",
-                  "Si no hay ningún atributo (attribute) configurado, se usa la categoría a la que pertenece.",
-                  "Si numeric está desactivado en la categoría del atributo, esta no sube de nivel, así que no se añade nada.",
+                  "Si está activado, al principio de los requisitos (requirements) de cada acción se añade automáticamente el requisito «que el nivel de la categoría a la que pertenece sea igual o superior al nivel de esa acción (`level`)».",
+                  "A una acción con disciplina (discipline) establecida se le añade además el requisito «que el nivel de la categoría de la disciplina sea igual o superior al nivel de disciplina (`disciplineLevel`)».",
+                  "Si numeric está desactivado en una categoría, esta no sube de nivel, así que no se añade el requisito de esa categoría.",
                   "El requisito añadido se escribe al cargar el mundo, así que en la pantalla del reproductor se muestra igual que un requisito normal."
                 ],
                 "reference": "es/editor/general?id=Límite de nivel de las acciones"
@@ -495,7 +496,8 @@
                   "El ataque y la experiencia aumentan según este multiplicador, y la defensa (el daño recibido) y la velocidad (el tiempo requerido) disminuyen según el mismo multiplicador.",
                   "La precisión, la evasión, la tasa de éxito y la recuperación son valores que se mantienen entre el `0` y el `100` %, así que el multiplicador se aplica a la proporción entre la parte que se cumple y la que no. El `0` % y el `100` % no cambian, y ningún valor intermedio supera el `100` %.",
                   "En la defensa, la evasión y la velocidad el multiplicador actúa a la mitad (una diferencia de nivel de `20` equivale a una diferencia de `10` en las demás propiedades). La defensa y la evasión se aplican por partida doble, a la probabilidad de recibir impactos y al daño recibido, y la velocidad se aplica a todas las demás propiedades como cantidad de ejecuciones, así que su efecto se debilita para mantener el equilibrio.",
-                  "Una referencia es (la tasa de crecimiento de la experiencia) elevada a `6.7`. Por encima de eso, subir de nivel se acelera cuanto más alto es el nivel; por debajo, subir de nivel en la parte final lleva más tiempo.",
+                  "En la experiencia, el multiplicador actúa `1.5` veces más fuerte (una diferencia de nivel de `10` equivale a una diferencia de `15` en las demás propiedades). Así, pasar a las acciones recién desbloqueadas da más experiencia que seguir repitiendo acciones de nivel bajo.",
+                  "Una referencia es (la tasa de crecimiento de la experiencia) elevada a `5`. Por encima de eso, subir de nivel se acelera cuanto más alto es el nivel; por debajo, subir de nivel en la parte final lleva más tiempo.",
                   "Si lo pones a `1`, desaparece la influencia de la diferencia de nivel. Aumentar el valor hace más bruscas las ventajas y desventajas debidas a la diferencia de nivel."
                 ],
                 "reference": "es/editor/general?id=Ratio de propiedades [Multiplicador]"
@@ -518,6 +520,27 @@
                   "La experiencia obtenida después de alcanzar el tope (el nivel máximo de las categorías) se descarta."
                 ],
                 "reference": "es/editor/general?id=Tasa de crecimiento de la experiencia [Multiplicador]"
+              }
+            },
+            "experienceReturnRate": {
+              "type": "number",
+              "default": 0.5,
+              "minimum": 0,
+              "maximum": 1,
+              "propertyOrder": 105.5,
+              "title": "Tasa de retorno de la experiencia [0-1]",
+              "options": {
+                "infoText": "La parte de la experiencia de una acción con disciplina que va a la categoría a la que pertenece"
+              },
+              "yutori": {
+                "points": [
+                  "La proporción en que se reparte la experiencia entre la categoría de la acción y la categoría de la disciplina cuando tiene éxito una acción con disciplina (discipline) establecida. El valor por defecto es `0.5`.",
+                  "La categoría a la que pertenece la acción recibe esta proporción, y la categoría de la disciplina el resto (`1` menos este valor). Con `0` solo la recibe la categoría de la disciplina; con `1`, solo la categoría de la acción.",
+                  "Cada parte se calcula con la diferencia entre el nivel de esa categoría y el nivel de la acción (`level` para la categoría de la acción, `disciplineLevel` para la disciplina) y con las correcciones de experiencia de los artículos que apuntan a esa categoría, y después se reparte.",
+                  "La parte de una categoría con numeric desactivado, cuyo nivel no sube, se descarta. No pasa a la otra categoría.",
+                  "La experiencia de una acción sin disciplina va íntegramente a la categoría a la que pertenece, sea cual sea este valor."
+                ],
+                "reference": "es/editor/general?id=Tasa de retorno de la experiencia [0-1]"
               }
             },
             "language": {
@@ -997,6 +1020,7 @@
                 "points": [
                   "Gestiona el tope de la cantidad de clases de artículos que un jugador puede tener.",
                   "Se gestiona por la cantidad de clases de artículos que tienes, no por la cantidad que posees de cada artículo.",
+                  "Los objetos cuyo valor de venta y de compra son ambos `0` y cuyo máximo es `1` (pertenencias que no se pueden vender, comprar ni tener más de una) no cuentan en el número de tipos.",
                   "Si pones `initialCount` a 0, la capacidad pasa a ser ilimitada y tampoco se puede comprar capacidad.",
                   "Cuando te refieras al artículo de la capacidad en los requisitos o las recompensas, usa el ID configurado aquí o `capacity`."
                 ],
@@ -2303,11 +2327,12 @@
         "required": [
           "information",
           "category",
-          "attribute",
+          "discipline",
           "group",
           "unlocked",
           "seconds",
           "level",
+          "disciplineLevel",
           "experience",
           "chance",
           "maximum",
@@ -2534,22 +2559,26 @@
               "reference": "es/editor/action?id=Categoría"
             }
           },
-          "attribute": {
+          "discipline": {
             "type": "string",
-            "maxLength": 20,
-            "title": "Atributo",
+            "default": "",
+            "pattern": "^[0-9a-zA-Z\\-]*$",
+            "title": "Disciplina",
             "options": {
-              "infoText": "La categoría de atributo propia de la acción"
+              "infoText": "La categoría que recibe la experiencia y sirve de referencia para la fuerza"
             },
             "yutori": {
               "points": [
-                "Puedes establecer un atributo (categoría) individual.",
-                "Si está en blanco, se hereda la categoría a la que pertenece.",
-                "Por ejemplo, si en una acción que pertenece a una categoría llamada Castillo del Rey Demonio estableces individualmente el atributo de magia, el nivel y las propiedades de la categoría de magia se calculan y se aplican al tiempo de finalización y al daño de la acción.",
-                "La experiencia al tener éxito también va a la categoría establecida en el atributo, no a la categoría a la que pertenece.",
-                "Si en la propia acción no hay ningún color establecido, los colores del icono y del fondo heredan el color de la categoría establecida en el atributo, no el de la categoría a la que pertenece."
+                "En cada acción puedes establecer como disciplina una categoría distinta de aquella a la que pertenece.",
+                "Si se deja en blanco, la categoría a la que pertenece pasa a ser la disciplina.",
+                "Por ejemplo, si en una acción que pertenece a una categoría llamada Castillo del Rey Demonio estableces la disciplina de magia, el nivel y las propiedades de la categoría de magia se calculan y se aplican al tiempo de finalización y al daño de la acción.",
+                "En una acción con disciplina establecida, introduce el nivel requerido de la categoría de la disciplina en el nivel de disciplina (`disciplineLevel`).",
+                "La experiencia al tener éxito se reparte entre la categoría a la que pertenece la acción y la categoría establecida como disciplina según la tasa de retorno de experiencia (`experienceReturnRate`) de la configuración general.",
+                "Los efectos de los artículos (correcciones de propiedades, habilidades y el consumo de consumibles) también se aplican solo si apuntan a la categoría establecida como disciplina. Los efectos que apuntan a la categoría a la que pertenece la acción no se aplican a una acción con disciplina establecida.",
+                "Mientras la categoría establecida como disciplina no esté desbloqueada, la acción tampoco se desbloquea, aunque la categoría a la que pertenece esté desbloqueada.",
+                "Si en la propia acción no hay ningún color establecido, los colores del icono y del fondo heredan el color de la categoría establecida como disciplina, no el de la categoría a la que pertenece."
               ],
-              "reference": "es/editor/action?id=Atributo"
+              "reference": "es/editor/action?id=Disciplina"
             }
           },
           "group": {
@@ -2620,18 +2649,36 @@
             "minimum": 1,
             "title": "Nivel",
             "options": {
-              "infoText": "El nivel de dificultad de la acción"
+              "infoText": "El nivel de dificultad de la acción respecto a la categoría a la que pertenece"
             },
             "yutori": {
               "points": [
-                "La dificultad de la acción se expresa mediante un nivel.",
-                "Al ejecutarla se compara con el nivel del jugador y se calcula cada propiedad.",
-                "El término de comparación es el nivel de la categoría establecida en el atributo.",
+                "La dificultad de la acción se expresa mediante un nivel de la categoría a la que pertenece.",
+                "En una acción sin disciplina, al ejecutarla este valor se compara con el nivel de la categoría a la que pertenece para calcular cada propiedad.",
+                "En una acción con disciplina establecida, el cálculo de las propiedades usa el nivel de disciplina (`disciplineLevel`), y este valor solo se usa para calcular la experiencia que va a la categoría de la acción y para el requisito de nivel al ejecutarla.",
                 "Por ejemplo, si ejecutas una acción más alta que tu propio nivel, hay efectos como que baja la tasa de éxito.",
                 "Mientras se cumplan las condiciones, se puede ejecutar aunque el nivel del jugador sea menor que este valor.",
                 "Sin embargo, si `actionLevelLimit` de general (el límite de nivel de las acciones) está activado, este valor se añade automáticamente como condición sobre el nivel de la categoría, así que no se puede ejecutar hasta que el nivel llegue. En las categorías que no tienen nivel no se añade."
               ],
               "reference": "es/editor/action?id=Nivel"
+            }
+          },
+          "disciplineLevel": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "title": "Nivel de disciplina",
+            "options": {
+              "infoText": "El nivel de dificultad de la acción respecto a la categoría de la disciplina"
+            },
+            "yutori": {
+              "points": [
+                "El nivel requerido de la categoría de la disciplina en una acción con disciplina (`discipline`) establecida. Si se establece una disciplina, es obligatorio un valor de `1` o más.",
+                "No se usa en una acción sin disciplina. Déjalo en `0`.",
+                "Al ejecutar, este valor se compara con el nivel de la categoría de la disciplina para calcular cada propiedad y la experiencia que va a la categoría de la disciplina.",
+                "Si `actionLevelLimit` (el límite de nivel de las acciones) de la configuración general está activado, se añade automáticamente como requisito junto con el nivel de la categoría a la que pertenece la acción (`level`)."
+              ],
+              "reference": "es/editor/action?id=Nivel de disciplina"
             }
           },
           "experience": {
@@ -2646,7 +2693,8 @@
               "points": [
                 "Es la experiencia estándar que se obtiene al ejecutar la acción una vez y tener éxito. 100 es la experiencia de un nivel.",
                 "En el caso del combate se obtiene al vencer al oponente, así que conviene establecerla generosa.",
-                "Varía en la ejecución real por el cálculo de las propiedades."
+                "Varía en la ejecución real por el cálculo de las propiedades.",
+                "En una acción con disciplina establecida, la experiencia se calcula a partir de este valor con la diferencia de nivel de la categoría a la que pertenece y de la categoría de la disciplina por separado, y se reparte según la tasa de retorno de experiencia (`experienceReturnRate`) de la configuración general."
               ],
               "reference": "es/editor/action?id=Experiencia [100 para el siguiente nivel]"
             }
@@ -4167,6 +4215,7 @@
           "Es un efecto especial que se sortea en cada turno y se activa en una acción de combate (`stamina`). No se activa en las acciones de ningún otro tipo.",
           "Su sustancia se define aquí, y se consulta por ID desde `skill` de un artículo (tu lado) y `skills` de una acción (el lado del oponente).",
           "Los candidatos de tu lado son las habilidades a las que remiten los artículos que están surtiendo efecto en ese momento (`unnecessary` mientras se posee, `necessary` y `consumable` mientras están equipados). Al desequipar un artículo, su habilidad también sale de los candidatos.",
+          "Sin embargo, la habilidad de un artículo que tiene una categoría objetivo para sus efectos (`category` de `properties`) solo entra en los candidatos cuando esa categoría coincide con la disciplina (`discipline`) de la acción en combate. En una acción con disciplina establecida, no entra en los candidatos aunque coincida con la categoría a la que pertenece la acción. `*` coincide con todas las categorías. La habilidad de un artículo sin efectos entra en los candidatos en cualquier combate.",
           "Cada turno se barajan los candidatos de tu lado y del lado del oponente, se juzga la probabilidad de activación desde el principio y solo se activa la primera que sale adelante. Si no sale adelante ninguna, ese turno no hay habilidad.",
           "Cuando varios artículos o acciones remiten a la misma habilidad, esta gana otras tantas oportunidades en el sorteo, así que se activa con más facilidad."
         ],

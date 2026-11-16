@@ -119,7 +119,7 @@ Penerusan pengaturan warna elemen induk
 - Susunan pewarisannya sebagai berikut.
 - Pada elemen yang warnanya diatur sendiri, warna itulah yang diutamakan. Warna itu tidak tertimpa meski kategorinya punya warna.
 - Cara dasarnya adalah menentukan warna per kategori dan menyerahkan yang di bawahnya pada pewarisan. Warna sendiri diatur saat kamu ingin menonjolkan elemen tertentu.
-- Bila pada aksi diatur atribut (attribute), warna yang diwarisi bukan warna kategori tempatnya berada, melainkan warna kategori yang ditunjuk pada atribut itu.
+- Bila pada aksi diatur disiplin (discipline), warna yang diwarisi bukan warna kategori tempatnya berada, melainkan warna kategori yang ditunjuk sebagai disiplin.
 - Kategori sendiri tidak punya sumber pewarisan. Bila warna kategori dibiarkan hitam (`#000000`), kategori itu dan elemen di bawahnya yang warnanya belum diatur ditampilkan dengan warna tengah antara warna batang dan warna teks pada desain.
 - Grup, skill, dan preset tidak mewarisi dan hanya memakai warna yang diatur pada dirinya sendiri.
 ```

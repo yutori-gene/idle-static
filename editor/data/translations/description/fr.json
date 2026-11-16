@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] introuvable dans {path}:{id}.",
-      "group_not_found": "Groupe [{group}] introuvable dans {path}. Il doit être vide ou correspondre à un ID de groupe défini."
+      "group_not_found": "Groupe [{group}] introuvable dans {path}. Il doit être vide ou correspondre à un ID de groupe défini.",
+      "category_not_found": "Catégorie [{categoryId}] introuvable dans {path}.",
+      "property_category_not_found": "Catégorie cible de l'effet [{categoryId}] introuvable dans {path}.",
+      "task_group_not_found": "Groupe [{groupId}] introuvable dans {path}. Il doit être vide ou correspondre à un ID de groupe défini.",
+      "discipline_level_required": "Une action dotée d'une discipline doit avoir un niveau de discipline (disciplineLevel) d'au moins 1 : {path}",
+      "discipline_same_as_category": "La discipline est la même catégorie que celle de l'action. Cela revient à ne pas avoir de discipline ; laissez-la vide : {path}",
+      "discipline_not_numeric": "La catégorie de discipline [{categoryId}] a les valeurs numériques désactivées. La condition de niveau de discipline et la répartition de l'expérience ne sont pas utilisées : {path}"
     }
   }
 }

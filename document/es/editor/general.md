@@ -56,6 +56,7 @@ ___
 Los ajustes de capacidad del inventario
 - Gestiona el tope de la cantidad de clases de artículos que un jugador puede tener.
 - Se gestiona por la cantidad de clases de artículos que tienes, no por la cantidad que posees de cada artículo.
+- Los objetos cuyo valor de venta y de compra son ambos `0` y cuyo máximo es `1` (pertenencias que no se pueden vender, comprar ni tener más de una) no cuentan en el número de tipos.
 - Si pones `initialCount` a 0, la capacidad pasa a ser ilimitada y tampoco se puede comprar capacidad.
 - Cuando te refieras al artículo de la capacidad en los requisitos o las recompensas, usa el ID configurado aquí o `capacity`.
 - [_item_](es/editor/item)
@@ -170,11 +171,22 @@ La tasa de incremento de la dificultad de subir de nivel
 - [_category_](es/editor/category)
 ___
 
+## Tasa de retorno de la experiencia [0-1]
+La parte de la experiencia de una acción con disciplina que va a la categoría a la que pertenece
+- La proporción en que se reparte la experiencia entre la categoría de la acción y la categoría de la disciplina cuando tiene éxito una acción con disciplina (discipline) establecida. El valor por defecto es `0.5`.
+- La categoría a la que pertenece la acción recibe esta proporción, y la categoría de la disciplina el resto (`1` menos este valor). Con `0` solo la recibe la categoría de la disciplina; con `1`, solo la categoría de la acción.
+- Cada parte se calcula con la diferencia entre el nivel de esa categoría y el nivel de la acción (`level` para la categoría de la acción, `disciplineLevel` para la disciplina) y con las correcciones de experiencia de los artículos que apuntan a esa categoría, y después se reparte.
+- La parte de una categoría con numeric desactivado, cuyo nivel no sube, se descarta. No pasa a la otra categoría.
+- La experiencia de una acción sin disciplina va íntegramente a la categoría a la que pertenece, sea cual sea este valor.
+- [_action_](es/editor/action)
+- [_category_](es/editor/category)
+___
+
 ## Límite de nivel de las acciones
-Exigir el nivel de la categoría del atributo para ejecutar una acción
-- Si está activado, al principio de los requisitos (requirements) de cada acción se añade automáticamente el requisito «que el nivel de la categoría del atributo sea igual o superior al nivel de esa acción».
-- Si no hay ningún atributo (attribute) configurado, se usa la categoría a la que pertenece.
-- Si numeric está desactivado en la categoría del atributo, esta no sube de nivel, así que no se añade nada.
+Exigir los niveles de la categoría de la acción y de la categoría de la disciplina para ejecutar una acción
+- Si está activado, al principio de los requisitos (requirements) de cada acción se añade automáticamente el requisito «que el nivel de la categoría a la que pertenece sea igual o superior al nivel de esa acción (`level`)».
+- A una acción con disciplina (discipline) establecida se le añade además el requisito «que el nivel de la categoría de la disciplina sea igual o superior al nivel de disciplina (`disciplineLevel`)».
+- Si numeric está desactivado en una categoría, esta no sube de nivel, así que no se añade el requisito de esa categoría.
 - El requisito añadido se escribe al cargar el mundo, así que en la pantalla del reproductor se muestra igual que un requisito normal.
 - [_action_](es/editor/action)
 - [_category_](es/editor/category)
@@ -188,7 +200,8 @@ Por cuánto se multiplican las propiedades por cada 10 de diferencia de nivel
 - El ataque y la experiencia aumentan según este multiplicador, y la defensa (el daño recibido) y la velocidad (el tiempo requerido) disminuyen según el mismo multiplicador.
 - La precisión, la evasión, la tasa de éxito y la recuperación son valores que se mantienen entre el `0` y el `100` %, así que el multiplicador se aplica a la proporción entre la parte que se cumple y la que no. El `0` % y el `100` % no cambian, y ningún valor intermedio supera el `100` %.
 - En la defensa, la evasión y la velocidad el multiplicador actúa a la mitad (una diferencia de nivel de `20` equivale a una diferencia de `10` en las demás propiedades). La defensa y la evasión se aplican por partida doble, a la probabilidad de recibir impactos y al daño recibido, y la velocidad se aplica a todas las demás propiedades como cantidad de ejecuciones, así que su efecto se debilita para mantener el equilibrio.
-- Una referencia es (la tasa de crecimiento de la experiencia) elevada a `6.7`. Por encima de eso, subir de nivel se acelera cuanto más alto es el nivel; por debajo, subir de nivel en la parte final lleva más tiempo.
+- En la experiencia, el multiplicador actúa `1.5` veces más fuerte (una diferencia de nivel de `10` equivale a una diferencia de `15` en las demás propiedades). Así, pasar a las acciones recién desbloqueadas da más experiencia que seguir repitiendo acciones de nivel bajo.
+- Una referencia es (la tasa de crecimiento de la experiencia) elevada a `5`. Por encima de eso, subir de nivel se acelera cuanto más alto es el nivel; por debajo, subir de nivel en la parte final lleva más tiempo.
 - Si lo pones a `1`, desaparece la influencia de la diferencia de nivel. Aumentar el valor hace más bruscas las ventajas y desventajas debidas a la diferencia de nivel.
 
 |Ratio de propiedades|Diferencia de nivel -20|Diferencia de nivel -10|Diferencia de nivel 0|Diferencia de nivel +10|Diferencia de nivel +20|

@@ -474,9 +474,17 @@
 			"name": "Aksi terbuka",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "Atribut",
-			"explanation": "Atribut khas aksi ini. Properti kategori berlaku pada atribut aksi ini, dan atribut ini juga mendapat pengalaman."
+		"discipline": {
+			"name": "Disiplin",
+			"explanation": "Kategori yang menjadi patokan kekuatan aksi ini. Selisih level dan efek item diterapkan dari kategori ini, dan pengalaman juga masuk ke kategori ini secara terpisah dari kategori tempat aksi bernaung."
+		},
+		"discipline-level": {
+			"name": "Level disiplin",
+			"explanation": "Level kategori disiplin yang dibutuhkan untuk menjalankan. Harus terpenuhi bersama level kategori tempat aksi bernaung."
+		},
+		"experience-distribution": {
+			"name": "Pembagian pengalaman",
+			"explanation": "Pengalaman aksi yang memiliki disiplin dihitung dari selisih level kategori tempatnya bernaung dan kategori disiplin masing-masing, lalu dibagi sehingga kategori tempatnya bernaung menerima bagian sebesar rasio pengembalian dan kategori disiplin menerima sisanya. Bagian kategori yang levelnya tidak naik hilang."
 		},
 		"progress": {
 			"name": "Kemajuan",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "Aksi adalah perbuatan yang bila dijalankan memberi pengalaman dan hadiah"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "Atribut adalah kategori yang menerima pengalaman. Kategori itu bisa berbeda dari kategori aksinya sendiri, dan level yang diperlukan untuk menjalankannya pun dinilai di sana"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "Disiplin adalah kategori yang menjadi patokan kekuatan. Bila berbeda dari kategori aksinya sendiri, menjalankannya membutuhkan level kedua kategori, dan pengalamannya dibagi ke keduanya. Efek item dinilai berdasarkan disiplin, dan aksi tidak bisa dijalankan sampai kategori disiplinnya dibuka"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

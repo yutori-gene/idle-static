@@ -2,7 +2,7 @@
 # Ação
 O comportamento que pode ser executado nesta categoria
 - Uma ação é um comportamento que, ao ser executado, dá experiência e recompensas
-- O atributo é a categoria que recebe a experiência. Ela pode ser diferente da categoria da própria ação, e o nível necessário para executar também é julgado por ela
+- A disciplina é a categoria que serve de referência para a força. Quando é diferente da categoria da ação, executar exige os níveis das duas, e a experiência é dividida entre ambas. Os efeitos dos itens são avaliados pela disciplina, e a ação não pode ser executada até que a categoria da disciplina seja desbloqueada
 - Mantendo a linha de execução pressionada, você alterna entre iniciar e parar
 - O que aparece em "Requisito" é consumido a cada execução. Quando há uma porcentagem, ela é a probabilidade de ser consumido
 - As ações que não cumprem os requisitos de desbloqueio são exibidas riscadas, e a explicação fica oculta

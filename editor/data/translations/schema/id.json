@@ -406,6 +406,7 @@
             "offlineMaxHours",
             "maxCategoryLevels",
             "levelCommonRatio",
+            "experienceReturnRate",
             "language",
             "translations",
             "coins",
@@ -467,13 +468,13 @@
               "propertyOrder": 103,
               "title": "Batas level aksi",
               "options": {
-                "infoText": "Menuntut level kategori atribut untuk menjalankan aksi"
+                "infoText": "Menuntut level kategori tempat aksi bernaung dan kategori disiplin untuk menjalankan aksi"
               },
               "yutori": {
                 "points": [
-                  "Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat \"level kategori atribut berada pada atau di atas level aksi tersebut\".",
-                  "Bila atribut (attribute) tidak diatur, kategori tempatnya bernaung yang dipakai.",
-                  "Bila numeric pada kategori atribut dinonaktifkan, kategori itu tidak naik level sehingga tidak ada yang ditambahkan.",
+                  "Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat \"level kategori tempatnya bernaung berada pada atau di atas level aksi tersebut (`level`)\".",
+                  "Pada aksi yang disiplinnya (discipline) diatur, ditambahkan pula syarat \"level kategori disiplin berada pada atau di atas level disiplin (`disciplineLevel`)\".",
+                  "Bila numeric pada suatu kategori dinonaktifkan, kategori itu tidak naik level sehingga syarat untuk kategori itu tidak ditambahkan.",
                   "Syarat yang ditambahkan dituliskan saat dunia dimuat, jadi pada layar player pun ia ditampilkan sama seperti syarat biasa."
                 ],
                 "reference": "id/editor/general?id=Batas level aksi"
@@ -495,7 +496,8 @@
                   "Serangan dan pengalaman bertambah sebesar pengali ini, sedangkan pertahanan (kerusakan yang diterima) dan kecepatan (waktu yang dibutuhkan) berkurang sebesar pengali yang sama.",
                   "Akurasi, menghindar, tingkat keberhasilan, dan jumlah pemulihan adalah nilai yang tetap berada di `0`–`100`%, jadi pengali dikenakan pada perbandingan antara sisi yang terjadi dan sisi yang tidak. `0`% dan `100`% tidak berubah, dan nilai di antaranya pun tidak pernah melewati `100`%.",
                   "Pada pertahanan, menghindar, dan kecepatan, pengali bekerja setengahnya (selisih level `20` setara dengan selisih level `10` pada properti lain). Pertahanan dan menghindar bekerja ganda, pada tingkat terkena serangan dan pada kerusakan yang diterima, sedangkan kecepatan bekerja pada semua properti lain sebagai jumlah penjalanan, jadi pengaruhnya dilemahkan agar seimbang.",
-                  "Patokannya adalah (laju pertumbuhan pengalaman) pangkat `6.7`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.",
+                  "Untuk pengalaman, pengalinya bekerja `1.5` kali lebih kuat (selisih level `10` dihitung seperti selisih `15` pada properti lain). Dengan begitu, beralih ke aksi yang baru terbuka memberi pengalaman lebih banyak daripada terus mengulang aksi berlevel rendah.",
+                  "Patokannya adalah (laju pertumbuhan pengalaman) pangkat `5`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.",
                   "Bila dijadikan `1`, pengaruh selisih level menghilang. Memperbesar nilainya membuat untung ruginya selisih level menjadi tajam."
                 ],
                 "reference": "id/editor/general?id=Rasio properti [Kali lipat]"
@@ -518,6 +520,27 @@
                   "Pengalaman yang diperoleh setelah mencapai batas atas (level maksimum kategori) akan dibuang."
                 ],
                 "reference": "id/editor/general?id=Laju pertumbuhan pengalaman [Kali lipat]"
+              }
+            },
+            "experienceReturnRate": {
+              "type": "number",
+              "default": 0.5,
+              "minimum": 0,
+              "maximum": 1,
+              "propertyOrder": 105.5,
+              "title": "Rasio pengembalian pengalaman [0-1]",
+              "options": {
+                "infoText": "Bagian pengalaman aksi yang memiliki disiplin yang masuk ke kategori tempatnya bernaung"
+              },
+              "yutori": {
+                "points": [
+                  "Rasio pembagian pengalaman ke kategori tempat aksi bernaung dan kategori disiplin saat aksi yang disiplinnya (discipline) diatur berhasil. Nilai bawaannya `0.5`.",
+                  "Kategori tempat aksi bernaung menerima rasio ini, dan kategori disiplin menerima sisanya (`1` dikurangi nilai ini). Dengan `0` hanya kategori disiplin yang menerima; dengan `1` hanya kategori tempat aksi bernaung.",
+                  "Tiap bagian dihitung dari selisih level kategori itu dengan level aksi (`level` untuk kategori tempat aksi bernaung, `disciplineLevel` untuk disiplin) dan dari koreksi pengalaman item yang menyasar kategori itu, lalu dibagi.",
+                  "Bagian kategori yang numeric-nya dinonaktifkan sehingga levelnya tidak naik dibuang. Bagian itu tidak dialihkan ke kategori lain.",
+                  "Pengalaman aksi tanpa disiplin seluruhnya masuk ke kategori tempatnya bernaung, berapa pun nilai ini."
+                ],
+                "reference": "id/editor/general?id=Rasio pengembalian pengalaman [0-1]"
               }
             },
             "language": {
@@ -997,6 +1020,7 @@
                 "points": [
                   "Mengelola batas atas jumlah jenis item yang bisa dimiliki pemain.",
                   "Yang dikelola bukan jumlah kepemilikan tiap item, melainkan jumlah jenis item yang dimiliki.",
+                  "Item yang nilai jual dan nilai belinya sama-sama `0` dan jumlah maksimumnya `1` (barang yang tidak bisa dijual, dibeli, atau dimiliki lebih dari satu) tidak dihitung dalam jumlah jenis.",
                   "Bila `initialCount` dijadikan 0, kapasitas menjadi tanpa batas, dan pembelian kapasitas pun tidak bisa dilakukan.",
                   "Bila kamu merujuk item kapasitas pada syarat atau hadiah, gunakanlah ID yang diatur di sini, atau `capacity`."
                 ],
@@ -2303,11 +2327,12 @@
         "required": [
           "information",
           "category",
-          "attribute",
+          "discipline",
           "group",
           "unlocked",
           "seconds",
           "level",
+          "disciplineLevel",
           "experience",
           "chance",
           "maximum",
@@ -2534,22 +2559,26 @@
               "reference": "id/editor/action?id=Kategori"
             }
           },
-          "attribute": {
+          "discipline": {
             "type": "string",
-            "maxLength": 20,
-            "title": "Atribut",
+            "default": "",
+            "pattern": "^[0-9a-zA-Z\\-]*$",
+            "title": "Disiplin",
             "options": {
-              "infoText": "Kategori atribut khas aksi"
+              "infoText": "Kategori yang menerima pengalaman dan menjadi patokan kekuatan"
             },
             "yutori": {
               "points": [
-                "Kamu bisa mengatur atribut (kategori) tersendiri.",
-                "Bila dikosongkan, kategori tempatnya bernaung akan diwarisi.",
-                "Misalnya, bila pada aksi yang bernaung di kategori bernama Istana Raja Iblis kamu mengatur atribut sihir secara tersendiri, level dan properti kategori sihirlah yang dihitung dan diterapkan pada waktu penyelesaian serta kerusakan aksi itu.",
-                "Pengalaman saat berhasil pun masuk ke kategori yang diatur pada atribut, bukan ke kategori tempatnya bernaung.",
-                "Bila pada aksi itu sendiri belum diatur warna, warna ikon dan latarnya mewarisi warna kategori yang diatur pada atribut, bukan warna kategori tempatnya bernaung."
+                "Untuk tiap aksi, kamu bisa mengatur kategori selain kategori tempatnya bernaung sebagai disiplin.",
+                "Bila dibiarkan kosong, kategori tempatnya bernaung menjadi disiplinnya.",
+                "Misalnya, bila pada aksi yang bernaung di kategori bernama Istana Raja Iblis kamu mengatur disiplin sihir, level dan properti kategori sihirlah yang dihitung dan diterapkan pada waktu penyelesaian serta kerusakan aksi itu.",
+                "Pada aksi yang disiplinnya diatur, masukkan level yang dibutuhkan dari kategori disiplin ke level disiplin (`disciplineLevel`).",
+                "Pengalaman saat berhasil dibagi ke kategori tempat aksi bernaung dan kategori yang diatur sebagai disiplin menurut rasio pengembalian pengalaman (`experienceReturnRate`) pada pengaturan umum.",
+                "Efek item (koreksi properti, skill, dan konsumsi barang habis pakai) juga hanya diterapkan bila sasarannya kategori yang diatur sebagai disiplin. Efek yang menyasar kategori tempat aksi itu bernaung tidak diterapkan pada aksi yang disiplinnya diatur.",
+                "Selama kategori yang diatur sebagai disiplin belum dibuka, aksinya juga tidak dibuka, meskipun kategori tempatnya bernaung sudah dibuka.",
+                "Bila pada aksi itu sendiri belum diatur warna, warna ikon dan latarnya mewarisi warna kategori yang diatur sebagai disiplin, bukan warna kategori tempatnya bernaung."
               ],
-              "reference": "id/editor/action?id=Atribut"
+              "reference": "id/editor/action?id=Disiplin"
             }
           },
           "group": {
@@ -2620,18 +2649,36 @@
             "minimum": 1,
             "title": "Level",
             "options": {
-              "infoText": "Level kesulitan aksi"
+              "infoText": "Level kesulitan aksi terhadap kategori tempatnya bernaung"
             },
             "yutori": {
               "points": [
-                "Kesulitan aksi dinyatakan dengan level.",
-                "Saat dijalankan, level itu dibandingkan dengan level pemain dan setiap properti dihitung.",
-                "Pembandingnya adalah level kategori yang diatur pada atribut.",
+                "Kesulitan aksi dinyatakan dengan level kategori tempatnya bernaung.",
+                "Pada aksi tanpa disiplin, saat dijalankan nilai ini dibandingkan dengan level kategori tempatnya bernaung untuk menghitung tiap properti.",
+                "Pada aksi yang disiplinnya diatur, perhitungan properti memakai level disiplin (`disciplineLevel`), dan nilai ini hanya dipakai untuk menghitung pengalaman yang masuk ke kategori tempatnya bernaung dan untuk syarat level saat dijalankan.",
                 "Misalnya, bila kamu menjalankan aksi yang lebih tinggi daripada levelmu sendiri, ada pengaruhnya seperti tingkat keberhasilan yang menurun.",
                 "Selama syaratnya terpenuhi, aksi tetap bisa dijalankan meski level pemain lebih kecil daripada nilai ini.",
                 "Namun bila `actionLevelLimit` di bagian umum (batas level aksi) aktif, nilai ini otomatis ditambahkan sebagai syarat atas level kategori, sehingga aksi tidak bisa dijalankan sampai levelnya sampai. Pada kategori yang tidak punya level, nilai itu tidak ditambahkan."
               ],
               "reference": "id/editor/action?id=Level"
+            }
+          },
+          "disciplineLevel": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "title": "Level disiplin",
+            "options": {
+              "infoText": "Level kesulitan aksi terhadap kategori disiplin"
+            },
+            "yutori": {
+              "points": [
+                "Level yang dibutuhkan dari kategori disiplin pada aksi yang disiplinnya (`discipline`) diatur. Bila disiplin diatur, nilai `1` atau lebih wajib diisi.",
+                "Tidak dipakai pada aksi tanpa disiplin. Biarkan tetap `0`.",
+                "Saat dijalankan, nilai ini dibandingkan dengan level kategori disiplin untuk menghitung tiap properti dan pengalaman yang masuk ke kategori disiplin.",
+                "Bila `actionLevelLimit` (batas level aksi) pada pengaturan umum diaktifkan, nilai ini otomatis ditambahkan sebagai syarat bersama level kategori tempat aksi bernaung (`level`)."
+              ],
+              "reference": "id/editor/action?id=Level disiplin"
             }
           },
           "experience": {
@@ -2646,7 +2693,8 @@
               "points": [
                 "Pengalaman baku yang diperoleh saat aksi dijalankan satu kali dan berhasil. 100 setara dengan pengalaman satu level.",
                 "Dalam pertempuran, pengalaman diperoleh saat mengalahkan lawan, jadi sebaiknya diatur agak banyak.",
-                "Pada pelaksanaan sebenarnya, nilainya berubah karena kalkulasi properti."
+                "Pada pelaksanaan sebenarnya, nilainya berubah karena kalkulasi properti.",
+                "Pada aksi yang disiplinnya diatur, pengalaman dihitung dari nilai ini dengan selisih level kategori tempatnya bernaung dan kategori disiplin masing-masing, lalu dibagi menurut rasio pengembalian pengalaman (`experienceReturnRate`) pada pengaturan umum."
               ],
               "reference": "id/editor/action?id=Pengalaman [100 untuk level berikutnya]"
             }
@@ -4167,6 +4215,7 @@
           "Efek khusus yang pada aksi pertempuran (`stamina`) diundi tiap giliran lalu aktif. Pada aksi tipe lain skill tidak aktif.",
           "Wujudnya didefinisikan di sini, lalu dirujuk lewat ID dari `skill` item (pihakmu) dan `skills` aksi (pihak lawan).",
           "Kandidat pihakmu adalah skill yang dirujuk oleh item yang sedang memberi efek saat itu (`unnecessary` selama dimiliki, `necessary` dan `consumable` selama dipasang). Bila peralatan dilepas, skillnya pun keluar dari kandidat.",
+          "Namun, skill dari item yang efeknya memiliki kategori sasaran (`category` pada `properties`) hanya masuk ke kandidat bila kategori itu cocok dengan disiplin (`discipline`) aksi dalam pertarungan. Pada aksi yang disiplinnya diatur, skill itu tidak masuk ke kandidat meskipun cocok dengan kategori tempat aksi itu bernaung. `*` cocok dengan semua kategori. Skill dari item tanpa efek masuk ke kandidat dalam pertarungan apa pun.",
           "Tiap giliran, kandidat pihakmu dan pihak lawan masing-masing diacak, peluang aktifnya dinilai dari yang teratas, dan hanya satu yang pertama berhasil yang aktif. Bila tidak ada yang berhasil, giliran itu tanpa skill.",
           "Bila skill yang sama dirujuk dari beberapa item atau aksi, kesempatan undiannya bertambah sebanyak itu sehingga skill lebih mudah aktif."
         ],

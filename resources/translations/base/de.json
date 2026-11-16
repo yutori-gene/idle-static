@@ -474,9 +474,17 @@
 			"name": "Aktion freigeschaltet",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "Attribut",
-			"explanation": "Das eigene Attribut dieser Aktion. Die Eigenschaften der Kategorie wirken auf das Attribut dieser Aktion, und dem Attribut wird ebenfalls Erfahrung gutgeschrieben."
+		"discipline": {
+			"name": "Disziplin",
+			"explanation": "Die Kategorie, die als Maßstab für die Stärke dieser Aktion dient. Der Levelunterschied und die Wirkungen von Gegenständen werden von dieser Kategorie angewendet, und die Erfahrung fließt getrennt von der Kategorie der Aktion auch in diese Kategorie."
+		},
+		"discipline-level": {
+			"name": "Level der Disziplin",
+			"explanation": "Das zum Ausführen nötige Level der Kategorie der Disziplin. Es muss zusammen mit dem Level der Kategorie, zu der die Aktion gehört, erfüllt sein."
+		},
+		"experience-distribution": {
+			"name": "Verteilung der Erfahrung",
+			"explanation": "Die Erfahrung einer Aktion mit Disziplin wird jeweils aus dem Levelunterschied der Kategorie, zu der sie gehört, und der Kategorie der Disziplin berechnet und so aufgeteilt, dass die eigene Kategorie den Anteil der Rückgaberate und die Kategorie der Disziplin den Rest erhält. Der Anteil einer Kategorie, deren Level nicht steigt, verfällt."
 		},
 		"progress": {
 			"name": "Fortschritt",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "Eine Aktion ist eine Handlung, die beim Ausführen Erfahrung und Belohnungen einbringt"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "Das Attribut ist die Kategorie, in die die Erfahrung fließt. Sie kann von der eigenen Kategorie der Aktion abweichen, und auch das zum Ausführen nötige Level wird dort geprüft"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "Die Disziplin ist die Kategorie, die als Maßstab für die Stärke dient. Weicht sie von der eigenen Kategorie ab, sind zum Ausführen die Level beider Kategorien nötig, und die Erfahrung wird auf beide aufgeteilt. Die Wirkungen von Gegenständen werden nach der Disziplin geprüft, und bis die Kategorie der Disziplin freigeschaltet ist, kann die Aktion nicht ausgeführt werden"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

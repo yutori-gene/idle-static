@@ -4,6 +4,7 @@ Efek khusus yang diundi tiap giliran pertempuran lalu aktif
 - Efek khusus yang pada aksi pertempuran (`stamina`) diundi tiap giliran lalu aktif. Pada aksi tipe lain skill tidak aktif.
 - Wujudnya didefinisikan di sini, lalu dirujuk lewat ID dari `skill` item (pihakmu) dan `skills` aksi (pihak lawan).
 - Kandidat pihakmu adalah skill yang dirujuk oleh item yang sedang memberi efek saat itu (`unnecessary` selama dimiliki, `necessary` dan `consumable` selama dipasang). Bila peralatan dilepas, skillnya pun keluar dari kandidat.
+- Namun, skill dari item yang efeknya memiliki kategori sasaran (`category` pada `properties`) hanya masuk ke kandidat bila kategori itu cocok dengan disiplin (`discipline`) aksi dalam pertarungan. Pada aksi yang disiplinnya diatur, skill itu tidak masuk ke kandidat meskipun cocok dengan kategori tempat aksi itu bernaung. `*` cocok dengan semua kategori. Skill dari item tanpa efek masuk ke kandidat dalam pertarungan apa pun.
 - Tiap giliran, kandidat pihakmu dan pihak lawan masing-masing diacak, peluang aktifnya dinilai dari yang teratas, dan hanya satu yang pertama berhasil yang aktif. Bila tidak ada yang berhasil, giliran itu tanpa skill.
 - Bila skill yang sama dirujuk dari beberapa item atau aksi, kesempatan undiannya bertambah sebanyak itu sehingga skill lebih mudah aktif.
 - [_item_](id/editor/item)

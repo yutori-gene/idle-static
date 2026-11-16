@@ -15,13 +15,16 @@ The ID of the category the action belongs to
 - Specify the ID of the category this action belongs to.
 ___
 
-## Attribute
-The attribute category specific to the action
-- You can set an individual attribute (category).
-- When it is blank, the category it belongs to is taken over.
-- For example, if you set the individual attribute of magic on an action that belongs to a category called Demon Castle, the level and the properties of the magic category are calculated and applied to the completion time and the damage of the action.
-- The experience on success also goes to the category set in the attribute, not to the category it belongs to.
-- When no colour is set on the action itself, the colours of the icon and the background take over the colour of the category set in the attribute, not of the category it belongs to.
+## Discipline
+The category that receives the experience and serves as the basis of strength
+- For each action, you can set a category other than the one it belongs to as its discipline.
+- When left blank, the category it belongs to becomes the discipline.
+- For example, if you set the discipline of magic on an action that belongs to a category called Demon Castle, the level and the properties of the magic category are calculated and applied to the completion time and the damage of the action.
+- For an action with a discipline set, enter the level required of the discipline's category in the discipline level (`disciplineLevel`).
+- The experience on success is split between both the category it belongs to and the category set as the discipline according to the experience return rate (`experienceReturnRate`) in general.
+- The effects of items (property corrections, skills and the consumption of consumables) are also applied only when they target the category set as the discipline. Effects that target the category it belongs to are not applied to an action with a discipline set.
+- While the category set as the discipline is not released, the action is not released either, even if the category it belongs to is released.
+- When no colour is set on the action itself, the colours of the icon and the background take over the colour of the category set as the discipline, not of the category it belongs to.
 - [_category_](en/editor/category)
 ___
 
@@ -41,14 +44,24 @@ The initial display and unlock state of the element (it moves up to a higher sta
 ___
 
 ## Level
-The difficulty level of the action
-- The difficulty of the action is expressed as a level.
-- On execution it is compared with the level of the player and each property is calculated.
-- The counterpart of the comparison is the level of the category set in the attribute.
+The difficulty level of the action against the category it belongs to
+- The difficulty of the action is expressed as a level of the category it belongs to.
+- For an action without a discipline, this value is compared with the level of the category it belongs to on execution to calculate each property.
+- For an action with a discipline set, the discipline level (`disciplineLevel`) is used to calculate the properties, and this value is used only to calculate the experience that goes to the category it belongs to and for the level requirement for execution.
 - For example, when you perform an action higher than your own level, there are effects such as the success rate going down.
 - As long as the conditions are met, it can be performed even when the level of the player is smaller than this value.
 - However, when `actionLevelLimit` in general (the level limit of actions) is enabled, this value is added automatically as a condition on the level of the category, so it cannot be performed until the level reaches it. It is not added for a category that has no level.
 - [_property_](en/editor/property)
+___
+
+## Discipline Level
+The difficulty level of the action against the discipline's category
+- The level required of the discipline's category for an action with a discipline (`discipline`) set. Once a discipline is set, a value of `1` or more is required.
+- It is not used for an action without a discipline. Leave it at `0`.
+- On execution, this value is compared with the level of the discipline's category to calculate each property and the experience that goes to the discipline's category.
+- When `actionLevelLimit` (the action level limit) in general is enabled, it is added automatically as a requirement together with the level of the category it belongs to (`level`).
+- [_property_](en/editor/property)
+- [_category_](en/editor/category)
 ___
 
 ## [_Requirement_](en/editor/requirement)
@@ -67,6 +80,7 @@ The experience gained when the action succeeds
 - It is the standard experience gained when the action is performed once and succeeds. 100 is the experience for one level.
 - In the case of combat it is gained when you beat the opponent, so it is a good idea to set it generously.
 - It varies at the actual execution through the calculation of the properties.
+- For an action with a discipline set, the experience is calculated from this value with the level gap of the category it belongs to and of the discipline's category respectively, and split according to the experience return rate (`experienceReturnRate`) in general.
 - [_property_](en/editor/property)
 ___
 

@@ -429,7 +429,7 @@ export const information: Type.Information = {
 				"heritage-from-parent": {
 					title: "Vererbung vom übergeordneten Element",
 					summary: "Die Übernahme der Farbeinstellung des übergeordneten Elements",
-					points: ["Aktionen, Gegenstände und Ereignisse ohne eingestellte Farbe übernehmen die Farbe der Kategorie, zu der sie gehören.", "Die Hierarchie der Vererbung sieht so aus.", "Bei einem Element mit einzeln eingestellter Farbe hat diese Farbe Vorrang. Sie wird nicht überschrieben, auch wenn die Kategorie eine Farbe hat.", "Grundsätzlich legt man je Kategorie eine Farbe fest und überlässt das Darunterliegende der Vererbung. Eine eigene Farbe stellt man ein, wenn ein bestimmtes Element hervorstechen soll.", "Ist an der Aktion ein Attribut (attribute) eingestellt, wird nicht die Farbe der Kategorie übernommen, zu der sie gehört, sondern die der im Attribut angegebenen Kategorie.", "Die Kategorie selbst hat niemanden, von dem sie erben könnte. Bleibt die Farbe der Kategorie Schwarz (`#000000`), werden diese Kategorie und die darunterliegenden Elemente ohne eingestellte Farbe in der Mischfarbe zwischen der Balkenfarbe und der Textfarbe des Designs angezeigt.", "Gruppen, Fähigkeiten und Voreinstellungen erben nicht und verwenden nur die an ihnen selbst eingestellte Farbe."],
+					points: ["Aktionen, Gegenstände und Ereignisse ohne eingestellte Farbe übernehmen die Farbe der Kategorie, zu der sie gehören.", "Die Hierarchie der Vererbung sieht so aus.", "Bei einem Element mit einzeln eingestellter Farbe hat diese Farbe Vorrang. Sie wird nicht überschrieben, auch wenn die Kategorie eine Farbe hat.", "Grundsätzlich legt man je Kategorie eine Farbe fest und überlässt das Darunterliegende der Vererbung. Eine eigene Farbe stellt man ein, wenn ein bestimmtes Element hervorstechen soll.", "Ist an der Aktion eine Disziplin (discipline) eingestellt, wird nicht die Farbe der Kategorie übernommen, zu der sie gehört, sondern die der als Disziplin angegebenen Kategorie.", "Die Kategorie selbst hat niemanden, von dem sie erben könnte. Bleibt die Farbe der Kategorie Schwarz (`#000000`), werden diese Kategorie und die darunterliegenden Elemente ohne eingestellte Farbe in der Mischfarbe zwischen der Balkenfarbe und der Textfarbe des Designs angezeigt.", "Gruppen, Fähigkeiten und Voreinstellungen erben nicht und verwenden nur die an ihnen selbst eingestellte Farbe."],
 					quote: colorTree,
 					links: { type: "type" },
 				},
@@ -583,7 +583,7 @@ export const group: Type.Information = {
 export const skill: Type.Skill = {
 	title: "Fähigkeit",
 	summary: "Ein besonderer Effekt, der in jeder Runde des Kampfes ausgelost wird und auslöst",
-	points: ["Es ist ein besonderer Effekt, der in einer Kampfaktion (`stamina`) in jeder Runde ausgelost wird und auslöst. Bei Aktionen anderer Typen löst er nicht aus.", "Definiert wird sie selbst hier, und über die ID wird aus `skill` eines Gegenstands (deine Seite) und `skills` einer Aktion (die Seite des Gegners) auf sie verwiesen.", "Die Kandidaten deiner Seite sind die Fähigkeiten, auf die die Gegenstände verweisen, die gerade wirken (`unnecessary` im Besitz, `necessary` und `consumable` ausgerüstet). Legst du die Ausrüstung ab, fällt auch deren Fähigkeit aus den Kandidaten.", "In jeder Runde werden die Kandidaten für deine Seite und für die Seite des Gegners gemischt, die Auslösewahrscheinlichkeit wird von vorn geprüft, und nur die erste, bei der es klappt, löst aus. Klappt es bei keiner, gibt es in dieser Runde keine Fähigkeit.", "Verweisen mehrere Gegenstände oder Aktionen auf dieselbe Fähigkeit, bekommt sie entsprechend mehr Gelegenheiten bei der Auslosung und löst deshalb leichter aus."],
+	points: ["Es ist ein besonderer Effekt, der in einer Kampfaktion (`stamina`) in jeder Runde ausgelost wird und auslöst. Bei Aktionen anderer Typen löst er nicht aus.", "Definiert wird sie selbst hier, und über die ID wird aus `skill` eines Gegenstands (deine Seite) und `skills` einer Aktion (die Seite des Gegners) auf sie verwiesen.", "Die Kandidaten deiner Seite sind die Fähigkeiten, auf die die Gegenstände verweisen, die gerade wirken (`unnecessary` im Besitz, `necessary` und `consumable` ausgerüstet). Legst du die Ausrüstung ab, fällt auch deren Fähigkeit aus den Kandidaten.", "Die Fähigkeit eines Gegenstands, dessen Wirkungen eine Zielkategorie haben (`category` in `properties`), kommt allerdings nur dann unter die Kandidaten, wenn diese Kategorie mit der Disziplin (`discipline`) der Aktion im Kampf übereinstimmt. Bei einer Aktion mit eingestellter Disziplin kommt sie nicht unter die Kandidaten, auch wenn sie mit der Kategorie übereinstimmt, zu der die Aktion gehört. `*` stimmt mit allen Kategorien überein. Die Fähigkeit eines Gegenstands ohne Wirkung kommt in jedem Kampf unter die Kandidaten.", "In jeder Runde werden die Kandidaten für deine Seite und für die Seite des Gegners gemischt, die Auslösewahrscheinlichkeit wird von vorn geprüft, und nur die erste, bei der es klappt, löst aus. Klappt es bei keiner, gibt es in dieser Runde keine Fähigkeit.", "Verweisen mehrere Gegenstände oder Aktionen auf dieselbe Fähigkeit, bekommt sie entsprechend mehr Gelegenheiten bei der Auslosung und löst deshalb leichter aus."],
 	links: { item: "item", action: "action" },
 	children: {
 		information: information,
@@ -696,10 +696,10 @@ export const action: Type.Action = {
 			summary: "Die ID der Kategorie, zu der die Aktion gehört",
 			points: ["Gib die ID der Kategorie an, zu der diese Aktion gehört."],
 		},
-		attribute: {
-			title: "Attribut",
-			summary: "Die aktionseigene Attributkategorie",
-			points: ["Du kannst ein einzelnes Attribut (eine Kategorie) einstellen.", "Ist das Feld leer, wird die Kategorie übernommen, zu der sie gehört.", "Stellst du zum Beispiel bei einer Aktion, die zu einer Kategorie namens Dämonenschloss gehört, einzeln das Attribut Magie ein, werden für die Abschlusszeit und den Schaden der Aktion das Level und die Eigenschaften der Kategorie Magie berechnet und angewendet.", "Auch die Erfahrung bei Erfolg fließt in die im Attribut eingestellte Kategorie und nicht in die Kategorie, zu der sie gehört.", "Ist an der Aktion selbst keine Farbe eingestellt, übernehmen die Farben von Symbol und Hintergrund die Farbe der im Attribut eingestellten Kategorie und nicht die der Kategorie, zu der sie gehört."],
+		discipline: {
+			title: "Disziplin",
+			summary: "Die Kategorie, in die die Erfahrung fließt und die als Maßstab für die Stärke dient",
+			points: ["Für jede Aktion kannst du eine andere Kategorie als die, zu der sie gehört, als Disziplin einstellen.", "Bleibt das Feld leer, wird die Kategorie, zu der sie gehört, zur Disziplin.", "Stellst du zum Beispiel bei einer Aktion, die zu einer Kategorie namens Dämonenschloss gehört, die Disziplin Magie ein, werden für die Abschlusszeit und den Schaden der Aktion das Level und die Eigenschaften der Kategorie Magie berechnet und angewendet.", "Bei einer Aktion mit eingestellter Disziplin trägst du das für die Kategorie der Disziplin nötige Level im Level der Disziplin (`disciplineLevel`) ein.", "Die Erfahrung bei Erfolg wird nach der Rückgaberate der Erfahrung (`experienceReturnRate`) aus den allgemeinen Einstellungen auf die Kategorie, zu der die Aktion gehört, und die als Disziplin eingestellte Kategorie aufgeteilt.", "Auch die Wirkungen von Gegenständen (Korrekturen der Eigenschaften, Fähigkeiten und der Verbrauch von Verbrauchsgegenständen) werden nur angewendet, wenn sie auf die als Disziplin eingestellte Kategorie zielen. Wirkungen, die auf die Kategorie zielen, zu der die Aktion gehört, werden bei einer Aktion mit eingestellter Disziplin nicht angewendet.", "Solange die als Disziplin eingestellte Kategorie nicht freigeschaltet ist, wird auch die Aktion nicht freigeschaltet, selbst wenn die Kategorie, zu der sie gehört, freigeschaltet ist.", "Ist an der Aktion selbst keine Farbe eingestellt, übernehmen die Farben von Symbol und Hintergrund die Farbe der als Disziplin eingestellten Kategorie und nicht die der Kategorie, zu der sie gehört."],
 			links: { category: "category" },
 		},
 		group: {
@@ -715,9 +715,15 @@ export const action: Type.Action = {
 		},
 		level: {
 			title: "Level",
-			summary: "Das Schwierigkeitslevel der Aktion",
-			points: ["Die Schwierigkeit der Aktion wird durch ein Level ausgedrückt.", "Bei der Ausführung wird es mit dem Level des Spielers verglichen und jede Eigenschaft berechnet.", "Der Vergleichspartner ist das Level der im Attribut eingestellten Kategorie.", "Führst du zum Beispiel eine Aktion aus, die höher liegt als dein eigenes Level, hat das Folgen wie eine sinkende Erfolgsrate.", "Solange die Bedingungen erfüllt sind, lässt sie sich auch ausführen, wenn das Level des Spielers kleiner ist als dieser Wert.", "Ist allerdings `actionLevelLimit` in den allgemeinen Einstellungen (die Levelgrenze der Aktionen) aktiviert, wird dieser Wert automatisch als Bedingung an das Level der Kategorie angehängt, sodass sie sich erst ausführen lässt, wenn das Level reicht. Bei Kategorien ohne Level wird er nicht angehängt."],
+			summary: "Das Schwierigkeitslevel der Aktion gegenüber der Kategorie, zu der sie gehört",
+			points: ["Die Schwierigkeit der Aktion wird durch ein Level der Kategorie ausgedrückt, zu der sie gehört.", "Bei einer Aktion ohne Disziplin wird dieser Wert beim Ausführen mit dem Level der Kategorie verglichen, zu der sie gehört, um jede Eigenschaft zu berechnen.", "Bei einer Aktion mit eingestellter Disziplin wird für die Berechnung der Eigenschaften das Level der Disziplin (`disciplineLevel`) verwendet; dieser Wert dient nur zur Berechnung der Erfahrung für die eigene Kategorie und für die Levelbedingung beim Ausführen.", "Führst du zum Beispiel eine Aktion aus, die höher liegt als dein eigenes Level, hat das Folgen wie eine sinkende Erfolgsrate.", "Solange die Bedingungen erfüllt sind, lässt sie sich auch ausführen, wenn das Level des Spielers kleiner ist als dieser Wert.", "Ist allerdings `actionLevelLimit` in den allgemeinen Einstellungen (die Levelgrenze der Aktionen) aktiviert, wird dieser Wert automatisch als Bedingung an das Level der Kategorie angehängt, sodass sie sich erst ausführen lässt, wenn das Level reicht. Bei Kategorien ohne Level wird er nicht angehängt."],
 			links: { property: "property" },
+		},
+		disciplineLevel: {
+			title: "Level der Disziplin",
+			summary: "Das Schwierigkeitslevel der Aktion gegenüber der Kategorie der Disziplin",
+			points: ["Das für die Kategorie der Disziplin nötige Level bei einer Aktion mit eingestellter Disziplin (`discipline`). Ist eine Disziplin eingestellt, ist ein Wert von `1` oder mehr Pflicht.", "Bei einer Aktion ohne Disziplin wird er nicht verwendet. Lass ihn auf `0`.", "Beim Ausführen wird dieser Wert mit dem Level der Kategorie der Disziplin verglichen, um jede Eigenschaft und die Erfahrung für die Kategorie der Disziplin zu berechnen.", "Ist `actionLevelLimit` (die Levelgrenze für Aktionen) in den allgemeinen Einstellungen aktiviert, wird er zusammen mit dem Level der Kategorie, zu der die Aktion gehört (`level`), automatisch als Bedingung hinzugefügt."],
+			links: { property: "property", category: "category" },
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "Die Bedingungen, die zur Ausführung der Aktion nötig sind" },
 		seconds: {
@@ -729,7 +735,7 @@ export const action: Type.Action = {
 		experience: {
 			title: "Erfahrung [100 für das nächste Level]",
 			summary: "Die bei Erfolg der Aktion erhaltene Erfahrung",
-			points: ["Es ist die Standarderfahrung, die du erhältst, wenn die Aktion einmal ausgeführt wird und gelingt. 100 ist die Erfahrung für ein Level.", "Beim Kampf erhältst du sie, wenn du den Gegner besiegst, deshalb ist es gut, sie großzügig einzustellen.", "Bei der tatsächlichen Ausführung schwankt sie durch die Berechnung der Eigenschaften."],
+			points: ["Es ist die Standarderfahrung, die du erhältst, wenn die Aktion einmal ausgeführt wird und gelingt. 100 ist die Erfahrung für ein Level.", "Beim Kampf erhältst du sie, wenn du den Gegner besiegst, deshalb ist es gut, sie großzügig einzustellen.", "Bei der tatsächlichen Ausführung schwankt sie durch die Berechnung der Eigenschaften.", "Bei einer Aktion mit eingestellter Disziplin wird die Erfahrung aus diesem Wert jeweils mit dem Levelunterschied der Kategorie, zu der sie gehört, und der Kategorie der Disziplin berechnet und nach der Rückgaberate der Erfahrung (`experienceReturnRate`) aus den allgemeinen Einstellungen aufgeteilt."],
 			links: { property: "property" },
 		},
 		chance: {
@@ -988,6 +994,7 @@ export const general: Type.General = {
 			points: [
 				"Verwaltet die Obergrenze der Anzahl an Gegenstandsarten, die ein Spieler halten kann.",
 				"Verwaltet wird über die Anzahl der gehaltenen Gegenstandsarten, nicht über die Besitzanzahl je Gegenstand.",
+				"Gegenstände, deren Verkaufs- und Kaufwert beide `0` sind und deren Höchstzahl `1` ist (Besitztümer, die man weder verkaufen noch kaufen noch mehrfach haben kann), zählen nicht zur Anzahl der Arten.",
 				"Setzt du `initialCount` auf 0, wird die Kapazität unbegrenzt, und auch der Kauf von Kapazität entfällt.",
 				"Wenn du dich in Bedingungen oder Belohnungen auf den Gegenstand der Kapazität beziehst, verwende die hier eingestellte ID oder `capacity`.",
 			],
@@ -1087,13 +1094,25 @@ export const general: Type.General = {
 			],
 			links: { category: "category" },
 		},
+		experienceReturnRate: {
+			title: "Rückgaberate der Erfahrung [0-1]",
+			summary: "Der Anteil der Erfahrung einer Aktion mit Disziplin, der in die Kategorie fließt, zu der sie gehört",
+			points: [
+				"Der Anteil, mit dem die Erfahrung beim Erfolg einer Aktion mit eingestellter Disziplin (discipline) auf die eigene Kategorie und die Kategorie der Disziplin aufgeteilt wird. Der Standardwert ist `0.5`.",
+				"Die Kategorie, zu der die Aktion gehört, erhält diesen Anteil, die Kategorie der Disziplin den Rest (`1` minus diesen Wert). Bei `0` fließt sie nur in die Kategorie der Disziplin, bei `1` nur in die eigene Kategorie.",
+				"Jeder Anteil wird aus dem Unterschied zwischen dem Level dieser Kategorie und dem Level der Aktion (`level` für die eigene Kategorie, `disciplineLevel` für die Disziplin) und aus den Erfahrungskorrekturen der Gegenstände für diese Kategorie berechnet und dann aufgeteilt.",
+				"Der Anteil einer Kategorie, bei der numeric deaktiviert ist und deren Level nicht steigt, wird verworfen. Er geht nicht an die andere Kategorie.",
+				"Die Erfahrung einer Aktion ohne Disziplin fließt unabhängig von diesem Wert vollständig in die Kategorie, zu der sie gehört.",
+			],
+			links: { action: "action", category: "category" },
+		},
 		actionLevelLimit: {
 			title: "Levelbeschränkung der Aktionen",
-			summary: "Für das Ausführen einer Aktion das Level der Kategorie des Attributs verlangen",
+			summary: "Für das Ausführen einer Aktion die Level der eigenen Kategorie und der Kategorie der Disziplin verlangen",
 			points: [
-				"Ist es aktiviert, wird an den Anfang der Bedingungen (requirements) jeder Aktion automatisch die Bedingung „das Level der Kategorie des Attributs liegt auf oder über dem Level dieser Aktion“ gesetzt.",
-				"Ist kein Attribut (attribute) eingestellt, wird die Kategorie verwendet, zu der sie gehört.",
-				"Ist bei der Kategorie des Attributs numeric deaktiviert, steigt sie nicht im Level, deshalb wird nichts hinzugefügt.",
+				"Ist es aktiviert, wird an den Anfang der Bedingungen (requirements) jeder Aktion automatisch die Bedingung „das Level der Kategorie, zu der sie gehört, liegt auf oder über dem Level dieser Aktion (`level`)“ gesetzt.",
+				"Bei einer Aktion mit eingestellter Disziplin (discipline) wird zusätzlich die Bedingung „das Level der Kategorie der Disziplin liegt auf oder über dem Level der Disziplin (`disciplineLevel`)“ hinzugefügt.",
+				"Ist bei einer Kategorie numeric deaktiviert, steigt sie nicht im Level, deshalb wird die Bedingung für diese Kategorie nicht hinzugefügt.",
 				"Die hinzugefügte Bedingung wird beim Laden der Welt eingeschrieben, deshalb erscheint sie auf dem Bildschirm des Players wie eine gewöhnliche Bedingung.",
 			],
 			links: { action: "action", category: "category", requirement: "requirement" },
@@ -1107,7 +1126,8 @@ export const general: Type.General = {
 				"Angriff und Erfahrung steigen um diesen Faktor, Verteidigung (der erlittene Schaden) und Geschwindigkeit (die benötigte Zeit) sinken um denselben Faktor.",
 				"Genauigkeit, Ausweichen, Erfolgsrate und Erholung sind Werte, die sich zwischen `0` und `100` % halten, deshalb wirkt der Faktor auf das Verhältnis zwischen dem Teil, der eintritt, und dem, der nicht eintritt. `0` % und `100` % ändern sich nicht, und kein Zwischenwert übersteigt `100` %.",
 				"Bei Verteidigung, Ausweichen und Geschwindigkeit wirkt der Faktor zur Hälfte (ein Levelunterschied von `20` entspricht einem Levelunterschied von `10` bei den anderen Eigenschaften). Verteidigung und Ausweichen wirken doppelt, auf die Trefferquote und auf den erlittenen Schaden, und Geschwindigkeit wirkt als Anzahl der Ausführungen auf alle anderen Eigenschaften, deshalb ist ihre Wirkung zum Ausgleich abgeschwächt.",
-				"Ein Anhaltspunkt ist (die Steigerungsrate der Erfahrung) hoch `6.7`. Darüber beschleunigt sich der Levelaufstieg, je höher das Level steigt, darunter dauert der Levelaufstieg in der späteren Phase länger.",
+				"Bei der Erfahrung wirkt der Multiplikator `1.5`-mal so stark (ein Levelunterschied von `10` zählt wie ein Unterschied von `15` bei den anderen Eigenschaften). So bringt der Wechsel zu gerade freigeschalteten Aktionen mehr Erfahrung, als Aktionen mit niedrigem Level weiter zu wiederholen.",
+				"Ein Anhaltspunkt ist (die Steigerungsrate der Erfahrung) hoch `5`. Darüber beschleunigt sich der Levelaufstieg, je höher das Level steigt, darunter dauert der Levelaufstieg in der späteren Phase länger.",
 				"Bei `1` fällt der Einfluss des Levelunterschieds weg. Ein größerer Wert lässt Vor- und Nachteile durch den Levelunterschied schroffer ausfallen.",
 			],
 			list: [

@@ -2,7 +2,7 @@
 # Aksi
 Perbuatan yang bisa dijalankan pada kategori ini
 - Aksi adalah perbuatan yang bila dijalankan memberi pengalaman dan hadiah
-- Atribut adalah kategori yang menerima pengalaman. Kategori itu bisa berbeda dari kategori aksinya sendiri, dan level yang diperlukan untuk menjalankannya pun dinilai di sana
+- Disiplin adalah kategori yang menjadi patokan kekuatan. Bila berbeda dari kategori aksinya sendiri, menjalankannya membutuhkan level kedua kategori, dan pengalamannya dibagi ke keduanya. Efek item dinilai berdasarkan disiplin, dan aksi tidak bisa dijalankan sampai kategori disiplinnya dibuka
 - Menekan lama baris pelaksanaan akan mengganti antara memulai dan menghentikan
 - Yang berjajar di "Syarat" akan dikonsumsi setiap kali dijalankan. Bila ada persentasenya, itu adalah peluang dikonsumsi
 - Aksi yang belum memenuhi syarat pembukaan ditampilkan bergaris coret, dan penjelasannya disembunyikan

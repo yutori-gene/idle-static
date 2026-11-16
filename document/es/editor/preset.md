@@ -122,7 +122,7 @@ Cómo se hereda la configuración de color del elemento padre
 - La jerarquía de la herencia es la siguiente.
 - En los elementos con un color propio establecido, ese color tiene prioridad. No se sobrescribe aunque la categoría tenga color.
 - Lo básico es decidir un color por categoría y dejar que lo que hay debajo lo herede. El color individual se establece cuando quieres destacar un elemento concreto.
-- Si en la acción hay establecido un atributo (attribute), el color que se hereda no es el de la categoría a la que pertenece, sino el de la categoría indicada en el atributo.
+- Si en la acción hay establecida una disciplina (discipline), el color que se hereda no es el de la categoría a la que pertenece, sino el de la categoría indicada como disciplina.
 - La categoría en sí no tiene de quién heredar. Si el color de la categoría sigue siendo negro (`#000000`), esa categoría y los elementos que hay debajo sin color establecido se muestran en el color intermedio entre el color de la barra y el color del texto del diseño.
 - Los grupos, las habilidades y los preajustes no heredan y solo usan el color establecido en ellos mismos.
 ```

@@ -474,9 +474,17 @@
 			"name": "动作开放",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "特性",
-			"explanation": "该动作特有的特性。类别的属性会作用于该动作的特性，并且该特性也会获得经验值。"
+		"discipline": {
+			"name": "流派",
+			"explanation": "作为这个动作强度基准的类别。等级差和物品的效果按这个类别来应用，经验值也会与所属类别分开进入这个类别。"
+		},
+		"discipline-level": {
+			"name": "流派等级",
+			"explanation": "执行所需的流派类别的等级。必须与所属类别的等级同时满足。"
+		},
+		"experience-distribution": {
+			"name": "经验值分配",
+			"explanation": "设置了流派的动作的经验值，会分别按所属类别和流派类别的等级差来计算，所属类别获得返还率的部分，流派类别获得其余部分。等级不会提升的类别的份额会消失。"
 		},
 		"progress": {
 			"name": "进度",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "动作是执行后可获得经验值和奖励的行为"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "特性是经验值的归属类别。它可能与动作自身的类别不同，执行所需的等级也按该类别判定"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "流派是作为强度基准的类别。与自身类别不同时，执行需要自身类别和流派两边的等级，经验值也会分给两边。物品的效果按流派判定，在流派的类别开放之前无法执行"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

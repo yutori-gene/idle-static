@@ -429,7 +429,7 @@ export const information: Type.Information = {
 				"heritage-from-parent": {
 					title: "Pewarisan dari elemen induk",
 					summary: "Penerusan pengaturan warna elemen induk",
-					points: ["Aksi, item, dan acara yang warnanya belum diatur mewarisi warna kategori tempatnya berada.", "Susunan pewarisannya sebagai berikut.", "Pada elemen yang warnanya diatur sendiri, warna itulah yang diutamakan. Warna itu tidak tertimpa meski kategorinya punya warna.", "Cara dasarnya adalah menentukan warna per kategori dan menyerahkan yang di bawahnya pada pewarisan. Warna sendiri diatur saat kamu ingin menonjolkan elemen tertentu.", "Bila pada aksi diatur atribut (attribute), warna yang diwarisi bukan warna kategori tempatnya berada, melainkan warna kategori yang ditunjuk pada atribut itu.", "Kategori sendiri tidak punya sumber pewarisan. Bila warna kategori dibiarkan hitam (`#000000`), kategori itu dan elemen di bawahnya yang warnanya belum diatur ditampilkan dengan warna tengah antara warna batang dan warna teks pada desain.", "Grup, skill, dan preset tidak mewarisi dan hanya memakai warna yang diatur pada dirinya sendiri."],
+					points: ["Aksi, item, dan acara yang warnanya belum diatur mewarisi warna kategori tempatnya berada.", "Susunan pewarisannya sebagai berikut.", "Pada elemen yang warnanya diatur sendiri, warna itulah yang diutamakan. Warna itu tidak tertimpa meski kategorinya punya warna.", "Cara dasarnya adalah menentukan warna per kategori dan menyerahkan yang di bawahnya pada pewarisan. Warna sendiri diatur saat kamu ingin menonjolkan elemen tertentu.", "Bila pada aksi diatur disiplin (discipline), warna yang diwarisi bukan warna kategori tempatnya berada, melainkan warna kategori yang ditunjuk sebagai disiplin.", "Kategori sendiri tidak punya sumber pewarisan. Bila warna kategori dibiarkan hitam (`#000000`), kategori itu dan elemen di bawahnya yang warnanya belum diatur ditampilkan dengan warna tengah antara warna batang dan warna teks pada desain.", "Grup, skill, dan preset tidak mewarisi dan hanya memakai warna yang diatur pada dirinya sendiri."],
 					quote: colorTree,
 					links: { type: "type" },
 				},
@@ -583,7 +583,7 @@ export const group: Type.Information = {
 export const skill: Type.Skill = {
 	title: "Skill",
 	summary: "Efek khusus yang diundi tiap giliran pertempuran lalu aktif",
-	points: ["Efek khusus yang pada aksi pertempuran (`stamina`) diundi tiap giliran lalu aktif. Pada aksi tipe lain skill tidak aktif.", "Wujudnya didefinisikan di sini, lalu dirujuk lewat ID dari `skill` item (pihakmu) dan `skills` aksi (pihak lawan).", "Kandidat pihakmu adalah skill yang dirujuk oleh item yang sedang memberi efek saat itu (`unnecessary` selama dimiliki, `necessary` dan `consumable` selama dipasang). Bila peralatan dilepas, skillnya pun keluar dari kandidat.", "Tiap giliran, kandidat pihakmu dan pihak lawan masing-masing diacak, peluang aktifnya dinilai dari yang teratas, dan hanya satu yang pertama berhasil yang aktif. Bila tidak ada yang berhasil, giliran itu tanpa skill.", "Bila skill yang sama dirujuk dari beberapa item atau aksi, kesempatan undiannya bertambah sebanyak itu sehingga skill lebih mudah aktif."],
+	points: ["Efek khusus yang pada aksi pertempuran (`stamina`) diundi tiap giliran lalu aktif. Pada aksi tipe lain skill tidak aktif.", "Wujudnya didefinisikan di sini, lalu dirujuk lewat ID dari `skill` item (pihakmu) dan `skills` aksi (pihak lawan).", "Kandidat pihakmu adalah skill yang dirujuk oleh item yang sedang memberi efek saat itu (`unnecessary` selama dimiliki, `necessary` dan `consumable` selama dipasang). Bila peralatan dilepas, skillnya pun keluar dari kandidat.", "Namun, skill dari item yang efeknya memiliki kategori sasaran (`category` pada `properties`) hanya masuk ke kandidat bila kategori itu cocok dengan disiplin (`discipline`) aksi dalam pertarungan. Pada aksi yang disiplinnya diatur, skill itu tidak masuk ke kandidat meskipun cocok dengan kategori tempat aksi itu bernaung. `*` cocok dengan semua kategori. Skill dari item tanpa efek masuk ke kandidat dalam pertarungan apa pun.", "Tiap giliran, kandidat pihakmu dan pihak lawan masing-masing diacak, peluang aktifnya dinilai dari yang teratas, dan hanya satu yang pertama berhasil yang aktif. Bila tidak ada yang berhasil, giliran itu tanpa skill.", "Bila skill yang sama dirujuk dari beberapa item atau aksi, kesempatan undiannya bertambah sebanyak itu sehingga skill lebih mudah aktif."],
 	links: { item: "item", action: "action" },
 	children: {
 		information: information,
@@ -696,10 +696,10 @@ export const action: Type.Action = {
 			summary: "ID kategori tempat aksi bernaung",
 			points: ["Tentukan ID kategori tempat aksi ini bernaung."],
 		},
-		attribute: {
-			title: "Atribut",
-			summary: "Kategori atribut khas aksi",
-			points: ["Kamu bisa mengatur atribut (kategori) tersendiri.", "Bila dikosongkan, kategori tempatnya bernaung akan diwarisi.", "Misalnya, bila pada aksi yang bernaung di kategori bernama Istana Raja Iblis kamu mengatur atribut sihir secara tersendiri, level dan properti kategori sihirlah yang dihitung dan diterapkan pada waktu penyelesaian serta kerusakan aksi itu.", "Pengalaman saat berhasil pun masuk ke kategori yang diatur pada atribut, bukan ke kategori tempatnya bernaung.", "Bila pada aksi itu sendiri belum diatur warna, warna ikon dan latarnya mewarisi warna kategori yang diatur pada atribut, bukan warna kategori tempatnya bernaung."],
+		discipline: {
+			title: "Disiplin",
+			summary: "Kategori yang menerima pengalaman dan menjadi patokan kekuatan",
+			points: ["Untuk tiap aksi, kamu bisa mengatur kategori selain kategori tempatnya bernaung sebagai disiplin.", "Bila dibiarkan kosong, kategori tempatnya bernaung menjadi disiplinnya.", "Misalnya, bila pada aksi yang bernaung di kategori bernama Istana Raja Iblis kamu mengatur disiplin sihir, level dan properti kategori sihirlah yang dihitung dan diterapkan pada waktu penyelesaian serta kerusakan aksi itu.", "Pada aksi yang disiplinnya diatur, masukkan level yang dibutuhkan dari kategori disiplin ke level disiplin (`disciplineLevel`).", "Pengalaman saat berhasil dibagi ke kategori tempat aksi bernaung dan kategori yang diatur sebagai disiplin menurut rasio pengembalian pengalaman (`experienceReturnRate`) pada pengaturan umum.", "Efek item (koreksi properti, skill, dan konsumsi barang habis pakai) juga hanya diterapkan bila sasarannya kategori yang diatur sebagai disiplin. Efek yang menyasar kategori tempat aksi itu bernaung tidak diterapkan pada aksi yang disiplinnya diatur.", "Selama kategori yang diatur sebagai disiplin belum dibuka, aksinya juga tidak dibuka, meskipun kategori tempatnya bernaung sudah dibuka.", "Bila pada aksi itu sendiri belum diatur warna, warna ikon dan latarnya mewarisi warna kategori yang diatur sebagai disiplin, bukan warna kategori tempatnya bernaung."],
 			links: { category: "category" },
 		},
 		group: {
@@ -715,9 +715,15 @@ export const action: Type.Action = {
 		},
 		level: {
 			title: "Level",
-			summary: "Level kesulitan aksi",
-			points: ["Kesulitan aksi dinyatakan dengan level.", "Saat dijalankan, level itu dibandingkan dengan level pemain dan setiap properti dihitung.", "Pembandingnya adalah level kategori yang diatur pada atribut.", "Misalnya, bila kamu menjalankan aksi yang lebih tinggi daripada levelmu sendiri, ada pengaruhnya seperti tingkat keberhasilan yang menurun.", "Selama syaratnya terpenuhi, aksi tetap bisa dijalankan meski level pemain lebih kecil daripada nilai ini.", "Namun bila `actionLevelLimit` di bagian umum (batas level aksi) aktif, nilai ini otomatis ditambahkan sebagai syarat atas level kategori, sehingga aksi tidak bisa dijalankan sampai levelnya sampai. Pada kategori yang tidak punya level, nilai itu tidak ditambahkan."],
+			summary: "Level kesulitan aksi terhadap kategori tempatnya bernaung",
+			points: ["Kesulitan aksi dinyatakan dengan level kategori tempatnya bernaung.", "Pada aksi tanpa disiplin, saat dijalankan nilai ini dibandingkan dengan level kategori tempatnya bernaung untuk menghitung tiap properti.", "Pada aksi yang disiplinnya diatur, perhitungan properti memakai level disiplin (`disciplineLevel`), dan nilai ini hanya dipakai untuk menghitung pengalaman yang masuk ke kategori tempatnya bernaung dan untuk syarat level saat dijalankan.", "Misalnya, bila kamu menjalankan aksi yang lebih tinggi daripada levelmu sendiri, ada pengaruhnya seperti tingkat keberhasilan yang menurun.", "Selama syaratnya terpenuhi, aksi tetap bisa dijalankan meski level pemain lebih kecil daripada nilai ini.", "Namun bila `actionLevelLimit` di bagian umum (batas level aksi) aktif, nilai ini otomatis ditambahkan sebagai syarat atas level kategori, sehingga aksi tidak bisa dijalankan sampai levelnya sampai. Pada kategori yang tidak punya level, nilai itu tidak ditambahkan."],
 			links: { property: "property" },
+		},
+		disciplineLevel: {
+			title: "Level disiplin",
+			summary: "Level kesulitan aksi terhadap kategori disiplin",
+			points: ["Level yang dibutuhkan dari kategori disiplin pada aksi yang disiplinnya (`discipline`) diatur. Bila disiplin diatur, nilai `1` atau lebih wajib diisi.", "Tidak dipakai pada aksi tanpa disiplin. Biarkan tetap `0`.", "Saat dijalankan, nilai ini dibandingkan dengan level kategori disiplin untuk menghitung tiap properti dan pengalaman yang masuk ke kategori disiplin.", "Bila `actionLevelLimit` (batas level aksi) pada pengaturan umum diaktifkan, nilai ini otomatis ditambahkan sebagai syarat bersama level kategori tempat aksi bernaung (`level`)."],
+			links: { property: "property", category: "category" },
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "Syarat yang diperlukan untuk menjalankan aksi" },
 		seconds: {
@@ -729,7 +735,7 @@ export const action: Type.Action = {
 		experience: {
 			title: "Pengalaman [100 untuk level berikutnya]",
 			summary: "Pengalaman yang diperoleh saat aksi berhasil",
-			points: ["Pengalaman baku yang diperoleh saat aksi dijalankan satu kali dan berhasil. 100 setara dengan pengalaman satu level.", "Dalam pertempuran, pengalaman diperoleh saat mengalahkan lawan, jadi sebaiknya diatur agak banyak.", "Pada pelaksanaan sebenarnya, nilainya berubah karena kalkulasi properti."],
+			points: ["Pengalaman baku yang diperoleh saat aksi dijalankan satu kali dan berhasil. 100 setara dengan pengalaman satu level.", "Dalam pertempuran, pengalaman diperoleh saat mengalahkan lawan, jadi sebaiknya diatur agak banyak.", "Pada pelaksanaan sebenarnya, nilainya berubah karena kalkulasi properti.", "Pada aksi yang disiplinnya diatur, pengalaman dihitung dari nilai ini dengan selisih level kategori tempatnya bernaung dan kategori disiplin masing-masing, lalu dibagi menurut rasio pengembalian pengalaman (`experienceReturnRate`) pada pengaturan umum."],
 			links: { property: "property" },
 		},
 		chance: {
@@ -988,6 +994,7 @@ export const general: Type.General = {
 			points: [
 				"Mengelola batas atas jumlah jenis item yang bisa dimiliki pemain.",
 				"Yang dikelola bukan jumlah kepemilikan tiap item, melainkan jumlah jenis item yang dimiliki.",
+				"Item yang nilai jual dan nilai belinya sama-sama `0` dan jumlah maksimumnya `1` (barang yang tidak bisa dijual, dibeli, atau dimiliki lebih dari satu) tidak dihitung dalam jumlah jenis.",
 				"Bila `initialCount` dijadikan 0, kapasitas menjadi tanpa batas, dan pembelian kapasitas pun tidak bisa dilakukan.",
 				"Bila kamu merujuk item kapasitas pada syarat atau hadiah, gunakanlah ID yang diatur di sini, atau `capacity`.",
 			],
@@ -1087,13 +1094,25 @@ export const general: Type.General = {
 			],
 			links: { category: "category" },
 		},
+		experienceReturnRate: {
+			title: "Rasio pengembalian pengalaman [0-1]",
+			summary: "Bagian pengalaman aksi yang memiliki disiplin yang masuk ke kategori tempatnya bernaung",
+			points: [
+				"Rasio pembagian pengalaman ke kategori tempat aksi bernaung dan kategori disiplin saat aksi yang disiplinnya (discipline) diatur berhasil. Nilai bawaannya `0.5`.",
+				"Kategori tempat aksi bernaung menerima rasio ini, dan kategori disiplin menerima sisanya (`1` dikurangi nilai ini). Dengan `0` hanya kategori disiplin yang menerima; dengan `1` hanya kategori tempat aksi bernaung.",
+				"Tiap bagian dihitung dari selisih level kategori itu dengan level aksi (`level` untuk kategori tempat aksi bernaung, `disciplineLevel` untuk disiplin) dan dari koreksi pengalaman item yang menyasar kategori itu, lalu dibagi.",
+				"Bagian kategori yang numeric-nya dinonaktifkan sehingga levelnya tidak naik dibuang. Bagian itu tidak dialihkan ke kategori lain.",
+				"Pengalaman aksi tanpa disiplin seluruhnya masuk ke kategori tempatnya bernaung, berapa pun nilai ini.",
+			],
+			links: { action: "action", category: "category" },
+		},
 		actionLevelLimit: {
 			title: "Batas level aksi",
-			summary: "Menuntut level kategori atribut untuk menjalankan aksi",
+			summary: "Menuntut level kategori tempat aksi bernaung dan kategori disiplin untuk menjalankan aksi",
 			points: [
-				"Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat \"level kategori atribut berada pada atau di atas level aksi tersebut\".",
-				"Bila atribut (attribute) tidak diatur, kategori tempatnya bernaung yang dipakai.",
-				"Bila numeric pada kategori atribut dinonaktifkan, kategori itu tidak naik level sehingga tidak ada yang ditambahkan.",
+				"Bila diaktifkan, di awal syarat (requirements) tiap aksi otomatis ditambahkan syarat \"level kategori tempatnya bernaung berada pada atau di atas level aksi tersebut (`level`)\".",
+				"Pada aksi yang disiplinnya (discipline) diatur, ditambahkan pula syarat \"level kategori disiplin berada pada atau di atas level disiplin (`disciplineLevel`)\".",
+				"Bila numeric pada suatu kategori dinonaktifkan, kategori itu tidak naik level sehingga syarat untuk kategori itu tidak ditambahkan.",
 				"Syarat yang ditambahkan dituliskan saat dunia dimuat, jadi pada layar player pun ia ditampilkan sama seperti syarat biasa.",
 			],
 			links: { action: "action", category: "category", requirement: "requirement" },
@@ -1107,7 +1126,8 @@ export const general: Type.General = {
 				"Serangan dan pengalaman bertambah sebesar pengali ini, sedangkan pertahanan (kerusakan yang diterima) dan kecepatan (waktu yang dibutuhkan) berkurang sebesar pengali yang sama.",
 				"Akurasi, menghindar, tingkat keberhasilan, dan jumlah pemulihan adalah nilai yang tetap berada di `0`–`100`%, jadi pengali dikenakan pada perbandingan antara sisi yang terjadi dan sisi yang tidak. `0`% dan `100`% tidak berubah, dan nilai di antaranya pun tidak pernah melewati `100`%.",
 				"Pada pertahanan, menghindar, dan kecepatan, pengali bekerja setengahnya (selisih level `20` setara dengan selisih level `10` pada properti lain). Pertahanan dan menghindar bekerja ganda, pada tingkat terkena serangan dan pada kerusakan yang diterima, sedangkan kecepatan bekerja pada semua properti lain sebagai jumlah penjalanan, jadi pengaruhnya dilemahkan agar seimbang.",
-				"Patokannya adalah (laju pertumbuhan pengalaman) pangkat `6.7`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.",
+				"Untuk pengalaman, pengalinya bekerja `1.5` kali lebih kuat (selisih level `10` dihitung seperti selisih `15` pada properti lain). Dengan begitu, beralih ke aksi yang baru terbuka memberi pengalaman lebih banyak daripada terus mengulang aksi berlevel rendah.",
+				"Patokannya adalah (laju pertumbuhan pengalaman) pangkat `5`. Di atas itu, kenaikan level makin cepat seiring naiknya level; di bawahnya, kenaikan level pada bagian akhir makin memakan waktu.",
 				"Bila dijadikan `1`, pengaruh selisih level menghilang. Memperbesar nilainya membuat untung ruginya selisih level menjadi tajam.",
 			],
 			list: [

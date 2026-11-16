@@ -56,6 +56,7 @@ ___
 The capacity settings of the inventory
 - Manages the cap on the number of kinds of items a player can hold.
 - It is managed by the number of kinds of items held, not by the number owned of each item.
+- Items whose selling and buying values are both `0` and whose maximum is `1` (belongings that cannot be sold, bought or held more than one of) are not counted toward the number of types.
 - Setting `initialCount` to 0 makes the capacity unlimited, and buying capacity also becomes unavailable.
 - When you refer to the capacity item in requirements or rewards, use the ID set here or `capacity`.
 - [_item_](en/editor/item)
@@ -170,11 +171,22 @@ The increasing rate of the difficulty of levelling up
 - [_category_](en/editor/category)
 ___
 
+## Experience Return Rate [0-1]
+The share of the experience of an action with a discipline that goes to the category it belongs to
+- The share in which the experience is split between the category it belongs to and the discipline's category when an action with a discipline (discipline) set succeeds. The default value is `0.5`.
+- The category it belongs to receives this share, and the discipline's category receives the rest (`1` minus this value). With `0`, only the discipline's category receives it; with `1`, only the category it belongs to receives it.
+- Each share is calculated from the gap between the level of that category and the level of the action (`level` for the category it belongs to, `disciplineLevel` for the discipline) and from the experience corrections of items that target that category, and then split.
+- The share of a category whose numeric is disabled and whose level does not rise is discarded. It does not go to the other category.
+- The experience of an action without a discipline all goes to the category it belongs to, regardless of this value.
+- [_action_](en/editor/action)
+- [_category_](en/editor/category)
+___
+
 ## Action Level Limit
-Requiring the level of the category of the attribute in order to execute an action
-- When it is enabled, the requirement "the level of the category of the attribute is at or above the level of that action" is added automatically at the head of the requirements of each action.
-- When no attribute is set, the category it belongs to is used.
-- When the numeric of the category of the attribute is disabled, it does not gain levels, so nothing is added.
+Requiring the levels of the category it belongs to and of the discipline's category in order to execute an action
+- When it is enabled, the requirement "the level of the category it belongs to is at or above the level of that action (`level`)" is added automatically at the head of the requirements of each action.
+- For an action with a discipline (discipline) set, the requirement "the level of the discipline's category is at or above the discipline level (`disciplineLevel`)" is added as well.
+- When the numeric of a category is disabled, it does not gain levels, so the requirement for that category is not added.
 - The added requirement is written in when the world is loaded, so it is shown on the screen of the player just like an ordinary requirement.
 - [_action_](en/editor/action)
 - [_category_](en/editor/category)
@@ -188,7 +200,8 @@ How many times the properties become for every 10 of level gap
 - Attack and experience increase by this multiplier, and defence (the damage taken) and speed (the required time) decrease by the same multiplier.
 - Accuracy, evasion, success rate, and the amount of recovery are values that stay within `0` to `100`%, so the multiplier applies to the ratio between the side that comes about and the side that does not. `0`% and `100`% do not change, and a value in between never goes over `100`%.
 - For defence, evasion, and speed the multiplier works at half strength (a level gap of `20` amounts to a level gap of `10` for the other properties). Defence and evasion apply twice over, to the rate of being hit and to the damage taken, and speed applies to all the other properties as the number of executions, so their effect is weakened to keep the balance.
-- A guide is (the experience growth rate) to the power of `6.7`. Above it, levelling up accelerates as the level rises, and below it, levelling up in the later stages takes more time.
+- For experience the multiplier works `1.5` times as strongly (a level difference of `10` counts as a level difference of `15` for the other properties). This makes switching to newly unlocked actions yield more experience than continuing to repeat lower-level actions.
+- A guide is (the experience growth rate) to the power of `5`. Above it, levelling up accelerates as the level rises, and below it, levelling up in the later stages takes more time.
 - Setting it to `1` removes the influence of the level gap. Making the value larger makes the advantage and the disadvantage from the level gap steeper.
 
 |Property Ratio|Level Gap -20|Level Gap -10|Level Gap 0|Level Gap +10|Level Gap +20|

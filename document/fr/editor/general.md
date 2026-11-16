@@ -56,6 +56,7 @@ ___
 Les réglages de capacité de l'inventaire
 - Gère le plafond du nombre de sortes d'objets qu'un joueur peut détenir.
 - La gestion se fait sur le nombre de sortes d'objets détenus, et non sur la quantité possédée de chaque objet.
+- Les objets dont la valeur de vente et d'achat sont toutes deux `0` et dont le maximum est `1` (possessions qu'on ne peut ni vendre, ni acheter, ni posséder en plus d'un exemplaire) ne comptent pas dans le nombre de types.
 - Mettre `initialCount` à 0 rend la capacité illimitée et empêche aussi d'acheter de la capacité.
 - Lorsque vous vous référez à l'objet de la capacité dans les conditions ou les récompenses, utilisez l'ID défini ici, ou bien `capacity`.
 - [_item_](fr/editor/item)
@@ -170,11 +171,22 @@ Le taux d'augmentation de la difficulté à monter de niveau
 - [_category_](fr/editor/category)
 ___
 
+## Taux de reversement de l'expérience [0-1]
+La part de l'expérience d'une action dotée d'une discipline qui va à la catégorie à laquelle elle appartient
+- La part selon laquelle l'expérience est répartie entre la catégorie de l'action et la catégorie de la discipline lorsqu'une action dont la discipline (discipline) est réglée réussit. La valeur par défaut est `0.5`.
+- La catégorie à laquelle l'action appartient reçoit cette part, et la catégorie de la discipline reçoit le reste (`1` moins cette valeur). Avec `0`, seule la catégorie de la discipline la reçoit ; avec `1`, seule la catégorie de l'action la reçoit.
+- Chaque part est calculée à partir de l'écart entre le niveau de cette catégorie et le niveau de l'action (`level` pour la catégorie de l'action, `disciplineLevel` pour la discipline) et des corrections d'expérience des objets qui ciblent cette catégorie, puis répartie.
+- La part d'une catégorie dont numeric est désactivé et dont le niveau ne monte pas est perdue. Elle ne va pas à l'autre catégorie.
+- L'expérience d'une action sans discipline va entièrement à la catégorie à laquelle elle appartient, quelle que soit cette valeur.
+- [_action_](fr/editor/action)
+- [_category_](fr/editor/category)
+___
+
 ## Limite de niveau des actions
-Exiger le niveau de la catégorie de l'attribut pour exécuter une action
-- Lorsque c'est activé, la condition « le niveau de la catégorie de l'attribut est supérieur ou égal au niveau de cette action » est ajoutée automatiquement en tête des conditions (requirements) de chaque action.
-- Lorsque aucun attribut (attribute) n'est défini, la catégorie à laquelle elle appartient est utilisée.
-- Lorsque numeric est désactivé dans la catégorie de l'attribut, celle-ci ne monte pas de niveau, rien n'est donc ajouté.
+Exiger les niveaux de la catégorie de l'action et de la catégorie de la discipline pour exécuter une action
+- Lorsque c'est activé, la condition « le niveau de la catégorie à laquelle elle appartient est supérieur ou égal au niveau de cette action (`level`) » est ajoutée automatiquement en tête des conditions (requirements) de chaque action.
+- Pour une action dont la discipline (discipline) est réglée, la condition « le niveau de la catégorie de la discipline est supérieur ou égal au niveau de discipline (`disciplineLevel`) » est ajoutée en plus.
+- Lorsque numeric est désactivé dans une catégorie, celle-ci ne monte pas de niveau, la condition de cette catégorie n'est donc pas ajoutée.
 - La condition ajoutée est inscrite au chargement du monde, elle s'affiche donc sur l'écran du lecteur comme une condition ordinaire.
 - [_action_](fr/editor/action)
 - [_category_](fr/editor/category)
@@ -188,7 +200,8 @@ Par combien les propriétés sont multipliées tous les 10 points d'écart de ni
 - L'attaque et l'expérience augmentent de ce multiplicateur, et la défense (les dégâts subis) ainsi que la vitesse (le temps requis) diminuent du même multiplicateur.
 - La précision, l'esquive, le taux de réussite et la récupération sont des valeurs comprises entre `0` et `100` %, le multiplicateur s'applique donc au rapport entre la part qui se réalise et celle qui ne se réalise pas. `0` % et `100` % ne changent pas, et aucune valeur intermédiaire ne dépasse `100` %.
 - Pour la défense, l'esquive et la vitesse, le multiplicateur agit de moitié (un écart de niveau de `20` équivaut à un écart de `10` pour les autres propriétés). La défense et l'esquive s'appliquent doublement, au taux de coups reçus et aux dégâts subis, et la vitesse s'applique à toutes les autres propriétés en tant que nombre d'exécutions : leur effet est donc affaibli pour maintenir l'équilibre.
-- Un repère est (le taux de croissance de l'expérience) élevé à la puissance `6.7`. Au-dessus, la montée en niveau s'accélère à mesure que le niveau grimpe ; en dessous, la montée en niveau dans la dernière partie demande plus de temps.
+- Pour l'expérience, le multiplicateur agit `1.5` fois plus fort (une différence de niveau de `10` compte comme une différence de `15` pour les autres propriétés). Ainsi, passer aux actions tout juste débloquées rapporte plus d'expérience que de continuer à répéter des actions de bas niveau.
+- Un repère est (le taux de croissance de l'expérience) élevé à la puissance `5`. Au-dessus, la montée en niveau s'accélère à mesure que le niveau grimpe ; en dessous, la montée en niveau dans la dernière partie demande plus de temps.
 - La mettre à `1` supprime l'influence de l'écart de niveau. Augmenter la valeur rend plus brutaux les avantages et les désavantages liés à l'écart de niveau.
 
 |Ratio des propriétés|Écart de niveau -20|Écart de niveau -10|Écart de niveau 0|Écart de niveau +10|Écart de niveau +20|

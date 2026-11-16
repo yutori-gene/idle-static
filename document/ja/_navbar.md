@@ -6,8 +6,6 @@
   * [Français](fr/?id=main)
   * [Русский](ru/?id=main)
   * [Deutsch](de/?id=main)
-  * [日本語](/?id=main)
+  * [日本語](ja/?id=main)
   * [Bahasa Indonesia](id/?id=main)
   * [한국어](ko/?id=main)
-
-* [GitHub](https://github.com)

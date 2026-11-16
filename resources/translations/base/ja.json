@@ -474,9 +474,17 @@
 			"name": "アクション解放",
 			"explanation": ""
 		},
-		"attribute": {
-			"name": "属性",
-			"explanation": "このアクション固有の属性。カテゴリのプロパティがこのアクションの属性に適用される。また、この属性には経験値も付与される。"
+		"discipline": {
+			"name": "系統",
+			"explanation": "このアクションの強さの基準になるカテゴリ。レベル差やアイテムの効果はこのカテゴリのものが適用され、経験値は所属するカテゴリと分けてこのカテゴリにも入る。"
+		},
+		"discipline-level": {
+			"name": "系統のレベル",
+			"explanation": "実行に必要な、系統のカテゴリのレベル。所属するカテゴリのレベルと両方を満たす必要がある。"
+		},
+		"experience-distribution": {
+			"name": "経験値の配分",
+			"explanation": "系統を持つアクションの経験値は、所属するカテゴリと系統のカテゴリそれぞれのレベル差で計算し、所属するカテゴリへ還元率のぶん、系統のカテゴリへ残りを分けて入れる。レベルの上がらないカテゴリの取り分は無くなる。"
 		},
 		"progress": {
 			"name": "進捗状況",
@@ -1294,9 +1302,9 @@
 			"name": "Hint Action Meaning",
 			"explanation": "アクションは、実行すると経験値や報酬を得られる行動"
 		},
-		"hint-action-attribute": {
-			"name": "Hint Action Attribute",
-			"explanation": "属性は経験値の入り先になるカテゴリ。自分のカテゴリと違うこともあり、実行に必要なレベルもそちらで判定される"
+		"hint-action-discipline": {
+			"name": "Hint Action Discipline",
+			"explanation": "系統は強さの基準になるカテゴリ。自分のカテゴリと違うときは、実行に自分のカテゴリと系統の両方のレベルが要り、経験値も両方へ分けて入る。アイテムの効果は系統で判定され、系統のカテゴリが解放されるまでは実行できない"
 		},
 		"hint-action-executing": {
 			"name": "Hint Action Executing",

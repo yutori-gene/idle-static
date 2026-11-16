@@ -4,6 +4,7 @@ Un efecto especial que se sortea en cada turno del combate y se activa
 - Es un efecto especial que se sortea en cada turno y se activa en una acción de combate (`stamina`). No se activa en las acciones de ningún otro tipo.
 - Su sustancia se define aquí, y se consulta por ID desde `skill` de un artículo (tu lado) y `skills` de una acción (el lado del oponente).
 - Los candidatos de tu lado son las habilidades a las que remiten los artículos que están surtiendo efecto en ese momento (`unnecessary` mientras se posee, `necessary` y `consumable` mientras están equipados). Al desequipar un artículo, su habilidad también sale de los candidatos.
+- Sin embargo, la habilidad de un artículo que tiene una categoría objetivo para sus efectos (`category` de `properties`) solo entra en los candidatos cuando esa categoría coincide con la disciplina (`discipline`) de la acción en combate. En una acción con disciplina establecida, no entra en los candidatos aunque coincida con la categoría a la que pertenece la acción. `*` coincide con todas las categorías. La habilidad de un artículo sin efectos entra en los candidatos en cualquier combate.
 - Cada turno se barajan los candidatos de tu lado y del lado del oponente, se juzga la probabilidad de activación desde el principio y solo se activa la primera que sale adelante. Si no sale adelante ninguna, ese turno no hay habilidad.
 - Cuando varios artículos o acciones remiten a la misma habilidad, esta gana otras tantas oportunidades en el sorteo, así que se activa con más facilidad.
 - [_item_](es/editor/item)

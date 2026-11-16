@@ -124,7 +124,7 @@ La reprise du réglage de couleur de l'élément parent
 - La hiérarchie de l'héritage est la suivante.
 - Pour un élément dont la couleur est réglée individuellement, cette couleur est prioritaire. Elle n'est pas écrasée même si la catégorie a une couleur.
 - L'usage de base consiste à décider une couleur par catégorie et à laisser l'héritage faire pour ce qui est en dessous. On règle une couleur individuelle lorsqu'on veut faire ressortir un élément précis.
-- Si un attribut (attribute) est réglé sur l'action, la couleur héritée n'est pas celle de la catégorie à laquelle elle appartient, mais celle de la catégorie indiquée dans l'attribut.
+- Si une discipline (discipline) est réglée sur l'action, la couleur héritée n'est pas celle de la catégorie à laquelle elle appartient, mais celle de la catégorie indiquée comme discipline.
 - La catégorie elle-même n'a personne dont hériter. Si la couleur de la catégorie reste le noir (`#000000`), cette catégorie et les éléments en dessous sans couleur réglée s'affichent dans la couleur intermédiaire entre la couleur de la barre et la couleur du texte du design.
 - Les groupes, les compétences et les préréglages n'héritent pas et n'utilisent que la couleur réglée sur eux-mêmes.
 ```

@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] not found at {path}:{id}.",
-      "group_not_found": "Group [{group}] not found at {path}. It must be empty or a defined group ID."
+      "group_not_found": "Group [{group}] not found at {path}. It must be empty or a defined group ID.",
+      "category_not_found": "Category [{categoryId}] not found at {path}.",
+      "property_category_not_found": "Effect target category [{categoryId}] not found at {path}.",
+      "task_group_not_found": "Group [{groupId}] not found at {path}. It must be empty or a defined group ID.",
+      "discipline_level_required": "An action with a discipline must have a discipline level (disciplineLevel) of 1 or more: {path}",
+      "discipline_same_as_category": "The discipline is set to the same category as the action's own category. It is treated as having no discipline, so leave it empty: {path}",
+      "discipline_not_numeric": "The discipline category [{categoryId}] has numeric values disabled. The discipline level requirement and the experience share are not used: {path}"
     }
   }
 }

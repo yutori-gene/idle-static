@@ -124,7 +124,7 @@ Como a configuração de cor do elemento pai é herdada
 - A hierarquia da herança é a seguinte.
 - Nos elementos com uma cor própria definida, essa cor tem prioridade. Não é sobrescrita mesmo que a categoria tenha cor.
 - O uso básico é decidir uma cor por categoria e deixar que o que está abaixo herde. A cor individual é definida quando você quer destacar um elemento específico.
-- Se um atributo (attribute) estiver definido na ação, a cor herdada não é a da categoria à qual ela pertence, e sim a da categoria indicada no atributo.
+- Se uma disciplina (discipline) estiver definida na ação, a cor herdada não é a da categoria à qual ela pertence, e sim a da categoria indicada como disciplina.
 - A própria categoria não tem de quem herdar. Se a cor da categoria continuar preta (`#000000`), essa categoria e os elementos abaixo dela sem cor definida são exibidos na cor intermediária entre a cor da barra e a cor do texto do design.
 - Grupos, habilidades e predefinições não herdam e usam apenas a cor definida neles mesmos.
 ```

@@ -429,7 +429,7 @@ export const information: Type.Information = {
 				"heritage-from-parent": {
 					title: "Inheritance from the Parent Element",
 					summary: "Taking over the colour setting of the parent element",
-					points: ["An action, item, or event with no colour set takes over the colour of the category it belongs to.", "The hierarchy of inheritance is as follows.", "For an element with a colour set on it individually, that colour takes priority. It is not overwritten even when the category has a colour.", "The basic way to use it is to decide a colour for each category and leave what is below it to inheritance. You set an individual colour when you want to make one particular element stand out.", "When an attribute (attribute) is set on an action, the colour it takes over is not that of the category it belongs to but that of the category specified in the attribute.", "A category itself has nothing to inherit from. When the colour of a category is left black (`#000000`), that category and the elements below it with no colour set are shown in the colour halfway between the bar colour and the text colour of the design.", "Groups, skills, and presets do not inherit, and only the colour set on themselves is used."],
+					points: ["An action, item, or event with no colour set takes over the colour of the category it belongs to.", "The hierarchy of inheritance is as follows.", "For an element with a colour set on it individually, that colour takes priority. It is not overwritten even when the category has a colour.", "The basic way to use it is to decide a colour for each category and leave what is below it to inheritance. You set an individual colour when you want to make one particular element stand out.", "When a discipline (discipline) is set on an action, the colour it takes over is not that of the category it belongs to but that of the category specified as the discipline.", "A category itself has nothing to inherit from. When the colour of a category is left black (`#000000`), that category and the elements below it with no colour set are shown in the colour halfway between the bar colour and the text colour of the design.", "Groups, skills, and presets do not inherit, and only the colour set on themselves is used."],
 					quote: colorTree,
 					links: { type: "type" },
 				},
@@ -583,7 +583,7 @@ export const group: Type.Information = {
 export const skill: Type.Skill = {
 	title: "Skill",
 	summary: "A special effect that is drawn each turn of a combat and fires",
-	points: ["It is a special effect that is drawn each turn and fires in a combat (`stamina`) action. It does not fire in an action of any other type.", "The substance is defined here, and it is referred to by ID from `skill` of an item (your own side) and `skills` of an action (the opponent side).", "The candidates on your own side are the skills referred to by the items that are taking effect at that moment (`unnecessary` while owned, `necessary` and `consumable` while equipped). Unequipping an item removes its skill from the candidates as well.", "Every turn the candidates are shuffled on your own side and on the opponent side, the activation chance is judged from the top, and only the first one that succeeds fires. If none of them succeeds, there is no skill on that turn.", "When the same skill is referred to from several items or actions, it gains that many more chances in the draw, so it fires more easily."],
+	points: ["It is a special effect that is drawn each turn and fires in a combat (`stamina`) action. It does not fire in an action of any other type.", "The substance is defined here, and it is referred to by ID from `skill` of an item (your own side) and `skills` of an action (the opponent side).", "The candidates on your own side are the skills referred to by the items that are taking effect at that moment (`unnecessary` while owned, `necessary` and `consumable` while equipped). Unequipping an item removes its skill from the candidates as well.", "However, the skill of an item that has a target category for its effects (`category` in `properties`) enters the candidates only when that category matches the discipline (`discipline`) of the action in combat. For an action with a discipline set, it does not enter the candidates even if it matches the category the action belongs to. `*` matches every category. The skill of an item with no effects enters the candidates in any combat.", "Every turn the candidates are shuffled on your own side and on the opponent side, the activation chance is judged from the top, and only the first one that succeeds fires. If none of them succeeds, there is no skill on that turn.", "When the same skill is referred to from several items or actions, it gains that many more chances in the draw, so it fires more easily."],
 	links: { item: "item", action: "action" },
 	children: {
 		information: information,
@@ -696,10 +696,10 @@ export const action: Type.Action = {
 			summary: "The ID of the category the action belongs to",
 			points: ["Specify the ID of the category this action belongs to."],
 		},
-		attribute: {
-			title: "Attribute",
-			summary: "The attribute category specific to the action",
-			points: ["You can set an individual attribute (category).", "When it is blank, the category it belongs to is taken over.", "For example, if you set the individual attribute of magic on an action that belongs to a category called Demon Castle, the level and the properties of the magic category are calculated and applied to the completion time and the damage of the action.", "The experience on success also goes to the category set in the attribute, not to the category it belongs to.", "When no colour is set on the action itself, the colours of the icon and the background take over the colour of the category set in the attribute, not of the category it belongs to."],
+		discipline: {
+			title: "Discipline",
+			summary: "The category that receives the experience and serves as the basis of strength",
+			points: ["For each action, you can set a category other than the one it belongs to as its discipline.", "When left blank, the category it belongs to becomes the discipline.", "For example, if you set the discipline of magic on an action that belongs to a category called Demon Castle, the level and the properties of the magic category are calculated and applied to the completion time and the damage of the action.", "For an action with a discipline set, enter the level required of the discipline's category in the discipline level (`disciplineLevel`).", "The experience on success is split between both the category it belongs to and the category set as the discipline according to the experience return rate (`experienceReturnRate`) in general.", "The effects of items (property corrections, skills and the consumption of consumables) are also applied only when they target the category set as the discipline. Effects that target the category it belongs to are not applied to an action with a discipline set.", "While the category set as the discipline is not released, the action is not released either, even if the category it belongs to is released.", "When no colour is set on the action itself, the colours of the icon and the background take over the colour of the category set as the discipline, not of the category it belongs to."],
 			links: { category: "category" },
 		},
 		group: {
@@ -715,9 +715,15 @@ export const action: Type.Action = {
 		},
 		level: {
 			title: "Level",
-			summary: "The difficulty level of the action",
-			points: ["The difficulty of the action is expressed as a level.", "On execution it is compared with the level of the player and each property is calculated.", "The counterpart of the comparison is the level of the category set in the attribute.", "For example, when you perform an action higher than your own level, there are effects such as the success rate going down.", "As long as the conditions are met, it can be performed even when the level of the player is smaller than this value.", "However, when `actionLevelLimit` in general (the level limit of actions) is enabled, this value is added automatically as a condition on the level of the category, so it cannot be performed until the level reaches it. It is not added for a category that has no level."],
+			summary: "The difficulty level of the action against the category it belongs to",
+			points: ["The difficulty of the action is expressed as a level of the category it belongs to.", "For an action without a discipline, this value is compared with the level of the category it belongs to on execution to calculate each property.", "For an action with a discipline set, the discipline level (`disciplineLevel`) is used to calculate the properties, and this value is used only to calculate the experience that goes to the category it belongs to and for the level requirement for execution.", "For example, when you perform an action higher than your own level, there are effects such as the success rate going down.", "As long as the conditions are met, it can be performed even when the level of the player is smaller than this value.", "However, when `actionLevelLimit` in general (the level limit of actions) is enabled, this value is added automatically as a condition on the level of the category, so it cannot be performed until the level reaches it. It is not added for a category that has no level."],
 			links: { property: "property" },
+		},
+		disciplineLevel: {
+			title: "Discipline Level",
+			summary: "The difficulty level of the action against the discipline's category",
+			points: ["The level required of the discipline's category for an action with a discipline (`discipline`) set. Once a discipline is set, a value of `1` or more is required.", "It is not used for an action without a discipline. Leave it at `0`.", "On execution, this value is compared with the level of the discipline's category to calculate each property and the experience that goes to the discipline's category.", "When `actionLevelLimit` (the action level limit) in general is enabled, it is added automatically as a requirement together with the level of the category it belongs to (`level`)."],
+			links: { property: "property", category: "category" },
 		},
 		requirements: { ...requirement, options: { ...requirement.options, array: true }, summary: "The conditions needed to perform the action" },
 		seconds: {
@@ -729,7 +735,7 @@ export const action: Type.Action = {
 		experience: {
 			title: "Experience [100 for the Next Level]",
 			summary: "The experience gained when the action succeeds",
-			points: ["It is the standard experience gained when the action is performed once and succeeds. 100 is the experience for one level.", "In the case of combat it is gained when you beat the opponent, so it is a good idea to set it generously.", "It varies at the actual execution through the calculation of the properties."],
+			points: ["It is the standard experience gained when the action is performed once and succeeds. 100 is the experience for one level.", "In the case of combat it is gained when you beat the opponent, so it is a good idea to set it generously.", "It varies at the actual execution through the calculation of the properties.", "For an action with a discipline set, the experience is calculated from this value with the level gap of the category it belongs to and of the discipline's category respectively, and split according to the experience return rate (`experienceReturnRate`) in general."],
 			links: { property: "property" },
 		},
 		chance: {
@@ -988,6 +994,7 @@ export const general: Type.General = {
 			points: [
 				"Manages the cap on the number of kinds of items a player can hold.",
 				"It is managed by the number of kinds of items held, not by the number owned of each item.",
+				"Items whose selling and buying values are both `0` and whose maximum is `1` (belongings that cannot be sold, bought or held more than one of) are not counted toward the number of types.",
 				"Setting `initialCount` to 0 makes the capacity unlimited, and buying capacity also becomes unavailable.",
 				"When you refer to the capacity item in requirements or rewards, use the ID set here or `capacity`.",
 			],
@@ -1087,13 +1094,25 @@ export const general: Type.General = {
 			],
 			links: { category: "category" },
 		},
+		experienceReturnRate: {
+			title: "Experience Return Rate [0-1]",
+			summary: "The share of the experience of an action with a discipline that goes to the category it belongs to",
+			points: [
+				"The share in which the experience is split between the category it belongs to and the discipline's category when an action with a discipline (discipline) set succeeds. The default value is `0.5`.",
+				"The category it belongs to receives this share, and the discipline's category receives the rest (`1` minus this value). With `0`, only the discipline's category receives it; with `1`, only the category it belongs to receives it.",
+				"Each share is calculated from the gap between the level of that category and the level of the action (`level` for the category it belongs to, `disciplineLevel` for the discipline) and from the experience corrections of items that target that category, and then split.",
+				"The share of a category whose numeric is disabled and whose level does not rise is discarded. It does not go to the other category.",
+				"The experience of an action without a discipline all goes to the category it belongs to, regardless of this value.",
+			],
+			links: { action: "action", category: "category" },
+		},
 		actionLevelLimit: {
 			title: "Action Level Limit",
-			summary: "Requiring the level of the category of the attribute in order to execute an action",
+			summary: "Requiring the levels of the category it belongs to and of the discipline's category in order to execute an action",
 			points: [
-				"When it is enabled, the requirement \"the level of the category of the attribute is at or above the level of that action\" is added automatically at the head of the requirements of each action.",
-				"When no attribute is set, the category it belongs to is used.",
-				"When the numeric of the category of the attribute is disabled, it does not gain levels, so nothing is added.",
+				"When it is enabled, the requirement \"the level of the category it belongs to is at or above the level of that action (`level`)\" is added automatically at the head of the requirements of each action.",
+				"For an action with a discipline (discipline) set, the requirement \"the level of the discipline's category is at or above the discipline level (`disciplineLevel`)\" is added as well.",
+				"When the numeric of a category is disabled, it does not gain levels, so the requirement for that category is not added.",
 				"The added requirement is written in when the world is loaded, so it is shown on the screen of the player just like an ordinary requirement.",
 			],
 			links: { action: "action", category: "category", requirement: "requirement" },
@@ -1107,7 +1126,8 @@ export const general: Type.General = {
 				"Attack and experience increase by this multiplier, and defence (the damage taken) and speed (the required time) decrease by the same multiplier.",
 				"Accuracy, evasion, success rate, and the amount of recovery are values that stay within `0` to `100`%, so the multiplier applies to the ratio between the side that comes about and the side that does not. `0`% and `100`% do not change, and a value in between never goes over `100`%.",
 				"For defence, evasion, and speed the multiplier works at half strength (a level gap of `20` amounts to a level gap of `10` for the other properties). Defence and evasion apply twice over, to the rate of being hit and to the damage taken, and speed applies to all the other properties as the number of executions, so their effect is weakened to keep the balance.",
-				"A guide is (the experience growth rate) to the power of `6.7`. Above it, levelling up accelerates as the level rises, and below it, levelling up in the later stages takes more time.",
+				"For experience the multiplier works `1.5` times as strongly (a level difference of `10` counts as a level difference of `15` for the other properties). This makes switching to newly unlocked actions yield more experience than continuing to repeat lower-level actions.",
+				"A guide is (the experience growth rate) to the power of `5`. Above it, levelling up accelerates as the level rises, and below it, levelling up in the later stages takes more time.",
 				"Setting it to `1` removes the influence of the level gap. Making the value larger makes the advantage and the disadvantage from the level gap steeper.",
 			],
 			list: [

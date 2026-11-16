@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] tidak ditemukan di {path}:{id}.",
-      "group_not_found": "Grup [{group}] tidak ditemukan di {path}. Harus kosong atau berupa ID grup yang telah didefinisikan."
+      "group_not_found": "Grup [{group}] tidak ditemukan di {path}. Harus kosong atau berupa ID grup yang telah didefinisikan.",
+      "category_not_found": "Kategori [{categoryId}] tidak ditemukan di {path}.",
+      "property_category_not_found": "Kategori sasaran efek [{categoryId}] tidak ditemukan di {path}.",
+      "task_group_not_found": "Grup [{groupId}] tidak ditemukan di {path}. Harus kosong atau berupa ID grup yang telah didefinisikan.",
+      "discipline_level_required": "Aksi yang memiliki disiplin harus memiliki level disiplin (disciplineLevel) minimal 1: {path}",
+      "discipline_same_as_category": "Disiplin diisi dengan kategori yang sama dengan kategori aksi itu sendiri. Ini sama dengan tanpa disiplin, jadi kosongkan saja: {path}",
+      "discipline_not_numeric": "Kategori disiplin [{categoryId}] menonaktifkan nilai numerik. Syarat level disiplin dan pembagian pengalaman tidak digunakan: {path}"
     }
   }
 }

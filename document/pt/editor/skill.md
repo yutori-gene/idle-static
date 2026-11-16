@@ -4,6 +4,7 @@ Um efeito especial que é sorteado a cada turno do combate e ativa
 - É um efeito especial que é sorteado a cada turno e ativa em uma ação de combate (`stamina`). Ele não ativa em ações de nenhum outro tipo.
 - A substância é definida aqui, e é referenciada por ID a partir de `skill` de um item (o seu lado) e `skills` de uma ação (o lado do adversário).
 - Os candidatos do seu lado são as habilidades referenciadas pelos itens que estão fazendo efeito naquele momento (`unnecessary` enquanto em posse, `necessary` e `consumable` enquanto equipados). Ao desequipar um item, a habilidade dele também sai dos candidatos.
+- No entanto, a habilidade de um item que tem uma categoria-alvo para seus efeitos (`category` de `properties`) só entra nos candidatos quando essa categoria coincide com a disciplina (`discipline`) da ação em combate. Numa ação com disciplina definida, ela não entra nos candidatos mesmo que coincida com a categoria à qual a ação pertence. `*` coincide com todas as categorias. A habilidade de um item sem efeitos entra nos candidatos em qualquer combate.
 - A cada turno os candidatos são embaralhados no seu lado e no lado do adversário, a probabilidade de ativação é julgada a partir do topo, e apenas a primeira que dá certo é ativada. Se nenhuma der certo, naquele turno não há habilidade.
 - Quando vários itens ou ações referenciam a mesma habilidade, ela ganha outras tantas oportunidades no sorteio, então ativa com mais facilidade.
 - [_item_](pt/editor/item)

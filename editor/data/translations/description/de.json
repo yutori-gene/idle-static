@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] wurde in {path}:{id} nicht gefunden.",
-      "group_not_found": "Gruppe [{group}] wurde in {path} nicht gefunden. Sie muss leer oder eine definierte Gruppen-ID sein."
+      "group_not_found": "Gruppe [{group}] wurde in {path} nicht gefunden. Sie muss leer oder eine definierte Gruppen-ID sein.",
+      "category_not_found": "Kategorie [{categoryId}] wurde in {path} nicht gefunden.",
+      "property_category_not_found": "Zielkategorie der Wirkung [{categoryId}] wurde in {path} nicht gefunden.",
+      "task_group_not_found": "Gruppe [{groupId}] wurde in {path} nicht gefunden. Sie muss leer oder eine definierte Gruppen-ID sein.",
+      "discipline_level_required": "Bei einer Aktion mit Disziplin muss das Level der Disziplin (disciplineLevel) mindestens 1 sein: {path}",
+      "discipline_same_as_category": "Als Disziplin ist dieselbe Kategorie wie die Kategorie der Aktion angegeben. Das gilt als keine Disziplin, lass das Feld daher leer: {path}",
+      "discipline_not_numeric": "Bei der Disziplin-Kategorie [{categoryId}] sind Zahlenwerte deaktiviert. Die Level-Bedingung der Disziplin und die Aufteilung der Erfahrung werden nicht verwendet: {path}"
     }
   }
 }

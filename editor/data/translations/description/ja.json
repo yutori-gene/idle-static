@@ -115,7 +115,13 @@
     },
     "reference": {
       "id_not_found": "{typeName} id [{id}] が {path}:{id} で見つかりません。",
-      "group_not_found": "グループ [{group}] が {path} で見つかりません。空か定義済みのグループIDである必要があります。"
+      "group_not_found": "グループ [{group}] が {path} で見つかりません。空か定義済みのグループIDである必要があります。",
+      "category_not_found": "カテゴリ [{categoryId}] が {path} で見つかりません。",
+      "property_category_not_found": "効果の対象カテゴリ [{categoryId}] が {path} で見つかりません。",
+      "task_group_not_found": "グループ [{groupId}] が {path} で見つかりません。空か定義済みのグループIDである必要があります。",
+      "discipline_level_required": "系統を設定したアクションは、系統のレベル（disciplineLevel）を1以上にする必要があります: {path}",
+      "discipline_same_as_category": "系統に所属カテゴリと同じカテゴリが指定されています。系統なしと同じ扱いになるので空欄にしてください: {path}",
+      "discipline_not_numeric": "系統のカテゴリ [{categoryId}] は数値が無効です。系統のレベル条件と経験値の配分は使われません: {path}"
     }
   }
 }

@@ -11,5 +11,4 @@
 - Real-time editing and preview
 - Offline support
 
-[GitHub](https://github.com/)
-[Get Started](#overview)
+[Get Started](#main)

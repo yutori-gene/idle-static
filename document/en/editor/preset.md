@@ -122,7 +122,7 @@ Taking over the colour setting of the parent element
 - The hierarchy of inheritance is as follows.
 - For an element with a colour set on it individually, that colour takes priority. It is not overwritten even when the category has a colour.
 - The basic way to use it is to decide a colour for each category and leave what is below it to inheritance. You set an individual colour when you want to make one particular element stand out.
-- When an attribute (attribute) is set on an action, the colour it takes over is not that of the category it belongs to but that of the category specified in the attribute.
+- When a discipline (discipline) is set on an action, the colour it takes over is not that of the category it belongs to but that of the category specified as the discipline.
 - A category itself has nothing to inherit from. When the colour of a category is left black (`#000000`), that category and the elements below it with no colour set are shown in the colour halfway between the bar colour and the text colour of the design.
 - Groups, skills, and presets do not inherit, and only the colour set on themselves is used.
 ```

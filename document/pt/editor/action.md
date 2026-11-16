@@ -15,13 +15,16 @@ O ID da categoria à qual a ação pertence
 - Indique o ID da categoria à qual esta ação pertence.
 ___
 
-## Atributo
-A categoria de atributo própria da ação
-- Você pode definir um atributo (categoria) individual.
-- Quando está em branco, a categoria à qual ela pertence é herdada.
-- Por exemplo, se numa ação que pertence a uma categoria chamada Castelo do Rei Demônio você definir individualmente o atributo de magia, o nível e as propriedades da categoria de magia são calculados e aplicados ao tempo de conclusão e ao dano da ação.
-- A experiência ao ter sucesso também vai para a categoria definida no atributo, e não para a categoria à qual ela pertence.
-- Quando na própria ação não há cor definida, as cores do ícone e do fundo herdam a cor da categoria definida no atributo, e não a da categoria à qual ela pertence.
+## Disciplina
+A categoria que recebe a experiência e serve de referência para a força
+- Em cada ação, você pode definir como disciplina uma categoria diferente daquela à qual ela pertence.
+- Se ficar em branco, a categoria à qual ela pertence passa a ser a disciplina.
+- Por exemplo, se numa ação que pertence a uma categoria chamada Castelo do Rei Demônio você definir a disciplina de magia, o nível e as propriedades da categoria de magia são calculados e aplicados ao tempo de conclusão e ao dano da ação.
+- Numa ação com disciplina definida, informe o nível exigido da categoria da disciplina no nível de disciplina (`disciplineLevel`).
+- A experiência ao ter sucesso é dividida entre a categoria à qual a ação pertence e a categoria definida como disciplina segundo a taxa de retorno de experiência (`experienceReturnRate`) da configuração geral.
+- Os efeitos dos itens (correções de propriedades, habilidades e o consumo de consumíveis) também só são aplicados se tiverem como alvo a categoria definida como disciplina. Efeitos que têm como alvo a categoria à qual a ação pertence não são aplicados a uma ação com disciplina definida.
+- Enquanto a categoria definida como disciplina não estiver desbloqueada, a ação também não é desbloqueada, mesmo que a categoria à qual ela pertence esteja desbloqueada.
+- Quando na própria ação não há cor definida, as cores do ícone e do fundo herdam a cor da categoria definida como disciplina, e não a da categoria à qual ela pertence.
 - [_category_](pt/editor/category)
 ___
 
@@ -41,14 +44,24 @@ O estado inicial de exibição e desbloqueio do elemento (passa automaticamente 
 ___
 
 ## Nível
-O nível de dificuldade da ação
-- A dificuldade da ação é expressa por um nível.
-- Na execução ela é comparada com o nível do jogador e cada propriedade é calculada.
-- O termo de comparação é o nível da categoria definida no atributo.
+O nível de dificuldade da ação em relação à categoria à qual pertence
+- A dificuldade da ação é expressa por um nível da categoria à qual ela pertence.
+- Numa ação sem disciplina, ao executar, este valor é comparado com o nível da categoria à qual ela pertence para calcular cada propriedade.
+- Numa ação com disciplina definida, o cálculo das propriedades usa o nível de disciplina (`disciplineLevel`), e este valor só é usado para calcular a experiência que vai para a categoria da ação e para o requisito de nível ao executar.
 - Por exemplo, se você executa uma ação mais alta que o seu próprio nível, há efeitos como a taxa de sucesso cair.
 - Desde que as condições sejam atendidas, dá para executá-la mesmo que o nível do jogador seja menor que este valor.
 - No entanto, se `actionLevelLimit` de geral (o limite de nível das ações) estiver ativado, este valor é adicionado automaticamente como condição sobre o nível da categoria, então não dá para executá-la até que o nível alcance. Nas categorias que não têm nível ele não é adicionado.
 - [_property_](pt/editor/property)
+___
+
+## Nível de disciplina
+O nível de dificuldade da ação em relação à categoria da disciplina
+- O nível exigido da categoria da disciplina numa ação com disciplina (`discipline`) definida. Ao definir uma disciplina, é obrigatório um valor de `1` ou mais.
+- Não é usado numa ação sem disciplina. Deixe em `0`.
+- Ao executar, este valor é comparado com o nível da categoria da disciplina para calcular cada propriedade e a experiência que vai para a categoria da disciplina.
+- Quando `actionLevelLimit` (o limite de nível das ações) da configuração geral está ativado, ele é acrescentado automaticamente como requisito junto com o nível da categoria à qual a ação pertence (`level`).
+- [_property_](pt/editor/property)
+- [_category_](pt/editor/category)
 ___
 
 ## [_Requisito_](pt/editor/requirement)
@@ -67,6 +80,7 @@ A experiência obtida quando a ação tem sucesso
 - É a experiência padrão obtida ao executar a ação uma vez e ter sucesso. 100 é a experiência de um nível.
 - No caso do combate ela é obtida ao vencer o oponente, então convém defini-la generosa.
 - Varia na execução real pelo cálculo das propriedades.
+- Numa ação com disciplina definida, a experiência é calculada a partir deste valor com a diferença de nível da categoria à qual pertence e da categoria da disciplina separadamente, e dividida segundo a taxa de retorno de experiência (`experienceReturnRate`) da configuração geral.
 - [_property_](pt/editor/property)
 ___
 

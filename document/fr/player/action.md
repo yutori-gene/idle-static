@@ -2,7 +2,7 @@
 # Action
 Le comportement qui peut être exécuté dans cette catégorie
 - Une action est un comportement qui, une fois exécuté, rapporte de l'expérience et des récompenses
-- L'attribut est la catégorie qui reçoit l'expérience. Elle peut différer de la catégorie de l'action elle-même, et le niveau requis pour l'exécution y est également évalué
+- La discipline est la catégorie qui sert de référence à la puissance. Si elle diffère de la catégorie de l'action, l'exécution exige les niveaux des deux catégories, et l'expérience est répartie entre les deux. Les effets des objets sont évalués selon la discipline, et l'action ne peut pas être exécutée tant que la catégorie de la discipline n'est pas débloquée
 - Un appui long sur la ligne d'exécution bascule entre démarrage et arrêt
 - Ce qui figure sous « Condition » est consommé à chaque exécution. Lorsqu'un pourcentage est indiqué, c'est la probabilité d'être consommé
 - Les actions dont les conditions de déverrouillage ne sont pas remplies sont affichées barrées, et leur explication est masquée

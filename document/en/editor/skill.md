@@ -4,6 +4,7 @@ A special effect that is drawn each turn of a combat and fires
 - It is a special effect that is drawn each turn and fires in a combat (`stamina`) action. It does not fire in an action of any other type.
 - The substance is defined here, and it is referred to by ID from `skill` of an item (your own side) and `skills` of an action (the opponent side).
 - The candidates on your own side are the skills referred to by the items that are taking effect at that moment (`unnecessary` while owned, `necessary` and `consumable` while equipped). Unequipping an item removes its skill from the candidates as well.
+- However, the skill of an item that has a target category for its effects (`category` in `properties`) enters the candidates only when that category matches the discipline (`discipline`) of the action in combat. For an action with a discipline set, it does not enter the candidates even if it matches the category the action belongs to. `*` matches every category. The skill of an item with no effects enters the candidates in any combat.
 - Every turn the candidates are shuffled on your own side and on the opponent side, the activation chance is judged from the top, and only the first one that succeeds fires. If none of them succeeds, there is no skill on that turn.
 - When the same skill is referred to from several items or actions, it gains that many more chances in the draw, so it fires more easily.
 - [_item_](en/editor/item)

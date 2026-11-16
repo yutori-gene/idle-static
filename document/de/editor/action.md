@@ -15,13 +15,16 @@ Die ID der Kategorie, zu der die Aktion gehört
 - Gib die ID der Kategorie an, zu der diese Aktion gehört.
 ___
 
-## Attribut
-Die aktionseigene Attributkategorie
-- Du kannst ein einzelnes Attribut (eine Kategorie) einstellen.
-- Ist das Feld leer, wird die Kategorie übernommen, zu der sie gehört.
-- Stellst du zum Beispiel bei einer Aktion, die zu einer Kategorie namens Dämonenschloss gehört, einzeln das Attribut Magie ein, werden für die Abschlusszeit und den Schaden der Aktion das Level und die Eigenschaften der Kategorie Magie berechnet und angewendet.
-- Auch die Erfahrung bei Erfolg fließt in die im Attribut eingestellte Kategorie und nicht in die Kategorie, zu der sie gehört.
-- Ist an der Aktion selbst keine Farbe eingestellt, übernehmen die Farben von Symbol und Hintergrund die Farbe der im Attribut eingestellten Kategorie und nicht die der Kategorie, zu der sie gehört.
+## Disziplin
+Die Kategorie, in die die Erfahrung fließt und die als Maßstab für die Stärke dient
+- Für jede Aktion kannst du eine andere Kategorie als die, zu der sie gehört, als Disziplin einstellen.
+- Bleibt das Feld leer, wird die Kategorie, zu der sie gehört, zur Disziplin.
+- Stellst du zum Beispiel bei einer Aktion, die zu einer Kategorie namens Dämonenschloss gehört, die Disziplin Magie ein, werden für die Abschlusszeit und den Schaden der Aktion das Level und die Eigenschaften der Kategorie Magie berechnet und angewendet.
+- Bei einer Aktion mit eingestellter Disziplin trägst du das für die Kategorie der Disziplin nötige Level im Level der Disziplin (`disciplineLevel`) ein.
+- Die Erfahrung bei Erfolg wird nach der Rückgaberate der Erfahrung (`experienceReturnRate`) aus den allgemeinen Einstellungen auf die Kategorie, zu der die Aktion gehört, und die als Disziplin eingestellte Kategorie aufgeteilt.
+- Auch die Wirkungen von Gegenständen (Korrekturen der Eigenschaften, Fähigkeiten und der Verbrauch von Verbrauchsgegenständen) werden nur angewendet, wenn sie auf die als Disziplin eingestellte Kategorie zielen. Wirkungen, die auf die Kategorie zielen, zu der die Aktion gehört, werden bei einer Aktion mit eingestellter Disziplin nicht angewendet.
+- Solange die als Disziplin eingestellte Kategorie nicht freigeschaltet ist, wird auch die Aktion nicht freigeschaltet, selbst wenn die Kategorie, zu der sie gehört, freigeschaltet ist.
+- Ist an der Aktion selbst keine Farbe eingestellt, übernehmen die Farben von Symbol und Hintergrund die Farbe der als Disziplin eingestellten Kategorie und nicht die der Kategorie, zu der sie gehört.
 - [_category_](de/editor/category)
 ___
 
@@ -41,14 +44,24 @@ Der anfängliche Anzeige- und Freischaltzustand des Elements (bei erfüllten Aus
 ___
 
 ## Level
-Das Schwierigkeitslevel der Aktion
-- Die Schwierigkeit der Aktion wird durch ein Level ausgedrückt.
-- Bei der Ausführung wird es mit dem Level des Spielers verglichen und jede Eigenschaft berechnet.
-- Der Vergleichspartner ist das Level der im Attribut eingestellten Kategorie.
+Das Schwierigkeitslevel der Aktion gegenüber der Kategorie, zu der sie gehört
+- Die Schwierigkeit der Aktion wird durch ein Level der Kategorie ausgedrückt, zu der sie gehört.
+- Bei einer Aktion ohne Disziplin wird dieser Wert beim Ausführen mit dem Level der Kategorie verglichen, zu der sie gehört, um jede Eigenschaft zu berechnen.
+- Bei einer Aktion mit eingestellter Disziplin wird für die Berechnung der Eigenschaften das Level der Disziplin (`disciplineLevel`) verwendet; dieser Wert dient nur zur Berechnung der Erfahrung für die eigene Kategorie und für die Levelbedingung beim Ausführen.
 - Führst du zum Beispiel eine Aktion aus, die höher liegt als dein eigenes Level, hat das Folgen wie eine sinkende Erfolgsrate.
 - Solange die Bedingungen erfüllt sind, lässt sie sich auch ausführen, wenn das Level des Spielers kleiner ist als dieser Wert.
 - Ist allerdings `actionLevelLimit` in den allgemeinen Einstellungen (die Levelgrenze der Aktionen) aktiviert, wird dieser Wert automatisch als Bedingung an das Level der Kategorie angehängt, sodass sie sich erst ausführen lässt, wenn das Level reicht. Bei Kategorien ohne Level wird er nicht angehängt.
 - [_property_](de/editor/property)
+___
+
+## Level der Disziplin
+Das Schwierigkeitslevel der Aktion gegenüber der Kategorie der Disziplin
+- Das für die Kategorie der Disziplin nötige Level bei einer Aktion mit eingestellter Disziplin (`discipline`). Ist eine Disziplin eingestellt, ist ein Wert von `1` oder mehr Pflicht.
+- Bei einer Aktion ohne Disziplin wird er nicht verwendet. Lass ihn auf `0`.
+- Beim Ausführen wird dieser Wert mit dem Level der Kategorie der Disziplin verglichen, um jede Eigenschaft und die Erfahrung für die Kategorie der Disziplin zu berechnen.
+- Ist `actionLevelLimit` (die Levelgrenze für Aktionen) in den allgemeinen Einstellungen aktiviert, wird er zusammen mit dem Level der Kategorie, zu der die Aktion gehört (`level`), automatisch als Bedingung hinzugefügt.
+- [_property_](de/editor/property)
+- [_category_](de/editor/category)
 ___
 
 ## [_Bedingung_](de/editor/requirement)
@@ -67,6 +80,7 @@ Die bei Erfolg der Aktion erhaltene Erfahrung
 - Es ist die Standarderfahrung, die du erhältst, wenn die Aktion einmal ausgeführt wird und gelingt. 100 ist die Erfahrung für ein Level.
 - Beim Kampf erhältst du sie, wenn du den Gegner besiegst, deshalb ist es gut, sie großzügig einzustellen.
 - Bei der tatsächlichen Ausführung schwankt sie durch die Berechnung der Eigenschaften.
+- Bei einer Aktion mit eingestellter Disziplin wird die Erfahrung aus diesem Wert jeweils mit dem Levelunterschied der Kategorie, zu der sie gehört, und der Kategorie der Disziplin berechnet und nach der Rückgaberate der Erfahrung (`experienceReturnRate`) aus den allgemeinen Einstellungen aufgeteilt.
 - [_property_](de/editor/property)
 ___
 
